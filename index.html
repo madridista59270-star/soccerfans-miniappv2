@@ -6,147 +6,159 @@
 <title>Soccers Fans</title>
 
 <style>
-*{
-  box-sizing:border-box;
-}
-
+*{box-sizing:border-box}
 body{
   margin:0;
-  background:#050505;
+  background:#030303;
   color:white;
-  font-family:Arial, sans-serif;
+  font-family:Arial,sans-serif;
 }
-
 .hero{
-  width:100%;
-  text-align:center;
   background:#000;
+  text-align:center;
   border-bottom:2px solid #d4af37;
 }
-
 .banner{
   width:100%;
   display:block;
   object-fit:cover;
-  object-position:center;
-  border-bottom:2px solid #d4af37;
 }
-
 .logo-wrap{
   display:flex;
   justify-content:center;
-  margin-top:-65px;
+  margin-top:-62px;
   position:relative;
-  z-index:10;
+  z-index:2;
 }
-
 .logo{
-  width:130px;
-  height:130px;
+  width:135px;
+  height:135px;
   border-radius:50%;
   border:4px solid #d4af37;
-  background:#000;
   object-fit:cover;
-  box-shadow:0 0 30px rgba(212,175,55,.7);
+  background:#000;
+  box-shadow:0 0 40px rgba(212,175,55,.8);
 }
-
 .title{
-  padding:14px 15px 28px;
+  padding:15px 15px 30px;
 }
-
 h1{
-  margin:8px 0 4px;
-  font-size:34px;
-  letter-spacing:2px;
+  font-size:38px;
+  letter-spacing:4px;
+  margin:10px 0;
 }
-
-.gold{
-  color:#d4af37;
-}
-
+.gold{color:#d4af37}
 .subtitle{
-  color:#f0d77a;
-  letter-spacing:3px;
+  color:#f3d37a;
+  letter-spacing:4px;
   font-size:15px;
 }
-
-.container{
-  padding:18px;
-}
-
+.container{padding:18px}
 .grid{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:14px;
 }
-
-.card{
-  background:linear-gradient(145deg,#111,#050505);
-  border:1px solid #5a4520;
-  border-radius:20px;
-  padding:24px 8px;
-  text-align:center;
-  font-size:19px;
-  font-weight:bold;
-  box-shadow:0 0 18px #000;
-}
-
-.promo{
-  margin-top:24px;
-  background:linear-gradient(135deg,#d4af37,#fff0a5);
-  color:#000;
+.pro-card{
+  background:linear-gradient(145deg,#151515,#050505);
+  border:1px solid rgba(212,175,55,.75);
   border-radius:24px;
-  padding:22px;
+  padding:24px 10px;
   text-align:center;
-  font-weight:bold;
-  font-size:20px;
-  line-height:1.7;
+  text-decoration:none;
+  color:white;
+  box-shadow:0 0 22px rgba(212,175,55,.18), inset 0 0 12px rgba(212,175,55,.08);
 }
-
-.section{
-  margin-top:30px;
+.pro-card .icon{
+  font-size:38px;
+  display:block;
+  margin-bottom:8px;
 }
-
+.pro-card strong{
+  display:block;
+  font-size:21px;
+}
+.pro-card small{
+  display:block;
+  color:#d4af37;
+  margin-top:6px;
+  font-size:13px;
+}
+.section{margin-top:32px}
+.section-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
 .section h2{
   color:#d4af37;
-  font-size:25px;
+  font-size:26px;
 }
-
+.see{
+  color:#d4af37;
+  text-decoration:none;
+  font-weight:bold;
+}
+.cards-row{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+}
+.product{
+  background:#111;
+  border:1px solid #5a4520;
+  border-radius:18px;
+  padding:18px 10px;
+  text-align:center;
+  font-weight:bold;
+  min-height:95px;
+}
+.product small{
+  display:block;
+  color:#d4af37;
+  margin-top:6px;
+}
 .list{
   background:#111;
   border:1px solid #3b2d14;
   border-radius:20px;
   overflow:hidden;
 }
-
 .item{
   padding:15px;
   border-bottom:1px solid #222;
-  font-size:18px;
+  font-size:17px;
 }
-
-.item:last-child{
-  border-bottom:0;
-}
-
-.btn{
+.item:last-child{border-bottom:0}
+.whatsapp{
   display:block;
-  margin-top:25px;
-  padding:17px;
-  background:#d4af37;
+  margin:30px 0 10px;
+  padding:18px;
+  background:linear-gradient(135deg,#d4af37,#fff0a5);
   color:#000;
   text-decoration:none;
   text-align:center;
-  font-weight:bold;
+  font-weight:900;
   border-radius:18px;
-  font-size:19px;
+  font-size:20px;
 }
-
 .footer{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  border-top:1px solid #3b2d14;
+  background:#050505;
+  padding:12px 0;
+  position:sticky;
+  bottom:0;
+}
+.nav{
   text-align:center;
-  color:#aaa;
-  padding:32px 10px;
-  font-size:14px;
+  font-size:12px;
+  color:#ccc;
+}
+.nav span{
+  display:block;
+  font-size:22px;
 }
 </style>
 </head>
@@ -169,58 +181,90 @@ h1{
 <div class="container">
 
   <div class="grid">
-    <div class="card">🌎 Nations 2026</div>
-    <div class="card">🏆 Clubs</div>
-    <div class="card">⭐ Best Sellers</div>
-    <div class="card">🔥 Offres Pack</div>
+    <a class="pro-card" href="#nations">
+      <span class="icon">🌎</span>
+      <strong>NATIONS 2026</strong>
+      <small>Maillots sélections</small>
+    </a>
+
+    <a class="pro-card" href="#clubs">
+      <span class="icon">🏆</span>
+      <strong>CLUBS</strong>
+      <small>Championnats européens</small>
+    </a>
+
+    <a class="pro-card" href="#mystery">
+      <span class="icon">🎁</span>
+      <strong>MYSTERY BOX</strong>
+      <small>Maillots surprises</small>
+    </a>
+
+    <a class="pro-card" href="#packs">
+      <span class="icon">🛍️</span>
+      <strong>OFFRES PACK</strong>
+      <small>Packs & promotions</small>
+    </a>
   </div>
 
-  <div class="section">
-    <h2>🌎 Nations 2026</h2>
-    <div class="list">
-      <div class="item">🇫🇷 France</div>
-      <div class="item">🇧🇷 Brésil</div>
-      <div class="item">🇦🇷 Argentine</div>
-      <div class="item">🇵🇹 Portugal</div>
-      <div class="item">🇪🇸 Espagne</div>
-      <div class="item">🇩🇪 Allemagne</div>
-      <div class="item">🏴 Angleterre</div>
-      <div class="item">🇲🇦 Maroc</div>
-      <div class="item">🇺🇸 USA</div>
-      <div class="item">🇯🇵 Japon</div>
+  <div class="section" id="nations">
+    <div class="section-head">
+      <h2>🌎 Nations 2026</h2>
+      <a class="see" href="#">Voir tout ›</a>
+    </div>
+
+    <div class="cards-row">
+      <div class="product">🇫🇷 France<small>Fan / Player</small></div>
+      <div class="product">🇧🇷 Brésil<small>Fan / Player</small></div>
+      <div class="product">🇦🇷 Argentine<small>Fan / Player</small></div>
+      <div class="product">🇵🇹 Portugal<small>Fan / Player</small></div>
     </div>
   </div>
 
-  <div class="section">
-    <h2>🏆 Clubs & Championnats</h2>
+  <div class="section" id="clubs">
+    <div class="section-head">
+      <h2>🏆 Clubs & Championnats</h2>
+      <a class="see" href="#">Voir tout ›</a>
+    </div>
+
     <div class="list">
-      <div class="item">🇫🇷 Ligue 1 : PSG, OM, Lyon, Monaco, Lille, Lens</div>
-      <div class="item">🏴 Premier League : Liverpool, Arsenal, Chelsea, Manchester City</div>
-      <div class="item">🇪🇸 La Liga : Real Madrid, Barcelone, Atlético</div>
-      <div class="item">🇮🇹 Serie A : Juventus, Milan, Inter, Napoli</div>
-      <div class="item">🇩🇪 Bundesliga : Bayern, Dortmund, Leverkusen</div>
+      <div class="item">🇫🇷 Ligue 1 — PSG, OM, Lyon, Monaco, Lille, Lens</div>
+      <div class="item">🏴 Premier League — Liverpool, Arsenal, Chelsea, Manchester City</div>
+      <div class="item">🇪🇸 La Liga — Real Madrid, Barcelone, Atlético</div>
+      <div class="item">🇮🇹 Serie A — Juventus, Milan, Inter, Napoli</div>
+      <div class="item">🇩🇪 Bundesliga — Bayern, Dortmund, Leverkusen</div>
     </div>
   </div>
 
-  <div class="section">
-    <h2>⭐ Best Sellers</h2>
+  <div class="section" id="mystery">
+    <h2>🎁 Mystery Box</h2>
     <div class="list">
-      <div class="item">🇫🇷 France 2026</div>
-      <div class="item">🇦🇷 Argentine 2026</div>
-      <div class="item">⚪ Real Madrid</div>
-      <div class="item">🔵🔴 PSG</div>
-      <div class="item">🔵🔴 FC Barcelone</div>
+      <div class="item">🎁 Maillot surprise Fan Version</div>
+      <div class="item">⭐ Maillot surprise Player Version</div>
+      <div class="item">🔥 Sélections, clubs ou éditions spéciales</div>
+      <div class="item">📲 Demandez les disponibilités avant commande</div>
     </div>
   </div>
 
-  <a class="btn" href="https://t.me/Soccerfans59">
-    📲 Commander sur Telegram
+  <div class="section" id="packs">
+    <h2>🔥 Offres Pack</h2>
+    <div class="list">
+      <div class="item">👕 Pack Fan : 5 maillots = 135€</div>
+      <div class="item">⭐ Pack Player : 5 maillots = 190€</div>
+      <div class="item">✍️ Flocage disponible sur demande</div>
+    </div>
+  </div>
+
+  <a class="whatsapp" href="https://t.me/Soccerfans59">
+    📲 COMMANDER SUR TELEGRAM ›
   </a>
 
 </div>
 
 <div class="footer">
-  SOCCERS FANS • QUALITÉ • PASSION • PERFORMANCE
+  <div class="nav"><span>🏠</span>Accueil</div>
+  <div class="nav"><span>👕</span>Collection</div>
+  <div class="nav"><span>🛒</span>Panier</div>
+  <div class="nav"><span>👤</span>Compte</div>
 </div>
 
 </body>
