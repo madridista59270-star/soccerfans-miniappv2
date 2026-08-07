@@ -103,25 +103,54 @@ export default function Home(){
         <div className="sfTrustCard"><span>💬</span><strong>7j/7</strong><small>Support</small></div>
       </section>
 
-      <div className="notice">🎁 Livraison offerte dès 100 € • Code démo <b>WELCOME10</b> : -10 %</div>
-      <div className="search"><input value={query} onChange={e=>setQuery(e.target.value)} placeholder="Rechercher club, nation, saison…"/></div>
-      <div className="chips">
+      <div className="promoRow">
+        <span className="promoRowIcon">🚚</span>
+        <span>Livraison offerte dès 100 €</span>
+        <span className="promoDot">•</span>
+        <span>Code <b>WELCOME10</b></span>
+      </div>
+
+      <div className="searchBarWrap">
+        <div className="searchBar">
+          <span className="searchIcon">⌕</span>
+          <input value={query} onChange={e=>setQuery(e.target.value)} placeholder="Rechercher un club, un pays, un maillot..."/>
+          <button className="filterBtn" type="button" aria-label="Filtres">☰</button>
+        </div>
+      </div>
+
+      <div className="chips chipsPremium">
         {["Tous","Clubs","Nations","Rétro","Enfant"].map(x=><button key={x} className={"chip "+(cat===x?"on":"")} onClick={()=>setCat(x)}>{x}</button>)}
       </div>
-      <section id="products" className="section">
-        <div className="section-head"><div><div className="kicker">Catalogue</div><h2>Maillots populaires</h2></div><span>{filtered.length} produits</span></div>
-        <div className="grid">
-          {filtered.map(p=><article className="card" key={p.id}>
-            {p.hot&&<span className="badge">🔥 TOP</span>}
-            <button className="heart" onClick={()=>setFavs(f=>f.includes(p.id)?f.filter(id=>id!==p.id):[...f,p.id])}>{favs.includes(p.id)?"♥":"♡"}</button>
-            <div className="card-img" onClick={()=>openProduct(p)}>{p.emoji}</div>
-            <div className="card-body" onClick={()=>openProduct(p)}>
-              <div className="card-title">{p.name}</div>
-              <div className="meta">{Object.keys(p.versions).join(" • ")}</div>
-              <div className="price">Dès {fmt(Math.min(...Object.values(p.versions)))}</div>
-            </div>
-          </article>)}
+
+      <section id="products" className="section sectionPremium">
+        <div className="section-head premiumHead"><div><div className="kicker">Catalogue</div><h2>Maillots populaires</h2></div><span>{filtered.length} produits</span></div>
+        <div className="grid premiumGrid">
+          {filtered.map((p,index)=>{
+            const minPrice=Math.min(...Object.values(p.versions));
+            const flag = p.hot ? 'TOP' : (index % 2 ? 'NOUVEAU' : 'TOP');
+            const versionLabel = Object.keys(p.versions).includes('Player') ? 'Player Version' : Object.keys(p.versions).join(' • ');
+            return <article className="card premiumCard" key={p.id}>
+              <span className={"badge premiumBadge "+(flag==='NOUVEAU'?'alt':'')}>{flag}</span>
+              <button className="heart premiumHeart" onClick={()=>setFavs(f=>f.includes(p.id)?f.filter(id=>id!==p.id):[...f,p.id])}>{favs.includes(p.id)?"♥":"♡"}</button>
+              <div className={"card-img premiumVisual cat-"+p.cat.toLowerCase()} onClick={()=>openProduct(p)}>
+                <div className="productGlow"></div>
+                <div className="productJersey">{p.emoji}</div>
+                <div className="productMark">{p.team.slice(0,2).toUpperCase()}</div>
+              </div>
+              <div className="card-body premiumCardBody" onClick={()=>openProduct(p)}>
+                <div className="card-title">{p.name}</div>
+                <div className="meta">{versionLabel}</div>
+                <div className="price">{fmt(minPrice)}</div>
+              </div>
+            </article>
+          })}
         </div>
+
+        <button className="collectionCta" onClick={()=>window.scrollTo({top:0,behavior:'smooth'})}>
+          <span className="collectionCtaIcon">🛡️</span>
+          <span>VOIR TOUTE LA COLLECTION</span>
+          <span className="collectionCtaArrow">→</span>
+        </button>
       </section>
     </>
   }
@@ -166,6 +195,524 @@ export default function Home(){
         box-shadow:0 0 18px rgba(244,197,66,.24);
         background:#08090b;
       }
+      .cartTopButton{
+        position:relative;
+        width:54px;
+        height:54px;
+        flex:0 0 54px;
+        display:grid;
+        place-items:center;
+        padding:0;
+        border-radius:18px;
+        border:1px solid rgba(244,197,66,.28);
+        background:
+          radial-gradient(circle at 35% 28%,rgba(244,197,66,.13),transparent 40%),
+          #111318;
+        color:#f4c542;
+        box-shadow:
+          inset 0 0 0 1px rgba(255,255,255,.015),
+          0 10px 25px rgba(0,0,0,.22);
+        cursor:pointer;
+        -webkit-tap-highlight-color:transparent;
+      }
+      .cartTopButton:active{
+        transform:scale(.96);
+      }
+      .cartTopIcon{
+        width:28px;
+        height:28px;
+        display:block;
+      }
+      .cartTopIcon svg{
+        display:block;
+        width:100%;
+        height:100%;
+        filter:drop-shadow(0 0 7px rgba(244,197,66,.23));
+      }
+      .cartTopBadge{
+        position:absolute;
+        top:-5px;
+        right:-5px;
+        min-width:20px;
+        height:20px;
+        padding:0 5px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        border-radius:999px;
+        border:2px solid #08090b;
+        background:#f4c542;
+        color:#08090b;
+        font-size:10px;
+        font-weight:900;
+        line-height:1;
+        box-shadow:0 4px 12px rgba(244,197,66,.28);
+      }
+      .promoRow{
+        display:flex;
+        align-items:center;
+        gap:10px;
+        min-height:58px;
+        padding:0 16px;
+        border-radius:18px;
+        border:1px solid rgba(244,197,66,.35);
+        background:linear-gradient(180deg,#0f100f,#090909);
+        color:#d8a92a;
+        font-size:16px;
+        font-weight:700;
+        box-shadow:inset 0 0 0 1px rgba(255,255,255,.02),0 8px 28px rgba(0,0,0,.18);
+        margin:12px 0 16px;
+      }
+      .promoRowIcon{font-size:20px}
+      .promoRow b{color:#ffd15a}
+      .promoDot{opacity:.55}
+
+      .searchBarWrap{margin:0 0 14px}
+      .searchBar{
+        display:flex;
+        align-items:center;
+        gap:12px;
+        min-height:64px;
+        padding:0 14px 0 18px;
+        border-radius:20px;
+        border:1px solid rgba(244,197,66,.23);
+        background:linear-gradient(180deg,#101115,#090a0d);
+        box-shadow:inset 0 0 0 1px rgba(255,255,255,.02);
+      }
+      .searchBar input{
+        flex:1;
+        min-width:0;
+        background:transparent;
+        border:0;
+        outline:0;
+        color:#fff;
+        font-size:15px;
+      }
+      .searchBar input::placeholder{color:#5d616a}
+      .searchIcon{
+        font-size:22px;
+        color:#a1a5ae;
+        line-height:1;
+      }
+      .filterBtn{
+        width:42px;
+        height:42px;
+        border-radius:14px;
+        border:1px solid rgba(244,197,66,.22);
+        background:#111318;
+        color:#d8a92a;
+        font-size:18px;
+      }
+
+      .chipsPremium{margin-bottom:22px !important}
+      .chipsPremium .chip{
+        min-height:46px !important;
+        padding:0 24px !important;
+        font-size:14px !important;
+      }
+      .chipsPremium .chip.on{
+        box-shadow:0 0 0 1px rgba(255,209,90,.35),0 0 18px rgba(244,197,66,.18), inset 0 0 12px rgba(255,209,90,.08) !important;
+      }
+
+      .sectionPremium{padding-top:8px !important}
+      .premiumHead{margin-bottom:18px !important}
+      .premiumHead h2{font-size:32px !important;line-height:1.02 !important}
+      .premiumHead > span{font-size:16px !important;color:#d8a92a !important;font-weight:700 !important}
+      .premiumHead .kicker{font-size:12px !important;letter-spacing:.12em !important}
+      .premiumHead h2::after{
+        content:"";
+        display:block;
+        width:76px;
+        height:4px;
+        margin-top:12px;
+        border-radius:999px;
+        background:linear-gradient(90deg,#f4c542,#8a5d00);
+      }
+
+      .premiumGrid{gap:16px !important}
+      .premiumCard{
+        border-radius:24px !important;
+        border:1px solid rgba(244,197,66,.45) !important;
+        background:linear-gradient(180deg,#121212 0%,#090909 100%) !important;
+        box-shadow:0 0 0 1px rgba(255,209,90,.08) inset, 0 12px 28px rgba(0,0,0,.28) !important;
+      }
+      .premiumVisual{
+        min-height:220px !important;
+        position:relative !important;
+        overflow:hidden;
+        display:flex !important;
+        align-items:flex-end !important;
+        justify-content:center !important;
+        padding-bottom:18px;
+        background:
+          radial-gradient(circle at 50% 20%,rgba(255,209,90,.15),transparent 32%),
+          radial-gradient(circle at 50% 100%,rgba(255,209,90,.09),transparent 58%),
+          linear-gradient(180deg,#131415,#090909) !important;
+      }
+      .premiumVisual::before{
+        content:"";
+        position:absolute;
+        inset:0;
+        background:radial-gradient(circle at 14% 50%,rgba(244,197,66,.08),transparent 28%), radial-gradient(circle at 85% 22%,rgba(244,197,66,.08),transparent 22%);
+        pointer-events:none;
+      }
+      .productGlow{
+        position:absolute;
+        width:190px;
+        height:190px;
+        border-radius:50%;
+        background:radial-gradient(circle,rgba(244,197,66,.16),transparent 66%);
+        filter:blur(4px);
+        bottom:16px;
+      }
+      .productJersey{
+        position:relative;
+        z-index:2;
+        font-size:104px !important;
+        line-height:1;
+        filter:drop-shadow(0 14px 22px rgba(0,0,0,.48));
+      }
+      .productMark{
+        position:absolute;
+        left:14px;
+        bottom:16px;
+        font-size:64px;
+        font-weight:900;
+        line-height:1;
+        letter-spacing:-.05em;
+        color:rgba(255,255,255,.06);
+      }
+      .premiumCardBody{
+        padding:14px 16px 16px !important;
+        border-top:1px solid rgba(244,197,66,.14);
+      }
+      .premiumCard .card-title{font-size:15px !important;line-height:1.22 !important}
+      .premiumCard .meta{font-size:11px !important;color:#7f838d !important}
+      .premiumCard .price{font-size:18px !important;color:#f4c542 !important}
+
+      .premiumBadge{
+        padding:7px 12px !important;
+        border-radius:9px !important;
+        font-size:12px !important;
+        font-weight:900 !important;
+        letter-spacing:.02em;
+        color:#090909 !important;
+        background:linear-gradient(135deg,#f8d45e,#d8a92a) !important;
+        border:0 !important;
+        text-transform:uppercase;
+      }
+      .premiumBadge.alt{background:linear-gradient(135deg,#ffe07b,#ebb537) !important}
+      .premiumHeart{
+        width:44px !important;
+        height:44px !important;
+        border:1px solid rgba(255,255,255,.18) !important;
+        background:rgba(10,10,10,.74) !important;
+        color:#fff !important;
+        font-size:23px !important;
+      }
+
+      .collectionCta{
+        width:100%;
+        margin-top:18px;
+        min-height:70px;
+        border-radius:22px;
+        border:1px solid rgba(244,197,66,.45);
+        background:linear-gradient(180deg,#111,#090909);
+        color:#d8a92a;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        gap:16px;
+        font-size:18px;
+        font-weight:900;
+        letter-spacing:.02em;
+        box-shadow:0 10px 26px rgba(0,0,0,.20), inset 0 0 0 1px rgba(255,255,255,.02);
+      }
+      .collectionCtaIcon{font-size:25px}
+      .collectionCtaArrow{font-size:32px;line-height:1}
+
+      .bottom{padding-bottom:max(8px, env(safe-area-inset-bottom)) !important}
+      .nav{gap:4px !important}
+      .nav b{font-size:24px !important;line-height:1}
+      .nav.on::before{top:0 !important}
+
+      @media (max-width:420px){
+        .promoRow{font-size:14px;padding:0 13px;gap:8px}
+        .searchBar{min-height:60px;padding:0 12px 0 15px}
+        .chipsPremium .chip{padding:0 18px !important;min-height:44px !important}
+        .premiumHead h2{font-size:27px !important}
+        .premiumHead > span{font-size:14px !important}
+        .premiumVisual{min-height:195px !important}
+        .productJersey{font-size:88px !important}
+        .collectionCta{font-size:16px;min-height:64px;gap:10px}
+      }
+
+      /* ===== SOCCER FANS — THÈME NOIR & OR POUR TOUT LE BAS DE PAGE ===== */
+      .notice{
+        margin:12px 0 16px !important;
+        padding:14px 16px !important;
+        border-radius:18px !important;
+        border:1px solid rgba(244,197,66,.35) !important;
+        background:
+          radial-gradient(circle at 12% 20%,rgba(244,197,66,.10),transparent 36%),
+          linear-gradient(135deg,#14120b,#0c0d10 55%,#111318) !important;
+        color:#eee7d0 !important;
+        box-shadow:0 12px 30px rgba(0,0,0,.20) !important;
+      }
+      .notice b{
+        color:#f4c542 !important;
+        font-weight:900 !important;
+      }
+
+      .search{
+        margin:0 0 14px !important;
+      }
+      .search input,
+      .input{
+        width:100% !important;
+        min-height:56px !important;
+        border-radius:18px !important;
+        border:1px solid rgba(244,197,66,.20) !important;
+        background:#101116 !important;
+        color:#fff !important;
+        padding:0 17px !important;
+        font-size:15px !important;
+        outline:none !important;
+        box-shadow:inset 0 0 0 1px rgba(255,255,255,.015) !important;
+      }
+      .search input::placeholder,
+      .input::placeholder{
+        color:#6f7179 !important;
+      }
+      .search input:focus,
+      .input:focus{
+        border-color:rgba(244,197,66,.75) !important;
+        box-shadow:0 0 0 3px rgba(244,197,66,.09) !important;
+      }
+
+      .chips{
+        display:flex !important;
+        gap:9px !important;
+        overflow-x:auto !important;
+        padding:2px 0 8px !important;
+        margin:0 0 14px !important;
+        scrollbar-width:none !important;
+      }
+      .chips::-webkit-scrollbar{display:none !important}
+      .chip{
+        flex:0 0 auto !important;
+        min-height:43px !important;
+        padding:0 18px !important;
+        border-radius:999px !important;
+        border:1px solid rgba(244,197,66,.20) !important;
+        background:#111318 !important;
+        color:#b8bac2 !important;
+        font-weight:800 !important;
+        box-shadow:none !important;
+      }
+      .chip.on{
+        border-color:#f4c542 !important;
+        background:linear-gradient(135deg,#f7d45f,#c99414) !important;
+        color:#08090b !important;
+        box-shadow:0 8px 22px rgba(244,197,66,.17) !important;
+      }
+
+      .section{
+        padding-top:14px !important;
+      }
+      .section-head{
+        align-items:flex-end !important;
+        margin-bottom:14px !important;
+      }
+      .section-head .kicker,
+      .kicker{
+        color:#d5a927 !important;
+        letter-spacing:.20em !important;
+        font-size:10px !important;
+        font-weight:900 !important;
+        text-transform:uppercase !important;
+      }
+      .section-head h2,
+      .section h2{
+        margin-top:5px !important;
+        color:#fff !important;
+        font-weight:950 !important;
+        letter-spacing:-.025em !important;
+      }
+      .section-head > span{
+        color:#8c8f98 !important;
+        font-size:12px !important;
+      }
+
+      .grid{
+        gap:12px !important;
+      }
+      .card{
+        position:relative !important;
+        overflow:hidden !important;
+        border-radius:22px !important;
+        border:1px solid rgba(244,197,66,.18) !important;
+        background:
+          linear-gradient(180deg,#15161a 0%,#0d0e11 100%) !important;
+        box-shadow:0 12px 28px rgba(0,0,0,.22) !important;
+      }
+      .card:active{
+        transform:scale(.988) !important;
+      }
+      .card-img{
+        min-height:190px !important;
+        display:grid !important;
+        place-items:center !important;
+        background:
+          radial-gradient(circle at 50% 42%,rgba(244,197,66,.17),transparent 35%),
+          radial-gradient(circle at 50% 100%,rgba(244,197,66,.08),transparent 55%),
+          linear-gradient(180deg,#18191d,#101115) !important;
+        color:#fff !important;
+        font-size:70px !important;
+        border-bottom:1px solid rgba(244,197,66,.12) !important;
+      }
+      .card-body{
+        padding:13px 13px 15px !important;
+        background:transparent !important;
+      }
+      .card-title{
+        color:#fff !important;
+        font-size:14px !important;
+        font-weight:900 !important;
+        line-height:1.25 !important;
+      }
+      .meta{
+        margin-top:6px !important;
+        color:#8c8f98 !important;
+        font-size:11px !important;
+      }
+      .price{
+        margin-top:8px !important;
+        color:#f4c542 !important;
+        font-size:15px !important;
+        font-weight:950 !important;
+      }
+      .badge{
+        top:11px !important;
+        left:11px !important;
+        border:1px solid rgba(244,197,66,.45) !important;
+        background:rgba(10,10,10,.82) !important;
+        color:#f4c542 !important;
+        backdrop-filter:blur(8px) !important;
+        box-shadow:0 5px 16px rgba(0,0,0,.22) !important;
+      }
+      .heart{
+        top:10px !important;
+        right:10px !important;
+        width:40px !important;
+        height:40px !important;
+        border-radius:50% !important;
+        border:1px solid rgba(244,197,66,.30) !important;
+        background:rgba(10,10,10,.80) !important;
+        color:#f4c542 !important;
+        backdrop-filter:blur(8px) !important;
+      }
+
+      .bottom{
+        border-top:1px solid rgba(244,197,66,.18) !important;
+        background:rgba(9,10,13,.96) !important;
+        box-shadow:0 -14px 35px rgba(0,0,0,.30) !important;
+        backdrop-filter:blur(18px) !important;
+      }
+      .nav{
+        position:relative !important;
+        color:#747780 !important;
+        transition:.18s ease !important;
+      }
+      .nav b{
+        color:inherit !important;
+        font-size:22px !important;
+      }
+      .nav.on{
+        color:#f4c542 !important;
+      }
+      .nav.on::before{
+        content:"" !important;
+        position:absolute !important;
+        top:4px !important;
+        left:50% !important;
+        width:26px !important;
+        height:2px !important;
+        border-radius:999px !important;
+        transform:translateX(-50%) !important;
+        background:#f4c542 !important;
+        box-shadow:0 0 12px rgba(244,197,66,.65) !important;
+      }
+
+      .profile,
+      .empty,
+      .summary{
+        border:1px solid rgba(244,197,66,.18) !important;
+        background:linear-gradient(180deg,#141519,#0d0e11) !important;
+        color:#fff !important;
+        border-radius:20px !important;
+      }
+      .muted,.tiny{color:#858892 !important}
+      .sumline{border-color:rgba(244,197,66,.10) !important}
+      .sumline.total b{color:#f4c542 !important}
+
+      .sheetback{
+        background:rgba(0,0,0,.72) !important;
+        backdrop-filter:blur(7px) !important;
+      }
+      .sheet{
+        border-top:1px solid rgba(244,197,66,.28) !important;
+        background:
+          radial-gradient(circle at 80% 0%,rgba(244,197,66,.08),transparent 28%),
+          #0d0e11 !important;
+        color:#fff !important;
+        box-shadow:0 -20px 60px rgba(0,0,0,.55) !important;
+      }
+      .sheet h3{color:#fff !important}
+      .close{
+        border:1px solid rgba(244,197,66,.22) !important;
+        background:#141519 !important;
+        color:#f4c542 !important;
+      }
+      .producthero,
+      .thumb{
+        background:
+          radial-gradient(circle,rgba(244,197,66,.16),transparent 58%),
+          #141519 !important;
+        border:1px solid rgba(244,197,66,.15) !important;
+      }
+      .label{
+        color:#c7c9cf !important;
+        font-weight:800 !important;
+      }
+      .variant{
+        border:1px solid rgba(244,197,66,.18) !important;
+        background:#141519 !important;
+        color:#b7bac2 !important;
+      }
+      .variant.on{
+        border-color:#f4c542 !important;
+        background:rgba(244,197,66,.12) !important;
+        color:#f4c542 !important;
+      }
+      .btn.primary{
+        border:0 !important;
+        background:linear-gradient(135deg,#f7d45f,#c99414) !important;
+        color:#08090b !important;
+        font-weight:950 !important;
+        box-shadow:0 10px 24px rgba(244,197,66,.18) !important;
+      }
+      .remove{
+        color:#d5a927 !important;
+      }
+
+      @media (max-width:420px){
+        .card-img{min-height:165px !important;font-size:60px !important}
+        .card-body{padding:12px !important}
+        .card-title{font-size:13px !important}
+        .chip{min-height:40px !important;padding:0 16px !important}
+      }
+
       .sfBannerWrap{
         width:100%;
         margin:14px auto 12px;
@@ -207,7 +754,8 @@ export default function Home(){
         padding:10px 3px;
         border-radius:14px;
         background:#111318;
-        border:1px solid #24272d;
+        border:1px solid rgba(244,197,66,.18);
+        background:linear-gradient(180deg,#15161a,#101115);
         text-align:center;
       }
       .sfTrustCard span{
@@ -253,7 +801,21 @@ export default function Home(){
           <small>{user?.first_name?`Bonjour ${user.first_name}`:"Telegram Store"}</small>
         </div>
       </div>
-      <button className="iconbtn" onClick={()=>setCartOpen(true)}>🛒 {cart.length||""}</button>
+      <button
+        className="cartTopButton"
+        onClick={()=>setCartOpen(true)}
+        aria-label={`Ouvrir le panier${cart.length ? `, ${cart.length} article${cart.length>1?"s":""}` : ""}`}
+      >
+        <span className="cartTopIcon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M3.5 4H5l1.65 9.1a2 2 0 0 0 1.97 1.65h7.98a2 2 0 0 0 1.94-1.52L20 7H6.05"
+              stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M9 19.2h.01M17 19.2h.01"
+              stroke="currentColor" strokeWidth="2.8" strokeLinecap="round"/>
+          </svg>
+        </span>
+        {cart.length>0 && <span className="cartTopBadge">{cart.length}</span>}
+      </button>
     </header>
 
     {screen==="shop"&&<Shop/>}
