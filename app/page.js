@@ -82,14 +82,27 @@ export default function Home(){
 
   function Shop(){
     return <>
-      <section className="hero">
-        <div>
-          <div className="kicker">Nouvelle collection</div>
-          <h1>Le maillot<br/>qu'il te faut.</h1>
-          <p>Fan, Player, rétro et enfants. Personnalise ton maillot directement dans Telegram.</p>
-          <button className="btn primary" onClick={()=>document.getElementById("products")?.scrollIntoView()}>Découvrir</button>
-        </div>
+      <section className="sfBannerWrap">
+        <button
+          className="sfBannerButton"
+          onClick={()=>document.getElementById("products")?.scrollIntoView({behavior:"smooth"})}
+          aria-label="Découvrir la collection Soccer Fans"
+        >
+          <img
+            src="/banner-home.png"
+            alt="Soccer Fans - Nouvelle saison 2026/27"
+            className="sfBannerImage"
+          />
+        </button>
       </section>
+
+      <section className="sfTrustGrid" aria-label="Nos garanties">
+        <div className="sfTrustCard"><span>🚚</span><strong>7 à 14 jours</strong><small>Livraison suivie</small></div>
+        <div className="sfTrustCard"><span>🔒</span><strong>Sécurisé</strong><small>Paiement</small></div>
+        <div className="sfTrustCard"><span>🎽</span><strong>Personnalisé</strong><small>Flocage</small></div>
+        <div className="sfTrustCard"><span>💬</span><strong>7j/7</strong><small>Support</small></div>
+      </section>
+
       <div className="notice">🎁 Livraison offerte dès 100 € • Code démo <b>WELCOME10</b> : -10 %</div>
       <div className="search"><input value={query} onChange={e=>setQuery(e.target.value)} placeholder="Rechercher club, nation, saison…"/></div>
       <div className="chips">
@@ -136,6 +149,85 @@ export default function Home(){
   }
 
   return <main className="app">
+    <style jsx global>{`
+      .sfBannerWrap{
+        width:100%;
+        margin:14px auto 12px;
+        display:flex;
+        justify-content:center;
+      }
+      .sfBannerButton{
+        display:block;
+        width:100%;
+        max-width:680px;
+        padding:0;
+        border:0;
+        background:transparent;
+        border-radius:24px;
+        overflow:hidden;
+        cursor:pointer;
+        box-shadow:0 18px 50px rgba(0,0,0,.28);
+        -webkit-tap-highlight-color:transparent;
+      }
+      .sfBannerButton:active{transform:scale(.992)}
+      .sfBannerImage{
+        display:block;
+        width:100%;
+        height:auto;
+        margin:0 auto;
+        object-fit:contain;
+        object-position:center center;
+        background:#050505;
+      }
+      .sfTrustGrid{
+        display:grid;
+        grid-template-columns:repeat(4,minmax(0,1fr));
+        gap:7px;
+        width:100%;
+        margin:0 auto 14px;
+      }
+      .sfTrustCard{
+        min-width:0;
+        padding:10px 3px;
+        border-radius:14px;
+        background:#111318;
+        border:1px solid #24272d;
+        text-align:center;
+      }
+      .sfTrustCard span{
+        display:block;
+        margin-bottom:4px;
+        font-size:19px;
+      }
+      .sfTrustCard strong{
+        display:block;
+        color:#fff;
+        font-size:9px;
+        line-height:1.2;
+        white-space:nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis;
+      }
+      .sfTrustCard small{
+        display:block;
+        margin-top:3px;
+        color:#8f949e;
+        font-size:8px;
+        line-height:1.1;
+      }
+      @media (min-width:700px){
+        .sfBannerButton{max-width:620px}
+        .sfTrustGrid{max-width:620px}
+      }
+      @media (max-width:420px){
+        .sfBannerWrap{margin-top:10px}
+        .sfBannerButton{border-radius:20px}
+        .sfTrustCard{padding:9px 2px}
+        .sfTrustCard span{font-size:18px}
+        .sfTrustCard strong{font-size:8.5px}
+        .sfTrustCard small{font-size:7.5px}
+      }
+    `}</style>
     <header className="top">
       <div className="brand"><div className="logo">SF</div><div><b>SOCCER FANS</b><small>{user?.first_name?`Bonjour ${user.first_name}`:"Telegram Store"}</small></div></div>
       <button className="iconbtn" onClick={()=>setCartOpen(true)}>🛒 {cart.length||""}</button>
