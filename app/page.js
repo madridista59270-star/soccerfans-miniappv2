@@ -150,6 +150,22 @@ export default function Home(){
 
   return <main className="app">
     <style jsx global>{`
+      .brand{
+        display:flex;
+        align-items:center;
+        gap:12px;
+      }
+      .brandLogo{
+        width:52px;
+        height:52px;
+        flex:0 0 52px;
+        border-radius:50%;
+        object-fit:cover;
+        object-position:center;
+        border:1px solid rgba(244,197,66,.55);
+        box-shadow:0 0 18px rgba(244,197,66,.24);
+        background:#08090b;
+      }
       .sfBannerWrap{
         width:100%;
         margin:14px auto 12px;
@@ -220,6 +236,7 @@ export default function Home(){
         .sfTrustGrid{max-width:620px}
       }
       @media (max-width:420px){
+        .brandLogo{width:48px;height:48px;flex-basis:48px}
         .sfBannerWrap{margin-top:10px}
         .sfBannerButton{border-radius:20px}
         .sfTrustCard{padding:9px 2px}
@@ -229,7 +246,13 @@ export default function Home(){
       }
     `}</style>
     <header className="top">
-      <div className="brand"><div className="logo">SF</div><div><b>SOCCER FANS</b><small>{user?.first_name?`Bonjour ${user.first_name}`:"Telegram Store"}</small></div></div>
+      <div className="brand">
+        <img src="/logo.png" alt="Soccer Fans" className="brandLogo"/>
+        <div>
+          <b>SOCCER FANS</b>
+          <small>{user?.first_name?`Bonjour ${user.first_name}`:"Telegram Store"}</small>
+        </div>
+      </div>
       <button className="iconbtn" onClick={()=>setCartOpen(true)}>🛒 {cart.length||""}</button>
     </header>
 
