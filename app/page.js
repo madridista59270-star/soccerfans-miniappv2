@@ -82,7 +82,7 @@ export default function Home(){
 
   function Shop(){
     return <>
-      <section className="sfBannerWrap">
+      <section className="sfBannerWrap">{/* TOP BANNER: KEEP */}
         <button
           className="sfBannerButton"
           onClick={()=>document.getElementById("products")?.scrollIntoView({behavior:"smooth"})}
@@ -134,7 +134,10 @@ export default function Home(){
               <button className="heart premiumHeart" onClick={()=>setFavs(f=>f.includes(p.id)?f.filter(id=>id!==p.id):[...f,p.id])}>{favs.includes(p.id)?"♥":"♡"}</button>
               <div className={"card-img premiumVisual cat-"+p.cat.toLowerCase()} onClick={()=>openProduct(p)}>
                 <div className="productGlow"></div>
-                <div className="productJersey">{p.emoji}</div>
+                {p.image
+                  ? <img src={p.image} alt={p.name} className="productPhoto"/>
+                  : <div className="productJersey">{p.emoji}</div>
+                }
                 <div className="productMark">{p.team.slice(0,2).toUpperCase()}</div>
               </div>
               <div className="card-body premiumCardBody" onClick={()=>openProduct(p)}>
@@ -364,6 +367,15 @@ export default function Home(){
         background:radial-gradient(circle,rgba(244,197,66,.16),transparent 66%);
         filter:blur(4px);
         bottom:16px;
+      }
+      .productPhoto{
+        position:relative;
+        z-index:2;
+        width:88%;
+        height:205px;
+        object-fit:contain;
+        object-position:center bottom;
+        filter:drop-shadow(0 14px 22px rgba(0,0,0,.48));
       }
       .productJersey{
         position:relative;
