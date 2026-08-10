@@ -1,0 +1,38 @@
+SOCCER FANS — CHOIX MANUEL DES COUVERTURES
+==========================================
+
+Pourquoi cette version ?
+------------------------
+Les albums Yupoo n'ont pas tous la même organisation :
+- la photo 004 peut être bonne dans un album,
+- la photo 058 dans un autre,
+- certaines photos sont des écussons, étiquettes ou gros plans.
+
+Le choix 100 % automatique n'est donc pas assez fiable.
+
+Cette version affiche TOUTES les photos de chaque produit.
+Tu choisis visuellement la vraie photo de face du maillot.
+
+INSTALLATION
+------------
+1. Mets ces fichiers dans :
+   C:\Users\guillaume\Documents\GitHub\soccerfans-miniappv2
+
+2. Double-clique sur :
+   LANCER_CHOIX_COUVERTURES.bat
+
+UTILISATION
+-----------
+- Clique sur une miniature.
+- Vérifie l'aperçu à droite.
+- Clique sur "VALIDER CETTE PHOTO".
+- Le programme passe automatiquement au produit suivant.
+
+Il sauvegarde products.json après CHAQUE choix.
+Donc si tu fermes le programme, les choix déjà faits ne sont pas perdus.
+
+Une sauvegarde de products.json est créée ici :
+public\products.before_manual_covers.json
+
+Après quelques choix, tu peux déjà faire Ctrl+F5 sur :
+http://localhost:3000
