@@ -1,0 +1,1654 @@
+[
+  {
+    "id": "165359968",
+    "name": "18 season Paris home retro Fan version",
+    "before": 72,
+    "after": 23,
+    "removed": [
+      {
+        "image": "/products/165359968/photo_002_1786381118946.png",
+        "reason": "guide/tableau détecté"
+      },
+      {
+        "image": "/products/165359968/photo_003_1786381118946.png",
+        "reason": "guide/tableau détecté"
+      },
+      {
+        "image": "/products/165359968/photo_004_1786381118946.png",
+        "reason": "guide/tableau détecté"
+      },
+      {
+        "image": "/products/165359968/photo_006_1786381118946.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/165359968/photo_007_1786381118946.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/165359968/photo_009_1786381118946.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/165359968/photo_010_1786381118946.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/165359968/photo_012_1786381118946.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/165359968/photo_013_1786381118946.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/165359968/photo_015_1786381118946.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/165359968/photo_016_1786381118946.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/165359968/photo_018_1786381118946.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/165359968/photo_019_1786381118946.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/165359968/photo_021_1786381118946.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/165359968/photo_022_1786381118946.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/165359968/photo_024_1786381118946.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/165359968/photo_025_1786381118946.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/165359968/photo_027_1786381118946.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/165359968/photo_028_1786381118946.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/165359968/photo_030_1786381118946.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/165359968/photo_031_1786381118946.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/165359968/photo_033_1786381118946.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/165359968/photo_034_1786381118946.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/165359968/photo_036_1786381118946.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/165359968/photo_037_1786381118946.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/165359968/photo_039_1786381118946.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/165359968/photo_040_1786381118946.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/165359968/photo_042_1786381118946.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/165359968/photo_043_1786381118946.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/165359968/photo_045_1786381118946.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/165359968/photo_046_1786381118946.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/165359968/photo_048_1786381118946.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/165359968/photo_049_1786381118946.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/165359968/photo_051_1786381118946.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/165359968/photo_052_1786381118946.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/165359968/photo_054_1786381118946.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/165359968/photo_055_1786381118946.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/165359968/photo_057_1786381118946.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/165359968/photo_058_1786381118946.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/165359968/photo_060_1786381118946.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/165359968/photo_061_1786381118946.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/165359968/photo_063_1786381118946.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/165359968/photo_064_1786381118946.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/165359968/photo_066_1786381118946.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/165359968/photo_067_1786381118946.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/165359968/photo_069_1786381118946.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/165359968/photo_070_1786381118946.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/165359968/photo_071_1786381118946.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/165359968/photo_072_1786381118946.jpg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "164644569",
+    "name": "1998 season France home Long sleeved Retro Fan version",
+    "before": 3,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/164644569/002.jpeg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "164537380",
+    "name": "1994 season Argentina away retro shorts",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/164537380/002.png",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164537380/003.png",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164537380/005.jpeg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "164640771",
+    "name": "8891 season Scotland away retro Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/164640771/002.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164640771/003.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164640771/005.jpeg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "164626372",
+    "name": "8889 season Scotland away retro Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/164626372/002.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164626372/003.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164626372/005.jpeg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "164641248",
+    "name": "2002 season Scotland Home Retro Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/164641248/002.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164641248/003.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164641248/005.jpeg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "164638886",
+    "name": "1998 season France away retro Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/164638886/002.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164638886/003.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164638886/005.jpeg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "164561248",
+    "name": "2010 season Spain goalkeeper retro Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/164561248/002.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164561248/003.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164561248/005.jpeg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "164626193",
+    "name": "1998 season Croatian Home retro Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/164626193/002.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164626193/003.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164626193/005.jpeg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "181312537",
+    "name": "2425 Turkey Wear on both sides windbreaker",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/181312537/002.png",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/181312537/003.png",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/181312537/005.jpg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "164639580",
+    "name": "1314 season Brazilian Black Classic Retro Player",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/164639580/002.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164639580/003.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164639580/005.jpeg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "181809452",
+    "name": "1994 season U.S.A away retro Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/181809452/002.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/181809452/003.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/181809452/005.jpg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "242412681",
+    "name": "2026 FIFA World Cup Panamá Home Kids Kit",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/242412681/002.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/242412681/003.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/242412681/005.jpg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "242412581",
+    "name": "2026 FIFA World Cup Panamá away Kids kit",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/242412581/002.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/242412581/003.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/242412581/005.jpg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "242412805",
+    "name": "2026 FIFA World Cup Panamá third Kids Kit",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/242412805/002.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/242412805/003.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/242412805/005.jpg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "164639532",
+    "name": "1978 season Scotland Home retro Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/164639532/002.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164639532/003.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164639532/005.jpeg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "164618468",
+    "name": "1984 season France home retro Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/164618468/002.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164618468/003.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164618468/005.jpeg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "164625558",
+    "name": "1998 season Croatia away retro Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/164625558/002.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164625558/003.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164625558/005.jpeg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "164626208",
+    "name": "9496 season Scotland away retro Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/164626208/002.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164626208/003.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164626208/005.jpeg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "181809438",
+    "name": "1988 season FC Dynamo Berlin away retro Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/181809438/002.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/181809438/003.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/181809438/005.jpg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "164624868",
+    "name": "1992 season German home retro Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/164624868/002.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164624868/003.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164624868/005.jpeg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "195725818",
+    "name": "2425 German windbreaker",
+    "before": 5,
+    "after": 3,
+    "removed": [
+      {
+        "image": "/products/195725818/002.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/195725818/005.jpg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "181393563",
+    "name": "2425 season Argentina 50th anniversary Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/181393563/002.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/181393563/003.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/181393563/005.jpg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "181393521",
+    "name": "2425 England Concept version Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/181393521/002.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/181393521/003.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/181393521/005.jpg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "164639102",
+    "name": "9698 season Scotland Home retro Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/164639102/002.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164639102/003.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164639102/005.jpeg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "196970438",
+    "name": "2006 season Brazil home Long sleeved retro Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/196970438/002.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/196970438/003.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/196970438/005.jpg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "164646684",
+    "name": "9496 Season Scotland Home Retro Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/164646684/002.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164646684/003.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164646684/005.jpeg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "164643871",
+    "name": "8788 season Scotland home Retro Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/164643871/002.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164643871/003.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164643871/005.jpeg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "164646444",
+    "name": "9293 season Scotland Home Retro Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/164646444/002.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164646444/003.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164646444/005.jpeg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "164625168",
+    "name": "1994 season Spain Home retro Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/164625168/002.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164625168/003.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164625168/005.jpeg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "164537210",
+    "name": "1998 season Germany away retro Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/164537210/002.png",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164537210/003.png",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164537210/005.jpeg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "164641514",
+    "name": "1996 season Germany home retro Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/164641514/002.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164641514/003.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164641514/005.jpeg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "164618182",
+    "name": "2012 season Scotland Home retro Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/164618182/002.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164618182/003.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164618182/005.jpeg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "164538567",
+    "name": "2016 season Germany away retro Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/164538567/002.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164538567/003.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164538567/005.jpeg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "164633126",
+    "name": "98 season Japan away retro Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/164633126/002.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164633126/003.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164633126/005.jpeg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "164537529",
+    "name": "2010 season Germany away retro Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/164537529/002.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164537529/003.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164537529/005.jpeg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "164623338",
+    "name": "2002 season Scotland away retro Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/164623338/002.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164623338/003.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164623338/005.jpeg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "164625018",
+    "name": "9193 season Scotland away retro Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/164625018/002.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164625018/003.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164625018/005.jpeg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "164646354",
+    "name": "9800 season Scotland Home Retro Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/164646354/002.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164646354/003.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164646354/005.jpeg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "164641225",
+    "name": "2002 season Argentina Away Retro Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/164641225/002.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164641225/003.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164641225/005.jpeg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "164643039",
+    "name": "1998 season France away Retro Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/164643039/002.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164643039/003.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164643039/005.jpeg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "164626514",
+    "name": "88 season Netherlands retro Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/164626514/002.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164626514/003.jpeg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/164626514/005.jpeg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "240045159",
+    "name": "2026 FIFA World Cup Curaçao home Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/240045159/002.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/240045159/003.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/240045159/005.jpg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "236045625",
+    "name": "2026 FIFA World Cup Curaçao away Player version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/236045625/002.png",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/236045625/003.png",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/236045625/005.jpg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "232646523",
+    "name": "2026 FIFA World Cup Curaçao away Kids kit",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/232646523/002.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/232646523/003.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/232646523/005.jpg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "231185215",
+    "name": "2026 FIFA World Cup Curaçao away Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/231185215/002.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/231185215/003.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/231185215/005.jpg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "219350688",
+    "name": "2026 season CURAÇAO home Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/219350688/002.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/219350688/003.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/219350688/005.jpg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "162684259",
+    "name": "2024 season USA away Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/162684259/002.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/162684259/003.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/162684259/005.jpg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "177995015",
+    "name": "2425 Colombia 100th anniversary T shirt",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/177995015/002.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/177995015/003.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/177995015/005.jpg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "162692905",
+    "name": "2024 season Colombia home Player version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/162692905/002.png",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/162692905/003.png",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/162692905/005.jpg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "162691368",
+    "name": "2024 season Colombia home Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/162691368/002.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/162691368/003.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/162691368/005.jpg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "232646352",
+    "name": "2026 FIFA World Cup Haiti third Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/232646352/002.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/232646352/003.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/232646352/005.jpg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "232646347",
+    "name": "2026 FIFA World Cup Haiti home Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/232646347/002.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/232646347/003.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/232646347/005.jpg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "232646151",
+    "name": "2026 FIFA World Cup Haiti away Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/232646151/002.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/232646151/003.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/232646151/005.jpg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "221483776",
+    "name": "2026 season The Republic of Haiti Home Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/221483776/002.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/221483776/003.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/221483776/005.jpg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "221483715",
+    "name": "2026 season The Republic of Haiti Third Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/221483715/002.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/221483715/003.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/221483715/005.jpg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "221483686",
+    "name": "2026 season The Republic of Haiti Away Training shirt Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/221483686/002.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/221483686/003.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/221483686/005.jpg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "246938388",
+    "name": "2026 FIFA World Cup Cape Verde goalkeeper Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/246938388/002.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/246938388/003.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/246938388/005.jpg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "236321228",
+    "name": "2026 FIFA World Cup Cape Verde away Kids kit",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/236321228/002.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/236321228/003.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/236321228/005.jpg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "236321223",
+    "name": "2026 FIFA World Cup Cape Verde home Kids kit",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/236321223/002.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/236321223/003.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/236321223/005.jpg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "236041635",
+    "name": "2026 FIFA World Cup Cape Verde home Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/236041635/002.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/236041635/003.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/236041635/005.jpg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "236041278",
+    "name": "2026 FIFA World Cup Cape Verde away Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/236041278/002.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/236041278/003.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/236041278/005.jpg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "215208434",
+    "name": "2526 season Cape Verde third Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/215208434/002.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/215208434/003.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/215208434/005.jpg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "215207625",
+    "name": "2526 season Cape Verde away Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/215207625/002.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/215207625/003.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/215207625/005.jpg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "215207176",
+    "name": "2526 season Cape Verde home Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/215207176/003.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/215207176/004.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/215207176/005.jpg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "242317605",
+    "name": "2026 FIFA World Cup Bosnia and Herzegovina home Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/242317605/002.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/242317605/003.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/242317605/005.jpg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "242317557",
+    "name": "2026 FIFA World Cup Bosnia and Herzegovina away Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/242317557/002.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/242317557/003.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/242317557/005.jpg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "233877708",
+    "name": "2526 Bosnia and Herzegovina home Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/233877708/002.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/233877708/003.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/233877708/005.jpg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "233461798",
+    "name": "2526 Bosnia and Herzegovina away Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/233461798/002.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/233461798/003.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/233461798/005.jpg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "242317526",
+    "name": "2026 FIFA World Cup Jordan Home Player version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/242317526/003.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/242317526/004.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/242317526/005.jpg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "242317504",
+    "name": "2026 FIFA World Cup Jordan third Player version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/242317504/002.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/242317504/003.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/242317504/005.jpg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "240045143",
+    "name": "2026 FIFA World Cup Jordan home Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/240045143/002.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/240045143/003.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/240045143/005.jpg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "240045138",
+    "name": "2026 FIFA World Cup Jordan third Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/240045138/002.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/240045138/003.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/240045138/005.jpg",
+        "reason": "doublon visuel"
+      }
+    ]
+  },
+  {
+    "id": "240045134",
+    "name": "2026 FIFA World Cup Jordan away Fan version",
+    "before": 5,
+    "after": 2,
+    "removed": [
+      {
+        "image": "/products/240045134/002.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/240045134/003.jpg",
+        "reason": "doublon visuel"
+      },
+      {
+        "image": "/products/240045134/005.jpg",
+        "reason": "doublon visuel"
+      }
+    ]
+  }
+]
