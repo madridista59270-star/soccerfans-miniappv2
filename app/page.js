@@ -183,7 +183,7 @@ export default function Home(){
   const [nationRotation,setNationRotation]=useState(0);
   const [leagueRotation,setLeagueRotation]=useState(0);
   const [clubRotation,setClubRotation]=useState(0);
-  const [footballLogos,setFootballLogos]=useState({clubs:{},leagues:{},leagueItems:[]});
+  const [footballLogos,setFootballLogos]=useState({clubs:{},leagues:{},leagueItems:[],nationItems:[]});
   const nationsRailRef=useRef(null);
   const leaguesRailRef=useRef(null);
   const clubsRailRef=useRef(null);
@@ -231,7 +231,8 @@ export default function Home(){
           setFootballLogos({
             clubs:data.clubs||{},
             leagues:data.leagues||{},
-            leagueItems:Array.isArray(data.leagueItems)?data.leagueItems:[]
+            leagueItems:Array.isArray(data.leagueItems)?data.leagueItems:[],
+            nationItems:Array.isArray(data.nationItems)?data.nationItems:[]
           });
         }
       })
@@ -262,6 +263,32 @@ export default function Home(){
         }
       })
       .catch(err=>console.warn("Chargement championnats :",err));
+
+    return ()=>{alive=false};
+  },[]);
+
+
+  // Charge automatiquement une grande liste de sélections nationales.
+  useEffect(()=>{
+    let alive=true;
+
+    fetch("/api/nations",{cache:"no-store"})
+      .then(r=>r.ok?r.json():Promise.reject(new Error("API nations indisponible")))
+      .then(data=>{
+        if(!alive) return;
+
+        const remoteItems=Array.isArray(data?.nationItems)
+          ? data.nationItems
+          : [];
+
+        if(remoteItems.length){
+          setFootballLogos(prev=>({
+            ...prev,
+            nationItems:remoteItems
+          }));
+        }
+      })
+      .catch(err=>console.warn("Chargement nations :",err));
 
     return ()=>{alive=false};
   },[]);
@@ -406,42 +433,95 @@ export default function Home(){
   }
 
   const nationShowcase = useMemo(()=>{
-    const map=new Map();
+    const productMap=new Map();
 
+    // Regroupe d'abord les vrais maillots Nations déjà présents dans products.json.
     products.forEach((p)=>{
-      if((p.cat||"").toLowerCase()!=="nations") return;
+      if((p.cat||"").toLowerCase()!=="nations" || !p.image) return;
 
       const detected=detectCountryFromProduct(p);
       const key=normalizeLogoKey(detected.label);
 
-      if(!map.has(key)){
-        map.set(key,{
+      if(!productMap.has(key)){
+        productMap.set(key,[]);
+      }
+
+      const images=productMap.get(key);
+      if(!images.includes(p.image)){
+        images.push(p.image);
+      }
+    });
+
+    const installed=Array.isArray(footballLogos.nationItems)
+      ? footballLogos.nationItems
+      : [];
+
+    // Si l'API Nations a chargé : afficher toute la liste.
+    if(installed.length){
+      return installed.map((item,i)=>{
+        const key=normalizeLogoKey(item.label);
+        const images=productMap.get(key)||[];
+
+        return {
+          id:item.code||`${key}-${i}`,
+          code:item.code||String(item.label||"").slice(0,2).toUpperCase(),
+          label:String(item.label||"NATION").toUpperCase(),
+          query:item.query||String(item.label||"").toLowerCase(),
+          flagUrl:item.flagUrl||"",
+          images,
+          image:rotatingImage(images,nationRotation+i),
+          hasProduct:images.length>0
+        };
+      });
+    }
+
+    // Secours : uniquement les Nations déjà présentes dans le catalogue.
+    return [...productMap.entries()]
+      .map(([key,images],i)=>{
+        const sample=products.find(p=>{
+          if((p.cat||"").toLowerCase()!=="nations") return false;
+          return normalizeLogoKey(detectCountryFromProduct(p).label)===key;
+        });
+
+        const detected=detectCountryFromProduct(sample||{});
+        return {
+          id:`local-${key}`,
           code:detected.label.slice(0,2).toUpperCase(),
           label:detected.label.toUpperCase(),
           query:detected.query,
-          flagCode:detected.flagCode,
           flagUrl:detected.flagUrl,
-          images:[]
-        });
-      }
+          images,
+          image:rotatingImage(images,nationRotation+i),
+          hasProduct:true
+        };
+      })
+      .sort((a,b)=>a.label.localeCompare(b.label,"fr"));
+  },[products,nationRotation,footballLogos.nationItems]);
 
-      const item=map.get(key);
 
-      if(p.image && !item.images.includes(p.image)){
-        item.images.push(p.image);
-      }
+  const CHAMPIONSHIP_PRIORITY = [
+    "UEFA Champions League",
+    "Premier League",
+    "La Liga",
+    "Serie A",
+    "Bundesliga",
+    "Ligue 1",
+    "UEFA Europa League",
+    "Primeira Liga",
+    "Eredivisie",
+    "Brazilian Serie A",
+    "Argentine Primera Division",
+    "Major League Soccer"
+  ];
 
-      // On garde seulement p.image : la photo principale du produit.
-      // Les photos de détails/tissu de p.images ne tournent plus ici.
+  function championshipPriority(name){
+    const key=normalizeLogoKey(name);
+    const index=CHAMPIONSHIP_PRIORITY.findIndex(x=>{
+      const wanted=normalizeLogoKey(x);
+      return key===wanted || key.includes(wanted) || wanted.includes(key);
     });
-
-    return [...map.values()]
-      .sort((a,b)=>a.label.localeCompare(b.label,"fr"))
-      .map((item,i)=>({
-        ...item,
-        image:rotatingImage(item.images,nationRotation+i)
-      }));
-  },[products,nationRotation]);
+    return index===-1 ? 999 : index;
+  }
 
   function getShopLeagueName(value){
     const key=normalizeLogoKey(value);
@@ -470,8 +550,13 @@ export default function Home(){
           return true;
         })
         .sort((a,b)=>{
+          const pa=championshipPriority(a.name);
+          const pb=championshipPriority(b.name);
+          if(pa!==pb) return pa-pb;
+
           const ca=String(a.country||"").localeCompare(String(b.country||""),"fr");
           if(ca!==0) return ca;
+
           return String(a.name||"").localeCompare(String(b.name||""),"fr");
         })
         .map(item=>{
@@ -599,7 +684,7 @@ export default function Home(){
       <section className="sfExactUniverse" aria-label="Nations et championnats">
         <div className="sfExactHeading">
           <span className="sfExactLine"></span>
-          <h2><span>🌍</span> NATIONS <em>2026</em></h2>
+          <h2><span>🌍</span> NATIONS <em>2026</em> <small className="sfNationCount">{nationShowcase.length}</small></h2>
           <span className="sfExactLine"></span>
         </div>
 
@@ -609,13 +694,15 @@ export default function Home(){
             {nationShowcase.map((item)=>(
               <button
                 key={item.label}
-                className="sfExactNation"
+                className={"sfExactNation "+(!item.hasProduct?"sfNationNoProduct":"")}
                 onClick={()=>jumpToProducts("Nations",item.query,"")}
               >
                 <div className="sfExactNationVisual">
                   {item.image
                     ? <img key={item.image} src={item.image} alt={item.label} className="sfRotateJersey"/>
-                    : <div className="sfExactFallback">🌍</div>
+                    : item.flagUrl
+                      ? <img src={item.flagUrl} alt={`Drapeau ${item.label}`} className="sfNationFallbackFlag"/>
+                      : <div className="sfExactFallback">🌍</div>
                   }
                 </div>
                 <div className="sfExactNationName">
@@ -633,7 +720,7 @@ export default function Home(){
 
         <div className="sfExactHeading sfExactClubHeading">
           <span className="sfExactLine"></span>
-          <h2><span>🏆</span> <em>CHAMPIONNATS</em> <small className="sfChampCount">{leagueShowcase.length}</small></h2>
+          <h2><span>🏆</span> <em>CHAMPIONNATS LES PLUS REGARDÉS</em> <small className="sfChampCount">{leagueShowcase.length}</small></h2>
           <span className="sfExactLine"></span>
         </div>
 
@@ -2978,6 +3065,62 @@ export default function Home(){
         font-size:10px;
         font-style:normal;
         vertical-align:middle;
+      }
+
+
+
+      /* ===== NATIONS AUTOMATIQUES : BEAUCOUP PLUS QUE 5 ===== */
+      .sfNationCount{
+        display:inline-flex;
+        align-items:center;
+        justify-content:center;
+        min-width:28px;
+        height:22px;
+        margin-left:7px;
+        padding:0 7px;
+        border-radius:999px;
+        border:1px solid rgba(244,197,66,.42);
+        background:rgba(244,197,66,.08);
+        color:#f4c542;
+        font-size:10px;
+        font-style:normal;
+        vertical-align:middle;
+      }
+
+      .sfNationFallbackFlag{
+        width:78%;
+        height:64%;
+        object-fit:cover;
+        display:block;
+        border-radius:12px;
+        border:1px solid rgba(244,197,66,.30);
+        box-shadow:0 10px 24px rgba(0,0,0,.35);
+      }
+
+      .sfNationNoProduct .sfExactNationVisual{
+        background:
+          radial-gradient(circle at 50% 50%,rgba(244,197,66,.07),transparent 48%),
+          #08090b;
+      }
+
+      .sfNationNoProduct .sfExactNationName b{
+        color:rgba(255,255,255,.88);
+      }
+
+
+
+      /* Titre Championnats les plus regardés */
+      .sfExactClubHeading h2{
+        white-space:normal !important;
+        text-align:center;
+        line-height:1.08 !important;
+      }
+
+      @media (max-width:420px){
+        .sfExactClubHeading h2{
+          font-size:15px !important;
+          max-width:240px;
+        }
       }
 
     `}</style>
