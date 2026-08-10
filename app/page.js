@@ -19,11 +19,11 @@ const getProductType = name => {
   const low=(name||"").toLowerCase();
 
   // Priorité : Short > Enfant > Rétro > Player > Fan
-  if(/shorts?/i.test(low)) return "Short";
-  if(/(kid|kids|child|children|youth|junior|enfant)/i.test(low)) return "Enfant";
-  if(/(retro|rétro|vintage|classic)/i.test(low)) return "Rétro";
-  if(/player/i.test(low)) return "Player";
-  if(/fan/i.test(low)) return "Fan";
+  if(/\bshorts?\b/i.test(low)) return "Short";
+  if(/\b(kid|kids|child|children|youth|junior|enfant)\b/i.test(low)) return "Enfant";
+  if(/\b(retro|rétro|vintage|classic)\b/i.test(low)) return "Rétro";
+  if(/\bplayer\b/i.test(low)) return "Player";
+  if(/\bfan\b/i.test(low)) return "Fan";
   return "";
 };
 
@@ -1166,6 +1166,487 @@ export default function Home(){
         .sfTrustCard strong{font-size:8.5px}
         .sfTrustCard small{font-size:7.5px}
       }
+
+      /* =========================================================
+         SOCCER FANS — STYLE RÉFÉRENCE NOIR / OR
+         Surcharge finale : garde toutes les fonctions existantes
+         ========================================================= */
+
+      :root{
+        --sf-gold:#f4c542;
+        --sf-gold-2:#d79d16;
+        --sf-gold-soft:#ffd965;
+        --sf-black:#050607;
+        --sf-panel:#0c0d10;
+        --sf-panel-2:#111216;
+        --sf-line:rgba(244,197,66,.42);
+        --sf-muted:#8c8f97;
+      }
+
+      html,body{
+        background:#050607 !important;
+      }
+
+      body{
+        color:#fff !important;
+      }
+
+      /* En-tête */
+      .top{
+        position:relative !important;
+        z-index:10 !important;
+        padding:14px 4px 10px !important;
+        background:
+          radial-gradient(circle at 12% 0%,rgba(244,197,66,.08),transparent 28%),
+          #050607 !important;
+      }
+
+      .brandLogo{
+        width:54px !important;
+        height:54px !important;
+        flex-basis:54px !important;
+        border:1px solid rgba(244,197,66,.48) !important;
+        box-shadow:0 0 22px rgba(244,197,66,.16) !important;
+      }
+
+      .brand b{
+        font-size:16px !important;
+        letter-spacing:.01em !important;
+        font-weight:950 !important;
+      }
+
+      .brand small{
+        margin-top:3px !important;
+        color:#b4b5ba !important;
+      }
+
+      .cartTopButton{
+        width:56px !important;
+        height:56px !important;
+        border-radius:18px !important;
+        border:1px solid rgba(244,197,66,.48) !important;
+        background:
+          radial-gradient(circle at 50% 35%,rgba(244,197,66,.10),transparent 55%),
+          #0c0d10 !important;
+        color:var(--sf-gold) !important;
+        box-shadow:0 0 22px rgba(244,197,66,.09) !important;
+      }
+
+      /* Livraison */
+      .promoRow{
+        min-height:54px !important;
+        margin:10px 0 14px !important;
+        padding:0 15px !important;
+        border-radius:15px !important;
+        border:1px solid rgba(244,197,66,.43) !important;
+        background:#090a0c !important;
+        color:#e4b73c !important;
+        font-size:14px !important;
+        justify-content:center !important;
+        box-shadow:
+          inset 0 0 0 1px rgba(255,255,255,.015),
+          0 0 22px rgba(244,197,66,.06) !important;
+      }
+
+      /* Recherche */
+      .searchBarWrap{
+        margin-bottom:13px !important;
+      }
+
+      .searchBar{
+        min-height:58px !important;
+        border-radius:16px !important;
+        border:1px solid rgba(244,197,66,.34) !important;
+        background:#0b0c0f !important;
+        padding:0 13px 0 16px !important;
+        gap:12px !important;
+      }
+
+      .searchIcon{
+        color:#c4c6cd !important;
+        font-size:27px !important;
+      }
+
+      .searchBar input{
+        font-size:14px !important;
+        color:#fff !important;
+      }
+
+      .searchBar input::placeholder{
+        color:#666a73 !important;
+      }
+
+      .filterBtn{
+        width:42px !important;
+        height:42px !important;
+        border:0 !important;
+        background:transparent !important;
+        color:var(--sf-gold) !important;
+        font-size:21px !important;
+      }
+
+      /* Catégories */
+      .chipsPremium{
+        gap:9px !important;
+        margin-bottom:20px !important;
+        padding:1px 0 6px !important;
+      }
+
+      .chipsPremium .chip{
+        min-height:44px !important;
+        padding:0 21px !important;
+        border-radius:14px !important;
+        border:1px solid rgba(244,197,66,.28) !important;
+        background:#0a0b0d !important;
+        color:#c8c9ce !important;
+        font-size:13px !important;
+        font-weight:850 !important;
+      }
+
+      .chipsPremium .chip.on{
+        color:#fff2c2 !important;
+        border-color:#ffd458 !important;
+        background:
+          radial-gradient(circle at 50% 30%,rgba(244,197,66,.20),transparent 65%),
+          #151109 !important;
+        box-shadow:
+          0 0 0 1px rgba(255,211,88,.12),
+          0 0 19px rgba(244,197,66,.24),
+          inset 0 0 15px rgba(244,197,66,.08) !important;
+      }
+
+      /* Bloc catalogue */
+      .sectionPremium{
+        padding-top:10px !important;
+      }
+
+      .premiumHead{
+        margin-bottom:17px !important;
+        align-items:flex-end !important;
+      }
+
+      .premiumHead .kicker{
+        color:#d7a72e !important;
+        font-size:10px !important;
+        letter-spacing:.18em !important;
+      }
+
+      .premiumHead h2{
+        margin:5px 0 0 !important;
+        font-size:29px !important;
+        line-height:1 !important;
+        letter-spacing:-.035em !important;
+        font-weight:950 !important;
+      }
+
+      .premiumHead h2::after{
+        width:58px !important;
+        height:3px !important;
+        margin-top:10px !important;
+        background:linear-gradient(90deg,#ffd45a,#c68b00) !important;
+        box-shadow:0 0 10px rgba(244,197,66,.30) !important;
+      }
+
+      .premiumHead > span{
+        padding-bottom:4px !important;
+        color:#d7a72e !important;
+        font-size:13px !important;
+        font-weight:850 !important;
+      }
+
+      /* 2 cartes par ligne comme la référence */
+      .premiumGrid{
+        display:grid !important;
+        grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+        gap:11px !important;
+      }
+
+      .premiumCard{
+        min-width:0 !important;
+        overflow:hidden !important;
+        border-radius:17px !important;
+        border:1px solid rgba(244,197,66,.52) !important;
+        background:#090a0c !important;
+        box-shadow:
+          0 0 0 1px rgba(244,197,66,.04) inset,
+          0 0 18px rgba(244,197,66,.08),
+          0 13px 25px rgba(0,0,0,.30) !important;
+      }
+
+      /* Zone photo : cadrage plus proche de la référence */
+      .premiumVisual{
+        position:relative !important;
+        isolation:isolate !important;
+        min-height:0 !important;
+        height:auto !important;
+        aspect-ratio:1 / 1.12 !important;
+        padding:0 !important;
+        display:block !important;
+        overflow:hidden !important;
+        background:
+          radial-gradient(circle at 50% 80%,rgba(244,197,66,.10),transparent 48%),
+          radial-gradient(circle at 50% 10%,rgba(244,197,66,.07),transparent 35%),
+          #0b0c0e !important;
+        border-bottom:1px solid rgba(244,197,66,.22) !important;
+      }
+
+      .premiumVisual::before{
+        content:"" !important;
+        position:absolute !important;
+        inset:0 !important;
+        z-index:3 !important;
+        pointer-events:none !important;
+        background:
+          linear-gradient(180deg,rgba(0,0,0,.00) 50%,rgba(0,0,0,.18) 100%),
+          radial-gradient(circle at 50% 50%,transparent 50%,rgba(0,0,0,.25) 100%) !important;
+      }
+
+      .premiumVisual::after{
+        content:"" !important;
+        position:absolute !important;
+        inset:0 !important;
+        z-index:1 !important;
+        opacity:.55 !important;
+        pointer-events:none !important;
+        background:
+          linear-gradient(125deg,transparent 40%,rgba(244,197,66,.08) 40.5%,transparent 41%),
+          linear-gradient(35deg,transparent 58%,rgba(244,197,66,.05) 58.5%,transparent 59%) !important;
+      }
+
+      .productGlow{
+        width:150px !important;
+        height:150px !important;
+        left:50% !important;
+        bottom:3% !important;
+        transform:translateX(-50%) !important;
+        opacity:.55 !important;
+        z-index:0 !important;
+      }
+
+      /* Important : centre parfaitement les vraies photos Yupoo */
+      .premiumVisual .productPhoto{
+        position:absolute !important;
+        inset:0 !important;
+        z-index:2 !important;
+        width:100% !important;
+        height:100% !important;
+        max-width:none !important;
+        object-fit:cover !important;
+        object-position:center center !important;
+        transform:scale(1.015) !important;
+        filter:
+          contrast(1.02)
+          saturate(.95)
+          brightness(.96)
+          drop-shadow(0 12px 20px rgba(0,0,0,.30)) !important;
+      }
+
+      /* Le petit filigrane d'équipe reste discret derrière l'image */
+      .productMark{
+        left:10px !important;
+        bottom:8px !important;
+        z-index:1 !important;
+        font-size:52px !important;
+        color:rgba(244,197,66,.055) !important;
+      }
+
+      /* Badges */
+      .premiumBadge{
+        top:9px !important;
+        left:9px !important;
+        z-index:6 !important;
+        padding:5px 9px !important;
+        border-radius:5px !important;
+        color:#08090b !important;
+        background:linear-gradient(135deg,#ffd964,#d99d15) !important;
+        font-size:9px !important;
+        font-weight:950 !important;
+        box-shadow:0 4px 12px rgba(0,0,0,.24) !important;
+      }
+
+      .premiumHeart{
+        top:6px !important;
+        right:6px !important;
+        z-index:6 !important;
+        width:38px !important;
+        height:38px !important;
+        padding:0 !important;
+        border:0 !important;
+        background:rgba(0,0,0,.15) !important;
+        color:#fff !important;
+        font-size:25px !important;
+        text-shadow:0 2px 7px rgba(0,0,0,.8) !important;
+        backdrop-filter:none !important;
+      }
+
+      /* Texte carte */
+      .premiumCardBody{
+        min-height:108px !important;
+        padding:10px 11px 11px !important;
+        background:
+          linear-gradient(180deg,#0b0c0e,#08090a) !important;
+        border-top:0 !important;
+      }
+
+      .premiumCard .card-title{
+        min-height:34px !important;
+        margin:0 !important;
+        color:#fff !important;
+        font-size:12.5px !important;
+        line-height:1.22 !important;
+        font-weight:900 !important;
+        display:-webkit-box !important;
+        -webkit-line-clamp:2 !important;
+        -webkit-box-orient:vertical !important;
+        overflow:hidden !important;
+      }
+
+      .premiumCard .meta{
+        margin-top:4px !important;
+        color:#8f9299 !important;
+        font-size:10px !important;
+        line-height:1.2 !important;
+        white-space:nowrap !important;
+        overflow:hidden !important;
+        text-overflow:ellipsis !important;
+      }
+
+      .premiumCard .price{
+        margin-top:6px !important;
+        color:#eab72d !important;
+        font-size:16px !important;
+        line-height:1 !important;
+        font-weight:950 !important;
+        letter-spacing:.01em !important;
+      }
+
+      /* CTA bas */
+      .collectionCta{
+        min-height:59px !important;
+        margin-top:16px !important;
+        border-radius:15px !important;
+        border:1px solid rgba(244,197,66,.60) !important;
+        background:#090a0b !important;
+        color:#d8a62c !important;
+        font-size:14px !important;
+        box-shadow:0 0 18px rgba(244,197,66,.06) !important;
+      }
+
+      .collectionCtaIcon{
+        font-size:20px !important;
+      }
+
+      .collectionCtaArrow{
+        font-size:25px !important;
+      }
+
+      /* Barre de navigation basse */
+      .bottom{
+        border-top:1px solid rgba(244,197,66,.16) !important;
+        background:rgba(7,8,10,.97) !important;
+        backdrop-filter:blur(18px) !important;
+        box-shadow:0 -12px 30px rgba(0,0,0,.34) !important;
+      }
+
+      .nav{
+        color:#797c84 !important;
+        font-size:10px !important;
+      }
+
+      .nav b{
+        margin-bottom:4px !important;
+        font-size:22px !important;
+      }
+
+      .nav.on{
+        color:var(--sf-gold) !important;
+      }
+
+      /* Galerie fiche produit : garde les vraies images complètes */
+      .producthero{
+        border-radius:18px !important;
+        background:#0b0c0e !important;
+      }
+
+      .productHeroPhoto{
+        object-fit:contain !important;
+        object-position:center center !important;
+        background:#0b0c0e !important;
+      }
+
+      .productThumbButton{
+        border-radius:10px !important;
+        background:#0c0d10 !important;
+      }
+
+      .productThumbButton img{
+        object-fit:cover !important;
+        object-position:center center !important;
+      }
+
+      /* Mobile */
+      @media (max-width:420px){
+        .promoRow{
+          font-size:12px !important;
+          gap:6px !important;
+          padding:0 10px !important;
+        }
+
+        .chipsPremium .chip{
+          min-height:41px !important;
+          padding:0 17px !important;
+          font-size:12px !important;
+        }
+
+        .premiumHead h2{
+          font-size:27px !important;
+        }
+
+        .premiumGrid{
+          gap:9px !important;
+        }
+
+        .premiumCard{
+          border-radius:15px !important;
+        }
+
+        .premiumCardBody{
+          min-height:101px !important;
+          padding:9px 10px 10px !important;
+        }
+
+        .premiumCard .card-title{
+          font-size:11.5px !important;
+          min-height:29px !important;
+        }
+
+        .premiumCard .price{
+          font-size:15px !important;
+        }
+      }
+
+      /* Tablette / PC : on élargit sans perdre l'esprit de la référence */
+      @media (min-width:760px){
+        .premiumGrid{
+          grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+          gap:14px !important;
+        }
+
+        .premiumCard .card-title{
+          font-size:14px !important;
+        }
+
+        .premiumCard .price{
+          font-size:18px !important;
+        }
+      }
+
+      @media (min-width:1100px){
+        .premiumGrid{
+          grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+        }
+      }
+
     `}</style>
     <header className="top">
       <div className="brand">
