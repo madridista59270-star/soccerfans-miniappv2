@@ -100,8 +100,8 @@ def main():
     ap.add_argument("catalogue", help="Chemin vers yupoo_images/catalogue.json")
     ap.add_argument("project", nargs="?", default=".", help="Racine du projet Next.js (défaut: dossier courant)")
     ap.add_argument(
-        "--images-per-product", type=int, default=1,
-        help="Nombre d'images copiées par produit. 1 = couverture seulement; 0 = toutes."
+        "--images-per-product", type=int, default=5,
+        help="Nombre d'images copiées par produit. Défaut: 5. 0 = toutes."
     )
     args = ap.parse_args()
 

@@ -40,6 +40,15 @@ function applyPricingRules(product){
   return product;
 }
 
+function getProductImages(product){
+  if(!product) return [];
+  const all=[
+    product.image,
+    ...(Array.isArray(product.images)?product.images:[])
+  ].filter(Boolean);
+  return [...new Set(all)].slice(0,5);
+}
+
 const LEAGUES = {
   "Ligue 1":["paris","psg","marseille","om ","lyon","monaco","lille","lens","rennes","nice"],
   "Premier League":["liverpool","arsenal","chelsea","manchester","tottenham","newcastle","aston villa","west ham"],
@@ -54,6 +63,7 @@ export default function Home(){
   const [query,setQuery]=useState("");
   const [cat,setCat]=useState("Tous");
   const [selected,setSelected]=useState(null);
+  const [galleryIndex,setGalleryIndex]=useState(0);
   const [version,setVersion]=useState("");
   const [size,setSize]=useState("M");
   const [printing,setPrinting]=useState("");
@@ -129,6 +139,7 @@ export default function Home(){
   function openProduct(p){
     const fixed=applyPricingRules(p);
     setSelected(fixed);
+    setGalleryIndex(0);
     setVersion(Object.keys(fixed.versions||{Fan:35})[0]);
     setSize("M"); setPrinting("");
     try{tg?.HapticFeedback?.impactOccurred("light")}catch{}
@@ -295,6 +306,11 @@ export default function Home(){
       </div>
     </section>
   }
+
+  const selectedGallery=getProductImages(selected);
+  const activeGalleryImage=selectedGallery.length
+    ? selectedGallery[Math.min(galleryIndex,selectedGallery.length-1)]
+    : "";
 
   return <main className="app">
     <style jsx global>{`
@@ -955,6 +971,90 @@ export default function Home(){
           #141519 !important;
         border:1px solid rgba(244,197,66,.15) !important;
       }
+
+      .productGallery{
+        margin-bottom:14px;
+      }
+      .producthero{
+        position:relative !important;
+        overflow:hidden !important;
+      }
+      .productHeroPhoto{
+        width:100% !important;
+        height:100% !important;
+        min-height:320px;
+        object-fit:contain !important;
+        display:block;
+      }
+      .galleryArrow{
+        position:absolute;
+        top:50%;
+        transform:translateY(-50%);
+        z-index:4;
+        width:42px;
+        height:42px;
+        border-radius:50%;
+        border:1px solid rgba(244,197,66,.45);
+        background:rgba(5,5,5,.76);
+        color:#f4c542;
+        font-size:26px;
+        line-height:1;
+        display:grid;
+        place-items:center;
+        backdrop-filter:blur(8px);
+        box-shadow:0 8px 22px rgba(0,0,0,.28);
+      }
+      .galleryArrow.prev{left:10px}
+      .galleryArrow.next{right:10px}
+      .galleryCounter{
+        position:absolute;
+        right:12px;
+        bottom:10px;
+        z-index:4;
+        padding:5px 9px;
+        border-radius:999px;
+        border:1px solid rgba(244,197,66,.35);
+        background:rgba(5,5,5,.72);
+        color:#f4c542;
+        font-size:11px;
+        font-weight:900;
+        backdrop-filter:blur(8px);
+      }
+      .productThumbs{
+        display:flex;
+        gap:8px;
+        overflow-x:auto;
+        padding:9px 2px 2px;
+        scrollbar-width:none;
+      }
+      .productThumbs::-webkit-scrollbar{display:none}
+      .productThumbButton{
+        flex:0 0 68px;
+        width:68px;
+        height:68px;
+        padding:0;
+        border-radius:13px;
+        overflow:hidden;
+        border:1px solid rgba(244,197,66,.18);
+        background:#111318;
+        opacity:.72;
+      }
+      .productThumbButton.on{
+        opacity:1;
+        border-color:#f4c542;
+        box-shadow:0 0 0 2px rgba(244,197,66,.08),0 0 16px rgba(244,197,66,.18);
+      }
+      .productThumbButton img{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        display:block;
+      }
+      @media (max-width:420px){
+        .productHeroPhoto{min-height:280px}
+        .galleryArrow{width:38px;height:38px;font-size:23px}
+        .productThumbButton{flex-basis:62px;width:62px;height:62px}
+      }
       .label{
         color:#c7c9cf !important;
         font-weight:800 !important;
@@ -1106,7 +1206,45 @@ export default function Home(){
     {selected&&<div className="sheetback" onClick={()=>setSelected(null)}>
       <div className="sheet" onClick={e=>e.stopPropagation()}>
         <button className="close" onClick={()=>setSelected(null)}>✕</button>
-        <div className="producthero">{selected.image?<img src={selected.image} alt={selected.name} className="productHeroPhoto"/>:<span>{selected.emoji}</span>}</div>
+        <div className="productGallery">
+          <div className="producthero">
+            {activeGalleryImage
+              ? <img src={activeGalleryImage} alt={`${selected.name} - photo ${galleryIndex+1}`} className="productHeroPhoto"/>
+              : <span>{selected.emoji}</span>
+            }
+            {selectedGallery.length>1&&<>
+              <button
+                type="button"
+                className="galleryArrow prev"
+                aria-label="Photo précédente"
+                onClick={()=>setGalleryIndex(i=>(i-1+selectedGallery.length)%selectedGallery.length)}
+              >‹</button>
+              <button
+                type="button"
+                className="galleryArrow next"
+                aria-label="Photo suivante"
+                onClick={()=>setGalleryIndex(i=>(i+1)%selectedGallery.length)}
+              >›</button>
+              <span className="galleryCounter">{galleryIndex+1}/{selectedGallery.length}</span>
+            </>}
+          </div>
+
+          {selectedGallery.length>1&&
+            <div className="productThumbs" aria-label="Photos du produit">
+              {selectedGallery.map((img,i)=>
+                <button
+                  type="button"
+                  key={`${img}-${i}`}
+                  className={"productThumbButton "+(galleryIndex===i?"on":"")}
+                  onClick={()=>setGalleryIndex(i)}
+                  aria-label={`Voir la photo ${i+1}`}
+                >
+                  <img src={img} alt={`${selected.name} miniature ${i+1}`}/>
+                </button>
+              )}
+            </div>
+          }
+        </div>
         <div className="kicker">{selected.cat}</div>
         <h3>{selected.name}</h3>
         <p className="muted">Choisis ta version, ta taille et ton flocage.</p>
