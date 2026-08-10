@@ -1,0 +1,1330 @@
+{
+  "clubs": {},
+  "leagues": {
+    "algerian ligue 1": "/logos/leagues/4753-algerian-ligue-1.png",
+    "argentina primera b metropolitana": "/logos/leagues/5215-argentina-primera-b-metropolitana.png",
+    "argentina torneo federal a": "/logos/leagues/5523-argentina-torneo-federal-a.png",
+    "argentinian copa de la liga profesional": "/logos/leagues/5428-argentinian-copa-de-la-liga-profesional.png",
+    "argentinian primera b nacional": "/logos/leagues/4616-argentinian-primera-b-nacional.png",
+    "argentinian primera c": "/logos/leagues/5524-argentinian-primera-c.png",
+    "argentinian primera division": "/logos/leagues/4406-argentinian-primera-division.png",
+    "copa argentina": "/logos/leagues/4500-copa-argentina.png",
+    "australia act npl": "/logos/leagues/4620-australia-act-npl.png",
+    "australia brisbane premier league": "/logos/leagues/5013-australia-brisbane-premier-league.png",
+    "australia cup": "/logos/leagues/5180-australia-cup.png",
+    "australia new south wales npl": "/logos/leagues/5011-australia-new-south-wales-npl.png",
+    "australia northern nsw npl": "/logos/leagues/5010-australia-northern-nsw-npl.png",
+    "australian a league": "/logos/leagues/4356-australian-a-league.png",
+    "austrian bundesliga": "/logos/leagues/4621-austrian-bundesliga.png",
+    "austrian cup": "/logos/leagues/5883-austrian-cup.png",
+    "austrian erste liga": "/logos/leagues/4796-austrian-erste-liga.png",
+    "austrian regionalliga mitte": "/logos/leagues/5318-austrian-regionalliga-mitte.png",
+    "austrian regionalliga nord": "/logos/leagues/5934-austrian-regionalliga-nord.png",
+    "austrian regionalliga west": "/logos/leagues/5316-austrian-regionalliga-west.png",
+    "belgian challenger pro league": "/logos/leagues/4623-belgian-challenger-pro-league.png",
+    "belgian cup": "/logos/leagues/5831-belgian-cup.png",
+    "belgian pro league": "/logos/leagues/4338-belgian-pro-league.png",
+    "belgian super cup": "/logos/leagues/5923-belgian-super-cup.png",
+    "brazil brasileiro women": "/logos/leagues/5201-brazil-brasileiro-women.png",
+    "brazil serie d": "/logos/leagues/5079-brazil-serie-d.png",
+    "brazilian campeonato acreano": "/logos/leagues/5676-brazilian-campeonato-acreano.png",
+    "brazilian campeonato alagoano": "/logos/leagues/5677-brazilian-campeonato-alagoano.png",
+    "brazilian campeonato amapaense": "/logos/leagues/5678-brazilian-campeonato-amapaense.png",
+    "brazilian serie a": "/logos/leagues/4351-brazilian-serie-a.png",
+    "brazilian serie b": "/logos/leagues/4404-brazilian-serie-b.png",
+    "brazilian serie c": "/logos/leagues/4625-brazilian-serie-c.png",
+    "copa do brasil": "/logos/leagues/4725-copa-do-brasil.png",
+    "canadian championship": "/logos/leagues/5922-canadian-championship.png",
+    "canadian northern super league": "/logos/leagues/5602-canadian-northern-super-league.png",
+    "canadian premier league": "/logos/leagues/4820-canadian-premier-league.png",
+    "chile primera b": "/logos/leagues/4899-chile-primera-b.png",
+    "chile primera division": "/logos/leagues/4627-chile-primera-division.png",
+    "chile segunda division": "/logos/leagues/5481-chile-segunda-division.png",
+    "chilean copa de la liga": "/logos/leagues/5858-chilean-copa-de-la-liga.png",
+    "copa chile": "/logos/leagues/5378-copa-chile.png",
+    "supercopa de chile": "/logos/leagues/5697-supercopa-de-chile.png",
+    "china fa cup": "/logos/leagues/5525-china-fa-cup.png",
+    "china league one": "/logos/leagues/4628-china-league-one.png",
+    "china league two": "/logos/leagues/5310-china-league-two.png",
+    "chinese super league": "/logos/leagues/4359-chinese-super-league.png",
+    "colombian liga dimayor": "/logos/leagues/4497-colombian-liga-dimayor.png",
+    "colombian torneo dimayor": "/logos/leagues/4951-colombian-torneo-dimayor.png",
+    "copa colombia": "/logos/leagues/5183-copa-colombia.png",
+    "superliga colombiana": "/logos/leagues/5804-superliga-colombiana.png",
+    "croatian druga hnl": "/logos/leagues/4952-croatian-druga-hnl.png",
+    "croatian first football league": "/logos/leagues/4629-croatian-first-football-league.png",
+    "croatian second football league": "/logos/leagues/5910-croatian-second-football-league.png",
+    "danish 1st division": "/logos/leagues/4683-danish-1st-division.png",
+    "danish 2nd division": "/logos/leagues/4632-danish-2nd-division.png",
+    "danish superliga": "/logos/leagues/4340-danish-superliga.png",
+    "denmark 3 division": "/logos/leagues/5222-denmark-3-division.png",
+    "denmark a liga": "/logos/leagues/5202-denmark-a-liga.png",
+    "egypt league cup": "/logos/leagues/5185-egypt-league-cup.png",
+    "egyptian premier league": "/logos/leagues/4829-egyptian-premier-league.png",
+    "efl cup": "/logos/leagues/4570-efl-cup.png",
+    "efl trophy": "/logos/leagues/4847-efl-trophy.png",
+    "english isthmian league north division": "/logos/leagues/5225-english-isthmian-league-north-division.png",
+    "english isthmian league premier division": "/logos/leagues/4647-english-isthmian-league-premier-division.png",
+    "english isthmian league south central division": "/logos/leagues/5226-english-isthmian-league-south-central-division.png",
+    "english league 1": "/logos/leagues/4396-english-league-1.png",
+    "english league 2": "/logos/leagues/4397-english-league-2.png",
+    "english league championship": "/logos/leagues/4329-english-league-championship.png",
+    "english premier league": "/logos/leagues/4328-english-premier-league.png",
+    "coupe de france": "/logos/leagues/4484-coupe-de-france.png",
+    "coupe de la ligue": "/logos/leagues/4504-coupe-de-la-ligue.png",
+    "french ligue 1": "/logos/leagues/4334-french-ligue-1.png",
+    "french ligue 2": "/logos/leagues/4401-french-ligue-2.png",
+    "french ligue 3": "/logos/leagues/4637-french-ligue-3.png",
+    "dfb pokal": "/logos/leagues/4485-dfb-pokal.png",
+    "dfb pokal frauen": "/logos/leagues/5403-dfb-pokal-frauen.png",
+    "german 2 bundesliga": "/logos/leagues/4399-german-2-bundesliga.png",
+    "german bundesliga": "/logos/leagues/4331-german-bundesliga.png",
+    "german oberliga baden wurttemberg": "/logos/leagues/5891-german-oberliga-baden-wurttemberg.png",
+    "ghanaian premier league": "/logos/leagues/4974-ghanaian-premier-league.png",
+    "greek football cup": "/logos/leagues/5830-greek-football-cup.png",
+    "greek gamma ethniki group 1": "/logos/leagues/5842-greek-gamma-ethniki-group-1.png",
+    "greek gamma ethniki group 2": "/logos/leagues/5843-greek-gamma-ethniki-group-2.png",
+    "greek gamma ethniki group 3": "/logos/leagues/5844-greek-gamma-ethniki-group-3.png",
+    "greek gamma ethniki group 4": "/logos/leagues/5845-greek-gamma-ethniki-group-4.png",
+    "greek super league 1": "/logos/leagues/4336-greek-super-league-1.png",
+    "greek super league 2": "/logos/leagues/4640-greek-super-league-2.png",
+    "hungarian nb i": "/logos/leagues/4690-hungarian-nb-i.png",
+    "hungarian nb ii": "/logos/leagues/4965-hungarian-nb-ii.png",
+    "hungarian nb iii northeast": "/logos/leagues/5865-hungarian-nb-iii-northeast.png",
+    "hungarian nb iii northwest": "/logos/leagues/5864-hungarian-nb-iii-northwest.png",
+    "hungarian nb iii southeast": "/logos/leagues/5867-hungarian-nb-iii-southeast.png",
+    "coppa italia": "/logos/leagues/4506-coppa-italia.png",
+    "coppa italia women": "/logos/leagues/5632-coppa-italia-women.png",
+    "italian serie a": "/logos/leagues/4332-italian-serie-a.png",
+    "italian serie a womens cup": "/logos/leagues/5919-italian-serie-a-womens-cup.png",
+    "italian serie b": "/logos/leagues/4394-italian-serie-b.png",
+    "italian serie c girone c": "/logos/leagues/4398-italian-serie-c-girone-c.png",
+    "japan emperors cup": "/logos/leagues/5637-japan-emperors-cup.png",
+    "japan football league": "/logos/leagues/5626-japan-football-league.png",
+    "japanese j1 league": "/logos/leagues/4633-japanese-j1-league.png",
+    "japanese j2 league": "/logos/leagues/4824-japanese-j2-league.png",
+    "japanese j3 league": "/logos/leagues/4967-japanese-j3-league.png",
+    "mexican campeon de campeones": "/logos/leagues/5662-mexican-campeon-de-campeones.png",
+    "mexican liga de expansion mx": "/logos/leagues/4654-mexican-liga-de-expansion-mx.png",
+    "mexican liga femenil": "/logos/leagues/5206-mexican-liga-femenil.png",
+    "mexican liga mx": "/logos/leagues/4350-mexican-liga-mx.png",
+    "moroccan botola 2": "/logos/leagues/4657-moroccan-botola-2.png",
+    "moroccan championship": "/logos/leagues/4520-moroccan-championship.png",
+    "nigerian npfl": "/logos/leagues/4827-nigerian-npfl.png",
+    "norway toppserien": "/logos/leagues/5208-norway-toppserien.png",
+    "norwegian 1 divisjon": "/logos/leagues/4457-norwegian-1-divisjon.png",
+    "norwegian cupen": "/logos/leagues/5634-norwegian-cupen.png",
+    "norwegian eliteserien": "/logos/leagues/4358-norwegian-eliteserien.png",
+    "norwegian second division group 1": "/logos/leagues/5758-norwegian-second-division-group-1.png",
+    "polish cup": "/logos/leagues/5838-polish-cup.png",
+    "polish ekstraklasa": "/logos/leagues/4422-polish-ekstraklasa.png",
+    "polish i liga": "/logos/leagues/4661-polish-i-liga.png",
+    "polish ii liga": "/logos/leagues/5709-polish-ii-liga.png",
+    "polish iii liga group i": "/logos/leagues/5798-polish-iii-liga-group-i.png",
+    "campeonato de portugal serie a": "/logos/leagues/5745-campeonato-de-portugal-serie-a.png",
+    "campeonato de portugal serie b": "/logos/leagues/5746-campeonato-de-portugal-serie-b.png",
+    "campeonato de portugal serie c": "/logos/leagues/5747-campeonato-de-portugal-serie-c.png",
+    "campeonato de portugal serie d": "/logos/leagues/5748-campeonato-de-portugal-serie-d.png",
+    "campeonato nacional feminino": "/logos/leagues/5404-campeonato-nacional-feminino.png",
+    "portugal liga 3": "/logos/leagues/5216-portugal-liga-3.png",
+    "portuguese ligapro": "/logos/leagues/4662-portuguese-ligapro.png",
+    "portuguese primeira liga": "/logos/leagues/4344-portuguese-primeira-liga.png",
+    "taca de liga": "/logos/leagues/4509-taca-de-liga.png",
+    "taca de portugal": "/logos/leagues/4510-taca-de-portugal.png",
+    "romanian liga i": "/logos/leagues/4691-romanian-liga-i.png",
+    "romanian liga ii": "/logos/leagues/4665-romanian-liga-ii.png",
+    "romanian liga iii seria i": "/logos/leagues/5821-romanian-liga-iii-seria-i.png",
+    "romanian liga iii seria ii": "/logos/leagues/5822-romanian-liga-iii-seria-ii.png",
+    "romanian liga iii seria iii": "/logos/leagues/5823-romanian-liga-iii-seria-iii.png",
+    "saudi arabian pro league": "/logos/leagues/4668-saudi-arabian-pro-league.png",
+    "saudi first division league": "/logos/leagues/5627-saudi-first-division-league.png",
+    "saudi king cup": "/logos/leagues/5649-saudi-king-cup.png",
+    "saudi super cup": "/logos/leagues/5650-saudi-super-cup.png",
+    "scottish challenge cup": "/logos/leagues/5939-scottish-challenge-cup.png",
+    "scottish championship": "/logos/leagues/4395-scottish-championship.png",
+    "scottish fa cup": "/logos/leagues/4723-scottish-fa-cup.png",
+    "scottish highland league": "/logos/leagues/5095-scottish-highland-league.png",
+    "scottish league 1": "/logos/leagues/4669-scottish-league-1.png",
+    "scottish league 2": "/logos/leagues/4670-scottish-league-2.png",
+    "scottish premier league": "/logos/leagues/4330-scottish-premier-league.png",
+    "senegal ligue 1": "/logos/leagues/4754-senegal-ligue-1.png",
+    "serbian prva liga": "/logos/leagues/5074-serbian-prva-liga.png",
+    "serbian super liga": "/logos/leagues/4671-serbian-super-liga.png",
+    "cosafa cup": "/logos/leagues/5182-cosafa-cup.png",
+    "south africa 8 cup": "/logos/leagues/5197-south-africa-8-cup.png",
+    "south african premier soccer league": "/logos/leagues/4802-south-african-premier-soccer-league.png",
+    "korea cup": "/logos/leagues/5635-korea-cup.png",
+    "korean k3 league": "/logos/leagues/5639-korean-k3-league.png",
+    "south korean k league 1": "/logos/leagues/4689-south-korean-k-league-1.png",
+    "south korean k league 2": "/logos/leagues/4822-south-korean-k-league-2.png",
+    "south korean k4 league": "/logos/leagues/5913-south-korean-k4-league.png",
+    "copa del rey": "/logos/leagues/4483-copa-del-rey.png",
+    "primera division rfef group 1": "/logos/leagues/4673-primera-division-rfef-group-1.png",
+    "primera division rfef group 2": "/logos/leagues/4750-primera-division-rfef-group-2.png",
+    "spanish copa federacion": "/logos/leagues/5703-spanish-copa-federacion.png",
+    "spanish la liga": "/logos/leagues/4335-spanish-la-liga.png",
+    "spanish la liga 2": "/logos/leagues/4400-spanish-la-liga-2.png",
+    "supercopa de espana": "/logos/leagues/4511-supercopa-de-espana.png",
+    "svenska cupen": "/logos/leagues/4756-svenska-cupen.png",
+    "sweden damallsvenskan": "/logos/leagues/5209-sweden-damallsvenskan.png",
+    "swedish allsvenskan": "/logos/leagues/4347-swedish-allsvenskan.png",
+    "swedish division 1 north": "/logos/leagues/4674-swedish-division-1-north.png",
+    "swedish division 1 south": "/logos/leagues/4845-swedish-division-1-south.png",
+    "swedish superettan": "/logos/leagues/4403-swedish-superettan.png",
+    "swiss 1 liga classic group 1": "/logos/leagues/5936-swiss-1-liga-classic-group-1.png",
+    "swiss 1 liga classic group 2": "/logos/leagues/5937-swiss-1-liga-classic-group-2.png",
+    "swiss 1 liga classic group 3": "/logos/leagues/5938-swiss-1-liga-classic-group-3.png",
+    "swiss challenge league": "/logos/leagues/4713-swiss-challenge-league.png",
+    "swiss cup": "/logos/leagues/5489-swiss-cup.png",
+    "swiss super league": "/logos/leagues/4675-swiss-super-league.png",
+    "tunisian ligue 1": "/logos/leagues/4828-tunisian-ligue-1.png",
+    "turkish 1 lig": "/logos/leagues/4676-turkish-1-lig.png",
+    "turkish 2 lig": "/logos/leagues/4679-turkish-2-lig.png",
+    "turkish 3 lig group 1": "/logos/leagues/5868-turkish-3-lig-group-1.png",
+    "turkish 3 lig group 2": "/logos/leagues/5869-turkish-3-lig-group-2.png",
+    "turkish 3 lig group 3": "/logos/leagues/5870-turkish-3-lig-group-3.png",
+    "turkish super lig": "/logos/leagues/4339-turkish-super-lig.png",
+    "ukrainian first league": "/logos/leagues/4677-ukrainian-first-league.png",
+    "ukrainian premier league": "/logos/leagues/4354-ukrainian-premier-league.png",
+    "copa auf uruguay": "/logos/leagues/5526-copa-auf-uruguay.png",
+    "copa de la liga auf": "/logos/leagues/5803-copa-de-la-liga-auf.png",
+    "uruguayan primera division": "/logos/leagues/4432-uruguayan-primera-division.png",
+    "uruguayan segunda division": "/logos/leagues/5072-uruguayan-segunda-division.png"
+  },
+  "leagueItems": [
+    {
+      "id": "4753",
+      "name": "Algerian Ligue 1",
+      "country": "Algeria",
+      "logo": "/logos/leagues/4753-algerian-ligue-1.png"
+    },
+    {
+      "id": "5215",
+      "name": "Argentina Primera B Metropolitana",
+      "country": "Argentina",
+      "logo": "/logos/leagues/5215-argentina-primera-b-metropolitana.png"
+    },
+    {
+      "id": "5523",
+      "name": "Argentina Torneo Federal A",
+      "country": "Argentina",
+      "logo": "/logos/leagues/5523-argentina-torneo-federal-a.png"
+    },
+    {
+      "id": "5428",
+      "name": "Argentinian Copa de la Liga Profesional",
+      "country": "Argentina",
+      "logo": "/logos/leagues/5428-argentinian-copa-de-la-liga-profesional.png"
+    },
+    {
+      "id": "4616",
+      "name": "Argentinian Primera B Nacional",
+      "country": "Argentina",
+      "logo": "/logos/leagues/4616-argentinian-primera-b-nacional.png"
+    },
+    {
+      "id": "5524",
+      "name": "Argentinian Primera C",
+      "country": "Argentina",
+      "logo": "/logos/leagues/5524-argentinian-primera-c.png"
+    },
+    {
+      "id": "4406",
+      "name": "Argentinian Primera Division",
+      "country": "Argentina",
+      "logo": "/logos/leagues/4406-argentinian-primera-division.png"
+    },
+    {
+      "id": "4500",
+      "name": "Copa Argentina",
+      "country": "Argentina",
+      "logo": "/logos/leagues/4500-copa-argentina.png"
+    },
+    {
+      "id": "4620",
+      "name": "Australia ACT NPL",
+      "country": "Australia",
+      "logo": "/logos/leagues/4620-australia-act-npl.png"
+    },
+    {
+      "id": "5013",
+      "name": "Australia Brisbane Premier League",
+      "country": "Australia",
+      "logo": "/logos/leagues/5013-australia-brisbane-premier-league.png"
+    },
+    {
+      "id": "5180",
+      "name": "Australia Cup",
+      "country": "Australia",
+      "logo": "/logos/leagues/5180-australia-cup.png"
+    },
+    {
+      "id": "5011",
+      "name": "Australia New South Wales NPL",
+      "country": "Australia",
+      "logo": "/logos/leagues/5011-australia-new-south-wales-npl.png"
+    },
+    {
+      "id": "5010",
+      "name": "Australia Northern NSW NPL",
+      "country": "Australia",
+      "logo": "/logos/leagues/5010-australia-northern-nsw-npl.png"
+    },
+    {
+      "id": "4356",
+      "name": "Australian A-League",
+      "country": "Australia",
+      "logo": "/logos/leagues/4356-australian-a-league.png"
+    },
+    {
+      "id": "4621",
+      "name": "Austrian Bundesliga",
+      "country": "Austria",
+      "logo": "/logos/leagues/4621-austrian-bundesliga.png"
+    },
+    {
+      "id": "5883",
+      "name": "Austrian Cup",
+      "country": "Austria",
+      "logo": "/logos/leagues/5883-austrian-cup.png"
+    },
+    {
+      "id": "4796",
+      "name": "Austrian Erste Liga",
+      "country": "Austria",
+      "logo": "/logos/leagues/4796-austrian-erste-liga.png"
+    },
+    {
+      "id": "5318",
+      "name": "Austrian Regionalliga Mitte",
+      "country": "Austria",
+      "logo": "/logos/leagues/5318-austrian-regionalliga-mitte.png"
+    },
+    {
+      "id": "5934",
+      "name": "Austrian Regionalliga Nord",
+      "country": "Austria",
+      "logo": "/logos/leagues/5934-austrian-regionalliga-nord.png"
+    },
+    {
+      "id": "5316",
+      "name": "Austrian Regionalliga West",
+      "country": "Austria",
+      "logo": "/logos/leagues/5316-austrian-regionalliga-west.png"
+    },
+    {
+      "id": "4623",
+      "name": "Belgian Challenger Pro League",
+      "country": "Belgium",
+      "logo": "/logos/leagues/4623-belgian-challenger-pro-league.png"
+    },
+    {
+      "id": "5831",
+      "name": "Belgian Cup",
+      "country": "Belgium",
+      "logo": "/logos/leagues/5831-belgian-cup.png"
+    },
+    {
+      "id": "4338",
+      "name": "Belgian Pro League",
+      "country": "Belgium",
+      "logo": "/logos/leagues/4338-belgian-pro-league.png"
+    },
+    {
+      "id": "5923",
+      "name": "Belgian Super Cup",
+      "country": "Belgium",
+      "logo": "/logos/leagues/5923-belgian-super-cup.png"
+    },
+    {
+      "id": "5201",
+      "name": "Brazil Brasileiro Women",
+      "country": "Brazil",
+      "logo": "/logos/leagues/5201-brazil-brasileiro-women.png"
+    },
+    {
+      "id": "5079",
+      "name": "Brazil Serie D",
+      "country": "Brazil",
+      "logo": "/logos/leagues/5079-brazil-serie-d.png"
+    },
+    {
+      "id": "5676",
+      "name": "Brazilian Campeonato Acreano",
+      "country": "Brazil",
+      "logo": "/logos/leagues/5676-brazilian-campeonato-acreano.png"
+    },
+    {
+      "id": "5677",
+      "name": "Brazilian Campeonato Alagoano",
+      "country": "Brazil",
+      "logo": "/logos/leagues/5677-brazilian-campeonato-alagoano.png"
+    },
+    {
+      "id": "5678",
+      "name": "Brazilian Campeonato Amapaense",
+      "country": "Brazil",
+      "logo": "/logos/leagues/5678-brazilian-campeonato-amapaense.png"
+    },
+    {
+      "id": "4351",
+      "name": "Brazilian Serie A",
+      "country": "Brazil",
+      "logo": "/logos/leagues/4351-brazilian-serie-a.png"
+    },
+    {
+      "id": "4404",
+      "name": "Brazilian Serie B",
+      "country": "Brazil",
+      "logo": "/logos/leagues/4404-brazilian-serie-b.png"
+    },
+    {
+      "id": "4625",
+      "name": "Brazilian Serie C",
+      "country": "Brazil",
+      "logo": "/logos/leagues/4625-brazilian-serie-c.png"
+    },
+    {
+      "id": "4725",
+      "name": "Copa do Brasil",
+      "country": "Brazil",
+      "logo": "/logos/leagues/4725-copa-do-brasil.png"
+    },
+    {
+      "id": "5922",
+      "name": "Canadian Championship",
+      "country": "Canada",
+      "logo": "/logos/leagues/5922-canadian-championship.png"
+    },
+    {
+      "id": "5602",
+      "name": "Canadian Northern Super League",
+      "country": "Canada",
+      "logo": "/logos/leagues/5602-canadian-northern-super-league.png"
+    },
+    {
+      "id": "4820",
+      "name": "Canadian Premier League",
+      "country": "Canada",
+      "logo": "/logos/leagues/4820-canadian-premier-league.png"
+    },
+    {
+      "id": "4899",
+      "name": "Chile Primera B",
+      "country": "Chile",
+      "logo": "/logos/leagues/4899-chile-primera-b.png"
+    },
+    {
+      "id": "4627",
+      "name": "Chile Primera Division",
+      "country": "Chile",
+      "logo": "/logos/leagues/4627-chile-primera-division.png"
+    },
+    {
+      "id": "5481",
+      "name": "Chile Segunda División",
+      "country": "Chile",
+      "logo": "/logos/leagues/5481-chile-segunda-division.png"
+    },
+    {
+      "id": "5858",
+      "name": "Chilean Copa de la Liga",
+      "country": "Chile",
+      "logo": "/logos/leagues/5858-chilean-copa-de-la-liga.png"
+    },
+    {
+      "id": "5378",
+      "name": "Copa Chile",
+      "country": "Chile",
+      "logo": "/logos/leagues/5378-copa-chile.png"
+    },
+    {
+      "id": "5697",
+      "name": "Supercopa de Chile",
+      "country": "Chile",
+      "logo": "/logos/leagues/5697-supercopa-de-chile.png"
+    },
+    {
+      "id": "5525",
+      "name": "China FA Cup",
+      "country": "China",
+      "logo": "/logos/leagues/5525-china-fa-cup.png"
+    },
+    {
+      "id": "4628",
+      "name": "China League One",
+      "country": "China",
+      "logo": "/logos/leagues/4628-china-league-one.png"
+    },
+    {
+      "id": "5310",
+      "name": "China league Two",
+      "country": "China",
+      "logo": "/logos/leagues/5310-china-league-two.png"
+    },
+    {
+      "id": "4359",
+      "name": "Chinese Super League",
+      "country": "China",
+      "logo": "/logos/leagues/4359-chinese-super-league.png"
+    },
+    {
+      "id": "4497",
+      "name": "Colombian Liga DIMAYOR",
+      "country": "Colombia",
+      "logo": "/logos/leagues/4497-colombian-liga-dimayor.png"
+    },
+    {
+      "id": "4951",
+      "name": "Colombian Torneo DIMAYOR",
+      "country": "Colombia",
+      "logo": "/logos/leagues/4951-colombian-torneo-dimayor.png"
+    },
+    {
+      "id": "5183",
+      "name": "Copa Colombia",
+      "country": "Colombia",
+      "logo": "/logos/leagues/5183-copa-colombia.png"
+    },
+    {
+      "id": "5804",
+      "name": "Superliga Colombiana",
+      "country": "Colombia",
+      "logo": "/logos/leagues/5804-superliga-colombiana.png"
+    },
+    {
+      "id": "4952",
+      "name": "Croatian Druga HNL",
+      "country": "Croatia",
+      "logo": "/logos/leagues/4952-croatian-druga-hnl.png"
+    },
+    {
+      "id": "4629",
+      "name": "Croatian First Football League",
+      "country": "Croatia",
+      "logo": "/logos/leagues/4629-croatian-first-football-league.png"
+    },
+    {
+      "id": "5910",
+      "name": "Croatian Second Football League",
+      "country": "Croatia",
+      "logo": "/logos/leagues/5910-croatian-second-football-league.png"
+    },
+    {
+      "id": "4683",
+      "name": "Danish 1st Division",
+      "country": "Denmark",
+      "logo": "/logos/leagues/4683-danish-1st-division.png"
+    },
+    {
+      "id": "4632",
+      "name": "Danish 2nd Division",
+      "country": "Denmark",
+      "logo": "/logos/leagues/4632-danish-2nd-division.png"
+    },
+    {
+      "id": "4340",
+      "name": "Danish Superliga",
+      "country": "Denmark",
+      "logo": "/logos/leagues/4340-danish-superliga.png"
+    },
+    {
+      "id": "5222",
+      "name": "Denmark 3 Division",
+      "country": "Denmark",
+      "logo": "/logos/leagues/5222-denmark-3-division.png"
+    },
+    {
+      "id": "5202",
+      "name": "Denmark A-Liga",
+      "country": "Denmark",
+      "logo": "/logos/leagues/5202-denmark-a-liga.png"
+    },
+    {
+      "id": "5185",
+      "name": "Egypt League Cup",
+      "country": "Egypt",
+      "logo": "/logos/leagues/5185-egypt-league-cup.png"
+    },
+    {
+      "id": "4829",
+      "name": "Egyptian Premier League",
+      "country": "Egypt",
+      "logo": "/logos/leagues/4829-egyptian-premier-league.png"
+    },
+    {
+      "id": "4570",
+      "name": "EFL Cup",
+      "country": "England",
+      "logo": "/logos/leagues/4570-efl-cup.png"
+    },
+    {
+      "id": "4847",
+      "name": "EFL Trophy",
+      "country": "England",
+      "logo": "/logos/leagues/4847-efl-trophy.png"
+    },
+    {
+      "id": "5225",
+      "name": "English Isthmian League North Division",
+      "country": "England",
+      "logo": "/logos/leagues/5225-english-isthmian-league-north-division.png"
+    },
+    {
+      "id": "4647",
+      "name": "English Isthmian League Premier Division",
+      "country": "England",
+      "logo": "/logos/leagues/4647-english-isthmian-league-premier-division.png"
+    },
+    {
+      "id": "5226",
+      "name": "English Isthmian League South Central Division",
+      "country": "England",
+      "logo": "/logos/leagues/5226-english-isthmian-league-south-central-division.png"
+    },
+    {
+      "id": "4396",
+      "name": "English League 1",
+      "country": "England",
+      "logo": "/logos/leagues/4396-english-league-1.png"
+    },
+    {
+      "id": "4397",
+      "name": "English League 2",
+      "country": "England",
+      "logo": "/logos/leagues/4397-english-league-2.png"
+    },
+    {
+      "id": "4329",
+      "name": "English League Championship",
+      "country": "England",
+      "logo": "/logos/leagues/4329-english-league-championship.png"
+    },
+    {
+      "id": "4328",
+      "name": "English Premier League",
+      "country": "England",
+      "logo": "/logos/leagues/4328-english-premier-league.png"
+    },
+    {
+      "id": "4484",
+      "name": "Coupe de France",
+      "country": "France",
+      "logo": "/logos/leagues/4484-coupe-de-france.png"
+    },
+    {
+      "id": "4504",
+      "name": "Coupe de la Ligue",
+      "country": "France",
+      "logo": "/logos/leagues/4504-coupe-de-la-ligue.png"
+    },
+    {
+      "id": "4334",
+      "name": "French Ligue 1",
+      "country": "France",
+      "logo": "/logos/leagues/4334-french-ligue-1.png"
+    },
+    {
+      "id": "4401",
+      "name": "French Ligue 2",
+      "country": "France",
+      "logo": "/logos/leagues/4401-french-ligue-2.png"
+    },
+    {
+      "id": "4637",
+      "name": "French Ligue 3",
+      "country": "France",
+      "logo": "/logos/leagues/4637-french-ligue-3.png"
+    },
+    {
+      "id": "4485",
+      "name": "DFB-Pokal",
+      "country": "Germany",
+      "logo": "/logos/leagues/4485-dfb-pokal.png"
+    },
+    {
+      "id": "5403",
+      "name": "DFB-Pokal Frauen",
+      "country": "Germany",
+      "logo": "/logos/leagues/5403-dfb-pokal-frauen.png"
+    },
+    {
+      "id": "4399",
+      "name": "German 2. Bundesliga",
+      "country": "Germany",
+      "logo": "/logos/leagues/4399-german-2-bundesliga.png"
+    },
+    {
+      "id": "4331",
+      "name": "German Bundesliga",
+      "country": "Germany",
+      "logo": "/logos/leagues/4331-german-bundesliga.png"
+    },
+    {
+      "id": "5891",
+      "name": "German Oberliga Baden-Württemberg",
+      "country": "Germany",
+      "logo": "/logos/leagues/5891-german-oberliga-baden-wurttemberg.png"
+    },
+    {
+      "id": "4974",
+      "name": "Ghanaian Premier League",
+      "country": "Ghana",
+      "logo": "/logos/leagues/4974-ghanaian-premier-league.png"
+    },
+    {
+      "id": "5830",
+      "name": "Greek Football Cup",
+      "country": "Greece",
+      "logo": "/logos/leagues/5830-greek-football-cup.png"
+    },
+    {
+      "id": "5842",
+      "name": "Greek Gamma Ethniki Group 1",
+      "country": "Greece",
+      "logo": "/logos/leagues/5842-greek-gamma-ethniki-group-1.png"
+    },
+    {
+      "id": "5843",
+      "name": "Greek Gamma Ethniki Group 2",
+      "country": "Greece",
+      "logo": "/logos/leagues/5843-greek-gamma-ethniki-group-2.png"
+    },
+    {
+      "id": "5844",
+      "name": "Greek Gamma Ethniki Group 3",
+      "country": "Greece",
+      "logo": "/logos/leagues/5844-greek-gamma-ethniki-group-3.png"
+    },
+    {
+      "id": "5845",
+      "name": "Greek Gamma Ethniki Group 4",
+      "country": "Greece",
+      "logo": "/logos/leagues/5845-greek-gamma-ethniki-group-4.png"
+    },
+    {
+      "id": "4336",
+      "name": "Greek Super League 1",
+      "country": "Greece",
+      "logo": "/logos/leagues/4336-greek-super-league-1.png"
+    },
+    {
+      "id": "4640",
+      "name": "Greek Super League 2",
+      "country": "Greece",
+      "logo": "/logos/leagues/4640-greek-super-league-2.png"
+    },
+    {
+      "id": "4690",
+      "name": "Hungarian NB I",
+      "country": "Hungary",
+      "logo": "/logos/leagues/4690-hungarian-nb-i.png"
+    },
+    {
+      "id": "4965",
+      "name": "Hungarian NB II",
+      "country": "Hungary",
+      "logo": "/logos/leagues/4965-hungarian-nb-ii.png"
+    },
+    {
+      "id": "5865",
+      "name": "Hungarian NB III Northeast",
+      "country": "Hungary",
+      "logo": "/logos/leagues/5865-hungarian-nb-iii-northeast.png"
+    },
+    {
+      "id": "5864",
+      "name": "Hungarian NB III Northwest",
+      "country": "Hungary",
+      "logo": "/logos/leagues/5864-hungarian-nb-iii-northwest.png"
+    },
+    {
+      "id": "5867",
+      "name": "Hungarian NB III Southeast",
+      "country": "Hungary",
+      "logo": "/logos/leagues/5867-hungarian-nb-iii-southeast.png"
+    },
+    {
+      "id": "4506",
+      "name": "Coppa Italia",
+      "country": "Italy",
+      "logo": "/logos/leagues/4506-coppa-italia.png"
+    },
+    {
+      "id": "5632",
+      "name": "Coppa Italia Women",
+      "country": "Italy",
+      "logo": "/logos/leagues/5632-coppa-italia-women.png"
+    },
+    {
+      "id": "4332",
+      "name": "Italian Serie A",
+      "country": "Italy",
+      "logo": "/logos/leagues/4332-italian-serie-a.png"
+    },
+    {
+      "id": "5919",
+      "name": "Italian Serie A Womens Cup",
+      "country": "Italy",
+      "logo": "/logos/leagues/5919-italian-serie-a-womens-cup.png"
+    },
+    {
+      "id": "4394",
+      "name": "Italian Serie B",
+      "country": "Italy",
+      "logo": "/logos/leagues/4394-italian-serie-b.png"
+    },
+    {
+      "id": "4398",
+      "name": "Italian Serie C Girone C",
+      "country": "Italy",
+      "logo": "/logos/leagues/4398-italian-serie-c-girone-c.png"
+    },
+    {
+      "id": "5637",
+      "name": "Japan Emperors Cup",
+      "country": "Japan",
+      "logo": "/logos/leagues/5637-japan-emperors-cup.png"
+    },
+    {
+      "id": "5626",
+      "name": "Japan Football League",
+      "country": "Japan",
+      "logo": "/logos/leagues/5626-japan-football-league.png"
+    },
+    {
+      "id": "4633",
+      "name": "Japanese J1 League",
+      "country": "Japan",
+      "logo": "/logos/leagues/4633-japanese-j1-league.png"
+    },
+    {
+      "id": "4824",
+      "name": "Japanese J2 League",
+      "country": "Japan",
+      "logo": "/logos/leagues/4824-japanese-j2-league.png"
+    },
+    {
+      "id": "4967",
+      "name": "Japanese J3 League",
+      "country": "Japan",
+      "logo": "/logos/leagues/4967-japanese-j3-league.png"
+    },
+    {
+      "id": "5662",
+      "name": "Mexican Campeon de Campeones",
+      "country": "Mexico",
+      "logo": "/logos/leagues/5662-mexican-campeon-de-campeones.png"
+    },
+    {
+      "id": "4654",
+      "name": "Mexican Liga de Expansión MX",
+      "country": "Mexico",
+      "logo": "/logos/leagues/4654-mexican-liga-de-expansion-mx.png"
+    },
+    {
+      "id": "5206",
+      "name": "Mexican Liga Femenil",
+      "country": "Mexico",
+      "logo": "/logos/leagues/5206-mexican-liga-femenil.png"
+    },
+    {
+      "id": "4350",
+      "name": "Mexican Liga MX",
+      "country": "Mexico",
+      "logo": "/logos/leagues/4350-mexican-liga-mx.png"
+    },
+    {
+      "id": "4657",
+      "name": "Moroccan Botola 2",
+      "country": "Morocco",
+      "logo": "/logos/leagues/4657-moroccan-botola-2.png"
+    },
+    {
+      "id": "4520",
+      "name": "Moroccan Championship",
+      "country": "Morocco",
+      "logo": "/logos/leagues/4520-moroccan-championship.png"
+    },
+    {
+      "id": "4827",
+      "name": "Nigerian NPFL",
+      "country": "Nigeria",
+      "logo": "/logos/leagues/4827-nigerian-npfl.png"
+    },
+    {
+      "id": "5208",
+      "name": "Norway Toppserien",
+      "country": "Norway",
+      "logo": "/logos/leagues/5208-norway-toppserien.png"
+    },
+    {
+      "id": "4457",
+      "name": "Norwegian 1. Divisjon",
+      "country": "Norway",
+      "logo": "/logos/leagues/4457-norwegian-1-divisjon.png"
+    },
+    {
+      "id": "5634",
+      "name": "Norwegian Cupen",
+      "country": "Norway",
+      "logo": "/logos/leagues/5634-norwegian-cupen.png"
+    },
+    {
+      "id": "4358",
+      "name": "Norwegian Eliteserien",
+      "country": "Norway",
+      "logo": "/logos/leagues/4358-norwegian-eliteserien.png"
+    },
+    {
+      "id": "5758",
+      "name": "Norwegian Second Division Group 1",
+      "country": "Norway",
+      "logo": "/logos/leagues/5758-norwegian-second-division-group-1.png"
+    },
+    {
+      "id": "5838",
+      "name": "Polish Cup",
+      "country": "Poland",
+      "logo": "/logos/leagues/5838-polish-cup.png"
+    },
+    {
+      "id": "4422",
+      "name": "Polish Ekstraklasa",
+      "country": "Poland",
+      "logo": "/logos/leagues/4422-polish-ekstraklasa.png"
+    },
+    {
+      "id": "4661",
+      "name": "Polish I liga",
+      "country": "Poland",
+      "logo": "/logos/leagues/4661-polish-i-liga.png"
+    },
+    {
+      "id": "5709",
+      "name": "Polish II liga",
+      "country": "Poland",
+      "logo": "/logos/leagues/5709-polish-ii-liga.png"
+    },
+    {
+      "id": "5798",
+      "name": "Polish III liga Group I",
+      "country": "Poland",
+      "logo": "/logos/leagues/5798-polish-iii-liga-group-i.png"
+    },
+    {
+      "id": "5745",
+      "name": "Campeonato de Portugal Serie A",
+      "country": "Portugal",
+      "logo": "/logos/leagues/5745-campeonato-de-portugal-serie-a.png"
+    },
+    {
+      "id": "5746",
+      "name": "Campeonato de Portugal Serie B",
+      "country": "Portugal",
+      "logo": "/logos/leagues/5746-campeonato-de-portugal-serie-b.png"
+    },
+    {
+      "id": "5747",
+      "name": "Campeonato de Portugal Serie C",
+      "country": "Portugal",
+      "logo": "/logos/leagues/5747-campeonato-de-portugal-serie-c.png"
+    },
+    {
+      "id": "5748",
+      "name": "Campeonato de Portugal Serie D",
+      "country": "Portugal",
+      "logo": "/logos/leagues/5748-campeonato-de-portugal-serie-d.png"
+    },
+    {
+      "id": "5404",
+      "name": "Campeonato Nacional Feminino",
+      "country": "Portugal",
+      "logo": "/logos/leagues/5404-campeonato-nacional-feminino.png"
+    },
+    {
+      "id": "5216",
+      "name": "Portugal Liga 3",
+      "country": "Portugal",
+      "logo": "/logos/leagues/5216-portugal-liga-3.png"
+    },
+    {
+      "id": "4662",
+      "name": "Portuguese LigaPro",
+      "country": "Portugal",
+      "logo": "/logos/leagues/4662-portuguese-ligapro.png"
+    },
+    {
+      "id": "4344",
+      "name": "Portuguese Primeira Liga",
+      "country": "Portugal",
+      "logo": "/logos/leagues/4344-portuguese-primeira-liga.png"
+    },
+    {
+      "id": "4509",
+      "name": "Taca de Liga",
+      "country": "Portugal",
+      "logo": "/logos/leagues/4509-taca-de-liga.png"
+    },
+    {
+      "id": "4510",
+      "name": "Taca de Portugal",
+      "country": "Portugal",
+      "logo": "/logos/leagues/4510-taca-de-portugal.png"
+    },
+    {
+      "id": "4691",
+      "name": "Romanian Liga I",
+      "country": "Romania",
+      "logo": "/logos/leagues/4691-romanian-liga-i.png"
+    },
+    {
+      "id": "4665",
+      "name": "Romanian Liga II",
+      "country": "Romania",
+      "logo": "/logos/leagues/4665-romanian-liga-ii.png"
+    },
+    {
+      "id": "5821",
+      "name": "Romanian Liga III Seria I",
+      "country": "Romania",
+      "logo": "/logos/leagues/5821-romanian-liga-iii-seria-i.png"
+    },
+    {
+      "id": "5822",
+      "name": "Romanian Liga III Seria II",
+      "country": "Romania",
+      "logo": "/logos/leagues/5822-romanian-liga-iii-seria-ii.png"
+    },
+    {
+      "id": "5823",
+      "name": "Romanian Liga III Seria III",
+      "country": "Romania",
+      "logo": "/logos/leagues/5823-romanian-liga-iii-seria-iii.png"
+    },
+    {
+      "id": "4668",
+      "name": "Saudi-Arabian Pro League",
+      "country": "Saudi Arabia",
+      "logo": "/logos/leagues/4668-saudi-arabian-pro-league.png"
+    },
+    {
+      "id": "5627",
+      "name": "Saudi First Division League",
+      "country": "Saudi Arabia",
+      "logo": "/logos/leagues/5627-saudi-first-division-league.png"
+    },
+    {
+      "id": "5649",
+      "name": "Saudi King Cup",
+      "country": "Saudi Arabia",
+      "logo": "/logos/leagues/5649-saudi-king-cup.png"
+    },
+    {
+      "id": "5650",
+      "name": "Saudi Super Cup",
+      "country": "Saudi Arabia",
+      "logo": "/logos/leagues/5650-saudi-super-cup.png"
+    },
+    {
+      "id": "5939",
+      "name": "Scottish Challenge Cup",
+      "country": "Scotland",
+      "logo": "/logos/leagues/5939-scottish-challenge-cup.png"
+    },
+    {
+      "id": "4395",
+      "name": "Scottish Championship",
+      "country": "Scotland",
+      "logo": "/logos/leagues/4395-scottish-championship.png"
+    },
+    {
+      "id": "4723",
+      "name": "Scottish FA Cup",
+      "country": "Scotland",
+      "logo": "/logos/leagues/4723-scottish-fa-cup.png"
+    },
+    {
+      "id": "5095",
+      "name": "Scottish Highland League",
+      "country": "Scotland",
+      "logo": "/logos/leagues/5095-scottish-highland-league.png"
+    },
+    {
+      "id": "4669",
+      "name": "Scottish League 1",
+      "country": "Scotland",
+      "logo": "/logos/leagues/4669-scottish-league-1.png"
+    },
+    {
+      "id": "4670",
+      "name": "Scottish League 2",
+      "country": "Scotland",
+      "logo": "/logos/leagues/4670-scottish-league-2.png"
+    },
+    {
+      "id": "4330",
+      "name": "Scottish Premier League",
+      "country": "Scotland",
+      "logo": "/logos/leagues/4330-scottish-premier-league.png"
+    },
+    {
+      "id": "4754",
+      "name": "Senegal Ligue 1",
+      "country": "Senegal",
+      "logo": "/logos/leagues/4754-senegal-ligue-1.png"
+    },
+    {
+      "id": "5074",
+      "name": "Serbian Prva Liga",
+      "country": "Serbia",
+      "logo": "/logos/leagues/5074-serbian-prva-liga.png"
+    },
+    {
+      "id": "4671",
+      "name": "Serbian Super Liga",
+      "country": "Serbia",
+      "logo": "/logos/leagues/4671-serbian-super-liga.png"
+    },
+    {
+      "id": "5182",
+      "name": "COSAFA Cup",
+      "country": "South Africa",
+      "logo": "/logos/leagues/5182-cosafa-cup.png"
+    },
+    {
+      "id": "5197",
+      "name": "South-Africa 8 Cup",
+      "country": "South Africa",
+      "logo": "/logos/leagues/5197-south-africa-8-cup.png"
+    },
+    {
+      "id": "4802",
+      "name": "South African Premier Soccer League",
+      "country": "South Africa",
+      "logo": "/logos/leagues/4802-south-african-premier-soccer-league.png"
+    },
+    {
+      "id": "5635",
+      "name": "Korea Cup",
+      "country": "South Korea",
+      "logo": "/logos/leagues/5635-korea-cup.png"
+    },
+    {
+      "id": "5639",
+      "name": "Korean K3 League",
+      "country": "South Korea",
+      "logo": "/logos/leagues/5639-korean-k3-league.png"
+    },
+    {
+      "id": "4689",
+      "name": "South Korean K League 1",
+      "country": "South Korea",
+      "logo": "/logos/leagues/4689-south-korean-k-league-1.png"
+    },
+    {
+      "id": "4822",
+      "name": "South Korean K League 2",
+      "country": "South Korea",
+      "logo": "/logos/leagues/4822-south-korean-k-league-2.png"
+    },
+    {
+      "id": "5913",
+      "name": "South Korean K4 League",
+      "country": "South Korea",
+      "logo": "/logos/leagues/5913-south-korean-k4-league.png"
+    },
+    {
+      "id": "4483",
+      "name": "Copa del Rey",
+      "country": "Spain",
+      "logo": "/logos/leagues/4483-copa-del-rey.png"
+    },
+    {
+      "id": "4673",
+      "name": "Primera División RFEF Group 1",
+      "country": "Spain",
+      "logo": "/logos/leagues/4673-primera-division-rfef-group-1.png"
+    },
+    {
+      "id": "4750",
+      "name": "Primera División RFEF Group 2",
+      "country": "Spain",
+      "logo": "/logos/leagues/4750-primera-division-rfef-group-2.png"
+    },
+    {
+      "id": "5703",
+      "name": "Spanish Copa Federacion",
+      "country": "Spain",
+      "logo": "/logos/leagues/5703-spanish-copa-federacion.png"
+    },
+    {
+      "id": "4335",
+      "name": "Spanish La Liga",
+      "country": "Spain",
+      "logo": "/logos/leagues/4335-spanish-la-liga.png"
+    },
+    {
+      "id": "4400",
+      "name": "Spanish La Liga 2",
+      "country": "Spain",
+      "logo": "/logos/leagues/4400-spanish-la-liga-2.png"
+    },
+    {
+      "id": "4511",
+      "name": "Supercopa de Espana",
+      "country": "Spain",
+      "logo": "/logos/leagues/4511-supercopa-de-espana.png"
+    },
+    {
+      "id": "4756",
+      "name": "Svenska Cupen",
+      "country": "Sweden",
+      "logo": "/logos/leagues/4756-svenska-cupen.png"
+    },
+    {
+      "id": "5209",
+      "name": "Sweden Damallsvenskan",
+      "country": "Sweden",
+      "logo": "/logos/leagues/5209-sweden-damallsvenskan.png"
+    },
+    {
+      "id": "4347",
+      "name": "Swedish Allsvenskan",
+      "country": "Sweden",
+      "logo": "/logos/leagues/4347-swedish-allsvenskan.png"
+    },
+    {
+      "id": "4674",
+      "name": "Swedish Division 1 North",
+      "country": "Sweden",
+      "logo": "/logos/leagues/4674-swedish-division-1-north.png"
+    },
+    {
+      "id": "4845",
+      "name": "Swedish Division 1 South",
+      "country": "Sweden",
+      "logo": "/logos/leagues/4845-swedish-division-1-south.png"
+    },
+    {
+      "id": "4403",
+      "name": "Swedish Superettan",
+      "country": "Sweden",
+      "logo": "/logos/leagues/4403-swedish-superettan.png"
+    },
+    {
+      "id": "5936",
+      "name": "Swiss 1. Liga Classic Group 1",
+      "country": "Switzerland",
+      "logo": "/logos/leagues/5936-swiss-1-liga-classic-group-1.png"
+    },
+    {
+      "id": "5937",
+      "name": "Swiss 1. Liga Classic Group 2",
+      "country": "Switzerland",
+      "logo": "/logos/leagues/5937-swiss-1-liga-classic-group-2.png"
+    },
+    {
+      "id": "5938",
+      "name": "Swiss 1. Liga Classic Group 3",
+      "country": "Switzerland",
+      "logo": "/logos/leagues/5938-swiss-1-liga-classic-group-3.png"
+    },
+    {
+      "id": "4713",
+      "name": "Swiss Challenge League",
+      "country": "Switzerland",
+      "logo": "/logos/leagues/4713-swiss-challenge-league.png"
+    },
+    {
+      "id": "5489",
+      "name": "Swiss Cup",
+      "country": "Switzerland",
+      "logo": "/logos/leagues/5489-swiss-cup.png"
+    },
+    {
+      "id": "4675",
+      "name": "Swiss Super League",
+      "country": "Switzerland",
+      "logo": "/logos/leagues/4675-swiss-super-league.png"
+    },
+    {
+      "id": "4828",
+      "name": "Tunisian Ligue 1",
+      "country": "Tunisia",
+      "logo": "/logos/leagues/4828-tunisian-ligue-1.png"
+    },
+    {
+      "id": "4676",
+      "name": "Turkish 1 Lig",
+      "country": "Turkey",
+      "logo": "/logos/leagues/4676-turkish-1-lig.png"
+    },
+    {
+      "id": "4679",
+      "name": "Turkish 2 Lig",
+      "country": "Turkey",
+      "logo": "/logos/leagues/4679-turkish-2-lig.png"
+    },
+    {
+      "id": "5868",
+      "name": "Turkish 3 Lig Group 1",
+      "country": "Turkey",
+      "logo": "/logos/leagues/5868-turkish-3-lig-group-1.png"
+    },
+    {
+      "id": "5869",
+      "name": "Turkish 3 Lig Group 2",
+      "country": "Turkey",
+      "logo": "/logos/leagues/5869-turkish-3-lig-group-2.png"
+    },
+    {
+      "id": "5870",
+      "name": "Turkish 3 Lig Group 3",
+      "country": "Turkey",
+      "logo": "/logos/leagues/5870-turkish-3-lig-group-3.png"
+    },
+    {
+      "id": "4339",
+      "name": "Turkish Super Lig",
+      "country": "Turkey",
+      "logo": "/logos/leagues/4339-turkish-super-lig.png"
+    },
+    {
+      "id": "4677",
+      "name": "Ukrainian First League",
+      "country": "Ukraine",
+      "logo": "/logos/leagues/4677-ukrainian-first-league.png"
+    },
+    {
+      "id": "4354",
+      "name": "Ukrainian Premier League",
+      "country": "Ukraine",
+      "logo": "/logos/leagues/4354-ukrainian-premier-league.png"
+    },
+    {
+      "id": "5526",
+      "name": "Copa AUF Uruguay",
+      "country": "Uruguay",
+      "logo": "/logos/leagues/5526-copa-auf-uruguay.png"
+    },
+    {
+      "id": "5803",
+      "name": "Copa de la Liga AUF",
+      "country": "Uruguay",
+      "logo": "/logos/leagues/5803-copa-de-la-liga-auf.png"
+    },
+    {
+      "id": "4432",
+      "name": "Uruguayan Primera Division",
+      "country": "Uruguay",
+      "logo": "/logos/leagues/4432-uruguayan-primera-division.png"
+    },
+    {
+      "id": "5072",
+      "name": "Uruguayan Segunda División",
+      "country": "Uruguay",
+      "logo": "/logos/leagues/5072-uruguayan-segunda-division.png"
+    }
+  ]
+}

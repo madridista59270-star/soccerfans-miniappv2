@@ -239,6 +239,33 @@ export default function Home(){
     return ()=>{alive=false};
   },[]);
 
+
+  // Charge automatiquement beaucoup plus de championnats.
+  // Cette route serveur évite de dépendre d'un ancien logos.json limité à 5.
+  useEffect(()=>{
+    let alive=true;
+
+    fetch("/api/championships",{cache:"no-store"})
+      .then(r=>r.ok?r.json():Promise.reject(new Error("API championnats indisponible")))
+      .then(data=>{
+        if(!alive) return;
+
+        const remoteItems=Array.isArray(data?.leagueItems)
+          ? data.leagueItems
+          : [];
+
+        if(remoteItems.length){
+          setFootballLogos(prev=>({
+            ...prev,
+            leagueItems:remoteItems
+          }));
+        }
+      })
+      .catch(err=>console.warn("Chargement championnats :",err));
+
+    return ()=>{alive=false};
+  },[]);
+
   // Rotation automatique des maillots dans les univers
   useEffect(()=>{
     const id=setInterval(()=>setNationRotation(v=>v+1),20000);
@@ -379,23 +406,42 @@ export default function Home(){
   }
 
   const nationShowcase = useMemo(()=>{
-    return products
-      .filter(p=>(p.cat||"").toLowerCase()==="nations" && p.image)
-      .map((p,index)=>{
-        const detected=detectCountryFromProduct(p);
-        return {
-          id:`${p.id||index}-${index}`,
+    const map=new Map();
+
+    products.forEach((p)=>{
+      if((p.cat||"").toLowerCase()!=="nations") return;
+
+      const detected=detectCountryFromProduct(p);
+      const key=normalizeLogoKey(detected.label);
+
+      if(!map.has(key)){
+        map.set(key,{
           code:detected.label.slice(0,2).toUpperCase(),
           label:detected.label.toUpperCase(),
           query:detected.query,
           flagCode:detected.flagCode,
           flagUrl:detected.flagUrl,
-          image:p.image,
-          productName:p.name||detected.label
-        };
-      });
-  },[products]);
+          images:[]
+        });
+      }
 
+      const item=map.get(key);
+
+      if(p.image && !item.images.includes(p.image)){
+        item.images.push(p.image);
+      }
+
+      // On garde seulement p.image : la photo principale du produit.
+      // Les photos de détails/tissu de p.images ne tournent plus ici.
+    });
+
+    return [...map.values()]
+      .sort((a,b)=>a.label.localeCompare(b.label,"fr"))
+      .map((item,i)=>({
+        ...item,
+        image:rotatingImage(item.images,nationRotation+i)
+      }));
+  },[products,nationRotation]);
 
   function getShopLeagueName(value){
     const key=normalizeLogoKey(value);
@@ -562,10 +608,9 @@ export default function Home(){
           <div className="sfExactNations" ref={nationsRailRef}>
             {nationShowcase.map((item)=>(
               <button
-                key={item.id}
+                key={item.label}
                 className="sfExactNation"
                 onClick={()=>jumpToProducts("Nations",item.query,"")}
-                title={item.productName}
               >
                 <div className="sfExactNationVisual">
                   {item.image
@@ -588,7 +633,7 @@ export default function Home(){
 
         <div className="sfExactHeading sfExactClubHeading">
           <span className="sfExactLine"></span>
-          <h2><span>🏆</span> <em>CHAMPIONNATS</em></h2>
+          <h2><span>🏆</span> <em>CHAMPIONNATS</em> <small className="sfChampCount">{leagueShowcase.length}</small></h2>
           <span className="sfExactLine"></span>
         </div>
 
@@ -2918,15 +2963,21 @@ export default function Home(){
 
 
 
-      /* Nations : toutes les photos principales téléchargées */
-      .sfNationRailWrap .sfExactNations{
-        grid-auto-columns:minmax(165px,1fr) !important;
-      }
-
-      @media (max-width:420px){
-        .sfNationRailWrap .sfExactNations{
-          grid-auto-columns:calc((100vw - 54px)/2.25) !important;
-        }
+      .sfChampCount{
+        display:inline-flex;
+        align-items:center;
+        justify-content:center;
+        min-width:28px;
+        height:22px;
+        margin-left:7px;
+        padding:0 7px;
+        border-radius:999px;
+        border:1px solid rgba(244,197,66,.42);
+        background:rgba(244,197,66,.08);
+        color:#f4c542;
+        font-size:10px;
+        font-style:normal;
+        vertical-align:middle;
       }
 
     `}</style>
