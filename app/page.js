@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 const FALLBACK_PRODUCTS = [
   {id:1,name:"Real Madrid Domicile 26/27",team:"Real Madrid",cat:"Clubs",versions:{Fan:35,Player:45},emoji:"⚪",hot:true},
@@ -58,6 +58,96 @@ function getProductImages(product){
   return [...new Set(all)];
 }
 
+const COUNTRY_TEAMS = [
+  ["France","🇫🇷",["france","french"]],
+  ["Brésil","🇧🇷",["brésil","bresil","brazil"]],
+  ["Argentine","🇦🇷",["argentine","argentina"]],
+  ["Belgique","🇧🇪",["belgique","belgium"]],
+  ["Angleterre","🏴",["england","angleterre"]],
+  ["Portugal","🇵🇹",["portugal"]],
+  ["Espagne","🇪🇸",["spain","espagne"]],
+  ["Allemagne","🇩🇪",["germany","allemagne","deutschland"]],
+  ["Italie","🇮🇹",["italy","italie"]],
+  ["Pays-Bas","🇳🇱",["netherlands","holland","pays bas"]],
+  ["Croatie","🇭🇷",["croatia","croatie"]],
+  ["Maroc","🇲🇦",["morocco","maroc"]],
+  ["Algérie","🇩🇿",["algeria","algérie","algerie"]],
+  ["Tunisie","🇹🇳",["tunisia","tunisie"]],
+  ["Sénégal","🇸🇳",["senegal","sénégal"]],
+  ["Côte d’Ivoire","🇨🇮",["ivory coast","cote d ivoire","côte d ivoire"]],
+  ["Cameroun","🇨🇲",["cameroon","cameroun"]],
+  ["Nigeria","🇳🇬",["nigeria"]],
+  ["Ghana","🇬🇭",["ghana"]],
+  ["Mali","🇲🇱",["mali"]],
+  ["Égypte","🇪🇬",["egypt","égypte","egypte"]],
+  ["Afrique du Sud","🇿🇦",["south africa","afrique du sud"]],
+  ["Colombie","🇨🇴",["colombia","colombie"]],
+  ["Uruguay","🇺🇾",["uruguay"]],
+  ["Chili","🇨🇱",["chile","chili"]],
+  ["Pérou","🇵🇪",["peru","pérou","perou"]],
+  ["Équateur","🇪🇨",["ecuador","équateur","equateur"]],
+  ["Paraguay","🇵🇾",["paraguay"]],
+  ["Venezuela","🇻🇪",["venezuela"]],
+  ["Mexique","🇲🇽",["mexico","mexique"]],
+  ["États-Unis","🇺🇸",["usa","united states","états unis","etats unis"]],
+  ["Canada","🇨🇦",["canada"]],
+  ["Costa Rica","🇨🇷",["costa rica"]],
+  ["Panama","🇵🇦",["panama"]],
+  ["Jamaïque","🇯🇲",["jamaica","jamaïque","jamaique"]],
+  ["Japon","🇯🇵",["japan","japon"]],
+  ["Corée du Sud","🇰🇷",["south korea","korea republic","corée du sud","coree du sud"]],
+  ["Chine","🇨🇳",["china","chine"]],
+  ["Australie","🇦🇺",["australia","australie"]],
+  ["Nouvelle-Zélande","🇳🇿",["new zealand","nouvelle zélande","nouvelle zelande"]],
+  ["Arabie saoudite","🇸🇦",["saudi arabia","arabie saoudite"]],
+  ["Qatar","🇶🇦",["qatar"]],
+  ["Iran","🇮🇷",["iran"]],
+  ["Irak","🇮🇶",["iraq","irak"]],
+  ["Turquie","🇹🇷",["turkey","türkiye","turkiye","turquie"]],
+  ["Grèce","🇬🇷",["greece","grèce","grece"]],
+  ["Suisse","🇨🇭",["switzerland","suisse"]],
+  ["Autriche","🇦🇹",["austria","autriche"]],
+  ["Danemark","🇩🇰",["denmark","danemark"]],
+  ["Suède","🇸🇪",["sweden","suède","suede"]],
+  ["Norvège","🇳🇴",["norway","norvège","norvege"]],
+  ["Pologne","🇵🇱",["poland","pologne"]],
+  ["Ukraine","🇺🇦",["ukraine"]],
+  ["Serbie","🇷🇸",["serbia","serbie"]],
+  ["Écosse","🏴",["scotland","écosse","ecosse"]],
+  ["Pays de Galles","🏴",["wales","pays de galles"]],
+  ["Irlande","🇮🇪",["ireland","irlande"]],
+  ["Irlande du Nord","🇬🇧",["northern ireland","irlande du nord"]],
+  ["Roumanie","🇷🇴",["romania","roumanie"]],
+  ["Hongrie","🇭🇺",["hungary","hongrie"]],
+  ["Tchéquie","🇨🇿",["czech republic","czechia","tchéquie","tchequie"]],
+  ["Slovaquie","🇸🇰",["slovakia","slovaquie"]],
+  ["Slovénie","🇸🇮",["slovenia","slovénie","slovenie"]],
+  ["Géorgie","🇬🇪",["georgia","géorgie","georgie"]]
+];
+
+function detectCountryFromProduct(product){
+  const raw=`${product?.team||""} ${product?.name||""}`;
+  const hay=normalizeLogoKey(raw);
+
+  for(const [label,flag,terms] of COUNTRY_TEAMS){
+    const hit=(terms||[]).find(term=>hay.includes(normalizeLogoKey(term)));
+    if(hit){
+      return {label,flag,query:hit};
+    }
+  }
+
+  const fallbackLabel=String(product?.team||product?.name||"Nation")
+    .replace(/^\s*\d{2,4}\s*/,'')
+    .replace(/\b(home|away|third|fourth|fan|player|version|retro|rétro|concept|anniversary|shirt|jersey)\b.*$/i,'')
+    .trim() || "Nation";
+
+  return {
+    label:fallbackLabel,
+    flag:"🌍",
+    query:fallbackLabel.toLowerCase()
+  };
+}
+
 const LEAGUES = {
   "Ligue 1":["paris","psg","marseille","om ","lyon","monaco","lille","lens","rennes","nice"],
   "Premier League":["liverpool","arsenal","chelsea","manchester","tottenham","newcastle","aston villa","west ham"],
@@ -88,6 +178,9 @@ export default function Home(){
   const [leagueRotation,setLeagueRotation]=useState(0);
   const [clubRotation,setClubRotation]=useState(0);
   const [footballLogos,setFootballLogos]=useState({clubs:{},leagues:{}});
+  const nationsRailRef=useRef(null);
+  const leaguesRailRef=useRef(null);
+  const clubsRailRef=useRef(null);
 
   useEffect(()=>{
     const app=window.Telegram?.WebApp;
@@ -243,6 +336,18 @@ export default function Home(){
       });
   }
 
+  function moveShowcase(ref,dir,type){
+    const el=ref?.current;
+    if(el){
+      const amount=Math.max(220,Math.round(el.clientWidth*.78));
+      el.scrollBy({left:dir*amount,behavior:"smooth"});
+    }
+
+    if(type==="nation") setNationRotation(v=>(v+dir+1000000)%1000000);
+    if(type==="league") setLeagueRotation(v=>(v+dir+1000000)%1000000);
+    if(type==="club") setClubRotation(v=>(v+dir+1000000)%1000000);
+  }
+
   function rotatingImage(images,index){
     if(!images?.length) return "";
     return images[index % images.length];
@@ -254,17 +359,15 @@ export default function Home(){
     products.forEach((p)=>{
       if((p.cat||"").toLowerCase()!=="nations") return;
 
-      const label=String(p.team||"").trim() || String(p.name||"").trim();
-      if(!label) return;
-
-      const key=label.toLowerCase();
+      const detected=detectCountryFromProduct(p);
+      const key=normalizeLogoKey(detected.label);
 
       if(!map.has(key)){
         map.set(key,{
-          code:label.slice(0,2).toUpperCase(),
-          label:label.toUpperCase(),
-          query:label.toLowerCase(),
-          fallback:p.emoji||"🌍",
+          code:detected.label.slice(0,2).toUpperCase(),
+          label:detected.label.toUpperCase(),
+          query:detected.query,
+          flag:detected.flag,
           images:[]
         });
       }
@@ -281,10 +384,6 @@ export default function Home(){
             item.images.push(img);
           }
         });
-      }
-
-      if((!item.fallback || item.fallback==="🌍") && p.emoji){
-        item.fallback=p.emoji;
       }
     });
 
@@ -418,25 +517,29 @@ export default function Home(){
           <span className="sfExactLine"></span>
         </div>
 
-        <div className="sfExactNations">
-          {nationShowcase.map((item)=>(
-            <button
-              key={item.code}
-              className="sfExactNation"
-              onClick={()=>jumpToProducts("Nations",item.query,"")}
-            >
-              <div className="sfExactNationVisual">
-                {item.image
-                  ? <img key={item.image} src={item.image} alt={item.label} className="sfRotateJersey"/>
-                  : <div className="sfExactFallback">{item.fallback}</div>
-                }
-              </div>
-              <div className="sfExactNationName">
-                <span>{item.fallback}</span>
-                <b>{item.label}</b>
-              </div>
-            </button>
-          ))}
+        <div className="sfRailWrap sfNationRailWrap">
+          <button type="button" className="sfRailArrow sfRailArrowLeft" onClick={()=>moveShowcase(nationsRailRef,-1,"nation")} aria-label="Maillots nations précédents">‹</button>
+          <div className="sfExactNations" ref={nationsRailRef}>
+            {nationShowcase.map((item)=>(
+              <button
+                key={item.label}
+                className="sfExactNation"
+                onClick={()=>jumpToProducts("Nations",item.query,"")}
+              >
+                <div className="sfExactNationVisual">
+                  {item.image
+                    ? <img key={item.image} src={item.image} alt={item.label} className="sfRotateJersey"/>
+                    : <div className="sfExactFallback">{item.flag}</div>
+                  }
+                </div>
+                <div className="sfExactNationName">
+                  <span className="sfCountryLogo" aria-hidden="true">{item.flag}</span>
+                  <b>{item.label}</b>
+                </div>
+              </button>
+            ))}
+          </div>
+          <button type="button" className="sfRailArrow sfRailArrowRight" onClick={()=>moveShowcase(nationsRailRef,1,"nation")} aria-label="Maillots nations suivants">›</button>
         </div>
 
         <div className="sfExactHeading sfExactClubHeading">
@@ -447,7 +550,9 @@ export default function Home(){
 
         {!!leagueShowcase.length && <>
           <div className="sfExactSubTitle">CHAMPIONNATS</div>
-          <div className="sfExactLeagues">
+          <div className="sfRailWrap">
+            <button type="button" className="sfRailArrow sfRailArrowLeft" onClick={()=>moveShowcase(leaguesRailRef,-1,"league")} aria-label="Championnats précédents">‹</button>
+            <div className="sfExactLeagues" ref={leaguesRailRef}>
             {leagueShowcase.map((item)=>(
               <button
                 key={item.label}
@@ -467,12 +572,16 @@ export default function Home(){
                 <small>{item.meta}</small>
               </button>
             ))}
+            </div>
+            <button type="button" className="sfRailArrow sfRailArrowRight" onClick={()=>moveShowcase(leaguesRailRef,1,"league")} aria-label="Championnats suivants">›</button>
           </div>
         </>}
 
         {!!clubShowcase.length && <>
           <div className="sfExactSubTitle sfExactClubSubTitle">TOUS LES CLUBS</div>
-          <div className="sfExactClubs">
+          <div className="sfRailWrap">
+            <button type="button" className="sfRailArrow sfRailArrowLeft" onClick={()=>moveShowcase(clubsRailRef,-1,"club")} aria-label="Clubs précédents">‹</button>
+            <div className="sfExactClubs" ref={clubsRailRef}>
             {clubShowcase.map((item)=>(
               <button
                 key={item.label}
@@ -494,6 +603,8 @@ export default function Home(){
                 </div>
               </button>
             ))}
+            </div>
+            <button type="button" className="sfRailArrow sfRailArrowRight" onClick={()=>moveShowcase(clubsRailRef,1,"club")} aria-label="Clubs suivants">›</button>
           </div>
         </>}
 
@@ -2563,6 +2674,106 @@ export default function Home(){
           top:5px;
           right:5px;
           padding:3px;
+        }
+      }
+
+
+
+      /* ===== CARROUSELS MANUELS : SOURIS + DOIGT + FLÈCHES ===== */
+      .sfRailWrap{
+        position:relative;
+      }
+
+      .sfExactNations,
+      .sfExactLeagues,
+      .sfExactClubs{
+        cursor:grab;
+        touch-action:pan-x;
+        scroll-behavior:smooth;
+        overscroll-behavior-x:contain;
+        padding-left:42px !important;
+        padding-right:42px !important;
+        scroll-padding-inline:42px;
+      }
+
+      .sfExactNations:active,
+      .sfExactLeagues:active,
+      .sfExactClubs:active{
+        cursor:grabbing;
+      }
+
+      .sfRailArrow{
+        position:absolute;
+        top:50%;
+        transform:translateY(-50%);
+        z-index:20;
+        width:38px;
+        height:52px;
+        border-radius:13px;
+        border:1px solid rgba(244,197,66,.72);
+        background:rgba(6,7,9,.92);
+        color:#f4c542;
+        display:grid;
+        place-items:center;
+        font-size:31px;
+        font-weight:900;
+        line-height:1;
+        box-shadow:0 8px 24px rgba(0,0,0,.38),0 0 14px rgba(244,197,66,.10);
+        cursor:pointer;
+        -webkit-tap-highlight-color:transparent;
+      }
+
+      .sfRailArrow:hover{
+        background:#17130a;
+        box-shadow:0 8px 24px rgba(0,0,0,.42),0 0 18px rgba(244,197,66,.22);
+      }
+
+      .sfRailArrow:active{
+        transform:translateY(-50%) scale(.94);
+      }
+
+      .sfRailArrowLeft{left:3px}
+      .sfRailArrowRight{right:3px}
+
+      /* Le petit carré vert sous le maillot devient le drapeau/logo du pays */
+      .sfCountryLogo{
+        width:27px;
+        height:27px;
+        flex:0 0 27px;
+        display:grid !important;
+        place-items:center;
+        border-radius:50%;
+        border:1px solid rgba(244,197,66,.55);
+        background:#090a0c;
+        font-size:19px !important;
+        line-height:1 !important;
+        box-shadow:0 5px 12px rgba(0,0,0,.28);
+      }
+
+      .sfExactNationName{
+        min-height:38px;
+        padding:5px 4px 2px;
+      }
+
+      @media (max-width:420px){
+        .sfRailArrow{
+          width:34px;
+          height:48px;
+          border-radius:12px;
+          font-size:28px;
+        }
+        .sfExactNations,
+        .sfExactLeagues,
+        .sfExactClubs{
+          padding-left:38px !important;
+          padding-right:38px !important;
+          scroll-padding-inline:38px;
+        }
+        .sfCountryLogo{
+          width:23px;
+          height:23px;
+          flex-basis:23px;
+          font-size:16px !important;
         }
       }
 
