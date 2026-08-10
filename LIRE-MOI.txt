@@ -1,38 +1,20 @@
-SOCCER FANS — CHOIX MANUEL DES COUVERTURES
-==========================================
+SOCCER FANS — PRIX DÉFINITIFS
 
-Pourquoi cette version ?
-------------------------
-Les albums Yupoo n'ont pas tous la même organisation :
-- la photo 004 peut être bonne dans un album,
-- la photo 058 dans un autre,
-- certaines photos sont des écussons, étiquettes ou gros plans.
-
-Le choix 100 % automatique n'est donc pas assez fiable.
-
-Cette version affiche TOUTES les photos de chaque produit.
-Tu choisis visuellement la vraie photo de face du maillot.
+Fan : 35 €
+Player : 45 €
+Rétro : 50 €
+Enfant : 25 €
+Flocage personnalisé : +3 €
 
 INSTALLATION
-------------
-1. Mets ces fichiers dans :
+1. Décompresse APPLIQUER_PRIX.py et METTRE_LES_PRIX.bat dans :
    C:\Users\guillaume\Documents\GitHub\soccerfans-miniappv2
 
 2. Double-clique sur :
-   LANCER_CHOIX_COUVERTURES.bat
+   METTRE_LES_PRIX.bat
 
-UTILISATION
------------
-- Clique sur une miniature.
-- Vérifie l'aperçu à droite.
-- Clique sur "VALIDER CETTE PHOTO".
-- Le programme passe automatiquement au produit suivant.
+3. Quand c'est terminé, retourne sur le site et fais Ctrl + F5.
 
-Il sauvegarde products.json après CHAQUE choix.
-Donc si tu fermes le programme, les choix déjà faits ne sont pas perdus.
-
-Une sauvegarde de products.json est créée ici :
-public\products.before_manual_covers.json
-
-Après quelques choix, tu peux déjà faire Ctrl+F5 sur :
-http://localhost:3000
+Le script met à jour public\products.json et vérifie aussi app\page.js.
+Des sauvegardes sont créées avant modification.
+Les photos, filtres, carrousels et autres fonctions ne sont pas modifiés.
