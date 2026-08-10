@@ -15,6 +15,15 @@ const FALLBACK_PRODUCTS = [
 
 const fmt = n => new Intl.NumberFormat("fr-FR",{style:"currency",currency:"EUR"}).format(n);
 
+const normalizeLogoKey = value => String(value||"")
+  .normalize("NFD")
+  .replace(/[\u0300-\u036f]/g,"")
+  .toLowerCase()
+  .replace(/[^a-z0-9]+/g," ")
+  .trim()
+  .replace(/\s+/g," ");
+
+
 const getProductType = name => {
   const low=(name||"").toLowerCase();
 
@@ -78,6 +87,7 @@ export default function Home(){
   const [nationRotation,setNationRotation]=useState(0);
   const [leagueRotation,setLeagueRotation]=useState(0);
   const [clubRotation,setClubRotation]=useState(0);
+  const [footballLogos,setFootballLogos]=useState({clubs:{},leagues:{}});
 
   useEffect(()=>{
     const app=window.Telegram?.WebApp;
@@ -112,19 +122,36 @@ export default function Home(){
   useEffect(()=>{localStorage.setItem("sf_cart_pro",JSON.stringify(cart))},[cart]);
   useEffect(()=>{localStorage.setItem("sf_favs",JSON.stringify(favs))},[favs]);
 
+
+  useEffect(()=>{
+    let alive=true;
+    fetch("/logos/logos.json",{cache:"no-store"})
+      .then(r=>r.ok?r.json():Promise.reject(new Error("logos.json indisponible")))
+      .then(data=>{
+        if(alive && data && typeof data==="object"){
+          setFootballLogos({
+            clubs:data.clubs||{},
+            leagues:data.leagues||{}
+          });
+        }
+      })
+      .catch(()=>{});
+    return ()=>{alive=false};
+  },[]);
+
   // Rotation automatique des maillots dans les univers
   useEffect(()=>{
-    const id=setInterval(()=>setNationRotation(v=>v+1),3500);
+    const id=setInterval(()=>setNationRotation(v=>v+1),20000);
     return ()=>clearInterval(id);
   },[]);
 
   useEffect(()=>{
-    const id=setInterval(()=>setLeagueRotation(v=>v+1),4300);
+    const id=setInterval(()=>setLeagueRotation(v=>v+1),20000);
     return ()=>clearInterval(id);
   },[]);
 
   useEffect(()=>{
-    const id=setInterval(()=>setClubRotation(v=>v+1),3900);
+    const id=setInterval(()=>setClubRotation(v=>v+1),20000);
     return ()=>clearInterval(id);
   },[]);
 
@@ -284,11 +311,12 @@ export default function Home(){
           meta:images.length ? `${images.length} maillot(s)` : "Disponible",
           league,
           images,
+          logo:footballLogos.leagues?.[normalizeLogoKey(league)]||"",
           image:rotatingImage(images,leagueRotation+i)
         };
       })
       .filter(item=>item.images.length);
-  },[products,leagueRotation]);
+  },[products,leagueRotation,footballLogos]);
 
   const clubShowcase = useMemo(()=>{
     const map=new Map();
@@ -336,9 +364,10 @@ export default function Home(){
       .sort((a,b)=>a.label.localeCompare(b.label,"fr"))
       .map((item,i)=>({
         ...item,
+        logo:footballLogos.clubs?.[normalizeLogoKey(item.label)]||"",
         image:rotatingImage(item.images,clubRotation+i)
       }));
-  },[products,clubRotation]);
+  },[products,clubRotation,footballLogos]);
 
   function Shop(){
     return <>
@@ -426,8 +455,11 @@ export default function Home(){
                 onClick={()=>jumpToProducts("Clubs","",item.league)}
               >
                 <div className="sfExactLeagueVisual">
-                  {item.image
-                    ? <img key={item.image} src={item.image} alt={item.label} className="sfRotateJersey"/>
+                  {item.image &&
+                    <img key={item.image} src={item.image} alt="" className="sfLeagueRotatingJersey"/>
+                  }
+                  {item.logo
+                    ? <img src={item.logo} alt={`Logo ${item.label}`} className="sfLeagueOfficialLogo"/>
                     : <div className="sfExactLeagueMark">{item.mark}</div>
                   }
                 </div>
@@ -451,6 +483,9 @@ export default function Home(){
                   {item.image
                     ? <img key={item.image} src={item.image} alt={item.label} className="sfRotateJersey"/>
                     : <div className="sfExactClubFallback">{item.fallback}</div>
+                  }
+                  {item.logo &&
+                    <img src={item.logo} alt={`Logo ${item.label}`} className="sfClubOfficialLogo"/>
                   }
                 </div>
                 <div className="sfExactClubName">
@@ -2459,6 +2494,75 @@ export default function Home(){
         .sfExactLeagues,
         .sfExactClubs{
           grid-auto-columns:minmax(175px,1fr) !important;
+        }
+      }
+
+
+
+      /* ===== LOGOS OFFICIELS CLUBS & CHAMPIONNATS ===== */
+      .sfExactLeagueVisual{
+        position:relative !important;
+        isolation:isolate;
+      }
+
+      .sfLeagueRotatingJersey{
+        position:absolute;
+        inset:4px;
+        width:calc(100% - 8px);
+        height:calc(100% - 8px);
+        object-fit:contain;
+        opacity:.22;
+        filter:blur(.2px) saturate(.7);
+        animation:sfJerseySwap .48s ease both;
+        z-index:0;
+      }
+
+      .sfLeagueOfficialLogo{
+        position:relative;
+        z-index:2;
+        width:72%;
+        height:72%;
+        object-fit:contain;
+        display:block;
+        filter:drop-shadow(0 8px 14px rgba(0,0,0,.45));
+      }
+
+      .sfExactLeagueMark{
+        position:relative;
+        z-index:2;
+      }
+
+      .sfExactClubVisual{
+        position:relative;
+        isolation:isolate;
+      }
+
+      .sfClubOfficialLogo{
+        position:absolute;
+        top:7px;
+        right:7px;
+        z-index:4;
+        width:38px;
+        height:38px;
+        padding:4px;
+        object-fit:contain;
+        border-radius:50%;
+        border:1px solid rgba(244,197,66,.62);
+        background:rgba(5,5,5,.82);
+        box-shadow:0 6px 15px rgba(0,0,0,.35),0 0 10px rgba(244,197,66,.10);
+      }
+
+      @media (max-width:420px){
+        .sfLeagueOfficialLogo{
+          width:68%;
+          height:68%;
+        }
+        .sfClubOfficialLogo{
+          width:32px;
+          height:32px;
+          top:5px;
+          right:5px;
+          padding:3px;
         }
       }
 

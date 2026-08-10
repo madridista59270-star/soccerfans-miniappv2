@@ -1,0 +1,24 @@
+{
+  "clubs": {
+    "2526 bosnia and herzegovina": "/logos/clubs/bosnia-and-herzegovina-u17.png",
+    "bosnia and herzegovina": "/logos/clubs/bosnia-and-herzegovina-u17.png",
+    "bosnia and herzegovina u17": "/logos/clubs/bosnia-and-herzegovina-u17.png",
+    "2526 cape verde": "/logos/clubs/cape-verde.png",
+    "cape verde": "/logos/clubs/cape-verde.png",
+    "curacao": "/logos/clubs/curacao.png"
+  },
+  "leagues": {
+    "english premier league": "/logos/leagues/english-premier-league.png",
+    "premier league": "/logos/leagues/english-premier-league.png",
+    "german bundesliga": "/logos/leagues/german-bundesliga.png",
+    "bundesliga": "/logos/leagues/german-bundesliga.png",
+    "italian serie a": "/logos/leagues/italian-serie-a.png",
+    "serie a": "/logos/leagues/italian-serie-a.png",
+    "french ligue 1": "/logos/leagues/french-ligue-1.png",
+    "ligue 1": "/logos/leagues/french-ligue-1.png",
+    "spanish la liga": "/logos/leagues/spanish-la-liga.png",
+    "la liga": "/logos/leagues/spanish-la-liga.png",
+    "fifa world cup": "/logos/leagues/fifa-world-cup.png",
+    "uefa european under 17 championship": "/logos/leagues/uefa-european-under-17-championship.png"
+  }
+}

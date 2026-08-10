@@ -1,0 +1,136 @@
+{
+  "products_count": 79,
+  "club_labels_count": 10,
+  "clubs_installed": 3,
+  "clubs_unresolved": [
+    {
+      "product_team": "2425 German windbreaker",
+      "queries_tested": [
+        "German windbreaker",
+        "2425 German windbreaker"
+      ]
+    },
+    {
+      "product_team": "FIFA World Cup Bosnia and Herzegovina",
+      "queries_tested": [
+        "FIFA World Cup Bosnia and Herzegovina"
+      ]
+    },
+    {
+      "product_team": "FIFA World Cup Cape Verde",
+      "queries_tested": [
+        "FIFA World Cup Cape Verde"
+      ]
+    },
+    {
+      "product_team": "FIFA World Cup Curaçao",
+      "queries_tested": [
+        "FIFA World Cup Curaçao"
+      ]
+    },
+    {
+      "product_team": "FIFA World Cup Haiti",
+      "queries_tested": [
+        "FIFA World Cup Haiti"
+      ]
+    },
+    {
+      "product_team": "FIFA World Cup Jordan",
+      "queries_tested": [
+        "FIFA World Cup Jordan"
+      ]
+    },
+    {
+      "product_team": "The Republic of Haiti",
+      "queries_tested": [
+        "The Republic of Haiti"
+      ]
+    }
+  ],
+  "leagues_installed": 7,
+  "leagues_unresolved": [],
+  "resolved_clubs": [
+    {
+      "product_team": "2526 Bosnia and Herzegovina",
+      "search": "Bosnia and Herzegovina",
+      "api_team": "Bosnia and Herzegovina U17",
+      "logo": "/logos/clubs/bosnia-and-herzegovina-u17.png",
+      "league": "UEFA European Under-17 Championship",
+      "league_id": "5415"
+    },
+    {
+      "product_team": "2526 Cape Verde",
+      "search": "Cape Verde",
+      "api_team": "Cape Verde",
+      "logo": "/logos/clubs/cape-verde.png",
+      "league": "FIFA World Cup",
+      "league_id": "4429"
+    },
+    {
+      "product_team": "CURAÇAO",
+      "search": "CURAÇAO",
+      "api_team": "Curaçao",
+      "logo": "/logos/clubs/curacao.png",
+      "league": "FIFA World Cup",
+      "league_id": "4429"
+    }
+  ],
+  "resolved_leagues": [
+    {
+      "league_id": 4328,
+      "api_league": "English Premier League",
+      "names": [
+        "Premier League"
+      ],
+      "logo": "/logos/leagues/english-premier-league.png"
+    },
+    {
+      "league_id": 4331,
+      "api_league": "German Bundesliga",
+      "names": [
+        "Bundesliga"
+      ],
+      "logo": "/logos/leagues/german-bundesliga.png"
+    },
+    {
+      "league_id": 4332,
+      "api_league": "Italian Serie A",
+      "names": [
+        "Serie A"
+      ],
+      "logo": "/logos/leagues/italian-serie-a.png"
+    },
+    {
+      "league_id": 4334,
+      "api_league": "French Ligue 1",
+      "names": [
+        "Ligue 1"
+      ],
+      "logo": "/logos/leagues/french-ligue-1.png"
+    },
+    {
+      "league_id": 4335,
+      "api_league": "Spanish La Liga",
+      "names": [
+        "La Liga"
+      ],
+      "logo": "/logos/leagues/spanish-la-liga.png"
+    },
+    {
+      "league_id": 4429,
+      "api_league": "FIFA World Cup",
+      "names": [
+        "FIFA World Cup"
+      ],
+      "logo": "/logos/leagues/fifa-world-cup.png"
+    },
+    {
+      "league_id": 5415,
+      "api_league": "UEFA European Under-17 Championship",
+      "names": [
+        "UEFA European Under-17 Championship"
+      ],
+      "logo": "/logos/leagues/uefa-european-under-17-championship.png"
+    }
+  ]
+}
