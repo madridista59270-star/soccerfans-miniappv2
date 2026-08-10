@@ -59,80 +59,85 @@ function getProductImages(product){
 }
 
 const COUNTRY_TEAMS = [
-  ["France","🇫🇷",["france","french"]],
-  ["Brésil","🇧🇷",["brésil","bresil","brazil"]],
-  ["Argentine","🇦🇷",["argentine","argentina"]],
-  ["Belgique","🇧🇪",["belgique","belgium"]],
-  ["Angleterre","🏴",["england","angleterre"]],
-  ["Portugal","🇵🇹",["portugal"]],
-  ["Espagne","🇪🇸",["spain","espagne"]],
-  ["Allemagne","🇩🇪",["germany","allemagne","deutschland"]],
-  ["Italie","🇮🇹",["italy","italie"]],
-  ["Pays-Bas","🇳🇱",["netherlands","holland","pays bas"]],
-  ["Croatie","🇭🇷",["croatia","croatie"]],
-  ["Maroc","🇲🇦",["morocco","maroc"]],
-  ["Algérie","🇩🇿",["algeria","algérie","algerie"]],
-  ["Tunisie","🇹🇳",["tunisia","tunisie"]],
-  ["Sénégal","🇸🇳",["senegal","sénégal"]],
-  ["Côte d’Ivoire","🇨🇮",["ivory coast","cote d ivoire","côte d ivoire"]],
-  ["Cameroun","🇨🇲",["cameroon","cameroun"]],
-  ["Nigeria","🇳🇬",["nigeria"]],
-  ["Ghana","🇬🇭",["ghana"]],
-  ["Mali","🇲🇱",["mali"]],
-  ["Égypte","🇪🇬",["egypt","égypte","egypte"]],
-  ["Afrique du Sud","🇿🇦",["south africa","afrique du sud"]],
-  ["Colombie","🇨🇴",["colombia","colombie"]],
-  ["Uruguay","🇺🇾",["uruguay"]],
-  ["Chili","🇨🇱",["chile","chili"]],
-  ["Pérou","🇵🇪",["peru","pérou","perou"]],
-  ["Équateur","🇪🇨",["ecuador","équateur","equateur"]],
-  ["Paraguay","🇵🇾",["paraguay"]],
-  ["Venezuela","🇻🇪",["venezuela"]],
-  ["Mexique","🇲🇽",["mexico","mexique"]],
-  ["États-Unis","🇺🇸",["usa","united states","états unis","etats unis"]],
-  ["Canada","🇨🇦",["canada"]],
-  ["Costa Rica","🇨🇷",["costa rica"]],
-  ["Panama","🇵🇦",["panama"]],
-  ["Jamaïque","🇯🇲",["jamaica","jamaïque","jamaique"]],
-  ["Japon","🇯🇵",["japan","japon"]],
-  ["Corée du Sud","🇰🇷",["south korea","korea republic","corée du sud","coree du sud"]],
-  ["Chine","🇨🇳",["china","chine"]],
-  ["Australie","🇦🇺",["australia","australie"]],
-  ["Nouvelle-Zélande","🇳🇿",["new zealand","nouvelle zélande","nouvelle zelande"]],
-  ["Arabie saoudite","🇸🇦",["saudi arabia","arabie saoudite"]],
-  ["Qatar","🇶🇦",["qatar"]],
-  ["Iran","🇮🇷",["iran"]],
-  ["Irak","🇮🇶",["iraq","irak"]],
-  ["Turquie","🇹🇷",["turkey","türkiye","turkiye","turquie"]],
-  ["Grèce","🇬🇷",["greece","grèce","grece"]],
-  ["Suisse","🇨🇭",["switzerland","suisse"]],
-  ["Autriche","🇦🇹",["austria","autriche"]],
-  ["Danemark","🇩🇰",["denmark","danemark"]],
-  ["Suède","🇸🇪",["sweden","suède","suede"]],
-  ["Norvège","🇳🇴",["norway","norvège","norvege"]],
-  ["Pologne","🇵🇱",["poland","pologne"]],
-  ["Ukraine","🇺🇦",["ukraine"]],
-  ["Serbie","🇷🇸",["serbia","serbie"]],
-  ["Écosse","🏴",["scotland","écosse","ecosse"]],
-  ["Pays de Galles","🏴",["wales","pays de galles"]],
-  ["Irlande","🇮🇪",["ireland","irlande"]],
-  ["Irlande du Nord","🇬🇧",["northern ireland","irlande du nord"]],
-  ["Roumanie","🇷🇴",["romania","roumanie"]],
-  ["Hongrie","🇭🇺",["hungary","hongrie"]],
-  ["Tchéquie","🇨🇿",["czech republic","czechia","tchéquie","tchequie"]],
-  ["Slovaquie","🇸🇰",["slovakia","slovaquie"]],
-  ["Slovénie","🇸🇮",["slovenia","slovénie","slovenie"]],
-  ["Géorgie","🇬🇪",["georgia","géorgie","georgie"]]
+  ["France","fr",["france","french"]],
+  ["Brésil","br",["brésil","bresil","brazil"]],
+  ["Argentine","ar",["argentine","argentina"]],
+  ["Belgique","be",["belgique","belgium"]],
+  ["Angleterre","gb-eng",["england","angleterre"]],
+  ["Portugal","pt",["portugal"]],
+  ["Espagne","es",["spain","espagne"]],
+  ["Allemagne","de",["germany","allemagne","deutschland"]],
+  ["Italie","it",["italy","italie"]],
+  ["Pays-Bas","nl",["netherlands","holland","pays bas"]],
+  ["Croatie","hr",["croatia","croatie"]],
+  ["Maroc","ma",["morocco","maroc"]],
+  ["Algérie","dz",["algeria","algérie","algerie"]],
+  ["Tunisie","tn",["tunisia","tunisie"]],
+  ["Sénégal","sn",["senegal","sénégal"]],
+  ["Côte d’Ivoire","ci",["ivory coast","cote d ivoire","côte d ivoire"]],
+  ["Cameroun","cm",["cameroon","cameroun"]],
+  ["Nigeria","ng",["nigeria"]],
+  ["Ghana","gh",["ghana"]],
+  ["Mali","ml",["mali"]],
+  ["Égypte","eg",["egypt","égypte","egypte"]],
+  ["Afrique du Sud","za",["south africa","afrique du sud"]],
+  ["Colombie","co",["colombia","colombie"]],
+  ["Uruguay","uy",["uruguay"]],
+  ["Chili","cl",["chile","chili"]],
+  ["Pérou","pe",["peru","pérou","perou"]],
+  ["Équateur","ec",["ecuador","équateur","equateur"]],
+  ["Paraguay","py",["paraguay"]],
+  ["Venezuela","ve",["venezuela"]],
+  ["Mexique","mx",["mexico","mexique"]],
+  ["États-Unis","us",["usa","united states","états unis","etats unis"]],
+  ["Canada","ca",["canada"]],
+  ["Costa Rica","cr",["costa rica"]],
+  ["Panama","pa",["panama"]],
+  ["Jamaïque","jm",["jamaica","jamaïque","jamaique"]],
+  ["Japon","jp",["japan","japon"]],
+  ["Corée du Sud","kr",["south korea","korea republic","corée du sud","coree du sud"]],
+  ["Chine","cn",["china","chine"]],
+  ["Australie","au",["australia","australie"]],
+  ["Nouvelle-Zélande","nz",["new zealand","nouvelle zélande","nouvelle zelande"]],
+  ["Arabie saoudite","sa",["saudi arabia","arabie saoudite"]],
+  ["Qatar","qa",["qatar"]],
+  ["Iran","ir",["iran"]],
+  ["Irak","iq",["iraq","irak"]],
+  ["Turquie","tr",["turkey","türkiye","turkiye","turquie"]],
+  ["Grèce","gr",["greece","grèce","grece"]],
+  ["Suisse","ch",["switzerland","suisse"]],
+  ["Autriche","at",["austria","autriche"]],
+  ["Danemark","dk",["denmark","danemark"]],
+  ["Suède","se",["sweden","suède","suede"]],
+  ["Norvège","no",["norway","norvège","norvege"]],
+  ["Pologne","pl",["poland","pologne"]],
+  ["Ukraine","ua",["ukraine"]],
+  ["Serbie","rs",["serbia","serbie"]],
+  ["Écosse","gb-sct",["scotland","écosse","ecosse"]],
+  ["Pays de Galles","gb-wls",["wales","pays de galles"]],
+  ["Irlande","ie",["ireland","irlande"]],
+  ["Irlande du Nord","gb-nir",["northern ireland","irlande du nord"]],
+  ["Roumanie","ro",["romania","roumanie"]],
+  ["Hongrie","hu",["hungary","hongrie"]],
+  ["Tchéquie","cz",["czech republic","czechia","tchéquie","tchequie"]],
+  ["Slovaquie","sk",["slovakia","slovaquie"]],
+  ["Slovénie","si",["slovenia","slovénie","slovenie"]],
+  ["Géorgie","ge",["georgia","géorgie","georgie"]]
 ];
 
 function detectCountryFromProduct(product){
   const raw=`${product?.team||""} ${product?.name||""}`;
   const hay=normalizeLogoKey(raw);
 
-  for(const [label,flag,terms] of COUNTRY_TEAMS){
+  for(const [label,flagCode,terms] of COUNTRY_TEAMS){
     const hit=(terms||[]).find(term=>hay.includes(normalizeLogoKey(term)));
     if(hit){
-      return {label,flag,query:hit};
+      return {
+        label,
+        flagCode,
+        flagUrl:`https://flagcdn.com/w80/${flagCode}.png`,
+        query:hit
+      };
     }
   }
 
@@ -143,7 +148,8 @@ function detectCountryFromProduct(product){
 
   return {
     label:fallbackLabel,
-    flag:"🌍",
+    flagCode:"",
+    flagUrl:"",
     query:fallbackLabel.toLowerCase()
   };
 }
@@ -177,7 +183,7 @@ export default function Home(){
   const [nationRotation,setNationRotation]=useState(0);
   const [leagueRotation,setLeagueRotation]=useState(0);
   const [clubRotation,setClubRotation]=useState(0);
-  const [footballLogos,setFootballLogos]=useState({clubs:{},leagues:{}});
+  const [footballLogos,setFootballLogos]=useState({clubs:{},leagues:{},leagueItems:[]});
   const nationsRailRef=useRef(null);
   const leaguesRailRef=useRef(null);
   const clubsRailRef=useRef(null);
@@ -224,7 +230,8 @@ export default function Home(){
         if(alive && data && typeof data==="object"){
           setFootballLogos({
             clubs:data.clubs||{},
-            leagues:data.leagues||{}
+            leagues:data.leagues||{},
+            leagueItems:Array.isArray(data.leagueItems)?data.leagueItems:[]
           });
         }
       })
@@ -338,14 +345,17 @@ export default function Home(){
 
   function moveShowcase(ref,dir,type){
     const el=ref?.current;
-    if(el){
-      const amount=Math.max(220,Math.round(el.clientWidth*.78));
-      el.scrollBy({left:dir*amount,behavior:"smooth"});
-    }
+    if(!el) return;
 
-    if(type==="nation") setNationRotation(v=>(v+dir+1000000)%1000000);
-    if(type==="league") setLeagueRotation(v=>(v+dir+1000000)%1000000);
-    if(type==="club") setClubRotation(v=>(v+dir+1000000)%1000000);
+    const amount=Math.max(220,Math.round(el.clientWidth*.78));
+    const maxScroll=Math.max(0,el.scrollWidth-el.clientWidth);
+    let target=el.scrollLeft+(dir*amount);
+
+    // Arrivé au bout : on repart de l'autre côté.
+    if(dir>0 && target>=maxScroll-8) target=0;
+    if(dir<0 && target<=8) target=maxScroll;
+
+    el.scrollTo({left:target,behavior:"smooth"});
   }
 
   function rotatingImage(images,index){
@@ -367,7 +377,8 @@ export default function Home(){
           code:detected.label.slice(0,2).toUpperCase(),
           label:detected.label.toUpperCase(),
           query:detected.query,
-          flag:detected.flag,
+          flagCode:detected.flagCode,
+          flagUrl:detected.flagUrl,
           images:[]
         });
       }
@@ -378,13 +389,8 @@ export default function Home(){
         item.images.push(p.image);
       }
 
-      if(Array.isArray(p.images)){
-        p.images.forEach(img=>{
-          if(img && !item.images.includes(img)){
-            item.images.push(img);
-          }
-        });
-      }
+      // On garde seulement p.image : la photo principale du produit.
+      // Les photos de détails/tissu de p.images ne tournent plus ici.
     });
 
     return [...map.values()]
@@ -395,26 +401,69 @@ export default function Home(){
       }));
   },[products,nationRotation]);
 
+  function getShopLeagueName(value){
+    const key=normalizeLogoKey(value);
+    if(key.includes("premier league")) return "Premier League";
+    if(key.includes("la liga") || key.includes("spanish la liga")) return "La Liga";
+    if(key.includes("serie a")) return "Serie A";
+    if(key.includes("bundesliga")) return "Bundesliga";
+    if(key.includes("ligue 1") || key.includes("french ligue 1")) return "Ligue 1";
+    return "";
+  }
+
   const leagueShowcase = useMemo(()=>{
-    return Object.keys(LEAGUES)
-      .map((league,i)=>{
-        const images=leagueProductImages(league);
-        return {
-          mark:league==="Ligue 1" ? "L1"
-            : league==="Premier League" ? "PL"
-            : league==="La Liga" ? "LIGA"
-            : league==="Serie A" ? "A"
-            : league==="Bundesliga" ? "BL"
-            : league.slice(0,3).toUpperCase(),
-          label:league.toUpperCase(),
-          meta:images.length ? `${images.length} maillot(s)` : "Disponible",
-          league,
-          images,
-          logo:footballLogos.leagues?.[normalizeLogoKey(league)]||"",
-          image:rotatingImage(images,leagueRotation+i)
-        };
-      })
-      .filter(item=>item.images.length);
+    const installed=Array.isArray(footballLogos.leagueItems)
+      ? footballLogos.leagueItems
+      : [];
+
+    if(installed.length){
+      const seen=new Set();
+
+      return installed
+        .filter(item=>item && item.name && item.logo)
+        .filter(item=>{
+          const k=normalizeLogoKey(item.name);
+          if(seen.has(k)) return false;
+          seen.add(k);
+          return true;
+        })
+        .sort((a,b)=>{
+          const ca=String(a.country||"").localeCompare(String(b.country||""),"fr");
+          if(ca!==0) return ca;
+          return String(a.name||"").localeCompare(String(b.name||""),"fr");
+        })
+        .map(item=>{
+          const shopLeague=getShopLeagueName(item.name);
+          return {
+            mark:String(item.name||"").slice(0,3).toUpperCase(),
+            label:String(item.name||"").toUpperCase(),
+            meta:String(item.country||"Football"),
+            league:shopLeague,
+            sourceLeague:String(item.name||""),
+            logo:item.logo,
+            image:""
+          };
+        });
+    }
+
+    // Secours si logos.json n'est pas encore généré.
+    return Object.keys(LEAGUES).map((league)=>{
+      const images=leagueProductImages(league);
+      return {
+        mark:league==="Ligue 1" ? "L1"
+          : league==="Premier League" ? "PL"
+          : league==="La Liga" ? "LIGA"
+          : league==="Serie A" ? "A"
+          : league==="Bundesliga" ? "BL"
+          : league.slice(0,3).toUpperCase(),
+        label:league.toUpperCase(),
+        meta:"Football",
+        league,
+        sourceLeague:league,
+        logo:footballLogos.leagues?.[normalizeLogoKey(league)]||"",
+        image:rotatingImage(images,leagueRotation)
+      };
+    });
   },[products,leagueRotation,footballLogos]);
 
   const clubShowcase = useMemo(()=>{
@@ -450,13 +499,8 @@ export default function Home(){
         item.images.push(p.image);
       }
 
-      if(Array.isArray(p.images)){
-        p.images.forEach(img=>{
-          if(img && !item.images.includes(img)){
-            item.images.push(img);
-          }
-        });
-      }
+      // On garde seulement p.image : la photo principale du produit.
+      // Les photos de détails/tissu de p.images ne tournent plus ici.
     });
 
     return [...map.values()]
@@ -529,11 +573,14 @@ export default function Home(){
                 <div className="sfExactNationVisual">
                   {item.image
                     ? <img key={item.image} src={item.image} alt={item.label} className="sfRotateJersey"/>
-                    : <div className="sfExactFallback">{item.flag}</div>
+                    : <div className="sfExactFallback">🌍</div>
                   }
                 </div>
                 <div className="sfExactNationName">
-                  <span className="sfCountryLogo" aria-hidden="true">{item.flag}</span>
+                  {item.flagUrl
+                    ? <img src={item.flagUrl} alt={`Drapeau ${item.label}`} className="sfCountryFlag"/>
+                    : <span className="sfCountryFallback">🌍</span>
+                  }
                   <b>{item.label}</b>
                 </div>
               </button>
@@ -544,69 +591,47 @@ export default function Home(){
 
         <div className="sfExactHeading sfExactClubHeading">
           <span className="sfExactLine"></span>
-          <h2><span>🏆</span> CLUBS & <em>CHAMPIONNATS</em></h2>
+          <h2><span>🏆</span> <em>CHAMPIONNATS</em></h2>
           <span className="sfExactLine"></span>
         </div>
 
-        {!!leagueShowcase.length && <>
-          <div className="sfExactSubTitle">CHAMPIONNATS</div>
-          <div className="sfRailWrap">
-            <button type="button" className="sfRailArrow sfRailArrowLeft" onClick={()=>moveShowcase(leaguesRailRef,-1,"league")} aria-label="Championnats précédents">‹</button>
-            <div className="sfExactLeagues" ref={leaguesRailRef}>
-            {leagueShowcase.map((item)=>(
-              <button
-                key={item.label}
-                className={"sfExactLeague "+(activeLeague===item.league?"on":"")}
-                onClick={()=>jumpToProducts("Clubs","",item.league)}
-              >
-                <div className="sfExactLeagueVisual">
-                  {item.image &&
-                    <img key={item.image} src={item.image} alt="" className="sfLeagueRotatingJersey"/>
-                  }
-                  {item.logo
-                    ? <img src={item.logo} alt={`Logo ${item.label}`} className="sfLeagueOfficialLogo"/>
-                    : <div className="sfExactLeagueMark">{item.mark}</div>
-                  }
-                </div>
-                <strong>{item.label}</strong>
-                <small>{item.meta}</small>
-              </button>
-            ))}
-            </div>
-            <button type="button" className="sfRailArrow sfRailArrowRight" onClick={()=>moveShowcase(leaguesRailRef,1,"league")} aria-label="Championnats suivants">›</button>
-          </div>
-        </>}
+        {!!leagueShowcase.length && (
+          <div className="sfRailWrap sfChampionshipRailWrap">
+            <button
+              type="button"
+              className="sfRailArrow sfRailArrowLeft"
+              onClick={()=>moveShowcase(leaguesRailRef,-1,"league")}
+              aria-label="Championnats précédents"
+            >‹</button>
 
-        {!!clubShowcase.length && <>
-          <div className="sfExactSubTitle sfExactClubSubTitle">TOUS LES CLUBS</div>
-          <div className="sfRailWrap">
-            <button type="button" className="sfRailArrow sfRailArrowLeft" onClick={()=>moveShowcase(clubsRailRef,-1,"club")} aria-label="Clubs précédents">‹</button>
-            <div className="sfExactClubs" ref={clubsRailRef}>
-            {clubShowcase.map((item)=>(
-              <button
-                key={item.label}
-                className="sfExactClub"
-                onClick={()=>jumpToProducts("Clubs",item.query,"")}
-              >
-                <div className="sfExactClubVisual">
-                  {item.image
-                    ? <img key={item.image} src={item.image} alt={item.label} className="sfRotateJersey"/>
-                    : <div className="sfExactClubFallback">{item.fallback}</div>
-                  }
-                  {item.logo &&
-                    <img src={item.logo} alt={`Logo ${item.label}`} className="sfClubOfficialLogo"/>
-                  }
-                </div>
-                <div className="sfExactClubName">
-                  <strong>{item.code}</strong>
-                  <span>{item.label}</span>
-                </div>
-              </button>
-            ))}
+            <div className="sfExactLeagues sfAllChampionships" ref={leaguesRailRef}>
+              {leagueShowcase.map((item)=>(
+                <button
+                  key={`${item.meta}-${item.sourceLeague}`}
+                  className={"sfExactLeague sfChampionshipCard "+(item.league && activeLeague===item.league?"on":"")}
+                  onClick={()=>item.league ? jumpToProducts("Clubs","",item.league) : null}
+                  title={item.league ? `Voir les maillots ${item.league}` : item.sourceLeague}
+                >
+                  <div className="sfExactLeagueVisual sfChampionshipLogoWrap">
+                    {item.logo
+                      ? <img src={item.logo} alt={`Logo ${item.label}`} className="sfLeagueOfficialLogo sfChampionshipLogo"/>
+                      : <div className="sfExactLeagueMark">{item.mark}</div>
+                    }
+                  </div>
+                  <strong>{item.label}</strong>
+                  <small>{item.meta}</small>
+                </button>
+              ))}
             </div>
-            <button type="button" className="sfRailArrow sfRailArrowRight" onClick={()=>moveShowcase(clubsRailRef,1,"club")} aria-label="Clubs suivants">›</button>
+
+            <button
+              type="button"
+              className="sfRailArrow sfRailArrowRight"
+              onClick={()=>moveShowcase(leaguesRailRef,1,"league")}
+              aria-label="Championnats suivants"
+            >›</button>
           </div>
-        </>}
+        )}
 
         <div className="sfExactMotto">
           <span></span>
@@ -2774,6 +2799,110 @@ export default function Home(){
           height:23px;
           flex-basis:23px;
           font-size:16px !important;
+        }
+      }
+
+
+
+      /* Correction carrousel : les flèches changent de cartes, pas les photos de détail */
+      .sfExactNationVisual .sfRotateJersey,
+      .sfExactClubVisual .sfRotateJersey,
+      .sfExactLeagueVisual .sfLeagueRotatingJersey{
+        object-fit:contain !important;
+        object-position:center center !important;
+      }
+
+
+
+      /* Vrais drapeaux sous les maillots Nations (Windows n'affiche plus AR/CO) */
+      .sfCountryFlag{
+        width:30px;
+        height:20px;
+        flex:0 0 30px;
+        object-fit:cover;
+        display:block;
+        border-radius:4px;
+        border:1px solid rgba(244,197,66,.52);
+        background:#090a0c;
+        box-shadow:0 4px 10px rgba(0,0,0,.30);
+      }
+
+      .sfCountryFallback{
+        width:30px;
+        height:20px;
+        flex:0 0 30px;
+        display:grid;
+        place-items:center;
+        font-size:15px;
+      }
+
+      .sfCountryLogo{
+        display:none !important;
+      }
+
+      @media (max-width:420px){
+        .sfCountryFlag,
+        .sfCountryFallback{
+          width:27px;
+          height:18px;
+          flex-basis:27px;
+        }
+      }
+
+
+
+      /* ===== CHAMPIONNATS UNIQUEMENT + TOUS LES LOGOS ===== */
+      .sfChampionshipRailWrap{
+        margin-top:8px;
+      }
+
+      .sfAllChampionships{
+        grid-auto-columns:minmax(150px,1fr) !important;
+      }
+
+      .sfChampionshipCard{
+        min-height:155px !important;
+        cursor:default;
+      }
+
+      .sfChampionshipCard.on,
+      .sfChampionshipCard[title^="Voir"]{
+        cursor:pointer;
+      }
+
+      .sfChampionshipLogoWrap{
+        height:102px !important;
+        margin-bottom:6px !important;
+      }
+
+      .sfChampionshipLogo{
+        width:82% !important;
+        height:82% !important;
+        object-fit:contain !important;
+        opacity:1 !important;
+        filter:drop-shadow(0 8px 14px rgba(0,0,0,.45)) !important;
+      }
+
+      .sfChampionshipCard strong{
+        font-size:9px !important;
+        line-height:1.12 !important;
+      }
+
+      .sfChampionshipCard small{
+        font-size:7px !important;
+        color:#e3b438 !important;
+        margin-top:5px !important;
+      }
+
+      @media (max-width:420px){
+        .sfAllChampionships{
+          grid-auto-columns:calc((100vw - 54px)/2.25) !important;
+        }
+        .sfChampionshipCard{
+          min-height:140px !important;
+        }
+        .sfChampionshipLogoWrap{
+          height:88px !important;
         }
       }
 
