@@ -347,15 +347,30 @@ export default function Home(){
     const el=ref?.current;
     if(!el) return;
 
-    const amount=Math.max(220,Math.round(el.clientWidth*.78));
     const maxScroll=Math.max(0,el.scrollWidth-el.clientWidth);
-    let target=el.scrollLeft+(dir*amount);
+    if(maxScroll<=2) return;
 
-    // Arrivé au bout : on repart de l'autre côté.
-    if(dir>0 && target>=maxScroll-8) target=0;
-    if(dir<0 && target<=8) target=maxScroll;
+    const firstCard=el.firstElementChild;
+    const cardWidth=firstCard?.getBoundingClientRect?.().width || Math.round(el.clientWidth*.42);
+    const styles=window.getComputedStyle(el);
+    const gap=parseFloat(styles.columnGap || styles.gap || "0") || 0;
+    const step=Math.max(120,cardWidth+gap);
 
-    el.scrollTo({left:target,behavior:"smooth"});
+    const atStart=el.scrollLeft<=6;
+    const atEnd=el.scrollLeft>=maxScroll-6;
+
+    let target;
+
+    if(dir>0){
+      target=atEnd ? 0 : Math.min(maxScroll,el.scrollLeft+step);
+    }else{
+      target=atStart ? maxScroll : Math.max(0,el.scrollLeft-step);
+    }
+
+    el.scrollTo({
+      left:target,
+      behavior:"smooth"
+    });
   }
 
   function rotatingImage(images,index){
@@ -2904,6 +2919,19 @@ export default function Home(){
         .sfChampionshipLogoWrap{
           height:88px !important;
         }
+      }
+
+
+
+      /* Flèches du carrousel : clic prioritaire et fiable */
+      .sfRailArrow{
+        pointer-events:auto !important;
+        user-select:none;
+        touch-action:manipulation !important;
+      }
+
+      .sfRailWrap{
+        isolation:isolate;
       }
 
     `}</style>
