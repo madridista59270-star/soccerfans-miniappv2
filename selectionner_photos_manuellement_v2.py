@@ -4,14 +4,15 @@ import json
 import mimetypes
 import shutil
 import urllib.parse
+from html import escape
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
-from html import escape
 
 PROJECT = Path.cwd()
 PRODUCTS_JSON = PROJECT / "public" / "products.json"
 YUPOO_ROOT = Path(r"B:\yupoo_soccerfans_downloader\yupoo_images")
 DEST_ROOT = PROJECT / "public" / "products"
+
 HOST = "127.0.0.1"
 PORT = 8765
 MAX_SELECT = 5
@@ -61,7 +62,7 @@ def save_products():
     )
 
 
-def page_shell(title: str, body: str) -> bytes:
+def shell(title: str, body: str) -> bytes:
     html = f"""<!doctype html>
 <html lang="fr">
 <head>
@@ -75,7 +76,6 @@ body{{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetic
 .wrap{{max-width:1200px;margin:auto;padding:20px}}
 h1,h2{{margin:0 0 16px}}
 a{{color:inherit;text-decoration:none}}
-.top{{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}}
 .badge{{color:var(--gold);font-weight:900}}
 .search{{width:100%;padding:14px 16px;border-radius:14px;border:1px solid #333;background:#111;color:#fff;margin-bottom:16px}}
 .products{{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}}
@@ -85,9 +85,12 @@ a{{color:inherit;text-decoration:none}}
 .grid{{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px}}
 .photo{{position:relative;border:2px solid #282a30;border-radius:16px;background:#111;overflow:hidden;cursor:pointer}}
 .photo.selected{{border-color:var(--gold);box-shadow:0 0 0 3px rgba(244,197,66,.18)}}
+.photo.primary{{border-color:#fff1a8;box-shadow:0 0 0 4px rgba(244,197,66,.32)}}
 .photo img{{display:block;width:100%;height:180px;object-fit:cover;background:#fff}}
-.photo .num{{position:absolute;top:8px;left:8px;background:rgba(0,0,0,.75);color:#fff;border-radius:999px;padding:5px 8px;font-weight:900}}
+.num{{position:absolute;top:8px;left:8px;background:rgba(0,0,0,.75);color:#fff;border-radius:999px;padding:5px 8px;font-weight:900}}
 .photo.selected .num{{background:var(--gold);color:#000}}
+.mainpick{{position:absolute;right:8px;top:8px;z-index:4;padding:6px 9px;border-radius:999px;border:1px solid #555;background:rgba(0,0,0,.78);color:#fff;font-size:11px;font-weight:900}}
+.photo.primary .mainpick{{background:var(--gold);color:#000;border-color:var(--gold)}}
 .bar{{position:sticky;bottom:0;margin-top:18px;padding:14px;border-radius:16px;background:rgba(8,9,11,.96);border:1px solid #333;display:flex;gap:10px;align-items:center;justify-content:space-between}}
 button{{padding:13px 18px;border-radius:13px;border:0;font-weight:900;cursor:pointer}}
 .save{{background:var(--gold);color:#000}}
@@ -97,9 +100,7 @@ button{{padding:13px 18px;border-radius:13px;border:0;font-weight:900;cursor:poi
 .err{{color:#ff7b72;font-weight:900}}
 </style>
 </head>
-<body>
-<div class="wrap">{body}</div>
-</body>
+<body><div class="wrap">{body}</div></body>
 </html>"""
     return html.encode("utf-8")
 
@@ -109,7 +110,7 @@ class Handler(BaseHTTPRequestHandler):
         pass
 
     def send_html(self, title: str, body: str, status=200):
-        data = page_shell(title, body)
+        data = shell(title, body)
         self.send_response(status)
         self.send_header("Content-Type", "text/html; charset=utf-8")
         self.send_header("Content-Length", str(len(data)))
@@ -138,8 +139,9 @@ class Handler(BaseHTTPRequestHandler):
                 )
 
             body = f"""
-            <div class="top">
-              <div><h1>Soccer Fans — sélection manuelle</h1><div class="badge">Choisis jusqu'à 5 photos par produit</div></div>
+            <h1>Soccer Fans — sélection manuelle</h1>
+            <div class="notice">
+              Choisis jusqu'à <b>5 photos</b> et définis toi-même la photo principale.
             </div>
             <form method="get">
               <input class="search" name="q" value="{escape(q)}" placeholder="Rechercher un produit...">
@@ -157,65 +159,99 @@ class Handler(BaseHTTPRequestHandler):
                 return
 
             imgs = album_images(pid)
-            current = set()
-            for webp in p.get("images") or []:
-                current.add(Path(str(webp)).name)
+            current_list = [Path(str(webp)).name for webp in (p.get("images") or [])]
+            current = set(current_list)
+            current_main = current_list[0] if current_list else ""
 
             tiles = []
             for i, img in enumerate(imgs):
                 img_url = f"/img?id={urllib.parse.quote(pid)}&n={i}"
-                selected = " selected" if img.name in current else ""
+                is_selected = img.name in current
+                is_primary = img.name == current_main
+                classes = "photo"
+                if is_selected:
+                    classes += " selected"
+                if is_primary:
+                    classes += " primary"
+
                 tiles.append(
-                    f'<label class="photo{selected}" data-index="{i}">'
-                    f'<input type="checkbox" name="sel" value="{i}" style="display:none" {"checked" if selected else ""}>'
+                    f'<label class="{classes}">'
+                    f'<input type="checkbox" name="sel" value="{i}" style="display:none" {"checked" if is_selected else ""}>'
+                    f'<input type="radio" name="main" value="{i}" style="display:none" {"checked" if is_primary else ""}>'
                     f'<span class="num">{i+1}</span>'
+                    f'<button type="button" class="mainpick">⭐ Principale</button>'
                     f'<img src="{img_url}" alt="photo {i+1}">'
                     f'</label>'
                 )
 
             body = f"""
-            <div class="top">
-              <div>
-                <a href="/" class="badge">← Retour aux produits</a>
-                <h1 style="margin-top:8px">{escape(str(p.get("name") or pid))}</h1>
-              </div>
-            </div>
+            <a href="/" class="badge">← Retour</a>
+            <h1 style="margin-top:10px">{escape(str(p.get("name") or pid))}</h1>
             <div class="notice">
-              Clique sur les photos que tu veux garder. Maximum <b>5</b>.
-              La première sélectionnée deviendra la photo principale.
+              1) Clique sur les photos que tu veux garder.<br>
+              2) Sur la photo du <b>maillot de face</b>, clique sur <b>⭐ Principale</b>.<br>
+              Cette photo sera toujours affichée en premier dans ta boutique.
             </div>
-            <form method="post" action="/save?id={urllib.parse.quote(pid)}" id="f">
-              <div class="grid">{''.join(tiles) or '<div class="err">Aucune image trouvée dans cet album.</div>'}</div>
+
+            <form method="post" action="/save?id={urllib.parse.quote(pid)}">
+              <div class="grid">{''.join(tiles) or '<div class="err">Aucune image trouvée.</div>'}</div>
               <div class="bar">
                 <span id="count">0 / 5 sélectionnées</span>
                 <div>
                   <a href="/"><button type="button" class="back">Annuler</button></a>
-                  <button class="save" type="submit">Enregistrer les 5 photos</button>
+                  <button class="save" type="submit">Enregistrer</button>
                 </div>
               </div>
             </form>
+
             <script>
             const boxes=[...document.querySelectorAll('input[name="sel"]')];
+            const mains=[...document.querySelectorAll('input[name="main"]')];
             const count=document.getElementById('count');
+
             function refresh(){{
-              let n=boxes.filter(b=>b.checked).length;
+              const n=boxes.filter(b=>b.checked).length;
               count.textContent=n+' / 5 sélectionnées';
               boxes.forEach(b=>b.closest('.photo').classList.toggle('selected',b.checked));
+              mains.forEach(r=>r.closest('.photo').classList.toggle('primary',r.checked));
             }}
+
             boxes.forEach(b=>{{
-              b.addEventListener('change',e=>{{
+              b.addEventListener('change',()=>{{
                 if(boxes.filter(x=>x.checked).length>5){{
                   b.checked=false;
                   alert('Maximum 5 photos.');
                 }}
+                if(!b.checked){{
+                  const r=b.closest('.photo').querySelector('input[name="main"]');
+                  if(r.checked) r.checked=false;
+                }}
                 refresh();
               }});
             }});
-            document.querySelectorAll('.photo').forEach(l=>{{
-              l.addEventListener('click',e=>{{
-                if(e.target.tagName==='INPUT') return;
+
+            document.querySelectorAll('.mainpick').forEach(btn=>{{
+              btn.addEventListener('click',e=>{{
+                e.preventDefault();
+                e.stopPropagation();
+
+                const card=btn.closest('.photo');
+                const box=card.querySelector('input[name="sel"]');
+                const radio=card.querySelector('input[name="main"]');
+
+                if(!box.checked){{
+                  if(boxes.filter(x=>x.checked).length>=5){{
+                    alert("Tu as déjà 5 photos. Décoche-en une avant.");
+                    return;
+                  }}
+                  box.checked=true;
+                }}
+
+                radio.checked=true;
+                refresh();
               }});
             }});
+
             refresh();
             </script>
             """
@@ -261,25 +297,34 @@ class Handler(BaseHTTPRequestHandler):
             return
 
         length = int(self.headers.get("Content-Length", "0"))
-        body = self.rfile.read(length).decode("utf-8", errors="replace")
-        form = urllib.parse.parse_qs(body)
-        raw_sel = form.get("sel", [])
+        raw = self.rfile.read(length).decode("utf-8", errors="replace")
+        form = urllib.parse.parse_qs(raw)
 
         indices = []
-        for x in raw_sel:
+        for x in form.get("sel", []):
             try:
                 indices.append(int(x))
             except ValueError:
                 pass
 
         indices = indices[:MAX_SELECT]
-        imgs = album_images(pid)
 
+        raw_main = (form.get("main", [""])[0] or "").strip()
+        try:
+            main_index = int(raw_main)
+        except ValueError:
+            main_index = indices[0] if indices else -1
+
+        if main_index in indices:
+            indices = [main_index] + [i for i in indices if i != main_index]
+
+        imgs = album_images(pid)
         chosen = [imgs[i] for i in indices if 0 <= i < len(imgs)]
+
         if not chosen:
             self.send_html(
                 "Erreur",
-                f'<div class="err">Tu dois sélectionner au moins une photo.</div><p><a href="/product?id={urllib.parse.quote(pid)}">← Retour</a></p>',
+                f'<div class="err">Sélectionne au moins une photo.</div><p><a href="/product?id={urllib.parse.quote(pid)}">← Retour</a></p>',
                 400,
             )
             return
@@ -287,7 +332,6 @@ class Handler(BaseHTTPRequestHandler):
         dest_folder = DEST_ROOT / pid
         dest_folder.mkdir(parents=True, exist_ok=True)
 
-        # Nettoie uniquement les copies de la boutique pour ce produit.
         for old in dest_folder.iterdir():
             if old.is_file() and old.suffix.lower() in IMAGE_EXTS:
                 old.unlink()
@@ -306,9 +350,9 @@ class Handler(BaseHTTPRequestHandler):
         self.send_html(
             "Enregistré",
             f"""
-            <div class="ok">✅ Photos enregistrées pour :</div>
+            <div class="ok">✅ Photos enregistrées</div>
             <h1>{escape(str(p.get("name") or pid))}</h1>
-            <p>{len(web_images)} photo(s) sélectionnée(s).</p>
+            <p>⭐ La photo principale est maintenant la première photo de la fiche produit.</p>
             <p><a class="badge" href="/product?id={urllib.parse.quote(pid)}">← Modifier encore</a></p>
             <p><a class="badge" href="/">← Choisir un autre produit</a></p>
             """
@@ -316,9 +360,10 @@ class Handler(BaseHTTPRequestHandler):
 
 
 print("")
-print("✅ Sélecteur manuel prêt")
-print(f"➡️ Ouvre dans ton navigateur : http://{HOST}:{PORT}")
-print("➡️ Pour arrêter : Ctrl + C dans PowerShell")
+print("✅ Sélecteur manuel V2 prêt")
+print(f"➡️ Ouvre : http://{HOST}:{PORT}")
+print("➡️ Choisis le maillot de face puis clique sur ⭐ Principale")
+print("➡️ Pour arrêter : Ctrl + C")
 print("")
 
 server = ThreadingHTTPServer((HOST, PORT), Handler)
