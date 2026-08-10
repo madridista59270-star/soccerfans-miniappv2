@@ -9,12 +9,17 @@
     },
     "emoji": "🎽",
     "hot": false,
-    "image": "/products/165359968/001.jpg",
+    "image": "/products/165359968/cover_1786380598786.jpg",
     "images": [
+      "/products/165359968/cover_1786380598786.jpg",
       "/products/165359968/001.jpg",
       "/products/165359968/002.jpg"
     ],
-    "source": "https://ezfashion.x.yupoo.com/albums/165359968?uid=1&isSubCate=false&referrercate=5100161"
+    "source": "https://ezfashion.x.yupoo.com/albums/165359968?uid=1&isSubCate=false&referrercate=5100161",
+    "main_source_name": "070.jpg",
+    "photo_source_names": [
+      "070.jpg"
+    ]
   },
   {
     "id": "165359650",
@@ -26,12 +31,17 @@
     },
     "emoji": "🎽",
     "hot": false,
-    "image": "/products/165359650/001.jpg",
+    "image": "/products/165359650/cover_1786380607400.jpg",
     "images": [
+      "/products/165359650/cover_1786380607400.jpg",
       "/products/165359650/001.jpg",
       "/products/165359650/002.jpg"
     ],
-    "source": "https://ezfashion.x.yupoo.com/albums/165359650?uid=1&isSubCate=false&referrercate=5100161"
+    "source": "https://ezfashion.x.yupoo.com/albums/165359650?uid=1&isSubCate=false&referrercate=5100161",
+    "main_source_name": "081.jpg",
+    "photo_source_names": [
+      "081.jpg"
+    ]
   },
   {
     "id": "181945758",
@@ -43,15 +53,19 @@
     },
     "emoji": "🎽",
     "hot": false,
-    "image": "/products/181945758/001.jpg",
+    "image": "/products/181945758/cover_1786380611196.jpg",
     "images": [
+      "/products/181945758/cover_1786380611196.jpg",
       "/products/181945758/001.jpg",
       "/products/181945758/002.jpg",
       "/products/181945758/003.jpg",
-      "/products/181945758/004.jpg",
-      "/products/181945758/005.jpg"
+      "/products/181945758/004.jpg"
     ],
-    "source": "https://ezfashion.x.yupoo.com/albums/181945758?uid=1&isSubCate=false&referrercate=5100161"
+    "source": "https://ezfashion.x.yupoo.com/albums/181945758?uid=1&isSubCate=false&referrercate=5100161",
+    "main_source_name": "004.jpg",
+    "photo_source_names": [
+      "004.jpg"
+    ]
   },
   {
     "id": "164550168",
@@ -63,13 +77,18 @@
     },
     "emoji": "🎽",
     "hot": false,
-    "image": "/products/164550168/001.jpeg",
+    "image": "/products/164550168/cover_1786380616074.jpeg",
     "images": [
+      "/products/164550168/cover_1786380616074.jpeg",
       "/products/164550168/001.jpeg",
       "/products/164550168/002.jpeg",
       "/products/164550168/003.jpeg"
     ],
-    "source": "https://ezfashion.x.yupoo.com/albums/164550168?uid=1&isSubCate=false&referrercate=5100161"
+    "source": "https://ezfashion.x.yupoo.com/albums/164550168?uid=1&isSubCate=false&referrercate=5100161",
+    "main_source_name": "011.jpeg",
+    "photo_source_names": [
+      "011.jpeg"
+    ]
   },
   {
     "id": "164625348",
@@ -81,12 +100,17 @@
     },
     "emoji": "🎽",
     "hot": false,
-    "image": "/products/164625348/001.jpeg",
+    "image": "/products/164625348/cover_1786380632553.jpeg",
     "images": [
+      "/products/164625348/cover_1786380632553.jpeg",
       "/products/164625348/001.jpeg",
       "/products/164625348/002.jpeg"
     ],
-    "source": "https://ezfashion.x.yupoo.com/albums/164625348?uid=1&isSubCate=false&referrercate=5100161"
+    "source": "https://ezfashion.x.yupoo.com/albums/164625348?uid=1&isSubCate=false&referrercate=5100161",
+    "main_source_name": "021.jpeg",
+    "photo_source_names": [
+      "021.jpeg"
+    ]
   },
   {
     "id": "164644569",
@@ -98,12 +122,17 @@
     },
     "emoji": "🎽",
     "hot": false,
-    "image": "/products/164644569/001.jpeg",
+    "image": "/products/164644569/cover_1786380640717.jpeg",
     "images": [
+      "/products/164644569/cover_1786380640717.jpeg",
       "/products/164644569/001.jpeg",
       "/products/164644569/002.jpeg"
     ],
-    "source": "https://ezfashion.x.yupoo.com/albums/164644569?uid=1&isSubCate=false&referrercate=5100161"
+    "source": "https://ezfashion.x.yupoo.com/albums/164644569?uid=1&isSubCate=false&referrercate=5100161",
+    "main_source_name": "033.jpeg",
+    "photo_source_names": [
+      "033.jpeg"
+    ]
   },
   {
     "id": "164537380",
