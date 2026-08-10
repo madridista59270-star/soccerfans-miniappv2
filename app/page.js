@@ -379,42 +379,23 @@ export default function Home(){
   }
 
   const nationShowcase = useMemo(()=>{
-    const map=new Map();
-
-    products.forEach((p)=>{
-      if((p.cat||"").toLowerCase()!=="nations") return;
-
-      const detected=detectCountryFromProduct(p);
-      const key=normalizeLogoKey(detected.label);
-
-      if(!map.has(key)){
-        map.set(key,{
+    return products
+      .filter(p=>(p.cat||"").toLowerCase()==="nations" && p.image)
+      .map((p,index)=>{
+        const detected=detectCountryFromProduct(p);
+        return {
+          id:`${p.id||index}-${index}`,
           code:detected.label.slice(0,2).toUpperCase(),
           label:detected.label.toUpperCase(),
           query:detected.query,
           flagCode:detected.flagCode,
           flagUrl:detected.flagUrl,
-          images:[]
-        });
-      }
+          image:p.image,
+          productName:p.name||detected.label
+        };
+      });
+  },[products]);
 
-      const item=map.get(key);
-
-      if(p.image && !item.images.includes(p.image)){
-        item.images.push(p.image);
-      }
-
-      // On garde seulement p.image : la photo principale du produit.
-      // Les photos de détails/tissu de p.images ne tournent plus ici.
-    });
-
-    return [...map.values()]
-      .sort((a,b)=>a.label.localeCompare(b.label,"fr"))
-      .map((item,i)=>({
-        ...item,
-        image:rotatingImage(item.images,nationRotation+i)
-      }));
-  },[products,nationRotation]);
 
   function getShopLeagueName(value){
     const key=normalizeLogoKey(value);
@@ -581,9 +562,10 @@ export default function Home(){
           <div className="sfExactNations" ref={nationsRailRef}>
             {nationShowcase.map((item)=>(
               <button
-                key={item.label}
+                key={item.id}
                 className="sfExactNation"
                 onClick={()=>jumpToProducts("Nations",item.query,"")}
+                title={item.productName}
               >
                 <div className="sfExactNationVisual">
                   {item.image
@@ -2932,6 +2914,19 @@ export default function Home(){
 
       .sfRailWrap{
         isolation:isolate;
+      }
+
+
+
+      /* Nations : toutes les photos principales téléchargées */
+      .sfNationRailWrap .sfExactNations{
+        grid-auto-columns:minmax(165px,1fr) !important;
+      }
+
+      @media (max-width:420px){
+        .sfNationRailWrap .sfExactNations{
+          grid-auto-columns:calc((100vw - 54px)/2.25) !important;
+        }
       }
 
     `}</style>
