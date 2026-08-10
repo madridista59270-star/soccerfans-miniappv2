@@ -1,11 +1,9 @@
 from __future__ import annotations
 
 import argparse
-import hashlib
 import json
 import re
 import shutil
-from collections import Counter
 from pathlib import Path
 
 INVALID_TITLES = {
@@ -39,17 +37,30 @@ def classify(title: str) -> str:
 
 def versions_for(title: str, cat: str) -> dict[str, int]:
     low = title.lower()
-    if cat == "Enfant":
-        return {"Enfant": 32}
-    if cat == "Rétro":
-        return {"Rétro": 34}
-    if "player" in low:
-        return {"Player": 39}
-    if "fan" in low:
-        return {"Fan": 29}
-    return {"Fan": 29, "Player": 39}
+
+    # Priorité : Short > Enfant > Rétro > Player > Fan.
+    # Exemple : "Argentina retro shorts" = Short 20 €
+    # Exemple : "Scotland retro Fan Version" = Rétro 50 €
+    if re.search(r"shorts?", low):
+        return {"Short": 20}
+
+    if any(k in low for k in ("kid", "kids", "child", "children", "youth", "junior", "enfant")):
+        return {"Enfant": 30}
+
+    if any(k in low for k in ("retro", "rétro", "vintage", "classic")):
+        return {"Rétro": 50}
+
+    if re.search(r"player", low):
+        return {"Player": 45}
+
+    if re.search(r"fan", low):
+        return {"Fan": 35}
+
+    # Si aucun type n'est indiqué dans le titre, on laisse les 2 choix.
+    return {"Fan": 35, "Player": 45}
 
 def guess_team(title: str) -> str:
+    # Retire les termes de saison/version les plus fréquents pour améliorer la recherche.
     s = re.sub(r"\b(?:19|20)\d{2}(?:/\d{2})?\b", " ", title, flags=re.I)
     s = re.sub(r"\bseason\b", " ", s, flags=re.I)
     s = re.sub(r"\b(?:home|away|third|fourth|goalkeeper|training)\b", " ", s, flags=re.I)
@@ -65,6 +76,7 @@ def resolve_source(raw: str, catalogue: Path) -> Path | None:
     if p.is_absolute():
         candidates.append(p)
     else:
+        # Le downloader enregistre typiquement "yupoo_images/album/001.jpg"
         candidates.extend([
             catalogue.parent.parent / p,
             catalogue.parent / p,
@@ -75,16 +87,6 @@ def resolve_source(raw: str, catalogue: Path) -> Path | None:
             return c
     return None
 
-def file_hash(path: Path) -> str:
-    h = hashlib.sha1()
-    with path.open("rb") as f:
-        while True:
-            chunk = f.read(1024 * 1024)
-            if not chunk:
-                break
-            h.update(chunk)
-    return h.hexdigest()
-
 def same_file_quick(src: Path, dst: Path) -> bool:
     try:
         return dst.exists() and dst.stat().st_size == src.stat().st_size
@@ -93,21 +95,13 @@ def same_file_quick(src: Path, dst: Path) -> bool:
 
 def main():
     ap = argparse.ArgumentParser(
-        description="Import intelligent Yupoo -> Soccer Fans : évite les images communes (ex: guides des tailles)."
+        description="Importe automatiquement un catalogue Yupoo téléchargé dans la boutique Soccer Fans."
     )
     ap.add_argument("catalogue", help="Chemin vers yupoo_images/catalogue.json")
-    ap.add_argument("project", nargs="?", default=".", help="Racine du projet Next.js")
+    ap.add_argument("project", nargs="?", default=".", help="Racine du projet Next.js (défaut: dossier courant)")
     ap.add_argument(
-        "--shared-threshold",
-        type=int,
-        default=3,
-        help="Une image identique présente dans au moins N albums est considérée comme image commune à éviter."
-    )
-    ap.add_argument(
-        "--images-per-product",
-        type=int,
-        default=1,
-        help="Nombre d'images produit copiées. 1 = couverture seulement; 0 = toutes les images non communes."
+        "--images-per-product", type=int, default=1,
+        help="Nombre d'images copiées par produit. 1 = couverture seulement; 0 = toutes."
     )
     args = ap.parse_args()
 
@@ -122,98 +116,40 @@ def main():
     if not project.exists():
         raise SystemExit(f"Projet introuvable : {project}")
 
+    public.mkdir(parents=True, exist_ok=True)
+    products_dir.mkdir(parents=True, exist_ok=True)
+
     raw = json.loads(catalogue.read_text(encoding="utf-8"))
     if not isinstance(raw, list):
         raise SystemExit("catalogue.json doit contenir une liste de produits.")
 
-    # 1) Résoudre toutes les images et compter celles qui sont identiques entre plusieurs albums.
-    entries = []
-    hash_album_count = Counter()
+    products = []
+    skipped = 0
+    copied = 0
+    reused = 0
 
     for entry in raw:
         album_id = str(entry.get("album_id") or "").strip()
         title = norm(str(entry.get("title") or ""))
         if not album_id or not title or title.lower() in INVALID_TITLES:
+            skipped += 1
             continue
 
         raw_images = list(entry.get("images") or [])
         if entry.get("cover") and entry["cover"] not in raw_images:
             raw_images.insert(0, entry["cover"])
 
-        resolved = []
-        seen_hashes_this_album = set()
-
-        for raw_img in raw_images:
-            src = resolve_source(str(raw_img), catalogue)
-            if not src:
-                continue
-            try:
-                digest = file_hash(src)
-            except OSError:
-                continue
-            resolved.append((src, digest))
-            seen_hashes_this_album.add(digest)
-
-        for digest in seen_hashes_this_album:
-            hash_album_count[digest] += 1
-
-        entries.append((entry, album_id, title, resolved))
-
-    shared_hashes = {
-        digest for digest, count in hash_album_count.items()
-        if count >= max(2, args.shared_threshold)
-    }
-
-    public.mkdir(parents=True, exist_ok=True)
-    products_dir.mkdir(parents=True, exist_ok=True)
-
-    products = []
-    copied = 0
-    reused = 0
-    skipped = 0
-    shared_skipped = 0
-
-    for entry, album_id, title, resolved in entries:
-        if not resolved:
-            skipped += 1
-            continue
-
-        # 2) Priorité aux images uniques de l'album.
-        unique_candidates = [(src, dig) for src, dig in resolved if dig not in shared_hashes]
-        shared_skipped += len(resolved) - len(unique_candidates)
-
-        # Si toutes les images sont communes, on garde quand même la première disponible.
-        candidates = unique_candidates or resolved
-
-        # Dédupliquer par hash en gardant l'ordre du catalogue.
-        dedup_candidates = []
-        seen = set()
-        for src, dig in candidates:
-            if dig in seen:
-                continue
-            seen.add(dig)
-            dedup_candidates.append((src, dig))
-
         if args.images_per_product > 0:
-            dedup_candidates = dedup_candidates[:args.images_per_product]
+            raw_images = raw_images[:args.images_per_product]
 
-        if not dedup_candidates:
-            skipped += 1
-            continue
-
+        web_images = []
         album_dest = products_dir / album_id
         album_dest.mkdir(parents=True, exist_ok=True)
 
-        # Supprime les anciennes couvertures de cet album pour éviter de garder le guide des tailles.
-        for old in album_dest.glob("*"):
-            if old.is_file():
-                try:
-                    old.unlink()
-                except OSError:
-                    pass
-
-        web_images = []
-        for idx, (src, _dig) in enumerate(dedup_candidates, 1):
+        for idx, raw_img in enumerate(raw_images, 1):
+            src = resolve_source(str(raw_img), catalogue)
+            if not src:
+                continue
             ext = src.suffix.lower() if src.suffix else ".jpg"
             dst = album_dest / f"{idx:03d}{ext}"
             if same_file_quick(src, dst):
@@ -223,8 +159,12 @@ def main():
                 copied += 1
             web_images.append(f"/products/{album_id}/{dst.name}")
 
+        if not web_images:
+            skipped += 1
+            continue
+
         cat = classify(title)
-        products.append({
+        product = {
             "id": album_id,
             "name": title,
             "team": guess_team(title),
@@ -235,8 +175,10 @@ def main():
             "image": web_images[0],
             "images": web_images,
             "source": entry.get("url") or "",
-        })
+        }
+        products.append(product)
 
+    # Déduplication stable par album_id.
     dedup = {}
     for p in products:
         dedup[str(p["id"])] = p
@@ -248,15 +190,15 @@ def main():
     )
 
     print("")
-    print("✅ Import intelligent terminé")
-    print(f"Produits générés        : {len(products)}")
-    print(f"Entrées ignorées        : {skipped}")
-    print(f"Images communes évitées : {shared_skipped}")
-    print(f"Images copiées          : {copied}")
-    print(f"Images déjà là          : {reused}")
-    print(f"Catalogue boutique      : {output_json}")
+    print("✅ Import terminé")
+    print(f"Produits générés : {len(products)}")
+    print(f"Entrées ignorées : {skipped}")
+    print(f"Images copiées    : {copied}")
+    print(f"Images déjà là    : {reused}")
+    print(f"Catalogue boutique: {output_json}")
     print("")
-    print("Recharge ensuite le site avec Ctrl + F5.")
+    print("Tu peux relancer exactement la même commande après une mise à jour Yupoo :")
+    print("les images déjà présentes seront réutilisées et products.json sera régénéré.")
 
 if __name__ == "__main__":
     main()
