@@ -75,6 +75,9 @@ export default function Home(){
   const [products,setProducts]=useState(()=>FALLBACK_PRODUCTS.map(applyPricingRules));
   const [activeLeague,setActiveLeague]=useState("");
   const [visibleCount,setVisibleCount]=useState(24);
+  const [nationRotation,setNationRotation]=useState(0);
+  const [leagueRotation,setLeagueRotation]=useState(0);
+  const [clubRotation,setClubRotation]=useState(0);
 
   useEffect(()=>{
     const app=window.Telegram?.WebApp;
@@ -108,6 +111,22 @@ export default function Home(){
 
   useEffect(()=>{localStorage.setItem("sf_cart_pro",JSON.stringify(cart))},[cart]);
   useEffect(()=>{localStorage.setItem("sf_favs",JSON.stringify(favs))},[favs]);
+
+  // Rotation automatique des maillots dans les univers
+  useEffect(()=>{
+    const id=setInterval(()=>setNationRotation(v=>v+1),3500);
+    return ()=>clearInterval(id);
+  },[]);
+
+  useEffect(()=>{
+    const id=setInterval(()=>setLeagueRotation(v=>v+1),4300);
+    return ()=>clearInterval(id);
+  },[]);
+
+  useEffect(()=>{
+    const id=setInterval(()=>setClubRotation(v=>v+1),3900);
+    return ()=>clearInterval(id);
+  },[]);
 
   const filtered=useMemo(()=>products.filter(p=>{
     const okCat=cat==="Tous"||p.cat===cat;
@@ -160,6 +179,167 @@ export default function Home(){
     else alert("Mode démonstration : commande prête.");
   }
 
+
+  function productImagesByTerms(terms=[], preferredCat=""){
+    const wanted=(terms||[]).map(t=>String(t).toLowerCase()).filter(Boolean);
+    const seen=new Set();
+
+    return products
+      .filter(p=>{
+        const hay=`${p.name||""} ${p.team||""} ${p.cat||""}`.toLowerCase();
+        const catOk=!preferredCat || (p.cat||"").toLowerCase()===preferredCat.toLowerCase();
+        return catOk && wanted.some(t=>hay.includes(t)) && p.image;
+      })
+      .map(p=>p.image)
+      .filter(img=>{
+        if(!img || seen.has(img)) return false;
+        seen.add(img);
+        return true;
+      });
+  }
+
+  function leagueProductImages(leagueName){
+    const terms=LEAGUES[leagueName]||[];
+    const seen=new Set();
+
+    return products
+      .filter(p=>{
+        if(!p.image) return false;
+        const hay=`${p.name||""} ${p.team||""} ${p.cat||""}`.toLowerCase();
+        return terms.some(t=>hay.includes(t));
+      })
+      .map(p=>p.image)
+      .filter(img=>{
+        if(!img || seen.has(img)) return false;
+        seen.add(img);
+        return true;
+      });
+  }
+
+  function rotatingImage(images,index){
+    if(!images?.length) return "";
+    return images[index % images.length];
+  }
+
+  const nationShowcase = useMemo(()=>{
+    const map=new Map();
+
+    products.forEach((p)=>{
+      if((p.cat||"").toLowerCase()!=="nations") return;
+
+      const label=String(p.team||"").trim() || String(p.name||"").trim();
+      if(!label) return;
+
+      const key=label.toLowerCase();
+
+      if(!map.has(key)){
+        map.set(key,{
+          code:label.slice(0,2).toUpperCase(),
+          label:label.toUpperCase(),
+          query:label.toLowerCase(),
+          fallback:p.emoji||"🌍",
+          images:[]
+        });
+      }
+
+      const item=map.get(key);
+
+      if(p.image && !item.images.includes(p.image)){
+        item.images.push(p.image);
+      }
+
+      if(Array.isArray(p.images)){
+        p.images.forEach(img=>{
+          if(img && !item.images.includes(img)){
+            item.images.push(img);
+          }
+        });
+      }
+
+      if((!item.fallback || item.fallback==="🌍") && p.emoji){
+        item.fallback=p.emoji;
+      }
+    });
+
+    return [...map.values()]
+      .sort((a,b)=>a.label.localeCompare(b.label,"fr"))
+      .map((item,i)=>({
+        ...item,
+        image:rotatingImage(item.images,nationRotation+i)
+      }));
+  },[products,nationRotation]);
+
+  const leagueShowcase = useMemo(()=>{
+    return Object.keys(LEAGUES)
+      .map((league,i)=>{
+        const images=leagueProductImages(league);
+        return {
+          mark:league==="Ligue 1" ? "L1"
+            : league==="Premier League" ? "PL"
+            : league==="La Liga" ? "LIGA"
+            : league==="Serie A" ? "A"
+            : league==="Bundesliga" ? "BL"
+            : league.slice(0,3).toUpperCase(),
+          label:league.toUpperCase(),
+          meta:images.length ? `${images.length} maillot(s)` : "Disponible",
+          league,
+          images,
+          image:rotatingImage(images,leagueRotation+i)
+        };
+      })
+      .filter(item=>item.images.length);
+  },[products,leagueRotation]);
+
+  const clubShowcase = useMemo(()=>{
+    const map=new Map();
+
+    products.forEach((p)=>{
+      if((p.cat||"").toLowerCase()!=="clubs") return;
+
+      const label=String(p.team||"").trim();
+      if(!label) return;
+
+      const key=label.toLowerCase();
+
+      if(!map.has(key)){
+        map.set(key,{
+          code:label
+            .split(/\s+/)
+            .filter(Boolean)
+            .slice(0,2)
+            .map(x=>x[0])
+            .join("")
+            .toUpperCase() || label.slice(0,2).toUpperCase(),
+          label:label.toUpperCase(),
+          query:label.toLowerCase(),
+          fallback:p.emoji||"⚽",
+          images:[]
+        });
+      }
+
+      const item=map.get(key);
+
+      if(p.image && !item.images.includes(p.image)){
+        item.images.push(p.image);
+      }
+
+      if(Array.isArray(p.images)){
+        p.images.forEach(img=>{
+          if(img && !item.images.includes(img)){
+            item.images.push(img);
+          }
+        });
+      }
+    });
+
+    return [...map.values()]
+      .sort((a,b)=>a.label.localeCompare(b.label,"fr"))
+      .map((item,i)=>({
+        ...item,
+        image:rotatingImage(item.images,clubRotation+i)
+      }));
+  },[products,clubRotation]);
+
   function Shop(){
     return <>
       <section className="sfBannerWrap">{/* TOP BANNER: KEEP */}
@@ -202,45 +382,94 @@ export default function Home(){
         {["Tous","Clubs","Nations","Rétro","Enfant"].map(x=><button key={x} className={"chip "+(cat===x?"on":"")} onClick={()=>{setCat(x);setActiveLeague("");setQuery("");}}>{x}</button>)}
       </div>
 
-      <section className="sfExplore" aria-label="Collections Soccer Fans">
-        <div className="sfExploreHead">
-          <div><div className="kicker">Collections</div><h2>Choisis ton univers</h2></div>
-          <span>2026/27</span>
+      <section className="sfExactUniverse" aria-label="Nations et championnats">
+        <div className="sfExactHeading">
+          <span className="sfExactLine"></span>
+          <h2><span>🌍</span> NATIONS <em>2026</em></h2>
+          <span className="sfExactLine"></span>
         </div>
 
-        <div className="sfNationPanel">
-          <div className="sfPanelTitle"><span>🌍</span><b>NATIONS <em>2026</em></b></div>
-          <div className="sfNationGrid">
-            {[
-              ["🇫🇷","France","france"],
-              ["🇧🇷","Brésil","br"],
-              ["🇦🇷","Argentine","argentine"],
-              ["🇧🇪","Belgique","belg"]
-            ].map(([flag,label,q])=>
-              <button key={label} className="sfNationCard" onClick={()=>jumpToProducts("Nations",q,"")}>
-                <span>{flag}</span><strong>{label}</strong>
-              </button>
-            )}
-          </div>
+        <div className="sfExactNations">
+          {nationShowcase.map((item)=>(
+            <button
+              key={item.code}
+              className="sfExactNation"
+              onClick={()=>jumpToProducts("Nations",item.query,"")}
+            >
+              <div className="sfExactNationVisual">
+                {item.image
+                  ? <img key={item.image} src={item.image} alt={item.label} className="sfRotateJersey"/>
+                  : <div className="sfExactFallback">{item.fallback}</div>
+                }
+              </div>
+              <div className="sfExactNationName">
+                <span>{item.fallback}</span>
+                <b>{item.label}</b>
+              </div>
+            </button>
+          ))}
         </div>
 
-        <div className="sfLeaguePanel">
-          <div className="sfPanelTitle"><span>🏆</span><b>CLUBS & CHAMPIONNATS</b></div>
-          <div className="sfLeagueGrid">
-            {[
-              ["L1","Ligue 1"],
-              ["PL","Premier League"],
-              ["LIGA","La Liga"],
-              ["A","Serie A"],
-              ["BL","Bundesliga"]
-            ].map(([mark,label])=>
-              <button key={label} className={"sfLeagueCard "+(activeLeague===label?"on":"")} onClick={()=>jumpToProducts("Clubs","",label)}>
-                <span>{mark}</span><strong>{label}</strong>
+        <div className="sfExactHeading sfExactClubHeading">
+          <span className="sfExactLine"></span>
+          <h2><span>🏆</span> CLUBS & <em>CHAMPIONNATS</em></h2>
+          <span className="sfExactLine"></span>
+        </div>
+
+        {!!leagueShowcase.length && <>
+          <div className="sfExactSubTitle">CHAMPIONNATS</div>
+          <div className="sfExactLeagues">
+            {leagueShowcase.map((item)=>(
+              <button
+                key={item.label}
+                className={"sfExactLeague "+(activeLeague===item.league?"on":"")}
+                onClick={()=>jumpToProducts("Clubs","",item.league)}
+              >
+                <div className="sfExactLeagueVisual">
+                  {item.image
+                    ? <img key={item.image} src={item.image} alt={item.label} className="sfRotateJersey"/>
+                    : <div className="sfExactLeagueMark">{item.mark}</div>
+                  }
+                </div>
+                <strong>{item.label}</strong>
+                <small>{item.meta}</small>
               </button>
-            )}
+            ))}
           </div>
+        </>}
+
+        {!!clubShowcase.length && <>
+          <div className="sfExactSubTitle sfExactClubSubTitle">TOUS LES CLUBS</div>
+          <div className="sfExactClubs">
+            {clubShowcase.map((item)=>(
+              <button
+                key={item.label}
+                className="sfExactClub"
+                onClick={()=>jumpToProducts("Clubs",item.query,"")}
+              >
+                <div className="sfExactClubVisual">
+                  {item.image
+                    ? <img key={item.image} src={item.image} alt={item.label} className="sfRotateJersey"/>
+                    : <div className="sfExactClubFallback">{item.fallback}</div>
+                  }
+                </div>
+                <div className="sfExactClubName">
+                  <strong>{item.code}</strong>
+                  <span>{item.label}</span>
+                </div>
+              </button>
+            ))}
+          </div>
+        </>}
+
+        <div className="sfExactMotto">
+          <span></span>
+          <b>QUALITÉ</b><i>•</i><b>PASSION</b><i>•</i><b>PERFORMANCE</b>
+          <span></span>
         </div>
       </section>
+
+
 
       <section id="products" className="section sectionPremium">
         <div className="section-head premiumHead"><div><div className="kicker">Catalogue</div><h2>Maillots populaires</h2></div><span>{filtered.length} produits</span></div>
@@ -1644,6 +1873,592 @@ export default function Home(){
       @media (min-width:1100px){
         .premiumGrid{
           grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+        }
+      }
+
+
+
+      /* ===== BLOC COLLECTIONS — STYLE CARTES COMME TA CAPTURE ===== */
+      .sfShowcase{
+        margin:12px 0 24px;
+        padding:16px 12px 14px;
+        border-radius:24px;
+        border:1px solid rgba(244,197,66,.22);
+        background:
+          radial-gradient(circle at 50% 0%, rgba(244,197,66,.08), transparent 34%),
+          linear-gradient(180deg,#111216,#0a0b0e);
+        box-shadow:0 16px 40px rgba(0,0,0,.26);
+      }
+      .sfShowcaseTop{
+        display:flex;
+        align-items:flex-end;
+        justify-content:space-between;
+        gap:12px;
+        margin-bottom:14px;
+      }
+      .sfShowcaseTop h2{
+        margin:4px 0 0;
+        color:#fff;
+        font-size:25px;
+        line-height:1.05;
+      }
+      .sfShowcaseTop > span{
+        color:#f4c542;
+        font-weight:950;
+        font-size:17px;
+      }
+      .sfShowcasePanel{
+        padding:12px;
+        border-radius:22px;
+        border:1px solid rgba(244,197,66,.18);
+        background:linear-gradient(180deg, rgba(20,22,27,.96), rgba(11,12,16,.98));
+        box-shadow: inset 0 0 0 1px rgba(255,255,255,.02);
+      }
+      .sfShowcasePanel + .sfShowcasePanel{ margin-top:12px; }
+      .sfShowcasePanelHead{
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        gap:10px;
+        margin-bottom:12px;
+        flex-wrap:wrap;
+      }
+      .sfShowcaseTitle{
+        display:flex;
+        align-items:center;
+        gap:8px;
+        color:#fff;
+        font-size:14px;
+        letter-spacing:.03em;
+      }
+      .sfShowcasePill{
+        min-height:32px;
+        padding:0 14px;
+        display:inline-flex;
+        align-items:center;
+        justify-content:center;
+        border-radius:999px;
+        border:1px solid rgba(244,197,66,.32);
+        background:rgba(244,197,66,.08);
+        color:#f4c542;
+        font-size:12px;
+        font-weight:900;
+        white-space:nowrap;
+      }
+      .sfNationHeroGrid{
+        display:grid;
+        grid-template-columns:repeat(4,minmax(0,1fr));
+        gap:10px;
+      }
+      .sfNationHeroCard{
+        min-width:0;
+        padding:10px 8px 12px;
+        border-radius:18px;
+        border:1px solid rgba(244,197,66,.20);
+        background:linear-gradient(180deg,#171a20,#0d0f13);
+        box-shadow:0 10px 24px rgba(0,0,0,.18);
+        color:#fff;
+      }
+      .sfNationHeroCard:active{ transform:scale(.98); }
+      .sfNationHeroVisual{
+        height:130px;
+        border-radius:16px;
+        background:
+          radial-gradient(circle at 50% -10%, rgba(244,197,66,.10), transparent 42%),
+          linear-gradient(180deg,#16191f,#0f1116);
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        overflow:hidden;
+        padding:10px;
+      }
+      .sfNationHeroPhoto{
+        width:100%;
+        height:100%;
+        object-fit:contain;
+        display:block;
+        filter: drop-shadow(0 8px 18px rgba(0,0,0,.32));
+      }
+      .sfNationHeroFallback{
+        font-size:58px;
+        line-height:1;
+      }
+      .sfNationHeroText{
+        margin-top:10px;
+        text-align:center;
+      }
+      .sfNationHeroText strong{
+        display:block;
+        color:#fff;
+        font-size:15px;
+        font-weight:950;
+        letter-spacing:.03em;
+      }
+      .sfNationHeroText span{
+        display:block;
+        color:rgba(255,255,255,.88);
+        font-size:10px;
+        margin-top:3px;
+        text-transform:uppercase;
+        letter-spacing:.04em;
+      }
+      .sfLeagueHeroGrid{
+        display:grid;
+        grid-template-columns:repeat(3,minmax(0,1fr));
+        gap:10px;
+      }
+      .sfLeagueHeroCard{
+        min-width:0;
+        min-height:106px;
+        padding:12px 8px 10px;
+        border-radius:18px;
+        border:1px solid rgba(244,197,66,.18);
+        background:linear-gradient(180deg,#16191f,#0d1015);
+        color:#fff;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:flex-start;
+        text-align:center;
+        gap:6px;
+      }
+      .sfLeagueHeroCard.on{
+        border-color:#f4c542;
+        box-shadow:0 0 0 2px rgba(244,197,66,.08),0 0 18px rgba(244,197,66,.14);
+      }
+      .sfLeagueHeroIcon{
+        width:46px;
+        height:46px;
+        border-radius:14px;
+        display:grid;
+        place-items:center;
+        font-size:14px;
+        font-weight:950;
+        color:#fff;
+        background:linear-gradient(180deg,#2a2f3a,#171b22);
+        box-shadow: inset 0 0 0 1px rgba(255,255,255,.04);
+      }
+      .sfLeagueHeroIcon.l1{ background:linear-gradient(180deg,#383d49,#1e232b); }
+      .sfLeagueHeroIcon.pl{ background:linear-gradient(180deg,#43404f,#231f30); }
+      .sfLeagueHeroIcon.liga{ background:linear-gradient(180deg,#4d4038,#261f19); }
+      .sfLeagueHeroIcon.sa{ background:linear-gradient(180deg,#2d4450,#17222b); }
+      .sfLeagueHeroIcon.bl{ background:linear-gradient(180deg,#4d2f2f,#271617); }
+      .sfLeagueHeroIcon.ucl{ background:linear-gradient(180deg,#28334a,#121926); }
+      .sfLeagueHeroCard strong{
+        font-size:11px;
+        line-height:1.1;
+      }
+      .sfLeagueHeroCard small{
+        color:rgba(255,255,255,.62);
+        font-size:9px;
+        line-height:1.2;
+      }
+      .sfServiceRow{
+        margin-top:12px;
+        display:grid;
+        grid-template-columns:repeat(4,minmax(0,1fr));
+        gap:8px;
+      }
+      .sfServiceCard{
+        min-width:0;
+        padding:10px 6px;
+        border-radius:16px;
+        border:1px solid rgba(244,197,66,.16);
+        background:linear-gradient(180deg,#121418,#0c0e12);
+        color:#fff;
+        text-align:center;
+      }
+      .sfServiceCard span{
+        display:block;
+        font-size:18px;
+        margin-bottom:6px;
+      }
+      .sfServiceCard b{
+        display:block;
+        font-size:10px;
+        line-height:1.1;
+        letter-spacing:.03em;
+      }
+      .sfServiceCard small{
+        display:block;
+        margin-top:3px;
+        color:rgba(255,255,255,.66);
+        font-size:8px;
+      }
+      @media (max-width:420px){
+        .sfShowcase{ padding:14px 10px 12px; }
+        .sfShowcaseTop h2{ font-size:22px; }
+        .sfNationHeroGrid{ gap:8px; }
+        .sfNationHeroVisual{ height:112px; padding:8px; }
+        .sfNationHeroText strong{ font-size:13px; }
+        .sfNationHeroText span{ font-size:9px; }
+        .sfLeagueHeroGrid{ gap:8px; }
+        .sfLeagueHeroCard{ min-height:98px; padding:10px 6px; }
+        .sfLeagueHeroIcon{ width:40px; height:40px; font-size:12px; }
+        .sfLeagueHeroCard strong{ font-size:10px; }
+        .sfLeagueHeroCard small{ font-size:8px; }
+        .sfServiceRow{ gap:6px; }
+        .sfServiceCard{ padding:9px 4px; }
+        .sfServiceCard b{ font-size:9px; }
+        .sfServiceCard small{ font-size:7px; }
+      }
+
+
+
+      /* ===== UNIVERS EXACT — NATIONS 2026 / CLUBS & CHAMPIONNATS ===== */
+      .sfExactUniverse{
+        margin:12px 0 24px;
+        padding:18px 12px 14px;
+        border-radius:22px;
+        background:
+          radial-gradient(circle at 50% 18%,rgba(244,197,66,.06),transparent 30%),
+          #050505;
+        border:1px solid rgba(244,197,66,.16);
+        overflow:hidden;
+      }
+      .sfExactHeading{
+        display:grid;
+        grid-template-columns:1fr auto 1fr;
+        align-items:center;
+        gap:12px;
+        margin:0 0 14px;
+      }
+      .sfExactHeading h2{
+        margin:0;
+        color:#fff;
+        font-size:24px;
+        line-height:1;
+        font-weight:950;
+        letter-spacing:.035em;
+        white-space:nowrap;
+      }
+      .sfExactHeading h2 em{
+        color:#e9b434;
+        font-style:normal;
+      }
+      .sfExactLine{
+        height:2px;
+        background:linear-gradient(90deg,transparent,#e2ad2d 50%,transparent);
+        box-shadow:0 0 8px rgba(244,197,66,.18);
+      }
+
+      .sfExactNations{
+        display:grid;
+        grid-template-columns:repeat(4,minmax(0,1fr));
+        gap:8px;
+      }
+      .sfExactNation{
+        min-width:0;
+        border:0;
+        padding:0;
+        background:transparent;
+        color:#fff;
+      }
+      .sfExactNationVisual{
+        height:170px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        overflow:hidden;
+        background:
+          radial-gradient(circle at 50% 55%,rgba(244,197,66,.05),transparent 50%),
+          #050505;
+      }
+      .sfRotateJersey{
+        width:100%;
+        height:100%;
+        object-fit:contain;
+        object-position:center center;
+        display:block;
+        animation:sfJerseySwap .48s ease both;
+        filter:drop-shadow(0 13px 20px rgba(0,0,0,.52));
+      }
+      @keyframes sfJerseySwap{
+        from{opacity:0;transform:scale(.93) translateY(4px)}
+        to{opacity:1;transform:scale(1) translateY(0)}
+      }
+      .sfExactFallback{
+        font-size:62px;
+      }
+      .sfExactNationName{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        gap:6px;
+        margin-top:4px;
+        font-size:11px;
+      }
+      .sfExactNationName span{font-size:19px}
+      .sfExactNationName b{
+        color:#fff;
+        font-size:12px;
+        letter-spacing:.02em;
+      }
+
+      .sfExactClubHeading{margin-top:17px}
+
+      .sfExactLeagues{
+        display:grid;
+        grid-template-columns:repeat(5,minmax(0,1fr));
+        gap:7px;
+      }
+      .sfExactLeague{
+        min-width:0;
+        min-height:154px;
+        padding:9px 6px 10px;
+        border-radius:15px;
+        border:1px solid rgba(238,182,48,.74);
+        background:
+          radial-gradient(circle at 50% 25%,rgba(244,197,66,.06),transparent 45%),
+          linear-gradient(180deg,#0d0d0e,#070708);
+        color:#fff;
+        text-align:center;
+        overflow:hidden;
+        box-shadow:inset 0 0 0 1px rgba(255,255,255,.015);
+      }
+      .sfExactLeague.on{
+        box-shadow:0 0 0 2px rgba(244,197,66,.11),0 0 16px rgba(244,197,66,.18);
+      }
+      .sfExactLeagueVisual{
+        height:92px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        overflow:hidden;
+        margin-bottom:5px;
+      }
+      .sfExactLeagueMark{
+        font-size:24px;
+        font-weight:950;
+        color:#fff;
+      }
+      .sfExactLeague strong{
+        display:block;
+        font-size:10px;
+        line-height:1.05;
+        color:#fff;
+      }
+      .sfExactLeague small{
+        display:block;
+        margin-top:5px;
+        color:#e3b438;
+        font-size:7.5px;
+        line-height:1.1;
+      }
+
+      .sfExactMotto{
+        margin-top:15px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        gap:8px;
+        color:#fff;
+      }
+      .sfExactMotto span{
+        flex:1;
+        max-width:100px;
+        height:2px;
+        background:linear-gradient(90deg,transparent,#d8a62e);
+      }
+      .sfExactMotto span:last-child{
+        background:linear-gradient(90deg,#d8a62e,transparent);
+      }
+      .sfExactMotto b{
+        font-size:9px;
+        letter-spacing:.22em;
+        font-weight:500;
+      }
+      .sfExactMotto i{
+        color:#d8a62e;
+        font-style:normal;
+      }
+
+      @media (max-width:420px){
+        .sfExactUniverse{padding:14px 8px 12px}
+        .sfExactHeading{gap:7px}
+        .sfExactHeading h2{font-size:18px}
+        .sfExactNations{gap:4px}
+        .sfExactNationVisual{height:126px}
+        .sfExactNationName{gap:3px}
+        .sfExactNationName span{font-size:15px}
+        .sfExactNationName b{font-size:9px}
+        .sfExactLeagues{gap:4px}
+        .sfExactLeague{
+          min-height:126px;
+          padding:7px 3px 8px;
+          border-radius:12px;
+        }
+        .sfExactLeagueVisual{height:72px}
+        .sfExactLeague strong{font-size:7.5px}
+        .sfExactLeague small{font-size:6px}
+        .sfExactMotto{gap:5px}
+        .sfExactMotto b{font-size:7px;letter-spacing:.14em}
+      }
+
+
+
+      /* Tous les pays Nations : défilement horizontal */
+      .sfExactNations{
+        display:grid !important;
+        grid-auto-flow:column !important;
+        grid-auto-columns:minmax(155px,1fr) !important;
+        grid-template-columns:none !important;
+        gap:8px !important;
+        overflow-x:auto !important;
+        overflow-y:hidden !important;
+        padding:2px 2px 10px !important;
+        scroll-snap-type:x mandatory !important;
+        scrollbar-width:none !important;
+        -webkit-overflow-scrolling:touch !important;
+      }
+
+      .sfExactNations::-webkit-scrollbar{
+        display:none !important;
+      }
+
+      .sfExactNation{
+        scroll-snap-align:start !important;
+      }
+
+      @media (max-width:420px){
+        .sfExactNations{
+          grid-auto-columns:calc((100vw - 54px)/2.25) !important;
+          gap:6px !important;
+        }
+        .sfExactNationVisual{
+          height:138px !important;
+        }
+      }
+
+      @media (min-width:700px){
+        .sfExactNations{
+          grid-auto-columns:minmax(180px,1fr) !important;
+        }
+      }
+
+
+
+      /* Tous les championnats + tous les clubs */
+      .sfExactSubTitle{
+        margin:4px 2px 9px;
+        color:#e3b438;
+        font-size:10px;
+        font-weight:950;
+        letter-spacing:.15em;
+      }
+
+      .sfExactClubSubTitle{
+        margin-top:15px;
+      }
+
+      .sfExactLeagues{
+        display:grid !important;
+        grid-auto-flow:column !important;
+        grid-auto-columns:minmax(150px,1fr) !important;
+        grid-template-columns:none !important;
+        gap:7px !important;
+        overflow-x:auto !important;
+        overflow-y:hidden !important;
+        padding:2px 2px 10px !important;
+        scroll-snap-type:x mandatory !important;
+        scrollbar-width:none !important;
+        -webkit-overflow-scrolling:touch !important;
+      }
+
+      .sfExactLeagues::-webkit-scrollbar,
+      .sfExactClubs::-webkit-scrollbar{
+        display:none !important;
+      }
+
+      .sfExactLeague{
+        scroll-snap-align:start !important;
+      }
+
+      .sfExactClubs{
+        display:grid;
+        grid-auto-flow:column;
+        grid-auto-columns:minmax(150px,1fr);
+        gap:7px;
+        overflow-x:auto;
+        overflow-y:hidden;
+        padding:2px 2px 10px;
+        scroll-snap-type:x mandatory;
+        scrollbar-width:none;
+        -webkit-overflow-scrolling:touch;
+      }
+
+      .sfExactClub{
+        min-width:0;
+        border:1px solid rgba(238,182,48,.55);
+        border-radius:15px;
+        padding:8px 6px 10px;
+        background:
+          radial-gradient(circle at 50% 25%,rgba(244,197,66,.05),transparent 44%),
+          linear-gradient(180deg,#0d0d0e,#070708);
+        color:#fff;
+        scroll-snap-align:start;
+        overflow:hidden;
+      }
+
+      .sfExactClubVisual{
+        height:112px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        overflow:hidden;
+      }
+
+      .sfExactClubFallback{
+        font-size:48px;
+      }
+
+      .sfExactClubName{
+        margin-top:6px;
+        text-align:center;
+      }
+
+      .sfExactClubName strong{
+        display:block;
+        color:#e3b438;
+        font-size:10px;
+        line-height:1;
+      }
+
+      .sfExactClubName span{
+        display:block;
+        margin-top:4px;
+        color:#fff;
+        font-size:8px;
+        line-height:1.1;
+        white-space:nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis;
+      }
+
+      @media (max-width:420px){
+        .sfExactLeagues,
+        .sfExactClubs{
+          grid-auto-columns:calc((100vw - 54px)/2.25) !important;
+          gap:6px !important;
+        }
+
+        .sfExactLeague{
+          min-height:132px !important;
+        }
+
+        .sfExactClubVisual{
+          height:105px;
+        }
+
+        .sfExactClubName span{
+          font-size:7.5px;
+        }
+      }
+
+      @media (min-width:700px){
+        .sfExactLeagues,
+        .sfExactClubs{
+          grid-auto-columns:minmax(175px,1fr) !important;
         }
       }
 
