@@ -46,7 +46,7 @@ function getProductImages(product){
     product.image,
     ...(Array.isArray(product.images)?product.images:[])
   ].filter(Boolean);
-  return [...new Set(all)].slice(0,5);
+  return [...new Set(all)];
 }
 
 const LEAGUES = {
