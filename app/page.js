@@ -39,6 +39,12 @@ const getProductType = name => {
 function applyPricingRules(product){
   if(!product || typeof product!=="object") return product;
 
+  // Si le produit a déjà plusieurs versions fusionnées
+  // (Fan / Player / Enfant), on les conserve telles quelles.
+  if(product.versions && typeof product.versions==="object" && Object.keys(product.versions).length){
+    return product;
+  }
+
   const type=getProductType(product.name);
   if(type==="Short")  return {...product, versions:{Short:20}};
   if(type==="Enfant") return {...product, versions:{Enfant:30}};
@@ -49,12 +55,20 @@ function applyPricingRules(product){
   return product;
 }
 
-function getProductImages(product){
+function getProductImages(product, activeVersion=""){
   if(!product) return [];
+
+  // Produit fusionné : la galerie suit la version choisie.
+  const versionGallery=activeVersion && product.versionImages?.[activeVersion];
+  if(Array.isArray(versionGallery) && versionGallery.length){
+    return [...new Set(versionGallery.filter(Boolean))];
+  }
+
   const all=[
     product.image,
     ...(Array.isArray(product.images)?product.images:[])
   ].filter(Boolean);
+
   return [...new Set(all)];
 }
 
@@ -343,7 +357,10 @@ export default function Home(){
       return sameNation && String(p.cat||"")!=="Shorts";
     }
 
-    const okCat=cat==="Tous"||p.cat===cat;
+    const okCat=
+      cat==="Tous" ||
+      p.cat===cat ||
+      (cat==="Enfant" && !!p.versions?.Enfant);
     const q=query.toLowerCase().trim();
     const hay=(`${p.name||""} ${p.team||""} ${p.nation||""} ${p.club||""} ${p.league||""} ${p.cat||""}`).toLowerCase();
     const okQ=!q||hay.includes(q);
@@ -425,18 +442,52 @@ export default function Home(){
   const shipping=subtotal===0?0:(subtotal>=100?0:5.90);
   const total=Math.max(0,subtotal-discount+shipping);
 
+  function preferredVersion(product){
+    const keys=Object.keys(product?.versions||{Fan:35});
+    if(keys.includes("Fan")) return "Fan";
+    if(keys.includes("Player")) return "Player";
+    if(keys.includes("Enfant")) return "Enfant";
+    return keys[0]||"Fan";
+  }
+
   function openProduct(p){
     const fixed=applyPricingRules(p);
+    const initialVersion=preferredVersion(fixed);
+
     setSelected(fixed);
     setGalleryIndex(0);
-    setVersion(Object.keys(fixed.versions||{Fan:35})[0]);
-    setSize("M"); setPrinting("");
+    setVersion(initialVersion);
+    setSize(initialVersion==="Enfant"?"16":"M");
+    setPrinting("");
+
     try{tg?.HapticFeedback?.impactOccurred("light")}catch{}
   }
+
+  function chooseVersion(nextVersion){
+    setVersion(nextVersion);
+    setGalleryIndex(0);
+    setSize(nextVersion==="Enfant"?"16":"M");
+  }
+
   function add(){
     const fixed=applyPricingRules(selected);
     const price=(fixed.versions?.[version]??35)+(printing.trim()?3:0);
-    setCart(c=>[...c,{key:crypto.randomUUID?.()||Date.now(),id:fixed.id,name:fixed.name,emoji:fixed.emoji,image:fixed.image||"",version,size,printing:printing.trim()||"Aucun",price,qty:1}]);
+    const versionGallery=getProductImages(fixed,version);
+    const cartImage=versionGallery[0]||fixed.image||"";
+
+    setCart(c=>[...c,{
+      key:crypto.randomUUID?.()||Date.now(),
+      id:fixed.id,
+      name:fixed.name,
+      emoji:fixed.emoji,
+      image:cartImage,
+      version,
+      size,
+      printing:printing.trim()||"Aucun",
+      price,
+      qty:1
+    }]);
+
     setSelected(null);
     try{tg?.HapticFeedback?.notificationOccurred("success")}catch{}
   }
@@ -1008,10 +1059,10 @@ export default function Home(){
         </div>
         <div className="grid premiumGrid">
           {displayedProducts.map((p,index)=>{
-            const minPrice=Math.min(...Object.values(p.versions||{Fan:35}));
-            const flag = p.hot ? 'TOP' : (index % 2 ? 'NOUVEAU' : 'TOP');
             const versionKeys=Object.keys(p.versions||{Fan:35});
-            const versionLabel = versionKeys.includes('Player') ? 'Player Version' : versionKeys.join(' • ');
+            const minPrice=Math.min(...Object.values(p.versions||{Fan:35}).filter(v=>typeof v==="number"));
+            const flag = p.hot ? 'TOP' : (index % 2 ? 'NOUVEAU' : 'TOP');
+            const versionLabel=versionKeys.join(" • ");
             return <article className="card premiumCard" key={p.id}>
               <span className={"badge premiumBadge "+(flag==='NOUVEAU'?'alt':'')}>{flag}</span>
               <button className="heart premiumHeart" onClick={()=>setFavs(f=>f.includes(p.id)?f.filter(id=>id!==p.id):[...f,p.id])}>{favs.includes(p.id)?"♥":"♡"}</button>
@@ -1025,8 +1076,11 @@ export default function Home(){
               </div>
               <div className="card-body premiumCardBody" onClick={()=>openProduct(p)}>
                 <div className="card-title">{p.name}</div>
-                <div className="meta">{versionLabel}</div>
-                <div className="price">{fmt(minPrice)}</div>
+                <div className="meta premiumVersionList">{versionLabel}</div>
+                <div className="price">
+                  {versionKeys.length>1&&<small className="priceFrom">Dès </small>}
+                  {fmt(minPrice)}
+                </div>
               </div>
             </article>
           })}
@@ -1069,7 +1123,7 @@ export default function Home(){
     </section>
   }
 
-  const selectedGallery=getProductImages(selected);
+  const selectedGallery=getProductImages(selected,version);
 
   const selectedPrice=selected
     ? (selected.versions?.[version] ?? selected.price ?? 35) + (printing.trim()?3:0)
@@ -1081,10 +1135,15 @@ export default function Home(){
 
   const isKidsProduct=selected
     ? (
-        String(selected.cat||"").toLowerCase()==="enfant" ||
-        String(selected.version||"").toLowerCase()==="enfant" ||
         String(version||"").toLowerCase()==="enfant" ||
-        /\b(kids?|youth|junior|enfant)\b/i.test(`${selected.name||""} ${selected.source_title||""}`)
+        (
+          Object.keys(selected.versions||{}).length<=1 &&
+          (
+            String(selected.cat||"").toLowerCase()==="enfant" ||
+            String(selected.version||"").toLowerCase()==="enfant" ||
+            /\b(kids?|youth|junior|enfant)\b/i.test(`${selected.name||""} ${selected.source_title||""}`)
+          )
+        )
       )
     : false;
 
@@ -4064,6 +4123,44 @@ export default function Home(){
         }
       }
 
+
+      /* ===== PRODUIT UNIQUE : FAN / PLAYER / ENFANT ===== */
+      .premiumVersionList{
+        color:#9ea2aa !important;
+        font-size:9px !important;
+        font-weight:750 !important;
+        line-height:1.35;
+      }
+
+      .priceFrom{
+        color:#9ea2aa;
+        font-size:9px;
+        font-weight:800;
+        text-transform:uppercase;
+        letter-spacing:.04em;
+      }
+
+      .premiumVariant.on{
+        box-shadow:inset 0 0 0 1px rgba(244,197,66,.18);
+      }
+
+      .premiumVariants{
+        grid-template-columns:repeat(auto-fit,minmax(100px,1fr)) !important;
+      }
+
+      @media (max-width:420px){
+        .premiumVariants{
+          grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+        }
+
+        .premiumVariant{
+          padding:8px !important;
+          flex-direction:column;
+          align-items:flex-start !important;
+          justify-content:center !important;
+        }
+      }
+
     `}</style>
     <header className="top">
       <div className="brand">
@@ -4219,7 +4316,7 @@ export default function Home(){
                   <button
                     key={v}
                     className={"variant premiumVariant "+(version===v?"on":"")}
-                    onClick={()=>setVersion(v)}
+                    onClick={()=>chooseVersion(v)}
                   >
                     <span>{v}</span>
                     <strong>{fmt(p)}</strong>

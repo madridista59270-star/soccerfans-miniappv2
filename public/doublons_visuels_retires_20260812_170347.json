@@ -1,0 +1,9 @@
+{
+  "changed_products": 0,
+  "removed_refs": 0,
+  "thresholds": {
+    "similarity_min": 0.985,
+    "hist_diff_max": 0.02
+  },
+  "items": []
+}
