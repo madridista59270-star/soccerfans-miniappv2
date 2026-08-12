@@ -1079,11 +1079,22 @@ export default function Home(){
     ? (selected.versions?.[version] ?? selected.price ?? 35)
     : 0;
 
+  const isKidsProduct=selected
+    ? (
+        String(selected.cat||"").toLowerCase()==="enfant" ||
+        String(selected.version||"").toLowerCase()==="enfant" ||
+        String(version||"").toLowerCase()==="enfant" ||
+        /\b(kids?|youth|junior|enfant)\b/i.test(`${selected.name||""} ${selected.source_title||""}`)
+      )
+    : false;
+
   const selectedSizes=selected
     ? (
         Array.isArray(selected.sizes) && selected.sizes.length
           ? selected.sizes
-          : ["S","M","L","XL","XXL"]
+          : isKidsProduct
+            ? ["16","18","20","22","24","26","28"]
+            : ["S","M","L","XL","XXL"]
       )
     : ["S","M","L","XL","XXL"];
 
@@ -3997,6 +4008,62 @@ export default function Home(){
         }
       }
 
+
+      /* ===== GUIDE TAILLES ENFANT ===== */
+      .kidsSizeGuide{
+        margin-top:10px;
+        padding:11px;
+        border-radius:13px;
+        border:1px solid rgba(244,197,66,.18);
+        background:rgba(244,197,66,.035);
+      }
+
+      .kidsSizeGuideTitle{
+        color:#f4c542;
+        font-size:9px;
+        font-weight:950;
+        letter-spacing:.06em;
+        text-transform:uppercase;
+      }
+
+      .kidsSizeGuideRow{
+        display:grid;
+        grid-template-columns:repeat(7,minmax(0,1fr));
+        gap:5px;
+        margin-top:8px;
+      }
+
+      .kidsSizeGuideRow span{
+        height:30px;
+        display:grid;
+        place-items:center;
+        border-radius:8px;
+        border:1px solid rgba(255,255,255,.10);
+        background:#111318;
+        color:#ddd;
+        font-size:9px;
+        font-weight:900;
+      }
+
+      .kidsSizeGuideRow span.on{
+        border-color:#f4c542;
+        background:rgba(244,197,66,.12);
+        color:#f4c542;
+      }
+
+      .kidsSizeGuide small{
+        display:block;
+        margin-top:7px;
+        color:#7f848c;
+        font-size:8px;
+      }
+
+      @media (max-width:420px){
+        .kidsSizeGuideRow{
+          grid-template-columns:repeat(4,minmax(0,1fr));
+        }
+      }
+
     `}</style>
     <header className="top">
       <div className="brand">
@@ -4181,8 +4248,23 @@ export default function Home(){
               </div>
 
               <div className="premiumSizeHint">
-                Vérifie bien la taille choisie avant de valider la commande.
+                {isKidsProduct
+                  ? "Tailles enfant disponibles : 16 • 18 • 20 • 22 • 24 • 26 • 28"
+                  : "Vérifie bien la taille choisie avant de valider la commande."
+                }
               </div>
+
+              {isKidsProduct && (
+                <div className="kidsSizeGuide">
+                  <div className="kidsSizeGuideTitle">Guide des tailles enfant</div>
+                  <div className="kidsSizeGuideRow">
+                    {["16","18","20","22","24","26","28"].map(s=>(
+                      <span key={s} className={size===s?"on":""}>{s}</span>
+                    ))}
+                  </div>
+                  <small>Choisis la même taille que celle indiquée par le fournisseur.</small>
+                </div>
+              )}
             </div>
 
             <div className="premiumOptionBlock">
