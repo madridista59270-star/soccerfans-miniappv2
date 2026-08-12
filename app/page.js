@@ -1070,6 +1070,30 @@ export default function Home(){
   }
 
   const selectedGallery=getProductImages(selected);
+
+  const selectedPrice=selected
+    ? (selected.versions?.[version] ?? selected.price ?? 35) + (printing.trim()?3:0)
+    : 0;
+
+  const selectedBasePrice=selected
+    ? (selected.versions?.[version] ?? selected.price ?? 35)
+    : 0;
+
+  const selectedSizes=selected
+    ? (
+        Array.isArray(selected.sizes) && selected.sizes.length
+          ? selected.sizes
+          : ["S","M","L","XL","XXL"]
+      )
+    : ["S","M","L","XL","XXL"];
+
+  const selectedMeta=selected ? [
+    selected.team ? {label:"Équipe",value:selected.team} : null,
+    selected.league ? {label:"Championnat",value:selected.league} : null,
+    selected.season ? {label:"Saison",value:selected.season} : null,
+    selected.kit ? {label:"Modèle",value:selected.kit} : null,
+  ].filter(Boolean) : [];
+
   const activeGalleryImage=selectedGallery.length
     ? selectedGallery[Math.min(galleryIndex,selectedGallery.length-1)]
     : "";
@@ -3485,6 +3509,494 @@ export default function Home(){
         }
       }
 
+
+      /* ===== FICHE PRODUIT PREMIUM ===== */
+      .productSheetBack{
+        padding:18px 12px 82px !important;
+        align-items:flex-end !important;
+      }
+
+      .premiumProductSheet{
+        width:min(760px,100%) !important;
+        max-width:760px !important;
+        max-height:min(91vh,900px) !important;
+        padding:0 !important;
+        overflow:auto !important;
+        border:1px solid rgba(244,197,66,.32) !important;
+        border-radius:26px 26px 18px 18px !important;
+        background:
+          radial-gradient(circle at 50% -10%,rgba(244,197,66,.08),transparent 35%),
+          linear-gradient(180deg,#101216,#08090b) !important;
+        box-shadow:0 -24px 70px rgba(0,0,0,.58) !important;
+      }
+
+      .premiumSheetTop{
+        position:sticky;
+        top:0;
+        z-index:30;
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        gap:12px;
+        min-height:64px;
+        padding:12px 16px;
+        border-bottom:1px solid rgba(244,197,66,.16);
+        background:rgba(9,10,12,.94);
+        backdrop-filter:blur(14px);
+      }
+
+      .premiumSheetEyebrow{
+        color:#f4c542;
+        font-size:10px;
+        font-weight:950;
+        letter-spacing:.16em;
+      }
+
+      .premiumSheetRef{
+        margin-top:3px;
+        color:#8e929a;
+        font-size:9px;
+        font-weight:700;
+      }
+
+      .premiumSheetClose{
+        position:static !important;
+        width:38px !important;
+        height:38px !important;
+        flex:0 0 38px;
+        border-radius:12px !important;
+        border:1px solid rgba(244,197,66,.24) !important;
+        background:#14161a !important;
+        color:#fff !important;
+      }
+
+      .premiumProductLayout{
+        display:grid;
+        grid-template-columns:minmax(0,1fr);
+      }
+
+      .premiumProductMedia{
+        padding:14px 14px 0;
+      }
+
+      .premiumProductHero{
+        min-height:360px !important;
+        border-radius:20px !important;
+        overflow:hidden;
+        border:1px solid rgba(244,197,66,.18);
+        background:#0d0f12 !important;
+      }
+
+      .premiumProductHero .productHeroPhoto{
+        width:100%;
+        height:100%;
+        min-height:360px;
+        object-fit:contain !important;
+        object-position:center !important;
+        background:#0d0f12;
+      }
+
+      .premiumHeroBadges{
+        position:absolute;
+        left:12px;
+        top:12px;
+        z-index:4;
+        display:flex;
+        flex-wrap:wrap;
+        gap:6px;
+      }
+
+      .premiumHeroBadges span{
+        padding:6px 9px;
+        border-radius:999px;
+        border:1px solid rgba(244,197,66,.40);
+        background:rgba(8,9,11,.82);
+        color:#f4c542;
+        font-size:8px;
+        font-weight:950;
+        letter-spacing:.08em;
+        text-transform:uppercase;
+        backdrop-filter:blur(8px);
+      }
+
+      .premiumGalleryCounter{
+        border:1px solid rgba(244,197,66,.32) !important;
+        background:rgba(7,8,10,.80) !important;
+        color:#f4c542 !important;
+      }
+
+      .premiumProductThumbs{
+        padding:10px 1px 2px !important;
+        gap:8px !important;
+      }
+
+      .premiumProductThumbs .productThumbButton{
+        width:62px !important;
+        height:62px !important;
+        flex:0 0 62px !important;
+        border-radius:12px !important;
+        background:#0c0d0f !important;
+      }
+
+      .premiumProductInfo{
+        padding:18px 16px 22px;
+      }
+
+      .premiumProductTitleRow{
+        display:flex;
+        align-items:flex-start;
+        justify-content:space-between;
+        gap:12px;
+      }
+
+      .premiumProductKicker{
+        margin-bottom:5px;
+      }
+
+      .premiumProductTitle{
+        margin:0 !important;
+        color:#fff;
+        font-size:23px !important;
+        line-height:1.12 !important;
+        letter-spacing:-.02em;
+      }
+
+      .premiumHeart{
+        width:42px;
+        height:42px;
+        flex:0 0 42px;
+        display:grid;
+        place-items:center;
+        border-radius:13px;
+        border:1px solid rgba(244,197,66,.22);
+        background:#121419;
+        color:#fff;
+        font-size:24px;
+        cursor:pointer;
+      }
+
+      .premiumHeart.on{
+        color:#f4c542;
+        border-color:rgba(244,197,66,.60);
+        background:rgba(244,197,66,.08);
+      }
+
+      .premiumPriceLine{
+        display:flex;
+        align-items:flex-end;
+        gap:10px;
+        margin-top:13px;
+      }
+
+      .premiumPriceLine strong{
+        color:#f4c542;
+        font-size:28px;
+        line-height:1;
+        font-weight:950;
+      }
+
+      .premiumPriceLine span{
+        padding-bottom:2px;
+        color:#a8abb1;
+        font-size:9px;
+        font-weight:700;
+      }
+
+      .premiumMetaGrid{
+        display:grid;
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:8px;
+        margin-top:16px;
+      }
+
+      .premiumMetaItem{
+        min-width:0;
+        padding:10px 11px;
+        border-radius:13px;
+        border:1px solid rgba(255,255,255,.07);
+        background:#111318;
+      }
+
+      .premiumMetaItem span{
+        display:block;
+        color:#777c84;
+        font-size:8px;
+        font-weight:800;
+        text-transform:uppercase;
+        letter-spacing:.08em;
+      }
+
+      .premiumMetaItem b{
+        display:block;
+        margin-top:4px;
+        overflow:hidden;
+        color:#f3f3f3;
+        font-size:10px;
+        white-space:nowrap;
+        text-overflow:ellipsis;
+      }
+
+      .premiumTrustStrip{
+        display:grid;
+        grid-template-columns:repeat(3,minmax(0,1fr));
+        gap:7px;
+        margin-top:14px;
+      }
+
+      .premiumTrustStrip>div{
+        padding:10px 8px;
+        border-radius:13px;
+        border:1px solid rgba(244,197,66,.14);
+        background:rgba(244,197,66,.035);
+        text-align:center;
+      }
+
+      .premiumTrustStrip b{
+        display:block;
+        color:#f2f2f2;
+        font-size:8px;
+        line-height:1.2;
+      }
+
+      .premiumTrustStrip span{
+        display:block;
+        margin-top:4px;
+        color:#81858d;
+        font-size:7px;
+      }
+
+      .premiumOptionBlock{
+        margin-top:15px;
+        padding:13px;
+        border-radius:16px;
+        border:1px solid rgba(255,255,255,.075);
+        background:#0d0f12;
+      }
+
+      .premiumOptionHead{
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        gap:10px;
+        margin-bottom:11px;
+      }
+
+      .premiumOptionHead>div{
+        display:flex;
+        align-items:center;
+        gap:8px;
+      }
+
+      .premiumOptionHead>div>span{
+        width:22px;
+        height:22px;
+        display:grid;
+        place-items:center;
+        border-radius:999px;
+        background:#f4c542;
+        color:#090a0c;
+        font-size:9px;
+        font-weight:950;
+      }
+
+      .premiumOptionHead b{
+        color:#fff;
+        font-size:11px;
+      }
+
+      .premiumOptionHead small{
+        color:#8d9198;
+        font-size:8px;
+      }
+
+      .premiumVariants{
+        display:grid !important;
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:8px !important;
+      }
+
+      .premiumVariant{
+        min-height:50px !important;
+        display:flex !important;
+        align-items:center !important;
+        justify-content:space-between !important;
+        gap:8px !important;
+        padding:9px 11px !important;
+        border-radius:12px !important;
+      }
+
+      .premiumVariant span{
+        font-weight:900;
+      }
+
+      .premiumVariant strong{
+        color:#f4c542;
+        font-size:10px;
+      }
+
+      .premiumSizeVariants{
+        display:grid !important;
+        grid-template-columns:repeat(5,minmax(0,1fr));
+        gap:7px !important;
+      }
+
+      .premiumSize{
+        min-width:0 !important;
+        height:42px !important;
+        padding:0 !important;
+        border-radius:11px !important;
+        font-size:10px !important;
+        font-weight:950 !important;
+      }
+
+      .premiumSizeHint,
+      .premiumPrintingHint{
+        margin-top:8px;
+        color:#747981;
+        font-size:8px;
+      }
+
+      .premiumPrintingInput{
+        height:48px !important;
+        border-radius:12px !important;
+        background:#111318 !important;
+      }
+
+      .premiumOrderSummary{
+        margin-top:15px;
+        padding:13px;
+        border-radius:16px;
+        border:1px solid rgba(244,197,66,.20);
+        background:
+          radial-gradient(circle at 100% 0%,rgba(244,197,66,.07),transparent 45%),
+          #101216;
+      }
+
+      .premiumOrderSummary>div{
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        gap:12px;
+        padding:5px 0;
+        color:#b2b5ba;
+        font-size:9px;
+      }
+
+      .premiumOrderSummary b{
+        color:#fff;
+      }
+
+      .premiumOrderTotal{
+        margin-top:5px;
+        padding-top:10px !important;
+        border-top:1px solid rgba(244,197,66,.14);
+      }
+
+      .premiumOrderTotal span{
+        color:#fff;
+        font-weight:900;
+      }
+
+      .premiumOrderTotal strong{
+        color:#f4c542;
+        font-size:17px;
+      }
+
+      .premiumOrderSummary small{
+        display:block;
+        margin-top:7px;
+        color:#7d8188;
+        font-size:8px;
+      }
+
+      .premiumStickyActions{
+        position:sticky !important;
+        bottom:0;
+        z-index:20;
+        margin:15px -16px -22px !important;
+        padding:12px 16px max(14px,env(safe-area-inset-bottom)) !important;
+        border-top:1px solid rgba(244,197,66,.15);
+        background:rgba(8,9,11,.96);
+        backdrop-filter:blur(14px);
+      }
+
+      .premiumAddButton{
+        width:100% !important;
+        min-height:54px;
+        display:flex !important;
+        align-items:center;
+        justify-content:space-between;
+        gap:12px;
+        border-radius:15px !important;
+        padding:0 16px !important;
+        font-size:11px !important;
+      }
+
+      .premiumAddButton span{
+        font-weight:950;
+        letter-spacing:.03em;
+      }
+
+      .premiumAddButton strong{
+        font-size:15px;
+      }
+
+      @media (min-width:700px){
+        .premiumProductSheet{
+          border-radius:26px !important;
+        }
+
+        .premiumProductLayout{
+          grid-template-columns:minmax(0,.94fr) minmax(0,1.06fr);
+          align-items:start;
+        }
+
+        .premiumProductMedia{
+          position:sticky;
+          top:66px;
+          padding:16px 8px 16px 16px;
+        }
+
+        .premiumProductInfo{
+          padding:18px 18px 22px 10px;
+        }
+
+        .premiumProductHero{
+          min-height:500px !important;
+        }
+
+        .premiumProductHero .productHeroPhoto{
+          min-height:500px;
+        }
+      }
+
+      @media (max-width:430px){
+        .premiumProductHero,
+        .premiumProductHero .productHeroPhoto{
+          min-height:330px !important;
+        }
+
+        .premiumProductTitle{
+          font-size:20px !important;
+        }
+
+        .premiumTrustStrip{
+          grid-template-columns:1fr;
+        }
+
+        .premiumTrustStrip>div{
+          display:flex;
+          align-items:center;
+          justify-content:space-between;
+          text-align:left;
+          gap:8px;
+        }
+
+        .premiumTrustStrip span{
+          margin-top:0;
+        }
+      }
+
     `}</style>
     <header className="top">
       <div className="brand">
@@ -3522,62 +4034,202 @@ export default function Home(){
       <button className={"nav "+(screen==="account"?"on":"")} onClick={()=>setScreen("account")}><b>◉</b>Compte</button>
     </nav>
 
-    {selected&&<div className="sheetback" onClick={()=>setSelected(null)}>
-      <div className="sheet" onClick={e=>e.stopPropagation()}>
-        <button className="close" onClick={()=>setSelected(null)}>✕</button>
-        <div className="productGallery">
-          <div className="producthero">
-            {activeGalleryImage
-              ? <img src={activeGalleryImage} alt={`${selected.name} - photo ${galleryIndex+1}`} className="productHeroPhoto"/>
-              : <span>{selected.emoji}</span>
-            }
-            {selectedGallery.length>1&&<>
-              <button
-                type="button"
-                className="galleryArrow prev"
-                aria-label="Photo précédente"
-                onClick={()=>setGalleryIndex(i=>(i-1+selectedGallery.length)%selectedGallery.length)}
-              >‹</button>
-              <button
-                type="button"
-                className="galleryArrow next"
-                aria-label="Photo suivante"
-                onClick={()=>setGalleryIndex(i=>(i+1)%selectedGallery.length)}
-              >›</button>
-              <span className="galleryCounter">{galleryIndex+1}/{selectedGallery.length}</span>
-            </>}
+    {selected&&<div className="sheetback productSheetBack" onClick={()=>setSelected(null)}>
+      <div className="sheet premiumProductSheet" onClick={e=>e.stopPropagation()}>
+        <div className="premiumSheetTop">
+          <div>
+            <div className="premiumSheetEyebrow">FICHE PRODUIT</div>
+            <div className="premiumSheetRef">Réf. {selected.id}</div>
+          </div>
+          <button className="close premiumSheetClose" onClick={()=>setSelected(null)} aria-label="Fermer">✕</button>
+        </div>
+
+        <div className="premiumProductLayout">
+          <div className="premiumProductMedia">
+            <div className="productGallery">
+              <div className="producthero premiumProductHero">
+                {activeGalleryImage
+                  ? <img src={activeGalleryImage} alt={`${selected.name} - photo ${galleryIndex+1}`} className="productHeroPhoto"/>
+                  : <span>{selected.emoji}</span>
+                }
+
+                <div className="premiumHeroBadges">
+                  <span>{selected.cat||"Maillot"}</span>
+                  {version && <span>{version}</span>}
+                </div>
+
+                {selectedGallery.length>1&&<>
+                  <button
+                    type="button"
+                    className="galleryArrow prev"
+                    aria-label="Photo précédente"
+                    onClick={()=>setGalleryIndex(i=>(i-1+selectedGallery.length)%selectedGallery.length)}
+                  >‹</button>
+                  <button
+                    type="button"
+                    className="galleryArrow next"
+                    aria-label="Photo suivante"
+                    onClick={()=>setGalleryIndex(i=>(i+1)%selectedGallery.length)}
+                  >›</button>
+                  <span className="galleryCounter premiumGalleryCounter">{galleryIndex+1}/{selectedGallery.length}</span>
+                </>}
+              </div>
+
+              {selectedGallery.length>1&&
+                <div className="productThumbs premiumProductThumbs" aria-label="Photos du produit">
+                  {selectedGallery.map((img,i)=>
+                    <button
+                      type="button"
+                      key={`${img}-${i}`}
+                      className={"productThumbButton "+(galleryIndex===i?"on":"")}
+                      onClick={()=>setGalleryIndex(i)}
+                      aria-label={`Voir la photo ${i+1}`}
+                    >
+                      <img src={img} alt={`${selected.name} miniature ${i+1}`}/>
+                    </button>
+                  )}
+                </div>
+              }
+            </div>
           </div>
 
-          {selectedGallery.length>1&&
-            <div className="productThumbs" aria-label="Photos du produit">
-              {selectedGallery.map((img,i)=>
-                <button
-                  type="button"
-                  key={`${img}-${i}`}
-                  className={"productThumbButton "+(galleryIndex===i?"on":"")}
-                  onClick={()=>setGalleryIndex(i)}
-                  aria-label={`Voir la photo ${i+1}`}
-                >
-                  <img src={img} alt={`${selected.name} miniature ${i+1}`}/>
-                </button>
-              )}
+          <div className="premiumProductInfo">
+            <div className="premiumProductTitleRow">
+              <div>
+                <div className="kicker premiumProductKicker">{selected.cat||"Collection"}</div>
+                <h3 className="premiumProductTitle">{selected.name}</h3>
+              </div>
+              <button
+                type="button"
+                className={"premiumHeart "+(favs.includes(selected.id)?"on":"")}
+                onClick={()=>toggleFav(selected.id)}
+                aria-label="Ajouter aux favoris"
+              >♡</button>
             </div>
-          }
+
+            <div className="premiumPriceLine">
+              <strong>{fmt(selectedPrice)}</strong>
+              {printing.trim()&&<span>dont +3 € flocage</span>}
+            </div>
+
+            {!!selectedMeta.length && (
+              <div className="premiumMetaGrid">
+                {selectedMeta.map(item=>(
+                  <div key={`${item.label}-${item.value}`} className="premiumMetaItem">
+                    <span>{item.label}</span>
+                    <b>{item.value}</b>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            <div className="premiumTrustStrip">
+              <div>
+                <b>🚚 Livraison 7–14 jours</b>
+                <span>Suivi de commande</span>
+              </div>
+              <div>
+                <b>🔒 Paiement sécurisé</b>
+                <span>Commande protégée</span>
+              </div>
+              <div>
+                <b>💬 Support 7j/7</b>
+                <span>Besoin d’aide ?</span>
+              </div>
+            </div>
+
+            <div className="premiumOptionBlock">
+              <div className="premiumOptionHead">
+                <div>
+                  <span>1</span>
+                  <b>Version</b>
+                </div>
+                <small>Choisis ton modèle</small>
+              </div>
+
+              <div className="variants premiumVariants">
+                {Object.entries(selected.versions||{Fan:selected.price||35}).map(([v,p])=>
+                  <button
+                    key={v}
+                    className={"variant premiumVariant "+(version===v?"on":"")}
+                    onClick={()=>setVersion(v)}
+                  >
+                    <span>{v}</span>
+                    <strong>{fmt(p)}</strong>
+                  </button>
+                )}
+              </div>
+            </div>
+
+            <div className="premiumOptionBlock">
+              <div className="premiumOptionHead">
+                <div>
+                  <span>2</span>
+                  <b>Taille</b>
+                </div>
+                <small>Taille sélectionnée : {size}</small>
+              </div>
+
+              <div className="variants premiumSizeVariants">
+                {selectedSizes.map(s=>
+                  <button
+                    key={s}
+                    className={"variant premiumSize "+(size===s?"on":"")}
+                    onClick={()=>setSize(s)}
+                  >{s}</button>
+                )}
+              </div>
+
+              <div className="premiumSizeHint">
+                Vérifie bien la taille choisie avant de valider la commande.
+              </div>
+            </div>
+
+            <div className="premiumOptionBlock">
+              <div className="premiumOptionHead">
+                <div>
+                  <span>3</span>
+                  <b>Flocage personnalisé</b>
+                </div>
+                <small>+3 €</small>
+              </div>
+
+              <input
+                className="input premiumPrintingInput"
+                value={printing}
+                onChange={e=>setPrinting(e.target.value)}
+                placeholder="Ex : MBAPPÉ 10"
+                maxLength={30}
+              />
+              <div className="premiumPrintingHint">
+                Laisse vide si tu ne souhaites pas de flocage.
+              </div>
+            </div>
+
+            <div className="premiumOrderSummary">
+              <div>
+                <span>Maillot</span>
+                <b>{fmt(selectedBasePrice)}</b>
+              </div>
+              <div>
+                <span>Flocage</span>
+                <b>{printing.trim()?"+3,00 €":"Aucun"}</b>
+              </div>
+              <div className="premiumOrderTotal">
+                <span>Total produit</span>
+                <strong>{fmt(selectedPrice)}</strong>
+              </div>
+              <small>Livraison offerte dès 100 € de commande.</small>
+            </div>
+
+            <div className="sticky-actions premiumStickyActions">
+              <button className="btn primary premiumAddButton" onClick={add}>
+                <span>Ajouter au panier</span>
+                <strong>{fmt(selectedPrice)}</strong>
+              </button>
+            </div>
+          </div>
         </div>
-        <div className="kicker">{selected.cat}</div>
-        <h3>{selected.name}</h3>
-        <p className="muted">Choisis ta version, ta taille et ton flocage.</p>
-
-        <div className="label">Version</div>
-        <div className="variants">{Object.entries(selected.versions||{Fan:35}).map(([v,p])=><button key={v} className={"variant "+(version===v?"on":"")} onClick={()=>setVersion(v)}>{v} • {fmt(p)}</button>)}</div>
-
-        <div className="label">Taille</div>
-        <div className="variants">{["S","M","L","XL","XXL"].map(s=><button key={s} className={"variant "+(size===s?"on":"")} onClick={()=>setSize(s)}>{s}</button>)}</div>
-
-        <div className="label">Flocage personnalisé (+3 €)</div>
-        <input className="input" value={printing} onChange={e=>setPrinting(e.target.value)} placeholder="Ex : MBAPPÉ 10"/>
-
-        <div className="sticky-actions"><button className="btn primary" style={{width:"100%"}} onClick={add}>Ajouter • {fmt((selected.versions?.[version]||29)+(printing.trim()?3:0))}</button></div>
       </div>
     </div>}
 
