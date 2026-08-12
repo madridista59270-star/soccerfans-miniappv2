@@ -179,6 +179,9 @@ export default function Home(){
   const [promo,setPromo]=useState("");
   const [products,setProducts]=useState(()=>FALLBACK_PRODUCTS.map(applyPricingRules));
   const [activeLeague,setActiveLeague]=useState("");
+  const [selectedNation,setSelectedNation]=useState("");
+  const [selectedChampionship,setSelectedChampionship]=useState("");
+  const [selectedClub,setSelectedClub]=useState("");
   const [visibleCount,setVisibleCount]=useState(24);
   const [nationRotation,setNationRotation]=useState(0);
   const [leagueRotation,setLeagueRotation]=useState(0);
@@ -310,25 +313,111 @@ export default function Home(){
   },[]);
 
   const filtered=useMemo(()=>products.filter(p=>{
+    // Mode "club ouvert" : tous les maillots du club
+    // (Clubs + Rétro + Enfant), sans les shorts.
+    if(selectedClub){
+      const wanted=normalizeLogoKey(selectedClub);
+      const teamKey=normalizeLogoKey(p.team||p.club||"");
+      const nameKey=normalizeLogoKey(p.name||"");
+
+      const sameClub=
+        teamKey===wanted ||
+        (!teamKey && nameKey.includes(wanted));
+
+      return sameClub && String(p.cat||"")!=="Shorts";
+    }
+
+    // Mode "pays ouvert" : affiche tous les produits de cette sélection
+    // même s'ils sont rangés en Nations, Rétro ou Enfant.
+    if(selectedNation){
+      const wanted=normalizeLogoKey(selectedNation);
+      const teamKey=normalizeLogoKey(p.team||"");
+      const nationKey=normalizeLogoKey(p.nation||"");
+      const nameKey=normalizeLogoKey(p.name||"");
+
+      const sameNation=
+        teamKey===wanted ||
+        nationKey===wanted ||
+        (!teamKey && !nationKey && nameKey.includes(wanted));
+
+      return sameNation && String(p.cat||"")!=="Shorts";
+    }
+
     const okCat=cat==="Tous"||p.cat===cat;
     const q=query.toLowerCase().trim();
-    const hay=(`${p.name||""} ${p.team||""} ${p.cat||""}`).toLowerCase();
+    const hay=(`${p.name||""} ${p.team||""} ${p.nation||""} ${p.club||""} ${p.league||""} ${p.cat||""}`).toLowerCase();
     const okQ=!q||hay.includes(q);
     const keys=activeLeague ? (LEAGUES[activeLeague]||[]) : [];
     const okLeague=!activeLeague||keys.some(k=>hay.includes(k));
     return okCat&&okQ&&okLeague;
-  }),[cat,query,products,activeLeague]);
+  }),[cat,query,products,activeLeague,selectedNation,selectedClub]);
 
-  const displayedProducts=filtered.slice(0,visibleCount);
+  // En mode pays/club : tous les maillots sont affichés directement.
+  const displayedProducts=(selectedNation||selectedClub) ? filtered : filtered.slice(0,visibleCount);
 
-  useEffect(()=>{ setVisibleCount(24); },[cat,query,activeLeague]);
+  useEffect(()=>{ setVisibleCount(24); },[cat,query,activeLeague,selectedNation,selectedClub]);
 
   function jumpToProducts(nextCat="Tous", nextQuery="", nextLeague=""){
+    setSelectedNation("");
+    setSelectedClub("");
+    setSelectedChampionship("");
     setCat(nextCat);
     setQuery(nextQuery);
     setActiveLeague(nextLeague);
     setVisibleCount(24);
     setTimeout(()=>document.getElementById("products")?.scrollIntoView({behavior:"smooth"}),60);
+  }
+
+  function openNation(label){
+    setSelectedClub("");
+    setSelectedChampionship("");
+    setSelectedNation(label);
+    setCat("Tous");
+    setQuery("");
+    setActiveLeague("");
+    setVisibleCount(9999);
+    setTimeout(()=>document.getElementById("products")?.scrollIntoView({behavior:"smooth"}),60);
+  }
+
+  function closeNation(){
+    setSelectedNation("");
+    setCat("Tous");
+    setQuery("");
+    setActiveLeague("");
+    setVisibleCount(24);
+    setTimeout(()=>document.getElementById("products")?.scrollIntoView({behavior:"smooth"}),60);
+  }
+
+  function openChampionship(item){
+    const league=item.league||getShopLeagueName(item.sourceLeague)||item.sourceLeague||item.label;
+    setSelectedNation("");
+    setSelectedClub("");
+    setSelectedChampionship(league);
+    setCat("Tous");
+    setQuery("");
+    setActiveLeague("");
+    setTimeout(()=>document.getElementById("championship-zone")?.scrollIntoView({behavior:"smooth",block:"center"}),50);
+  }
+
+  function closeChampionship(){
+    setSelectedChampionship("");
+    setSelectedClub("");
+  }
+
+  function openClub(label){
+    setSelectedNation("");
+    setSelectedClub(label);
+    setCat("Tous");
+    setQuery("");
+    setActiveLeague("");
+    setVisibleCount(9999);
+    setTimeout(()=>document.getElementById("products")?.scrollIntoView({behavior:"smooth"}),60);
+  }
+
+  function closeClub(){
+    setSelectedClub("");
+    setVisibleCount(24);
+    setTimeout(()=>document.getElementById("championship-zone")?.scrollIntoView({behavior:"smooth",block:"center"}),60);
   }
 
   const subtotal=cart.reduce((s,x)=>s+x.price*x.qty,0);
@@ -525,12 +614,29 @@ export default function Home(){
 
   function getShopLeagueName(value){
     const key=normalizeLogoKey(value);
-    if(key.includes("premier league")) return "Premier League";
+
+    if(key.includes("premier league") || key==="epl") return "Premier League";
     if(key.includes("la liga") || key.includes("spanish la liga")) return "La Liga";
-    if(key.includes("serie a")) return "Serie A";
+    if(key.includes("serie a") && !key.includes("brazil")) return "Serie A";
     if(key.includes("bundesliga")) return "Bundesliga";
     if(key.includes("ligue 1") || key.includes("french ligue 1")) return "Ligue 1";
+
+    if(key.includes("primeira liga") || key.includes("portuguese")) return "Primeira Liga";
+    if(key.includes("eredivisie") || key.includes("dutch")) return "Eredivisie";
+    if(key.includes("scottish premiership") || key.includes("scottish premier")) return "Scottish Premiership";
+    if(key.includes("super lig") || key.includes("turkish")) return "Süper Lig";
+    if(key==="mls" || key.includes("major league soccer")) return "MLS";
+    if(key.includes("saudi pro league") || key.includes("saudi professional")) return "Saudi Pro League";
+    if(key.includes("brazilian serie a") || key.includes("brasileirao")) return "Brasileirão";
+    if(key.includes("argentine primera") || key.includes("argentina primera")) return "Primera División Argentine";
+
     return "";
+  }
+
+  function sameLeague(a,b){
+    const aa=getShopLeagueName(a)||String(a||"").trim();
+    const bb=getShopLeagueName(b)||String(b||"").trim();
+    return normalizeLogoKey(aa)===normalizeLogoKey(bb);
   }
 
   const leagueShowcase = useMemo(()=>{
@@ -592,6 +698,44 @@ export default function Home(){
       };
     });
   },[products,leagueRotation,footballLogos]);
+
+  const championshipClubs = useMemo(()=>{
+    if(!selectedChampionship) return [];
+
+    const map=new Map();
+
+    products.forEach((p)=>{
+      const team=String(p.team||p.club||"").trim();
+      const league=String(p.league||"").trim();
+
+      if(!team || !league || !sameLeague(league,selectedChampionship)) return;
+
+      const key=normalizeLogoKey(team);
+
+      if(!map.has(key)){
+        map.set(key,{
+          label:team,
+          key,
+          logo:footballLogos.clubs?.[key]||"",
+          count:0,
+          image:p.image||""
+        });
+      }
+
+      const item=map.get(key);
+      item.count+=1;
+
+      if(!item.image && p.image){
+        item.image=p.image;
+      }
+
+      if(!item.logo){
+        item.logo=footballLogos.clubs?.[key]||"";
+      }
+    });
+
+    return [...map.values()].sort((a,b)=>a.label.localeCompare(b.label,"fr"));
+  },[products,footballLogos,selectedChampionship]);
 
   const clubShowcase = useMemo(()=>{
     const map=new Map();
@@ -672,13 +816,13 @@ export default function Home(){
       <div className="searchBarWrap">
         <div className="searchBar">
           <span className="searchIcon">⌕</span>
-          <input value={query} onChange={e=>{setQuery(e.target.value);setActiveLeague("");}} placeholder="Rechercher un club, un pays, un maillot..."/>
+          <input value={query} onChange={e=>{setSelectedNation("");setSelectedClub("");setSelectedChampionship("");setQuery(e.target.value);setActiveLeague("");}} placeholder="Rechercher un club, un pays, un maillot..."/>
           <button className="filterBtn" type="button" aria-label="Filtres">☰</button>
         </div>
       </div>
 
       <div className="chips chipsPremium">
-        {["Tous","Clubs","Nations","Rétro","Enfant"].map(x=><button key={x} className={"chip "+(cat===x?"on":"")} onClick={()=>{setCat(x);setActiveLeague("");setQuery("");}}>{x}</button>)}
+        {["Tous","Clubs","Nations","Rétro","Enfant"].map(x=><button key={x} className={"chip "+(!selectedNation&&!selectedClub&&cat===x?"on":"")} onClick={()=>{setSelectedNation("");setSelectedClub("");setSelectedChampionship("");setCat(x);setActiveLeague("");setQuery("");}}>{x}</button>)}
       </div>
 
       <section className="sfExactUniverse" aria-label="Nations et championnats">
@@ -695,7 +839,7 @@ export default function Home(){
               <button
                 key={item.label}
                 className={"sfExactNation "+(!item.hasProduct?"sfNationNoProduct":"")}
-                onClick={()=>jumpToProducts("Nations",item.query,"")}
+                onClick={()=>openNation(item.label)}
               >
                 <div className="sfExactNationVisual">
                   {item.image
@@ -718,49 +862,111 @@ export default function Home(){
           <button type="button" className="sfRailArrow sfRailArrowRight" onClick={()=>moveShowcase(nationsRailRef,1,"nation")} aria-label="Maillots nations suivants">›</button>
         </div>
 
-        <div className="sfExactHeading sfExactClubHeading">
-          <span className="sfExactLine"></span>
-          <h2><span>🏆</span> <em>CHAMPIONNATS LES PLUS REGARDÉS</em> <small className="sfChampCount">{leagueShowcase.length}</small></h2>
-          <span className="sfExactLine"></span>
-        </div>
-
-        {!!leagueShowcase.length && (
-          <div className="sfRailWrap sfChampionshipRailWrap">
-            <button
-              type="button"
-              className="sfRailArrow sfRailArrowLeft"
-              onClick={()=>moveShowcase(leaguesRailRef,-1,"league")}
-              aria-label="Championnats précédents"
-            >‹</button>
-
-            <div className="sfExactLeagues sfAllChampionships" ref={leaguesRailRef}>
-              {leagueShowcase.map((item)=>(
-                <button
-                  key={`${item.meta}-${item.sourceLeague}`}
-                  className={"sfExactLeague sfChampionshipCard "+(item.league && activeLeague===item.league?"on":"")}
-                  onClick={()=>item.league ? jumpToProducts("Clubs","",item.league) : null}
-                  title={item.league ? `Voir les maillots ${item.league}` : item.sourceLeague}
-                >
-                  <div className="sfExactLeagueVisual sfChampionshipLogoWrap">
-                    {item.logo
-                      ? <img src={item.logo} alt={`Logo ${item.label}`} className="sfLeagueOfficialLogo sfChampionshipLogo"/>
-                      : <div className="sfExactLeagueMark">{item.mark}</div>
-                    }
-                  </div>
-                  <strong>{item.label}</strong>
-                  <small>{item.meta}</small>
-                </button>
-              ))}
-            </div>
-
-            <button
-              type="button"
-              className="sfRailArrow sfRailArrowRight"
-              onClick={()=>moveShowcase(leaguesRailRef,1,"league")}
-              aria-label="Championnats suivants"
-            >›</button>
+        <div id="championship-zone" className="sfChampionshipSelector">
+          <div className="sfExactHeading sfExactClubHeading">
+            <span className="sfExactLine"></span>
+            <h2>
+              <span>🏆</span>{" "}
+              <em>{selectedChampionship ? `CLUBS — ${selectedChampionship.toUpperCase()}` : "CHAMPIONNATS LES PLUS REGARDÉS"}</em>
+              {!selectedChampionship && <small className="sfChampCount">{leagueShowcase.length}</small>}
+            </h2>
+            <span className="sfExactLine"></span>
           </div>
-        )}
+
+          {!selectedChampionship ? (
+            !!leagueShowcase.length && (
+              <div className="sfRailWrap sfChampionshipRailWrap">
+                <button
+                  type="button"
+                  className="sfRailArrow sfRailArrowLeft"
+                  onClick={()=>moveShowcase(leaguesRailRef,-1,"league")}
+                  aria-label="Championnats précédents"
+                >‹</button>
+
+                <div className="sfExactLeagues sfAllChampionships" ref={leaguesRailRef}>
+                  {leagueShowcase.map((item)=>(
+                    <button
+                      key={`${item.meta}-${item.sourceLeague}`}
+                      className="sfExactLeague sfChampionshipCard"
+                      onClick={()=>openChampionship(item)}
+                      title={`Voir les clubs ${item.league||item.sourceLeague||item.label}`}
+                    >
+                      <div className="sfExactLeagueVisual sfChampionshipLogoWrap">
+                        {item.logo
+                          ? <img src={item.logo} alt={`Logo ${item.label}`} className="sfLeagueOfficialLogo sfChampionshipLogo"/>
+                          : <div className="sfExactLeagueMark">{item.mark}</div>
+                        }
+                      </div>
+                      <strong>{item.label}</strong>
+                      <small>{item.meta}</small>
+                    </button>
+                  ))}
+                </div>
+
+                <button
+                  type="button"
+                  className="sfRailArrow sfRailArrowRight"
+                  onClick={()=>moveShowcase(leaguesRailRef,1,"league")}
+                  aria-label="Championnats suivants"
+                >›</button>
+              </div>
+            )
+          ) : (
+            <>
+              <div className="sfChampionshipBackRow">
+                <button type="button" className="nationBackBtn" onClick={closeChampionship}>
+                  ← Championnats
+                </button>
+                <span>{championshipClubs.length} clubs</span>
+              </div>
+
+              {championshipClubs.length ? (
+                <div className="sfRailWrap">
+                  <button
+                    type="button"
+                    className="sfRailArrow sfRailArrowLeft"
+                    onClick={()=>moveShowcase(clubsRailRef,-1,"club")}
+                    aria-label="Clubs précédents"
+                  >‹</button>
+
+                  <div className="sfExactClubs sfChampionshipClubsRail" ref={clubsRailRef}>
+                    {championshipClubs.map((club)=>(
+                      <button
+                        key={club.key}
+                        type="button"
+                        className={"sfExactClub sfLeagueClubCard "+(selectedClub===club.label?"on":"")}
+                        onClick={()=>openClub(club.label)}
+                        title={`Voir tous les maillots ${club.label}`}
+                      >
+                        <div className="sfExactClubVisual sfLeagueClubLogoVisual">
+                          {club.logo
+                            ? <img src={club.logo} alt={`Logo ${club.label}`} className="sfClubBigLogo"/>
+                            : <div className="sfClubInitials">{club.label.split(/\s+/).slice(0,2).map(x=>x[0]).join("").toUpperCase()}</div>
+                          }
+                        </div>
+                        <div className="sfExactClubName">
+                          <span>{club.label}</span>
+                          <strong>{club.count} maillot{club.count>1?"s":""}</strong>
+                        </div>
+                      </button>
+                    ))}
+                  </div>
+
+                  <button
+                    type="button"
+                    className="sfRailArrow sfRailArrowRight"
+                    onClick={()=>moveShowcase(clubsRailRef,1,"club")}
+                    aria-label="Clubs suivants"
+                  >›</button>
+                </div>
+              ) : (
+                <div className="sfNoClubs">
+                  Aucun club de ce championnat n’est encore présent dans ton catalogue.
+                </div>
+              )}
+            </>
+          )}
+        </div>
 
         <div className="sfExactMotto">
           <span></span>
@@ -772,7 +978,34 @@ export default function Home(){
 
 
       <section id="products" className="section sectionPremium">
-        <div className="section-head premiumHead"><div><div className="kicker">Catalogue</div><h2>Maillots populaires</h2></div><span>{filtered.length} produits</span></div>
+        <div className="section-head premiumHead">
+          <div>
+            <div className="kicker">
+              {selectedClub ? "Club" : selectedNation ? "Sélection nationale" : "Catalogue"}
+            </div>
+            <h2>
+              {selectedClub
+                ? `Tous les maillots ${selectedClub}`
+                : selectedNation
+                  ? `Tous les maillots ${selectedNation}`
+                  : "Maillots populaires"
+              }
+            </h2>
+
+            {selectedClub && (
+              <button type="button" className="nationBackBtn" onClick={closeClub}>
+                ← Clubs {selectedChampionship}
+              </button>
+            )}
+
+            {!selectedClub && selectedNation && (
+              <button type="button" className="nationBackBtn" onClick={closeNation}>
+                ← Toutes les nations
+              </button>
+            )}
+          </div>
+          <span>{filtered.length} produits</span>
+        </div>
         <div className="grid premiumGrid">
           {displayedProducts.map((p,index)=>{
             const minPrice=Math.min(...Object.values(p.versions||{Fan:35}));
@@ -799,7 +1032,7 @@ export default function Home(){
           })}
         </div>
 
-        {visibleCount<filtered.length&&
+        {!selectedNation && !selectedClub && visibleCount<filtered.length&&
           <button className="loadMoreBtn" onClick={()=>setVisibleCount(v=>v+24)}>
             VOIR 24 PRODUITS DE PLUS <span>↓</span>
           </button>
@@ -3120,6 +3353,135 @@ export default function Home(){
         .sfExactClubHeading h2{
           font-size:15px !important;
           max-width:240px;
+        }
+      }
+
+
+      /* ===== PAGE D'UN PAYS : TOUS LES MAILLOTS ===== */
+      .nationBackBtn{
+        margin-top:10px;
+        padding:8px 13px;
+        border-radius:999px;
+        border:1px solid rgba(244,197,66,.48);
+        background:rgba(244,197,66,.08);
+        color:#f4c542;
+        font-weight:900;
+        font-size:10px;
+        letter-spacing:.35px;
+        cursor:pointer;
+      }
+
+      .nationBackBtn:hover{
+        background:rgba(244,197,66,.14);
+      }
+
+      @media (max-width:420px){
+        .nationBackBtn{
+          padding:7px 11px;
+          font-size:9px;
+        }
+      }
+
+
+      /* ===== CHAMPIONNAT -> CLUBS -> MAILLOTS ===== */
+      .sfChampionshipSelector{
+        scroll-margin-top:90px;
+      }
+
+      .sfChampionshipBackRow{
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        gap:10px;
+        margin:4px 3px 10px;
+      }
+
+      .sfChampionshipBackRow > span{
+        color:#e3b438;
+        font-size:9px;
+        font-weight:900;
+        letter-spacing:.08em;
+      }
+
+      .sfChampionshipClubsRail{
+        grid-auto-columns:minmax(145px,1fr) !important;
+      }
+
+      .sfLeagueClubCard{
+        min-height:145px;
+        cursor:pointer;
+        transition:transform .16s ease,border-color .16s ease,background .16s ease;
+      }
+
+      .sfLeagueClubCard:hover,
+      .sfLeagueClubCard.on{
+        border-color:#f4c542;
+        background:
+          radial-gradient(circle at 50% 28%,rgba(244,197,66,.11),transparent 48%),
+          linear-gradient(180deg,#101113,#070708);
+      }
+
+      .sfLeagueClubLogoVisual{
+        height:95px !important;
+      }
+
+      .sfClubBigLogo{
+        width:72px;
+        height:72px;
+        object-fit:contain;
+        display:block;
+        filter:drop-shadow(0 8px 13px rgba(0,0,0,.42));
+      }
+
+      .sfClubInitials{
+        width:68px;
+        height:68px;
+        display:grid;
+        place-items:center;
+        border-radius:50%;
+        border:1px solid rgba(244,197,66,.65);
+        background:#0c0d0f;
+        color:#f4c542;
+        font-size:20px;
+        font-weight:950;
+      }
+
+      .sfLeagueClubCard .sfExactClubName span{
+        color:#fff;
+        font-size:9px;
+        font-weight:900;
+        white-space:normal;
+        min-height:20px;
+      }
+
+      .sfLeagueClubCard .sfExactClubName strong{
+        margin-top:4px;
+        color:#e3b438;
+        font-size:8px;
+      }
+
+      .sfNoClubs{
+        margin:8px 2px 12px;
+        padding:16px;
+        border:1px dashed rgba(244,197,66,.42);
+        border-radius:14px;
+        color:#ddd;
+        text-align:center;
+        font-size:10px;
+      }
+
+      @media (max-width:420px){
+        .sfChampionshipClubsRail{
+          grid-auto-columns:calc((100vw - 54px)/2.25) !important;
+        }
+
+        .sfClubBigLogo{
+          width:62px;
+          height:62px;
+        }
+
+        .sfLeagueClubLogoVisual{
+          height:84px !important;
         }
       }
 
