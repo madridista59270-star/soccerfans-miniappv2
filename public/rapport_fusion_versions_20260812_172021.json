@@ -1,0 +1,3189 @@
+{
+  "before": 1166,
+  "after": 622,
+  "fusion_groups": 196,
+  "cards_removed": 544,
+  "groups": [
+    {
+      "key": "meta|fc barcelona|2026 27|domicile|",
+      "kept_id": "247187595",
+      "name": "FC Barcelona 2026/27 Domicile Short",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "249514648",
+        "247188175",
+        "247188106",
+        "247187595",
+        "246939308",
+        "246938438"
+      ],
+      "removed_cards": 5
+    },
+    {
+      "key": "meta|malaga cf|2026 27|domicile|",
+      "kept_id": "242317552",
+      "name": "Málaga CF 2026/27 Domicile",
+      "versions": [
+        "Fan",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "248835016",
+        "242317552"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|real betis|2026 27|domicile|",
+      "kept_id": "242316997",
+      "name": "Real Betis 2026/27 Domicile",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "248834901",
+        "246938752",
+        "242316997"
+      ],
+      "removed_cards": 2
+    },
+    {
+      "key": "meta|atletico madrid|2026 27|domicile|",
+      "kept_id": "247565698",
+      "name": "Atlético Madrid 2026/27 Domicile",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "248834841",
+        "248415217",
+        "247565698"
+      ],
+      "removed_cards": 2
+    },
+    {
+      "key": "meta|valencia cf|2026 27|domicile|",
+      "kept_id": "238358046",
+      "name": "Valencia CF 2026/27 Domicile",
+      "versions": [
+        "Fan",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "248834792",
+        "238358046"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|manchester united|2026 27|exterieur|",
+      "kept_id": "248415091",
+      "name": "Manchester United 2026/27 Extérieur",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "248834726",
+        "248415240",
+        "248415235",
+        "248415091",
+        "248415007"
+      ],
+      "removed_cards": 4
+    },
+    {
+      "key": "meta|leeds united|2026 27|exterieur|",
+      "kept_id": "242316910",
+      "name": "Leeds United 2026/27 Extérieur",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "248834674",
+        "248415205",
+        "242316910"
+      ],
+      "removed_cards": 2
+    },
+    {
+      "key": "meta|brighton hove albion fc|2026 27|domicile|",
+      "kept_id": "248834139",
+      "name": "Brighton & Hove Albion FC. 2026/27 Domicile",
+      "versions": [
+        "Fan",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "248834612",
+        "248834139"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|ajax|2026 27|domicile|",
+      "kept_id": "248415137",
+      "name": "Ajax 2026/27 Domicile",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "248834512",
+        "248415137",
+        "247566130",
+        "246937801"
+      ],
+      "removed_cards": 3
+    },
+    {
+      "key": "meta|everton fc|2026 27|domicile|",
+      "kept_id": "248414992",
+      "name": "Everton FC. 2026/27 Domicile",
+      "versions": [
+        "Fan",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "248834460",
+        "248414992"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|inter milan|2026 27|exterieur|",
+      "kept_id": "248415148",
+      "name": "Inter Milan 2026/27 Extérieur",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "248674231",
+        "248415148",
+        "248414838"
+      ],
+      "removed_cards": 2
+    },
+    {
+      "key": "meta|manchester city|2026 27|exterieur|",
+      "kept_id": "246939269",
+      "name": "Manchester City 2026/27 Extérieur",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "248415229",
+        "246939269"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|tigres uanl|2026 27|domicile|",
+      "kept_id": "248415115",
+      "name": "Tigres UANL 2026/27 Domicile",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "248415199",
+        "248415115"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|celtic|2026 27|third|",
+      "kept_id": "248415153",
+      "name": "Celtic 2026/27 Third",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "248415194",
+        "248415153"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|real madrid|2026 27|exterieur|",
+      "kept_id": "248415056",
+      "name": "Real Madrid 2026/27 Extérieur",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "248415182",
+        "248415056"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|bayern munich|2026 27|domicile|",
+      "kept_id": "248415107",
+      "name": "Bayern Munich 2026/27 Domicile",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "248415107",
+        "247187721",
+        "239342291",
+        "239341653",
+        "238357863",
+        "238357831"
+      ],
+      "removed_cards": 5
+    },
+    {
+      "key": "meta|paris saint germain|2026 27|domicile|",
+      "kept_id": "248415102",
+      "name": "Paris Saint-Germain 2026/27 Domicile",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "248415102",
+        "246937332",
+        "242412866",
+        "242412717",
+        "242317179",
+        "242316492",
+        "239341157"
+      ],
+      "removed_cards": 6
+    },
+    {
+      "key": "meta|arsenal|2026 27|third|",
+      "kept_id": "248415097",
+      "name": "Arsenal 2026/27 Third",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "248415097",
+        "248414886",
+        "247187663",
+        "246937976"
+      ],
+      "removed_cards": 3
+    },
+    {
+      "key": "meta|fc porto|2026 27|exterieur|",
+      "kept_id": "248415081",
+      "name": "FC Porto 2026/27 Extérieur",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "248415081",
+        "248414830"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|arsenal|2026 27|exterieur|",
+      "kept_id": "247188090",
+      "name": "Arsenal 2026/27 Extérieur",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "248415064",
+        "247566514",
+        "247188090",
+        "247187742",
+        "246938691",
+        "246938593",
+        "246937864"
+      ],
+      "removed_cards": 6
+    },
+    {
+      "key": "meta|chivas guadalajara cd|2026 27|domicile|",
+      "kept_id": "248415037",
+      "name": "Chivas Guadalajara CD 2026/27 Domicile",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "248415037",
+        "248415029"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|real madrid|2026 27|gardien|",
+      "kept_id": "248415001",
+      "name": "Real Madrid 2026/27 Gardien",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "248415001",
+        "248414844"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|real madrid|2026 27|domicile|",
+      "kept_id": "238357947",
+      "name": "Real Madrid 2026/27 Domicile Short",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "248414899",
+        "240045171",
+        "238357947",
+        "235030945",
+        "235030913",
+        "235030833",
+        "233462396",
+        "233461875",
+        "233461812"
+      ],
+      "removed_cards": 8
+    },
+    {
+      "key": "meta|benfica|2026 27|domicile|",
+      "kept_id": "248414897",
+      "name": "Benfica 2026/27 Domicile",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "248414897",
+        "242317123",
+        "236765021",
+        "236047046"
+      ],
+      "removed_cards": 3
+    },
+    {
+      "key": "meta|espagne|2026|domicile|",
+      "kept_id": "248414858",
+      "name": "Espagne 2026 Domicile",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "248414858",
+        "215918848",
+        "215918829",
+        "218360019",
+        "219350641",
+        "219350658",
+        "219350895",
+        "247262496",
+        "247262530",
+        "247262710",
+        "219350862"
+      ],
+      "removed_cards": 10
+    },
+    {
+      "key": "meta|fc barcelona|2026 27|exterieur|",
+      "kept_id": "248414852",
+      "name": "FC Barcelona 2026/27 Extérieur",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "248414852",
+        "246937759"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|paris saint germain|2026 27|exterieur|",
+      "kept_id": "247566112",
+      "name": "Paris Saint-Germain 2026/27 Extérieur Short",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "248414825",
+        "247566112",
+        "247565615",
+        "246939430"
+      ],
+      "removed_cards": 3
+    },
+    {
+      "key": "meta|inter milan|2026 27|domicile|",
+      "kept_id": "247566678",
+      "name": "Inter Milan 2026/27 Domicile",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "247566678",
+        "242316662",
+        "239342206",
+        "239341668",
+        "239341639"
+      ],
+      "removed_cards": 4
+    },
+    {
+      "key": "meta|liverpool|2026 27|exterieur|",
+      "kept_id": "246938717",
+      "name": "Liverpool 2026/27 Extérieur",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "247566633",
+        "247566269",
+        "246938717",
+        "246938469",
+        "246937509"
+      ],
+      "removed_cards": 4
+    },
+    {
+      "key": "meta|newcastle united|2026 27|domicile|",
+      "kept_id": "247566600",
+      "name": "Newcastle United 2026/27 Domicile",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "247566600",
+        "247566080",
+        "247188045",
+        "247187945",
+        "246937573",
+        "246937465"
+      ],
+      "removed_cards": 5
+    },
+    {
+      "key": "meta|al nassr|2026 27|domicile|",
+      "kept_id": "247566576",
+      "name": "Al Nassr 2026/27 Domicile",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "247566576",
+        "247188028",
+        "239342266",
+        "239342192"
+      ],
+      "removed_cards": 3
+    },
+    {
+      "key": "meta|chelsea|2026 27|domicile|",
+      "kept_id": "247566543",
+      "name": "Chelsea 2026/27 Domicile",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "247566543",
+        "247566469",
+        "247566372",
+        "247187936",
+        "242317675",
+        "242317224",
+        "242314206"
+      ],
+      "removed_cards": 6
+    },
+    {
+      "key": "meta|chivas guadalajara cd|2026 27|exterieur|",
+      "kept_id": "247565800",
+      "name": "Chivas Guadalajara CD 2026/27 Extérieur",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "247566482",
+        "247565800"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|borussia dortmund|2026 27|domicile|",
+      "kept_id": "242309515",
+      "name": "Borussia Dortmund 2026/27 Domicile Short",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "247566456",
+        "242314195",
+        "242309515",
+        "239342295",
+        "239341166",
+        "238358063",
+        "238357871"
+      ],
+      "removed_cards": 6
+    },
+    {
+      "key": "meta|liverpool|2026 27|domicile|",
+      "kept_id": "246938404",
+      "name": "Liverpool 2026/27 Domicile",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "247566419",
+        "246938404",
+        "242316467",
+        "240045176",
+        "239342328",
+        "239341604",
+        "239340942",
+        "239340931"
+      ],
+      "removed_cards": 7
+    },
+    {
+      "key": "meta|olympique lyonnais|2026 27|domicile|",
+      "kept_id": "246939479",
+      "name": "Olympique Lyonnais 2026/27 Domicile",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "247566333",
+        "246939479",
+        "246939057"
+      ],
+      "removed_cards": 2
+    },
+    {
+      "key": "meta|a c milan|2026 27|domicile|",
+      "kept_id": "247188193",
+      "name": "A.C. Milan 2026/27 Domicile Short",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "247566301",
+        "247188193",
+        "247187710",
+        "242412787",
+        "242316852"
+      ],
+      "removed_cards": 4
+    },
+    {
+      "key": "meta|argentine|2026|exterieur|",
+      "kept_id": "232646430",
+      "name": "Argentine 2026 Extérieur",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "247565986",
+        "236765324",
+        "232646430",
+        "232646422",
+        "232646178",
+        "231185202",
+        "229928528",
+        "229928116"
+      ],
+      "removed_cards": 7
+    },
+    {
+      "key": "meta|portsmouth fc|2026 27|domicile|",
+      "kept_id": "247565896",
+      "name": "Portsmouth FC. 2026/27 Domicile",
+      "versions": [
+        "Fan",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "247565896",
+        "247187645"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|manchester united|2026 27|third|",
+      "kept_id": "247565773",
+      "name": "Manchester United 2026/27 Third",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "247565773",
+        "246938865"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|japon|2026|exterieur|",
+      "kept_id": "232646418",
+      "name": "Japon 2026 Extérieur Short",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "247565575",
+        "236040264",
+        "232646418",
+        "220066088",
+        "220065932"
+      ],
+      "removed_cards": 4
+    },
+    {
+      "key": "meta|mexique|2026|third|",
+      "kept_id": "239341607",
+      "name": "Mexique 2026 Third",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "247565549",
+        "239341607",
+        "235030949",
+        "233462456",
+        "231018352",
+        "231018107"
+      ],
+      "removed_cards": 5
+    },
+    {
+      "key": "meta|espagne|2026|exterieur|",
+      "kept_id": "229928256",
+      "name": "Espagne 2026 Extérieur",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "229928256",
+        "232646361",
+        "235030835",
+        "232646439",
+        "232646533",
+        "231185378",
+        "232646327",
+        "238358053",
+        "240045128"
+      ],
+      "removed_cards": 8
+    },
+    {
+      "key": "meta|west ham united fc|2026 27|domicile|",
+      "kept_id": "246939098",
+      "name": "West Ham United FC. 2026/27 Domicile",
+      "versions": [
+        "Fan",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "247188119",
+        "246939098"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|rc lens|2026 27|domicile|",
+      "kept_id": "240045142",
+      "name": "RC Lens 2026/27 Domicile",
+      "versions": [
+        "Fan",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "247187992",
+        "240045142"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|fc nantes|2026 27|domicile|",
+      "kept_id": "246938153",
+      "name": "FC Nantes 2026/27 Domicile",
+      "versions": [
+        "Fan",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "247187916",
+        "246938153"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|olympique de marseille|2026 27|domicile|",
+      "kept_id": "247187611",
+      "name": "Olympique de Marseille 2026/27 Domicile Short",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "247187806",
+        "247187611",
+        "242412618",
+        "242316883"
+      ],
+      "removed_cards": 3
+    },
+    {
+      "key": "meta|atletico madrid|2026 27|exterieur|",
+      "kept_id": "242412565",
+      "name": "Atlético Madrid 2026/27 Extérieur",
+      "versions": [
+        "Fan",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "247187759",
+        "242412565",
+        "242316792"
+      ],
+      "removed_cards": 2
+    },
+    {
+      "key": "meta|bologna fc 1909|2026 27|domicile|",
+      "kept_id": "246938968",
+      "name": "Bologna FC. 1909 2026/27 Domicile",
+      "versions": [
+        "Fan",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "247187575",
+        "246938968"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|borussia dortmund|2026 27|exterieur|",
+      "kept_id": "246939541",
+      "name": "Borussia Dortmund 2026/27 Extérieur",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "246939541",
+        "246938577"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "name|france 2026|",
+      "kept_id": "246939367",
+      "name": "France 2026",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "246939367",
+        "236321201",
+        "232646459",
+        "222924191"
+      ],
+      "removed_cards": 3
+    },
+    {
+      "key": "meta|bresil|2026|domicile|",
+      "kept_id": "246939325",
+      "name": "Brésil 2026 Domicile",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "246939325",
+        "246937631",
+        "236041799",
+        "229928343",
+        "229928270",
+        "229130197",
+        "227844709",
+        "227844605"
+      ],
+      "removed_cards": 7
+    },
+    {
+      "key": "meta|liverpool|2026 27|gardien|",
+      "kept_id": "242317647",
+      "name": "Liverpool 2026/27 Gardien",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "246938951",
+        "242317647"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|fc porto|2026 27|domicile|",
+      "kept_id": "242316824",
+      "name": "FC Porto 2026/27 Domicile",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "246938810",
+        "242679320",
+        "242316824"
+      ],
+      "removed_cards": 2
+    },
+    {
+      "key": "meta|manchester united|2026 27|domicile|",
+      "kept_id": "246938517",
+      "name": "Manchester United 2026/27 Domicile",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "246938517",
+        "239593803",
+        "239342302",
+        "239341657",
+        "239341147",
+        "239340936"
+      ],
+      "removed_cards": 5
+    },
+    {
+      "key": "meta|argentine|2026|domicile|",
+      "kept_id": "219350868",
+      "name": "Argentine 2026 Domicile Short",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "246938261",
+        "219350868",
+        "218360027",
+        "218360011",
+        "216430595",
+        "215918688",
+        "215918677"
+      ],
+      "removed_cards": 6
+    },
+    {
+      "key": "meta|ajax|2026 27|third|",
+      "kept_id": "239340976",
+      "name": "Ajax 2026/27 Third",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "242679337",
+        "242317379",
+        "239340976"
+      ],
+      "removed_cards": 2
+    },
+    {
+      "key": "meta|borussia monchengladbach|2026 27|domicile|",
+      "kept_id": "240045150",
+      "name": "Borussia Mönchengladbach 2026/27 Domicile",
+      "versions": [
+        "Fan",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "242412825",
+        "240045150"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|panama|2026|third|",
+      "kept_id": "235030855",
+      "name": "Panama 2026 Third",
+      "versions": [
+        "Fan",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "242412805",
+        "235030855"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|panama|2026|domicile|",
+      "kept_id": "235030837",
+      "name": "Panama 2026 Domicile",
+      "versions": [
+        "Fan",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "242412681",
+        "235030837"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|borussia monchengladbach|2026 27|exterieur|",
+      "kept_id": "240045166",
+      "name": "Borussia Mönchengladbach 2026/27 Extérieur",
+      "versions": [
+        "Fan",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "242412633",
+        "240045166"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|panama|2026|exterieur|",
+      "kept_id": "235030852",
+      "name": "Panama 2026 Extérieur",
+      "versions": [
+        "Fan",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "242412581",
+        "235030852"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|aston villa fc|2026 27|domicile|",
+      "kept_id": "242317761",
+      "name": "Aston Villa FC. 2026/27 Domicile",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "242317761",
+        "242317448"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|jordan|2026|domicile|",
+      "kept_id": "240045143",
+      "name": "Jordan 2026 Domicile",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "242317526",
+        "240045143"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|jordan|2026|third|",
+      "kept_id": "240045138",
+      "name": "Jordan 2026 Third",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "242317504",
+        "240045138"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|manchester city|2026 27|domicile|",
+      "kept_id": "242316622",
+      "name": "Manchester City 2026/27 Domicile Short",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "242316622",
+        "242309525",
+        "239593917",
+        "239593906",
+        "239593898",
+        "239593866"
+      ],
+      "removed_cards": 5
+    },
+    {
+      "key": "name|angleterre 2026|",
+      "kept_id": "242314243",
+      "name": "Angleterre 2026",
+      "versions": [
+        "Fan",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "242314243",
+        "236765002",
+        "235031028",
+        "233461899",
+        "222924151"
+      ],
+      "removed_cards": 4
+    },
+    {
+      "key": "name|paris saint germain 2025 26|",
+      "kept_id": "240272445",
+      "name": "Paris Saint-Germain 2025/26",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "240272445",
+        "239342215",
+        "239342200",
+        "238357922",
+        "231018389",
+        "231018259",
+        "220066121",
+        "212967571"
+      ],
+      "removed_cards": 7
+    },
+    {
+      "key": "meta|pays bas|2026|domicile|",
+      "kept_id": "240045173",
+      "name": "Pays-Bas 2026 Domicile",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "240045173",
+        "240045100",
+        "238357940",
+        "236046399",
+        "233462468",
+        "232646126",
+        "227844556"
+      ],
+      "removed_cards": 6
+    },
+    {
+      "key": "meta|arsenal|2026 27|domicile|",
+      "kept_id": "240045122",
+      "name": "Arsenal 2026/27 Domicile",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "240045124",
+        "240045122",
+        "239342285",
+        "239342269",
+        "239341601",
+        "239341159",
+        "239341143",
+        "239340972",
+        "239340967"
+      ],
+      "removed_cards": 8
+    },
+    {
+      "key": "meta|france|2026|exterieur|",
+      "kept_id": "238358058",
+      "name": "France 2026 Extérieur",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "240045102",
+        "238358058",
+        "235030995",
+        "235030900",
+        "233461461",
+        "229928103",
+        "220065912"
+      ],
+      "removed_cards": 6
+    },
+    {
+      "key": "meta|france|2026|domicile|",
+      "kept_id": "238357873",
+      "name": "France 2026 Domicile",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "240045098",
+        "238357873",
+        "238357866",
+        "236765330",
+        "236321324",
+        "229928099",
+        "229928072",
+        "220065895"
+      ],
+      "removed_cards": 7
+    },
+    {
+      "key": "meta|croatie|2026|domicile|",
+      "kept_id": "236043710",
+      "name": "Croatie 2026 Domicile Short",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "240045093",
+        "236765095",
+        "236044978",
+        "236043710",
+        "233461903"
+      ],
+      "removed_cards": 4
+    },
+    {
+      "key": "meta|angleterre|2026|domicile|",
+      "kept_id": "231018183",
+      "name": "Angleterre 2026 Domicile",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "240045090",
+        "236042087",
+        "231018183",
+        "229928395",
+        "229927855",
+        "227844727",
+        "227844361",
+        "220066104"
+      ],
+      "removed_cards": 7
+    },
+    {
+      "key": "meta|uruguay|2026|exterieur|",
+      "kept_id": "239593797",
+      "name": "Uruguay 2026 Extérieur Short",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "239593797",
+        "235030860",
+        "227844285"
+      ],
+      "removed_cards": 2
+    },
+    {
+      "key": "meta|norvege|2026|exterieur|",
+      "kept_id": "239593786",
+      "name": "Norvège 2026 Extérieur Short",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "239593786",
+        "235030989",
+        "232646489",
+        "232646372"
+      ],
+      "removed_cards": 3
+    },
+    {
+      "key": "meta|norvege|2026|domicile|",
+      "kept_id": "239593757",
+      "name": "Norvège 2026 Domicile Short",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "239593757",
+        "232646474",
+        "231018071",
+        "229928003"
+      ],
+      "removed_cards": 3
+    },
+    {
+      "key": "meta|croatie|2026|exterieur|",
+      "kept_id": "239593747",
+      "name": "Croatie 2026 Extérieur Short",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "239593747",
+        "238357927",
+        "236045156",
+        "236041459"
+      ],
+      "removed_cards": 3
+    },
+    {
+      "key": "meta|ukraine|2026|exterieur|",
+      "kept_id": "231018218",
+      "name": "Ukraine 2026 Extérieur",
+      "versions": [
+        "Fan",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "239342313",
+        "231018218"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|sport club corinthians paulista|2026 27|domicile|",
+      "kept_id": "236045815",
+      "name": "Sport Club Corinthians Paulista 2026/27 Domicile",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "239342307",
+        "236765308",
+        "236045815"
+      ],
+      "removed_cards": 2
+    },
+    {
+      "key": "meta|fc barcelona|2025 26|domicile|",
+      "kept_id": "236765253",
+      "name": "FC Barcelona 2025/26 Domicile",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "239342187",
+        "236765253"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|ecosse|2026|exterieur|",
+      "kept_id": "239341644",
+      "name": "Écosse 2026 Extérieur",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "239341644",
+        "231018583",
+        "220066075",
+        "217334415"
+      ],
+      "removed_cards": 3
+    },
+    {
+      "key": "meta|celtic|2026 27|domicile|",
+      "kept_id": "239340928",
+      "name": "Celtic 2026/27 Domicile",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "239341595",
+        "239340928"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|norvege|2026|third|",
+      "kept_id": "236042818",
+      "name": "Norvège 2026 Third",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "238358032",
+        "236042818"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|uruguay|2026|domicile|",
+      "kept_id": "238357942",
+      "name": "Uruguay 2026 Domicile Short",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "238357942",
+        "236039922",
+        "227844280"
+      ],
+      "removed_cards": 2
+    },
+    {
+      "key": "meta|cote d ivoire|2026|domicile|",
+      "kept_id": "222923898",
+      "name": "Côte d'Ivoire 2026 Domicile",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "238357934",
+        "236046214",
+        "222923898"
+      ],
+      "removed_cards": 2
+    },
+    {
+      "key": "meta|colombie|2026|exterieur|",
+      "kept_id": "238357882",
+      "name": "Colombie 2026 Extérieur",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "238357882",
+        "235031346",
+        "233461455",
+        "232646393",
+        "220066069",
+        "220065922"
+      ],
+      "removed_cards": 5
+    },
+    {
+      "key": "meta|etats unis|2026|domicile|",
+      "kept_id": "236042682",
+      "name": "États-Unis 2026 Domicile",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "238357841",
+        "236042682",
+        "231185519",
+        "231185496",
+        "231185188"
+      ],
+      "removed_cards": 4
+    },
+    {
+      "key": "meta|etats unis|2026|exterieur|",
+      "kept_id": "236765292",
+      "name": "États-Unis 2026 Extérieur",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "238357838",
+        "236765292",
+        "235031342",
+        "229928314",
+        "229928243"
+      ],
+      "removed_cards": 4
+    },
+    {
+      "key": "meta|equateur|2026|domicile|",
+      "kept_id": "229927990",
+      "name": "Équateur 2026 Domicile",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "238357834",
+        "232646531",
+        "229927990"
+      ],
+      "removed_cards": 2
+    },
+    {
+      "key": "meta|pologne|2026|exterieur|",
+      "kept_id": "231018204",
+      "name": "Pologne 2026 Extérieur",
+      "versions": [
+        "Fan",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "236765115",
+        "231018204"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|perou|2026|exterieur|",
+      "kept_id": "229928180",
+      "name": "Pérou 2026 Extérieur",
+      "versions": [
+        "Fan",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "236765107",
+        "229928180"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|arabie saoudite|2026|exterieur|",
+      "kept_id": "235030760",
+      "name": "Arabie saoudite 2026 Extérieur",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "236765102",
+        "235030963",
+        "235030760"
+      ],
+      "removed_cards": 2
+    },
+    {
+      "key": "meta|pologne|2026|domicile|",
+      "kept_id": "236039781",
+      "name": "Pologne 2026 Domicile",
+      "versions": [
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "236765089",
+        "236039781"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|maroc|2026|exterieur|",
+      "kept_id": "231184944",
+      "name": "Maroc 2026 Extérieur",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "236321329",
+        "235030739",
+        "231184944"
+      ],
+      "removed_cards": 2
+    },
+    {
+      "key": "meta|turkiye|2026|domicile|",
+      "kept_id": "231185227",
+      "name": "Türkiye 2026 Domicile",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "236321308",
+        "235030972",
+        "231185227"
+      ],
+      "removed_cards": 2
+    },
+    {
+      "key": "meta|irlande du nord|2026|exterieur|",
+      "kept_id": "232646357",
+      "name": "Irlande du Nord 2026 Extérieur",
+      "versions": [
+        "Fan",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "236321302",
+        "232646357"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|hongrie|2026|exterieur|",
+      "kept_id": "229928361",
+      "name": "Hongrie 2026 Extérieur",
+      "versions": [
+        "Fan",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "236321237",
+        "229928361"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|cape verde|2026|exterieur|",
+      "kept_id": "236041278",
+      "name": "Cape Verde 2026 Extérieur",
+      "versions": [
+        "Fan",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "236321228",
+        "236041278"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|cape verde|2026|domicile|",
+      "kept_id": "236041635",
+      "name": "Cape Verde 2026 Domicile",
+      "versions": [
+        "Fan",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "236321223",
+        "236041635"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|australie|2026|exterieur|",
+      "kept_id": "233461842",
+      "name": "Australie 2026 Extérieur",
+      "versions": [
+        "Fan",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "236321220",
+        "233461842"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|venezuela|2026|exterieur|",
+      "kept_id": "229927948",
+      "name": "Venezuela 2026 Extérieur",
+      "versions": [
+        "Fan",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "236321213",
+        "229927948"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|cote d ivoire|2026|exterieur|",
+      "kept_id": "236046828",
+      "name": "Côte d'Ivoire 2026 Extérieur",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "236046828",
+        "236046023"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|curacao|2026|exterieur|",
+      "kept_id": "231185215",
+      "name": "Curaçao 2026 Extérieur",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "236045625",
+        "232646523",
+        "231185215",
+        "219350690"
+      ],
+      "removed_cards": 3
+    },
+    {
+      "key": "meta|mexique|2026|exterieur|",
+      "kept_id": "236043465",
+      "name": "Mexique 2026 Extérieur Short",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "236043465",
+        "233461342",
+        "220066022",
+        "220065942",
+        "216431339",
+        "216429986"
+      ],
+      "removed_cards": 5
+    },
+    {
+      "key": "meta|pays bas|2026|exterieur|",
+      "kept_id": "236041959",
+      "name": "Pays-Bas 2026 Extérieur",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "236041959",
+        "235031011",
+        "227844592",
+        "227844404"
+      ],
+      "removed_cards": 3
+    },
+    {
+      "key": "meta|allemagne|2026|exterieur|",
+      "kept_id": "227844598",
+      "name": "Allemagne 2026 Extérieur Short",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "236040409",
+        "227844598",
+        "221483816",
+        "220066019",
+        "219350672",
+        "216430768",
+        "216429633"
+      ],
+      "removed_cards": 6
+    },
+    {
+      "key": "meta|italie|2026|exterieur|",
+      "kept_id": "232646405",
+      "name": "Italie 2026 Extérieur Short",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "236040088",
+        "232646405",
+        "220066109",
+        "216429288",
+        "216428733"
+      ],
+      "removed_cards": 4
+    },
+    {
+      "key": "meta|los angeles galaxy|2026 27|domicile|",
+      "kept_id": "233877690",
+      "name": "Los Angeles Galaxy 2026/27 Domicile",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "236039574",
+        "233877690",
+        "231185457",
+        "231185053"
+      ],
+      "removed_cards": 3
+    },
+    {
+      "key": "name|portugal 2026|",
+      "kept_id": "236039089",
+      "name": "Portugal 2026",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "236039089",
+        "227844560",
+        "219350882",
+        "219350765",
+        "217601604"
+      ],
+      "removed_cards": 4
+    },
+    {
+      "key": "meta|los angeles|2026 27|domicile|",
+      "kept_id": "236042357",
+      "name": "Los Angeles 2026/27 Domicile",
+      "versions": [
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "236042357",
+        "229928495"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|paraguay|2026|exterieur|",
+      "kept_id": "230269205",
+      "name": "Paraguay 2026 Extérieur",
+      "versions": [
+        "Fan",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "235031335",
+        "230269205"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|senegal|2026|domicile|",
+      "kept_id": "217601650",
+      "name": "Sénégal 2026 Domicile",
+      "versions": [
+        "Fan",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "235031023",
+        "217601650",
+        "216307834"
+      ],
+      "removed_cards": 2
+    },
+    {
+      "key": "meta|senegal|2026|exterieur|",
+      "kept_id": "217601566",
+      "name": "Sénégal 2026 Extérieur",
+      "versions": [
+        "Fan",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "235031006",
+        "217601566"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|paraguay|2026|domicile|",
+      "kept_id": "230339454",
+      "name": "Paraguay 2026 Domicile",
+      "versions": [
+        "Fan",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "235030997",
+        "230339454"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|turkiye|2026|exterieur|",
+      "kept_id": "231185340",
+      "name": "Türkiye 2026 Extérieur",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "235030980",
+        "233462408",
+        "231185340"
+      ],
+      "removed_cards": 2
+    },
+    {
+      "key": "meta|nigeria|2026|exterieur|",
+      "kept_id": "235030866",
+      "name": "Nigeria 2026 Extérieur",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "235030976",
+        "235030866"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|afrique du sud|2026|domicile|",
+      "kept_id": "229927978",
+      "name": "Afrique du Sud 2026 Domicile",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "235030960",
+        "231018424",
+        "229927978"
+      ],
+      "removed_cards": 2
+    },
+    {
+      "key": "meta|allemagne|2026|domicile|",
+      "kept_id": "221483801",
+      "name": "Allemagne 2026 Domicile Short",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "235030937",
+        "221483801",
+        "218360030",
+        "216430894",
+        "216430512",
+        "215918730",
+        "215918722"
+      ],
+      "removed_cards": 6
+    },
+    {
+      "key": "meta|mexique|2026|domicile|",
+      "kept_id": "218360038",
+      "name": "Mexique 2026 Domicile",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "235030933",
+        "218360038",
+        "218360009",
+        "218359973",
+        "216431064",
+        "216430290",
+        "215918769",
+        "215918761"
+      ],
+      "removed_cards": 7
+    },
+    {
+      "key": "meta|angleterre|2026|exterieur|",
+      "kept_id": "235030917",
+      "name": "Angleterre 2026 Extérieur",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "235030917",
+        "232646503",
+        "231185148",
+        "229928113",
+        "229928381",
+        "229928081",
+        "229927850"
+      ],
+      "removed_cards": 6
+    },
+    {
+      "key": "meta|ghana|2026|exterieur|",
+      "kept_id": "233461652",
+      "name": "Ghana 2026 Extérieur",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "235030755",
+        "233461652"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|bresil|2026|gardien|",
+      "kept_id": "230268981",
+      "name": "Brésil 2026 Gardien",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "235030744",
+        "232646466",
+        "230268981"
+      ],
+      "removed_cards": 2
+    },
+    {
+      "key": "meta|bresil|2026|exterieur|",
+      "kept_id": "231184936",
+      "name": "Brésil 2026 Extérieur",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "235030735",
+        "232646449",
+        "231184936",
+        "231018030",
+        "229130218",
+        "227844719",
+        "228129548",
+        "219350799",
+        "219350768"
+      ],
+      "removed_cards": 8
+    },
+    {
+      "key": "meta|coree du sud|2026|domicile|",
+      "kept_id": "233462330",
+      "name": "Corée du Sud 2026 Domicile Short",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "233877760",
+        "233462330",
+        "232646518",
+        "231018241"
+      ],
+      "removed_cards": 3
+    },
+    {
+      "key": "meta|afrique du sud|2026|exterieur|",
+      "kept_id": "229928092",
+      "name": "Afrique du Sud 2026 Extérieur",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "233877748",
+        "232646557",
+        "229928092"
+      ],
+      "removed_cards": 2
+    },
+    {
+      "key": "meta|canada|2026|exterieur|",
+      "kept_id": "231018211",
+      "name": "Canada 2026 Extérieur",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "233877726",
+        "231018563",
+        "231018211"
+      ],
+      "removed_cards": 2
+    },
+    {
+      "key": "meta|australie|2026|domicile|",
+      "kept_id": "231185174",
+      "name": "Australie 2026 Domicile",
+      "versions": [
+        "Fan",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "233462494",
+        "231185174"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "name|a c milan fifth 2026 27|",
+      "kept_id": "231018359",
+      "name": "A.C. Milan fifth 2026/27",
+      "versions": [
+        "Fan",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "233462435",
+        "231018359"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|suede|2026|exterieur|",
+      "kept_id": "229928084",
+      "name": "Suède 2026 Extérieur",
+      "versions": [
+        "Fan",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "233462422",
+        "229928084"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|portugal|2026|exterieur|",
+      "kept_id": "233462380",
+      "name": "Portugal 2026 Extérieur Short",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "233462380",
+        "221483814",
+        "221483812",
+        "220065991",
+        "219350876",
+        "219350780",
+        "219350773"
+      ],
+      "removed_cards": 6
+    },
+    {
+      "key": "meta|equateur|2026|exterieur|",
+      "kept_id": "229928308",
+      "name": "Équateur 2026 Extérieur",
+      "versions": [
+        "Fan",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "232646525",
+        "229928308"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|etats unis|2026|gardien|",
+      "kept_id": "232646118",
+      "name": "États-Unis 2026 Gardien",
+      "versions": [
+        "Fan",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "232646501",
+        "232646118"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|belgique|2026|exterieur|",
+      "kept_id": "232646390",
+      "name": "Belgique 2026 Extérieur Short",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "232646390",
+        "224260264",
+        "222923907"
+      ],
+      "removed_cards": 2
+    },
+    {
+      "key": "meta|ghana|2026|domicile|",
+      "kept_id": "222923895",
+      "name": "Ghana 2026 Domicile",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "232646386",
+        "222923895"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|new york city fc|2026 27|exterieur|",
+      "kept_id": "229927995",
+      "name": "New York City FC 2026/27 Extérieur",
+      "versions": [
+        "Fan",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "231185472",
+        "229927995"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|new york red bulls fc|2026 27|domicile|",
+      "kept_id": "227844529",
+      "name": "New York Red Bulls FC 2026/27 Domicile",
+      "versions": [
+        "Fan",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "231185389",
+        "227844529"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|canada|2026|domicile|",
+      "kept_id": "231185113",
+      "name": "Canada 2026 Domicile",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "231185113",
+        "231018116"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|pays de galles|2026|exterieur|",
+      "kept_id": "219350855",
+      "name": "Pays de Galles 2026 Extérieur",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "231018573",
+        "220066097",
+        "219350855"
+      ],
+      "removed_cards": 2
+    },
+    {
+      "key": "meta|equateur|2026|third|",
+      "kept_id": "229927953",
+      "name": "Équateur 2026 Third",
+      "versions": [
+        "Fan",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "231018441",
+        "229927953"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|sociedade esportiva palmeiras|2026 27|domicile|",
+      "kept_id": "231018383",
+      "name": "Sociedade Esportiva Palmeiras 2026/27 Domicile",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "231018383",
+        "229130132",
+        "228352879",
+        "227844786",
+        "227844469"
+      ],
+      "removed_cards": 4
+    },
+    {
+      "key": "meta|sociedade esportiva palmeiras|2026 27|exterieur|",
+      "kept_id": "231018376",
+      "name": "Sociedade Esportiva Palmeiras 2026/27 Extérieur",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "231018376",
+        "229130179",
+        "228352874",
+        "227844772",
+        "227844481"
+      ],
+      "removed_cards": 4
+    },
+    {
+      "key": "meta|cr flamengo|2026 27|domicile|",
+      "kept_id": "231018367",
+      "name": "CR Flamengo 2026/27 Domicile",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "231018367",
+        "227844397",
+        "227844311"
+      ],
+      "removed_cards": 2
+    },
+    {
+      "key": "meta|a c milan|2026 27|third|",
+      "kept_id": "227844304",
+      "name": "A.C. Milan 2026/27 Third",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "231018126",
+        "227844304"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|inter milan|2025 26|fourth|",
+      "kept_id": "231017584",
+      "name": "Inter Milan 2025/26 Fourth Short",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "231017584",
+        "228352870",
+        "227844207"
+      ],
+      "removed_cards": 2
+    },
+    {
+      "key": "meta|chelsea|2025 26|domicile|",
+      "kept_id": "229928125",
+      "name": "Chelsea 2025/26 Domicile",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "229928523",
+        "229928303",
+        "229928125",
+        "213352208"
+      ],
+      "removed_cards": 3
+    },
+    {
+      "key": "meta|inter miami|2026 27|exterieur|",
+      "kept_id": "229928377",
+      "name": "Inter Miami 2026/27 Extérieur Short",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "229928377",
+        "229927966",
+        "227844776",
+        "227844518"
+      ],
+      "removed_cards": 3
+    },
+    {
+      "key": "meta|coree du sud|2026|exterieur|",
+      "kept_id": "229928297",
+      "name": "Corée du Sud 2026 Extérieur",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "229928297",
+        "229928283"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|jamaique|2026|domicile|",
+      "kept_id": "224260355",
+      "name": "Jamaïque 2026 Domicile",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "229928286",
+        "229130240",
+        "224260355"
+      ],
+      "removed_cards": 2
+    },
+    {
+      "key": "meta|jamaique|2026|exterieur|",
+      "kept_id": "227844355",
+      "name": "Jamaïque 2026 Extérieur",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "229928273",
+        "229130230",
+        "227844355"
+      ],
+      "removed_cards": 2
+    },
+    {
+      "key": "meta|autriche|2026|domicile|",
+      "kept_id": "222923976",
+      "name": "Autriche 2026 Domicile Short",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "229928260",
+        "222923976",
+        "221483821",
+        "219350738"
+      ],
+      "removed_cards": 3
+    },
+    {
+      "key": "meta|maroc|2026|domicile|",
+      "kept_id": "224260257",
+      "name": "Maroc 2026 Domicile",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "229927870",
+        "224260257"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|clube de regatas do flamengo|2026 27|domicile|",
+      "kept_id": "227844614",
+      "name": "Clube de Regatas do Flamengo 2026/27 Domicile Short",
+      "versions": [
+        "Fan",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "227844782",
+        "227844614",
+        "227844200"
+      ],
+      "removed_cards": 2
+    },
+    {
+      "key": "meta|irlande|2026|domicile|",
+      "kept_id": "227844294",
+      "name": "Irlande 2026 Domicile",
+      "versions": [
+        "Fan",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "227844762",
+        "227844294"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|irlande|2026|exterieur|",
+      "kept_id": "227844297",
+      "name": "Irlande 2026 Extérieur",
+      "versions": [
+        "Fan",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "227844739",
+        "227844297"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|qatar|2026|domicile|",
+      "kept_id": "217601564",
+      "name": "Qatar 2026 Domicile",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "227844695",
+        "221483782",
+        "217601564"
+      ],
+      "removed_cards": 2
+    },
+    {
+      "key": "meta|chivas guadalajara|2026 27|third|",
+      "kept_id": "227844408",
+      "name": "Chivas Guadalajara 2026/27 Third",
+      "versions": [
+        "Fan",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "227844408",
+        "228129564"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "name|manchester united 2025 26|",
+      "kept_id": "227844329",
+      "name": "Manchester United 2025/26",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "227844329",
+        "227844261",
+        "224260230",
+        "224260170",
+        "222924162",
+        "222923893",
+        "220065948",
+        "217601593",
+        "216307632",
+        "215207202",
+        "212967644"
+      ],
+      "removed_cards": 10
+    },
+    {
+      "key": "name|napoli 2025 26|",
+      "kept_id": "227844221",
+      "name": "Napoli 2025/26",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "227844221",
+        "228129553",
+        "216307937",
+        "215393426",
+        "211242721"
+      ],
+      "removed_cards": 4
+    },
+    {
+      "key": "meta|fc barcelona|2025 26|fourth|",
+      "kept_id": "224260235",
+      "name": "FC Barcelona 2025/26 Fourth",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "224260370",
+        "224260235",
+        "221483800",
+        "218360051"
+      ],
+      "removed_cards": 3
+    },
+    {
+      "key": "name|real madrid 2025 26|",
+      "kept_id": "224260225",
+      "name": "Real Madrid 2025/26",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "224260225",
+        "224260178",
+        "222924156",
+        "222924034",
+        "222923902",
+        "221483834",
+        "221483832",
+        "221483790",
+        "221483706",
+        "217601588",
+        "216308067",
+        "216308021",
+        "216307638",
+        "212967553"
+      ],
+      "removed_cards": 13
+    },
+    {
+      "key": "meta|suisse|2026|domicile|",
+      "kept_id": "222923983",
+      "name": "Suisse 2026 Domicile Short",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "224260186",
+        "222923983",
+        "219350741",
+        "219350695"
+      ],
+      "removed_cards": 3
+    },
+    {
+      "key": "meta|suede|2026|domicile|",
+      "kept_id": "222923995",
+      "name": "Suède 2026 Domicile Short",
+      "versions": [
+        "Fan",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "224260176",
+        "222923995",
+        "217601609"
+      ],
+      "removed_cards": 2
+    },
+    {
+      "key": "meta|algerie|2026|domicile|",
+      "kept_id": "224260166",
+      "name": "Algérie 2026 Domicile Short",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "224260166",
+        "218360045",
+        "217601559",
+        "217334255"
+      ],
+      "removed_cards": 3
+    },
+    {
+      "key": "meta|ecosse|2026|domicile|",
+      "kept_id": "224260155",
+      "name": "Écosse 2026 Domicile Short",
+      "versions": [
+        "Fan",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "224260155",
+        "220066161",
+        "220066106",
+        "217334489"
+      ],
+      "removed_cards": 3
+    },
+    {
+      "key": "name|bayern munich 2025 26|",
+      "kept_id": "224260132",
+      "name": "Bayern Munich 2025/26",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "224260132",
+        "222923917",
+        "220066000",
+        "216307895",
+        "215393429",
+        "215207267",
+        "213351842"
+      ],
+      "removed_cards": 6
+    },
+    {
+      "key": "name|fc barcelona 2025 26|",
+      "kept_id": "224260110",
+      "name": "FC Barcelona 2025/26",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "224260110",
+        "215393487",
+        "215207604",
+        "215207054",
+        "212967540"
+      ],
+      "removed_cards": 4
+    },
+    {
+      "key": "name|arsenal 2025 26|",
+      "kept_id": "224260103",
+      "name": "Arsenal 2025/26",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "224260103",
+        "220066027",
+        "216307898",
+        "212967536"
+      ],
+      "removed_cards": 3
+    },
+    {
+      "key": "name|liverpool 2025 26|",
+      "kept_id": "222924145",
+      "name": "Liverpool 2025/26",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "222924145",
+        "220065986",
+        "213352155",
+        "213351804"
+      ],
+      "removed_cards": 3
+    },
+    {
+      "key": "meta|olympique de marseille|2025 26|fourth|",
+      "kept_id": "213351722",
+      "name": "Olympique de Marseille 2025/26 Fourth",
+      "versions": [
+        "Fan",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "222924038",
+        "213351722"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|irlande du nord|2026|domicile|",
+      "kept_id": "222923986",
+      "name": "Irlande du Nord 2026 Domicile Short",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "222923986",
+        "222923935",
+        "218359988"
+      ],
+      "removed_cards": 2
+    },
+    {
+      "key": "meta|hongrie|2026|domicile|",
+      "kept_id": "216425649",
+      "name": "Hongrie 2026 Domicile",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "222923965",
+        "216425649"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|pays de galles|2026|domicile|",
+      "kept_id": "217601554",
+      "name": "Pays de Galles 2026 Domicile",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "222923928",
+        "218360173",
+        "217601554"
+      ],
+      "removed_cards": 2
+    },
+    {
+      "key": "meta|suisse|2026|exterieur|",
+      "kept_id": "222923882",
+      "name": "Suisse 2026 Extérieur",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "222923882",
+        "222923857"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|belgique|2026|domicile|",
+      "kept_id": "221483840",
+      "name": "Belgique 2026 Domicile",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "221483840",
+        "218359977",
+        "217601802",
+        "217601647",
+        "216430217",
+        "216425559",
+        "215918706"
+      ],
+      "removed_cards": 6
+    },
+    {
+      "key": "meta|italie|2026|domicile|",
+      "kept_id": "221483804",
+      "name": "Italie 2026 Domicile",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "221483804",
+        "219350730",
+        "217601790",
+        "217601530",
+        "217334549",
+        "215918880",
+        "215918867"
+      ],
+      "removed_cards": 6
+    },
+    {
+      "key": "name|venezia fc fifth 2025 26|",
+      "kept_id": "220065927",
+      "name": "Venezia FC. fifth 2025/26",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "221483718",
+        "220065927"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|portugal|2026|domicile|",
+      "kept_id": "220065988",
+      "name": "Portugal 2026 Domicile",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "220066115",
+        "220065988",
+        "220065893",
+        "219350897",
+        "219350760",
+        "219350652",
+        "217601779"
+      ],
+      "removed_cards": 6
+    },
+    {
+      "key": "meta|perou|2026|domicile|",
+      "kept_id": "217601657",
+      "name": "Pérou 2026 Domicile",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "220066101",
+        "217601657"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|united arab emirates|2026|domicile|",
+      "kept_id": "217601643",
+      "name": "United Arab Emirates 2026 Domicile",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "220066091",
+        "217601643"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|cfmonterrey|2025 26|third|",
+      "kept_id": "220066034",
+      "name": "CFMonterrey 2025/26 Third",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "220066034",
+        "220066030"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|algerie|2026|exterieur|",
+      "kept_id": "219350704",
+      "name": "Algérie 2026 Extérieur",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "220066004",
+        "219350704"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|arabie saoudite|2026|domicile|",
+      "kept_id": "217334050",
+      "name": "Arabie saoudite 2026 Domicile",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "220065918",
+        "217334050"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|venezuela|2026|domicile|",
+      "kept_id": "217449491",
+      "name": "Venezuela 2026 Domicile",
+      "versions": [
+        "Fan",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "219350900",
+        "217449491"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|japon|2026|domicile|",
+      "kept_id": "219350637",
+      "name": "Japon 2026 Domicile",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "219350637",
+        "218359971",
+        "217601798",
+        "217601783",
+        "215918786",
+        "215918781"
+      ],
+      "removed_cards": 5
+    },
+    {
+      "key": "meta|ukraine|2026|domicile|",
+      "kept_id": "217334337",
+      "name": "Ukraine 2026 Domicile",
+      "versions": [
+        "Fan",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "218360056",
+        "217334337"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|colombie|2026|domicile|",
+      "kept_id": "218360005",
+      "name": "Colombie 2026 Domicile",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "218360005",
+        "218359968",
+        "216431204",
+        "216430429",
+        "216429189",
+        "215918748"
+      ],
+      "removed_cards": 5
+    },
+    {
+      "key": "meta|manchester city|2025 26|fourth|",
+      "kept_id": "217601522",
+      "name": "Manchester City 2025/26 Fourth Short",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "217601522",
+        "216307626",
+        "215207048"
+      ],
+      "removed_cards": 2
+    },
+    {
+      "key": "meta|paris saint germain|2025 26|fourth|",
+      "kept_id": "216307674",
+      "name": "Paris Saint-Germain 2025/26 Fourth",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "216308037",
+        "216307944",
+        "216307674"
+      ],
+      "removed_cards": 2
+    },
+    {
+      "key": "meta|paris saint germain|2025 26|third|",
+      "kept_id": "215393467",
+      "name": "Paris Saint-Germain 2025/26 Third",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "216308027",
+        "215393467"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|borussia dortmund|2025 26|exterieur|",
+      "kept_id": "215393849",
+      "name": "Borussia Dortmund 2025/26 Extérieur Short",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "215393849",
+        "215393472",
+        "213352193",
+        "213351834"
+      ],
+      "removed_cards": 3
+    },
+    {
+      "key": "meta|sociedade esportiva palmeiras|2025 26|third|",
+      "kept_id": "215208502",
+      "name": "Sociedade Esportiva Palmeiras 2025/26 Third",
+      "versions": [
+        "Fan",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "215393481",
+        "215208502",
+        "215207181"
+      ],
+      "removed_cards": 2
+    },
+    {
+      "key": "meta|inter milan|2025 26|third|",
+      "kept_id": "213351856",
+      "name": "Inter Milan 2025/26 Third",
+      "versions": [
+        "Fan",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "215393478",
+        "213351856"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|atletico madrid|2025 26|third|",
+      "kept_id": "213351694",
+      "name": "Atlético Madrid 2025/26 Third",
+      "versions": [
+        "Fan",
+        "Player"
+      ],
+      "merged_ids": [
+        "213352171",
+        "213351694",
+        "213351481"
+      ],
+      "removed_cards": 2
+    },
+    {
+      "key": "meta|tottenham hotspur|2025 26|third|",
+      "kept_id": "213351794",
+      "name": "Tottenham Hotspur 2025/26 Third",
+      "versions": [
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "213351794",
+        "213351532"
+      ],
+      "removed_cards": 1
+    },
+    {
+      "key": "meta|a s roma|2025 26|exterieur|",
+      "kept_id": "213351476",
+      "name": "A.S. Roma 2025/26 Extérieur Short",
+      "versions": [
+        "Fan",
+        "Player",
+        "Enfant"
+      ],
+      "merged_ids": [
+        "213351541",
+        "213351476",
+        "211242828"
+      ],
+      "removed_cards": 2
+    }
+  ]
+}
