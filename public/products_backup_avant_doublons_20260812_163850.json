@@ -97,22 +97,11 @@
       "/products/248834901/002.jpg",
       "/products/248834901/003.jpg",
       "/products/248834901/004.jpg",
-      "/products/248834901/005.jpg",
-      "/products/247187822/cover_auto.jpg",
-      "/products/247187822/001.jpg",
-      "/products/247187822/002.jpg",
-      "/products/247187822/003.jpg",
-      "/products/247187822/004.jpg",
-      "/products/247187822/005.jpg"
+      "/products/248834901/005.jpg"
     ],
     "tri_score": 96,
     "tri_confidence": "haute",
-    "main_source_name": "001.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "248834901",
-      "247187822"
-    ]
+    "main_source_name": "001.jpg"
   },
   {
     "id": "248834841",
@@ -1792,22 +1781,11 @@
       "/products/248414852/002.jpg",
       "/products/248414852/003.jpg",
       "/products/248414852/004.jpg",
-      "/products/248414852/005.jpg",
-      "/products/246938849/cover_auto.jpg",
-      "/products/246938849/001.jpg",
-      "/products/246938849/002.jpg",
-      "/products/246938849/003.jpg",
-      "/products/246938849/004.jpg",
-      "/products/246938849/005.jpg"
+      "/products/248414852/005.jpg"
     ],
     "tri_score": 96,
     "tri_confidence": "haute",
-    "main_source_name": "001.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "248414852",
-      "246938849"
-    ]
+    "main_source_name": "001.jpg"
   },
   {
     "id": "248414844",
@@ -2892,22 +2870,11 @@
       "/products/247262687/002.jpg",
       "/products/247262687/003.jpg",
       "/products/247262687/004.jpg",
-      "/products/247262687/005.jpg",
-      "/products/247262551/cover_auto.jpg",
-      "/products/247262551/001.jpg",
-      "/products/247262551/002.jpg",
-      "/products/247262551/003.jpg",
-      "/products/247262551/004.jpg",
-      "/products/247262551/005.jpg"
+      "/products/247262687/005.jpg"
     ],
     "tri_score": 96,
     "tri_confidence": "haute",
-    "main_source_name": "001.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "247262687",
-      "247262551"
-    ]
+    "main_source_name": "001.jpg"
   },
   {
     "id": "247262664",
@@ -2930,6 +2897,32 @@
       "/products/247262664/003.jpg",
       "/products/247262664/004.jpg",
       "/products/247262664/005.jpg"
+    ],
+    "tri_score": 96,
+    "tri_confidence": "haute",
+    "main_source_name": "001.jpg"
+  },
+  {
+    "id": "247262551",
+    "name": "Espagne 2026 Third",
+    "source_title": "2026 FIFA World Cup Spain third Fan version two star",
+    "sport": "Football",
+    "cat": "Nations",
+    "product_type": "Maillot",
+    "team": "Espagne",
+    "league": "",
+    "season": "2026",
+    "kit": "Third",
+    "version": "Fan",
+    "price": 35,
+    "image": "/products/247262551/cover_auto.jpg",
+    "images": [
+      "/products/247262551/cover_auto.jpg",
+      "/products/247262551/001.jpg",
+      "/products/247262551/002.jpg",
+      "/products/247262551/003.jpg",
+      "/products/247262551/004.jpg",
+      "/products/247262551/005.jpg"
     ],
     "tri_score": 96,
     "tri_confidence": "haute",
@@ -3264,27 +3257,80 @@
     "images": [
       "/products/247371597/cover_auto.jpg",
       "/products/247371597/004.jpg",
-      "/products/247371597/005.jpg",
+      "/products/247371597/005.jpg"
+    ],
+    "tri_score": 93,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
+  },
+  {
+    "id": "247371583",
+    "name": "Espagne 2026",
+    "source_title": "2026 Spain Pure Cotton Champion T-Shirt",
+    "sport": "Football",
+    "cat": "Nations",
+    "product_type": "Maillot",
+    "team": "Espagne",
+    "league": "",
+    "season": "2026",
+    "kit": "",
+    "version": "Fan",
+    "price": 35,
+    "image": "/products/247371583/cover_auto.jpg",
+    "images": [
       "/products/247371583/cover_auto.jpg",
       "/products/247371583/004.jpg",
-      "/products/247371583/005.jpg",
+      "/products/247371583/005.jpg"
+    ],
+    "tri_score": 93,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
+  },
+  {
+    "id": "247371573",
+    "name": "Espagne 2026",
+    "source_title": "2026 Spain Pure Cotton Champion T-Shirt",
+    "sport": "Football",
+    "cat": "Nations",
+    "product_type": "Maillot",
+    "team": "Espagne",
+    "league": "",
+    "season": "2026",
+    "kit": "",
+    "version": "Fan",
+    "price": 35,
+    "image": "/products/247371573/cover_auto.jpg",
+    "images": [
       "/products/247371573/cover_auto.jpg",
       "/products/247371573/004.jpg",
-      "/products/247371573/005.jpg",
+      "/products/247371573/005.jpg"
+    ],
+    "tri_score": 93,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
+  },
+  {
+    "id": "247371560",
+    "name": "Espagne 2026",
+    "source_title": "2026 Spain Pure Cotton Champion T-Shirt",
+    "sport": "Football",
+    "cat": "Nations",
+    "product_type": "Maillot",
+    "team": "Espagne",
+    "league": "",
+    "season": "2026",
+    "kit": "",
+    "version": "Fan",
+    "price": 35,
+    "image": "/products/247371560/cover_auto.jpg",
+    "images": [
       "/products/247371560/cover_auto.jpg",
       "/products/247371560/004.jpg",
       "/products/247371560/005.jpg"
     ],
     "tri_score": 93,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpg",
-    "merged_duplicate_count": 4,
-    "merged_duplicate_ids": [
-      "247371597",
-      "247371583",
-      "247371573",
-      "247371560"
-    ]
+    "main_source_name": "004.jpg"
   },
   {
     "id": "247262496",
@@ -3476,19 +3522,11 @@
     "images": [
       "/products/222923944/cover_auto.jpg",
       "/products/222923944/004.jpg",
-      "/products/222923944/005.jpg",
-      "/products/238358010/cover_auto.jpg",
-      "/products/238358010/004.jpg",
-      "/products/238358010/005.jpg"
+      "/products/222923944/005.jpg"
     ],
     "tri_score": 96,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "222923944",
-      "238358010"
-    ]
+    "main_source_name": "004.jpg"
   },
   {
     "id": "238358053",
@@ -3540,6 +3578,29 @@
     "main_source_name": "004.jpg"
   },
   {
+    "id": "238358010",
+    "name": "Espagne 2026 Gardien",
+    "source_title": "2026 FIFA World Cup Spain goalkeeper Fan version",
+    "sport": "Football",
+    "cat": "Nations",
+    "product_type": "Maillot",
+    "team": "Espagne",
+    "league": "",
+    "season": "2026",
+    "kit": "Gardien",
+    "version": "Fan",
+    "price": 35,
+    "image": "/products/238358010/cover_auto.jpg",
+    "images": [
+      "/products/238358010/cover_auto.jpg",
+      "/products/238358010/004.jpg",
+      "/products/238358010/005.jpg"
+    ],
+    "tri_score": 96,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
+  },
+  {
     "id": "247188193",
     "name": "A.C. Milan 2026/27 Domicile Short",
     "source_title": "2627 season A.C. Milan home shorts",
@@ -3559,22 +3620,11 @@
       "/products/247188193/002.jpg",
       "/products/247188193/003.jpg",
       "/products/247188193/004.jpg",
-      "/products/247188193/005.jpg",
-      "/products/247188138/cover_auto.jpg",
-      "/products/247188138/001.jpg",
-      "/products/247188138/002.jpg",
-      "/products/247188138/003.jpg",
-      "/products/247188138/004.jpg",
-      "/products/247188138/005.jpg"
+      "/products/247188193/005.jpg"
     ],
     "tri_score": 96,
     "tri_confidence": "haute",
-    "main_source_name": "001.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "247188193",
-      "247188138"
-    ]
+    "main_source_name": "001.jpg"
   },
   {
     "id": "247188175",
@@ -3597,6 +3647,32 @@
       "/products/247188175/003.jpg",
       "/products/247188175/004.jpg",
       "/products/247188175/005.jpg"
+    ],
+    "tri_score": 96,
+    "tri_confidence": "haute",
+    "main_source_name": "001.jpg"
+  },
+  {
+    "id": "247188138",
+    "name": "A.C. Milan 2026/27 Domicile Short",
+    "source_title": "2627 season A.C. Milan home shorts",
+    "sport": "Football",
+    "cat": "Shorts",
+    "product_type": "Shorts",
+    "team": "A.C. Milan",
+    "league": "",
+    "season": "2026/27",
+    "kit": "Domicile",
+    "version": "Short",
+    "price": 20,
+    "image": "/products/247188138/cover_auto.jpg",
+    "images": [
+      "/products/247188138/cover_auto.jpg",
+      "/products/247188138/001.jpg",
+      "/products/247188138/002.jpg",
+      "/products/247188138/003.jpg",
+      "/products/247188138/004.jpg",
+      "/products/247188138/005.jpg"
     ],
     "tri_score": 96,
     "tri_confidence": "haute",
@@ -3879,19 +3955,37 @@
       "/products/247187842/002.jpg",
       "/products/247187842/003.jpg",
       "/products/247187842/004.jpg",
-      "/products/247187842/005.jpg",
-      "/products/227844393/cover_auto.jpg",
-      "/products/227844393/004.jpg",
-      "/products/227844393/005.jpg"
+      "/products/247187842/005.jpg"
     ],
     "tri_score": 93,
     "tri_confidence": "haute",
-    "main_source_name": "001.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "247187842",
-      "227844393"
-    ]
+    "main_source_name": "001.jpg"
+  },
+  {
+    "id": "247187822",
+    "name": "Real Betis 2026/27 Domicile Enfant",
+    "source_title": "2627 season Real Betis Balompié home Kids kit",
+    "sport": "Football",
+    "cat": "Enfant",
+    "product_type": "Enfant",
+    "team": "Real Betis",
+    "league": "La Liga",
+    "season": "2026/27",
+    "kit": "Domicile",
+    "version": "Enfant",
+    "price": 30,
+    "image": "/products/247187822/cover_auto.jpg",
+    "images": [
+      "/products/247187822/cover_auto.jpg",
+      "/products/247187822/001.jpg",
+      "/products/247187822/002.jpg",
+      "/products/247187822/003.jpg",
+      "/products/247187822/004.jpg",
+      "/products/247187822/005.jpg"
+    ],
+    "tri_score": 96,
+    "tri_confidence": "haute",
+    "main_source_name": "001.jpg"
   },
   {
     "id": "247187806",
@@ -4769,6 +4863,32 @@
     "main_source_name": "001.jpg"
   },
   {
+    "id": "246938849",
+    "name": "FC Barcelona 2026/27 Extérieur",
+    "source_title": "2627 season FC Barcelona Barça away Fan version",
+    "sport": "Football",
+    "cat": "Clubs",
+    "product_type": "Maillot",
+    "team": "FC Barcelona",
+    "league": "La Liga",
+    "season": "2026/27",
+    "kit": "Extérieur",
+    "version": "Fan",
+    "price": 35,
+    "image": "/products/246938849/cover_auto.jpg",
+    "images": [
+      "/products/246938849/cover_auto.jpg",
+      "/products/246938849/001.jpg",
+      "/products/246938849/002.jpg",
+      "/products/246938849/003.jpg",
+      "/products/246938849/004.jpg",
+      "/products/246938849/005.jpg"
+    ],
+    "tri_score": 96,
+    "tri_confidence": "haute",
+    "main_source_name": "001.jpg"
+  },
+  {
     "id": "246938810",
     "name": "FC Porto 2026/27 Domicile Player",
     "source_title": "2627 season FC Porto home Player version",
@@ -5490,19 +5610,11 @@
       "/products/246937685/002.jpg",
       "/products/246937685/003.jpg",
       "/products/246937685/004.jpg",
-      "/products/246937685/005.jpg",
-      "/products/239340903/cover_auto.jpg",
-      "/products/239340903/004.jpg",
-      "/products/239340903/005.jpg"
+      "/products/246937685/005.jpg"
     ],
     "tri_score": 96,
     "tri_confidence": "haute",
-    "main_source_name": "001.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "246937685",
-      "239340903"
-    ]
+    "main_source_name": "001.jpg"
   },
   {
     "id": "246937631",
@@ -5957,22 +6069,11 @@
     "images": [
       "/products/242412717/cover_auto.jpg",
       "/products/242412717/004.jpg",
-      "/products/242412717/005.jpg",
-      "/products/239342320/cover_auto.jpg",
-      "/products/239342320/001.jpg",
-      "/products/239342320/002.jpg",
-      "/products/239342320/003.jpg",
-      "/products/239342320/004.jpg",
-      "/products/239342320/005.jpg"
+      "/products/242412717/005.jpg"
     ],
     "tri_score": 96,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "242412717",
-      "239342320"
-    ]
+    "main_source_name": "004.jpg"
   },
   {
     "id": "242412699",
@@ -6612,19 +6713,11 @@
       "/products/242317179/002.jpg",
       "/products/242317179/003.jpg",
       "/products/242317179/004.jpg",
-      "/products/242317179/005.jpg",
-      "/products/239340926/cover_auto.jpg",
-      "/products/239340926/004.jpg",
-      "/products/239340926/005.jpg"
+      "/products/242317179/005.jpg"
     ],
     "tri_score": 96,
     "tri_confidence": "haute",
-    "main_source_name": "001.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "242317179",
-      "239340926"
-    ]
+    "main_source_name": "001.jpg"
   },
   {
     "id": "242317123",
@@ -7102,19 +7195,11 @@
     "images": [
       "/products/242314243/cover_auto.jpg",
       "/products/242314243/004.jpg",
-      "/products/242314243/005.jpg",
-      "/products/233461369/cover_auto.jpg",
-      "/products/233461369/004.jpg",
-      "/products/233461369/005.jpg"
+      "/products/242314243/005.jpg"
     ],
     "tri_score": 93,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "242314243",
-      "233461369"
-    ]
+    "main_source_name": "004.jpg"
   },
   {
     "id": "242314206",
@@ -7231,19 +7316,11 @@
       "/products/242309515/002.jpg",
       "/products/242309515/003.jpg",
       "/products/242309515/004.jpg",
-      "/products/242309515/005.jpg",
-      "/products/240045089/cover_auto.jpg",
-      "/products/240045089/004.jpg",
-      "/products/240045089/005.jpg"
+      "/products/242309515/005.jpg"
     ],
     "tri_score": 96,
     "tri_confidence": "haute",
-    "main_source_name": "001.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "242309515",
-      "240045089"
-    ]
+    "main_source_name": "001.jpg"
   },
   {
     "id": "240272445",
@@ -7337,19 +7414,11 @@
     "images": [
       "/products/240045180/cover_auto.jpg",
       "/products/240045180/004.jpg",
-      "/products/240045180/005.jpg",
-      "/products/233461378/cover_auto.jpg",
-      "/products/233461378/004.jpg",
-      "/products/233461378/005.jpg"
+      "/products/240045180/005.jpg"
     ],
     "tri_score": 93,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "240045180",
-      "233461378"
-    ]
+    "main_source_name": "004.jpg"
   },
   {
     "id": "240045176",
@@ -7742,19 +7811,34 @@
     "images": [
       "/products/240045119/cover_auto.jpg",
       "/products/240045119/004.jpg",
-      "/products/240045119/005.jpg",
+      "/products/240045119/005.jpg"
+    ],
+    "tri_score": 93,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
+  },
+  {
+    "id": "240045113",
+    "name": "rose 2026/27 Rétro",
+    "source_title": "2627 season rose Hip hop version retro Fan version",
+    "sport": "Football",
+    "cat": "Rétro",
+    "product_type": "Rétro",
+    "team": "rose",
+    "league": "",
+    "season": "2026/27",
+    "kit": "",
+    "version": "Rétro",
+    "price": 50,
+    "image": "/products/240045113/cover_auto.jpg",
+    "images": [
       "/products/240045113/cover_auto.jpg",
       "/products/240045113/004.jpg",
       "/products/240045113/005.jpg"
     ],
     "tri_score": 93,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "240045119",
-      "240045113"
-    ]
+    "main_source_name": "004.jpg"
   },
   {
     "id": "240045105",
@@ -7895,6 +7979,29 @@
     "main_source_name": "004.jpg"
   },
   {
+    "id": "240045089",
+    "name": "Borussia Dortmund 2026/27 Domicile Short",
+    "source_title": "2627 season Borussia Dortmund home shorts",
+    "sport": "Football",
+    "cat": "Shorts",
+    "product_type": "Shorts",
+    "team": "Borussia Dortmund",
+    "league": "Bundesliga",
+    "season": "2026/27",
+    "kit": "Domicile",
+    "version": "Short",
+    "price": 20,
+    "image": "/products/240045089/cover_auto.jpg",
+    "images": [
+      "/products/240045089/cover_auto.jpg",
+      "/products/240045089/004.jpg",
+      "/products/240045089/005.jpg"
+    ],
+    "tri_score": 96,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
+  },
+  {
     "id": "239593803",
     "name": "Manchester United 2026/27 Domicile Short",
     "source_title": "2627 season Manchester United F.C. home shorts",
@@ -7911,19 +8018,11 @@
     "images": [
       "/products/239593803/cover_auto.jpg",
       "/products/239593803/004.jpg",
-      "/products/239593803/005.jpg",
-      "/products/239342281/cover_auto.jpg",
-      "/products/239342281/004.jpg",
-      "/products/239342281/005.jpg"
+      "/products/239593803/005.jpg"
     ],
     "tri_score": 96,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "239593803",
-      "239342281"
-    ]
+    "main_source_name": "004.jpg"
   },
   {
     "id": "239593981",
@@ -7942,19 +8041,34 @@
     "images": [
       "/products/239593981/cover_auto.jpg",
       "/products/239593981/004.jpg",
-      "/products/239593981/005.jpg",
+      "/products/239593981/005.jpg"
+    ],
+    "tri_score": 93,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
+  },
+  {
+    "id": "239593965",
+    "name": "Al Ittihad 2026/27",
+    "source_title": "2627 season Al-Ittihad Club Concept version Fan version",
+    "sport": "Football",
+    "cat": "Clubs",
+    "product_type": "Maillot",
+    "team": "Al Ittihad",
+    "league": "Saudi Pro League",
+    "season": "2026/27",
+    "kit": "",
+    "version": "Fan",
+    "price": 35,
+    "image": "/products/239593965/cover_auto.jpg",
+    "images": [
       "/products/239593965/cover_auto.jpg",
       "/products/239593965/004.jpg",
       "/products/239593965/005.jpg"
     ],
     "tri_score": 93,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "239593981",
-      "239593965"
-    ]
+    "main_source_name": "004.jpg"
   },
   {
     "id": "239593930",
@@ -8187,6 +8301,32 @@
     "main_source_name": "004.jpg"
   },
   {
+    "id": "239342320",
+    "name": "Paris Saint-Germain 2026/27 Domicile Enfant",
+    "source_title": "2627 season Paris Saint-Germain F.C. home Kids kit",
+    "sport": "Football",
+    "cat": "Enfant",
+    "product_type": "Enfant",
+    "team": "Paris Saint-Germain",
+    "league": "Ligue 1",
+    "season": "2026/27",
+    "kit": "Domicile",
+    "version": "Enfant",
+    "price": 30,
+    "image": "/products/239342320/cover_auto.jpg",
+    "images": [
+      "/products/239342320/cover_auto.jpg",
+      "/products/239342320/001.jpg",
+      "/products/239342320/002.jpg",
+      "/products/239342320/003.jpg",
+      "/products/239342320/004.jpg",
+      "/products/239342320/005.jpg"
+    ],
+    "tri_score": 96,
+    "tri_confidence": "haute",
+    "main_source_name": "001.jpg"
+  },
+  {
     "id": "239342313",
     "name": "Ukraine 2026 Extérieur Enfant",
     "source_title": "2026 Ukraine away Kids kit",
@@ -8325,6 +8465,29 @@
     "main_source_name": "004.jpg"
   },
   {
+    "id": "239342281",
+    "name": "Manchester United 2026/27 Domicile Short",
+    "source_title": "2627 season Manchester United F.C. home shorts",
+    "sport": "Football",
+    "cat": "Shorts",
+    "product_type": "Shorts",
+    "team": "Manchester United",
+    "league": "Premier League",
+    "season": "2026/27",
+    "kit": "Domicile",
+    "version": "Short",
+    "price": 20,
+    "image": "/products/239342281/cover_auto.jpg",
+    "images": [
+      "/products/239342281/cover_auto.jpg",
+      "/products/239342281/004.jpg",
+      "/products/239342281/005.jpg"
+    ],
+    "tri_score": 96,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
+  },
+  {
     "id": "239342269",
     "name": "Arsenal 2026/27 Domicile Short",
     "source_title": "2627 season Arsenal F.C. home shorts",
@@ -8387,19 +8550,11 @@
     "images": [
       "/products/239342215/cover_auto.jpg",
       "/products/239342215/004.jpg",
-      "/products/239342215/005.jpg",
-      "/products/229130084/cover_auto.jpg",
-      "/products/229130084/004.jpg",
-      "/products/229130084/005.jpg"
+      "/products/239342215/005.jpg"
     ],
     "tri_score": 93,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "239342215",
-      "229130084"
-    ]
+    "main_source_name": "004.jpg"
   },
   {
     "id": "239342206",
@@ -8625,19 +8780,34 @@
     "images": [
       "/products/239341635/cover_auto.jpg",
       "/products/239341635/004.jpg",
-      "/products/239341635/005.jpg",
+      "/products/239341635/005.jpg"
+    ],
+    "tri_score": 96,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
+  },
+  {
+    "id": "239341630",
+    "name": "Pays-Bas 2026 Gardien",
+    "source_title": "2026 FIFA World Cup Netherlands goalkeeper Fan version",
+    "sport": "Football",
+    "cat": "Nations",
+    "product_type": "Maillot",
+    "team": "Pays-Bas",
+    "league": "",
+    "season": "2026",
+    "kit": "Gardien",
+    "version": "Fan",
+    "price": 35,
+    "image": "/products/239341630/cover_auto.jpg",
+    "images": [
       "/products/239341630/cover_auto.jpg",
       "/products/239341630/004.jpg",
       "/products/239341630/005.jpg"
     ],
     "tri_score": 96,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "239341635",
-      "239341630"
-    ]
+    "main_source_name": "004.jpg"
   },
   {
     "id": "239341629",
@@ -8886,19 +9056,11 @@
     "images": [
       "/products/239341135/cover_auto.jpg",
       "/products/239341135/004.jpg",
-      "/products/239341135/005.jpg",
-      "/products/222923941/cover_auto.jpg",
-      "/products/222923941/004.jpg",
-      "/products/222923941/005.jpg"
+      "/products/239341135/005.jpg"
     ],
     "tri_score": 96,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "239341135",
-      "222923941"
-    ]
+    "main_source_name": "004.jpg"
   },
   {
     "id": "239340986",
@@ -8943,19 +9105,11 @@
       "/products/239340983/002.jpg",
       "/products/239340983/003.jpg",
       "/products/239340983/004.jpg",
-      "/products/239340983/005.jpg",
-      "/products/227844488/cover_auto.jpg",
-      "/products/227844488/004.jpg",
-      "/products/227844488/005.jpg"
+      "/products/239340983/005.jpg"
     ],
     "tri_score": 96,
     "tri_confidence": "haute",
-    "main_source_name": "001.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "239340983",
-      "227844488"
-    ]
+    "main_source_name": "001.jpg"
   },
   {
     "id": "239340976",
@@ -9125,6 +9279,29 @@
     "main_source_name": "004.jpg"
   },
   {
+    "id": "239340926",
+    "name": "Paris Saint-Germain 2026/27 Domicile Player",
+    "source_title": "2627 season Paris Saint-Germain F.C. home Player version",
+    "sport": "Football",
+    "cat": "Clubs",
+    "product_type": "Maillot",
+    "team": "Paris Saint-Germain",
+    "league": "Ligue 1",
+    "season": "2026/27",
+    "kit": "Domicile",
+    "version": "Player",
+    "price": 45,
+    "image": "/products/239340926/cover_auto.jpg",
+    "images": [
+      "/products/239340926/cover_auto.jpg",
+      "/products/239340926/004.jpg",
+      "/products/239340926/005.jpg"
+    ],
+    "tri_score": 96,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
+  },
+  {
     "id": "239340922",
     "name": "Olympique Lyonnais 2026/27 Extérieur",
     "source_title": "2627 season Olympique Lyonnais away Fan version",
@@ -9174,6 +9351,29 @@
     "main_source_name": "001.jpg"
   },
   {
+    "id": "239340903",
+    "name": "Rangers FC. 2026/27 Extérieur",
+    "source_title": "2627 season Rangers F.C. away Fan version",
+    "sport": "Football",
+    "cat": "Clubs",
+    "product_type": "Maillot",
+    "team": "Rangers FC.",
+    "league": "",
+    "season": "2026/27",
+    "kit": "Extérieur",
+    "version": "Fan",
+    "price": 35,
+    "image": "/products/239340903/cover_auto.jpg",
+    "images": [
+      "/products/239340903/cover_auto.jpg",
+      "/products/239340903/004.jpg",
+      "/products/239340903/005.jpg"
+    ],
+    "tri_score": 96,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
+  },
+  {
     "id": "239340897",
     "name": "Rangers FC. 2026/27 Domicile",
     "source_title": "2627 season Rangers F.C. home Fan version",
@@ -9190,19 +9390,11 @@
     "images": [
       "/products/239340897/cover_auto.jpg",
       "/products/239340897/004.jpg",
-      "/products/239340897/005.jpg",
-      "/products/236040898/cover_auto.jpg",
-      "/products/236040898/004.jpg",
-      "/products/236040898/005.jpg"
+      "/products/239340897/005.jpg"
     ],
     "tri_score": 96,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "239340897",
-      "236040898"
-    ]
+    "main_source_name": "004.jpg"
   },
   {
     "id": "239340894",
@@ -9520,19 +9712,11 @@
     "images": [
       "/products/238357942/cover_auto.jpg",
       "/products/238357942/004.jpg",
-      "/products/238357942/005.jpg",
-      "/products/236765079/cover_auto.jpg",
-      "/products/236765079/004.jpg",
-      "/products/236765079/005.jpg"
+      "/products/238357942/005.jpg"
     ],
     "tri_score": 96,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "238357942",
-      "236765079"
-    ]
+    "main_source_name": "004.jpg"
   },
   {
     "id": "238357940",
@@ -9554,19 +9738,11 @@
       "/products/238357940/002.jpeg",
       "/products/238357940/003.jpeg",
       "/products/238357940/004.jpeg",
-      "/products/238357940/005.jpeg",
-      "/products/233462249/cover_auto.jpg",
-      "/products/233462249/004.jpg",
-      "/products/233462249/005.jpg"
+      "/products/238357940/005.jpeg"
     ],
     "tri_score": 96,
     "tri_confidence": "haute",
-    "main_source_name": "001.jpeg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "238357940",
-      "233462249"
-    ]
+    "main_source_name": "001.jpeg"
   },
   {
     "id": "238357934",
@@ -9631,19 +9807,11 @@
     "images": [
       "/products/238357922/cover_auto.jpg",
       "/products/238357922/004.jpg",
-      "/products/238357922/005.jpg",
-      "/products/229928511/cover_auto.jpg",
-      "/products/229928511/004.jpg",
-      "/products/229928511/005.jpg"
+      "/products/238357922/005.jpg"
     ],
     "tri_score": 93,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "238357922",
-      "229928511"
-    ]
+    "main_source_name": "004.jpg"
   },
   {
     "id": "238357882",
@@ -10227,6 +10395,29 @@
     "main_source_name": "004.jpg"
   },
   {
+    "id": "236765079",
+    "name": "Uruguay 2026 Domicile Short",
+    "source_title": "2026 FIFA World Cup Uruguay home shorts",
+    "sport": "Football",
+    "cat": "Shorts",
+    "product_type": "Shorts",
+    "team": "Uruguay",
+    "league": "",
+    "season": "2026",
+    "kit": "Domicile",
+    "version": "Short",
+    "price": 20,
+    "image": "/products/236765079/cover_auto.jpg",
+    "images": [
+      "/products/236765079/cover_auto.jpg",
+      "/products/236765079/004.jpg",
+      "/products/236765079/005.jpg"
+    ],
+    "tri_score": 96,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
+  },
+  {
     "id": "236765070",
     "name": "Japon 2026",
     "source_title": "2026 Japan Hip hop version Fan version",
@@ -10450,19 +10641,34 @@
     "images": [
       "/products/236765002/cover_auto.jpg",
       "/products/236765002/004.jpg",
-      "/products/236765002/005.jpg",
+      "/products/236765002/005.jpg"
+    ],
+    "tri_score": 93,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
+  },
+  {
+    "id": "236764992",
+    "name": "Angleterre 2026",
+    "source_title": "2026 FIFA World Cup England 500 Concept version Fan version",
+    "sport": "Football",
+    "cat": "Nations",
+    "product_type": "Maillot",
+    "team": "Angleterre",
+    "league": "",
+    "season": "2026",
+    "kit": "",
+    "version": "Fan",
+    "price": 35,
+    "image": "/products/236764992/cover_auto.jpg",
+    "images": [
       "/products/236764992/cover_auto.jpg",
       "/products/236764992/004.jpg",
       "/products/236764992/005.jpg"
     ],
     "tri_score": 93,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "236765002",
-      "236764992"
-    ]
+    "main_source_name": "004.jpg"
   },
   {
     "id": "236764967",
@@ -10757,19 +10963,34 @@
     "images": [
       "/products/236321201/cover_auto.jpg",
       "/products/236321201/004.jpg",
-      "/products/236321201/005.jpg",
+      "/products/236321201/005.jpg"
+    ],
+    "tri_score": 93,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
+  },
+  {
+    "id": "236321199",
+    "name": "France 2026",
+    "source_title": "2026 FIFA World Cup France Appearance outfit",
+    "sport": "Football",
+    "cat": "Nations",
+    "product_type": "Maillot",
+    "team": "France",
+    "league": "",
+    "season": "2026",
+    "kit": "",
+    "version": "Fan",
+    "price": 35,
+    "image": "/products/236321199/cover_auto.jpg",
+    "images": [
       "/products/236321199/cover_auto.jpg",
       "/products/236321199/004.jpg",
       "/products/236321199/005.jpg"
     ],
     "tri_score": 93,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "236321201",
-      "236321199"
-    ]
+    "main_source_name": "004.jpg"
   },
   {
     "id": "236046828",
@@ -10998,19 +11219,11 @@
     "images": [
       "/products/236044270/cover_auto.jpg",
       "/products/236044270/004.jpg",
-      "/products/236044270/005.jpg",
-      "/products/229928250/cover_auto.jpg",
-      "/products/229928250/004.jpg",
-      "/products/229928250/005.jpg"
+      "/products/236044270/005.jpg"
     ],
     "tri_score": 93,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "236044270",
-      "229928250"
-    ]
+    "main_source_name": "004.jpg"
   },
   {
     "id": "236043832",
@@ -11098,19 +11311,11 @@
     "images": [
       "/products/236043198/cover_auto.jpg",
       "/products/236043198/004.jpg",
-      "/products/236043198/005.jpg",
-      "/products/236038753/cover_auto.jpg",
-      "/products/236038753/004.jpg",
-      "/products/236038753/005.jpg"
+      "/products/236043198/005.jpg"
     ],
     "tri_score": 96,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "236043198",
-      "236038753"
-    ]
+    "main_source_name": "004.jpg"
   },
   {
     "id": "236042943",
@@ -11317,6 +11522,29 @@
       "/products/236041278/cover_auto.jpg",
       "/products/236041278/004.jpg",
       "/products/236041278/005.jpg"
+    ],
+    "tri_score": 96,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
+  },
+  {
+    "id": "236040898",
+    "name": "Rangers FC. 2026/27 Domicile",
+    "source_title": "2627 season Rangers F.C. home Fan version",
+    "sport": "Football",
+    "cat": "Clubs",
+    "product_type": "Maillot",
+    "team": "Rangers FC.",
+    "league": "",
+    "season": "2026/27",
+    "kit": "Domicile",
+    "version": "Fan",
+    "price": 35,
+    "image": "/products/236040898/cover_auto.jpg",
+    "images": [
+      "/products/236040898/cover_auto.jpg",
+      "/products/236040898/004.jpg",
+      "/products/236040898/005.jpg"
     ],
     "tri_score": 96,
     "tri_confidence": "haute",
@@ -11639,6 +11867,29 @@
       "/products/236040550/cover_auto.jpg",
       "/products/236040550/004.jpg",
       "/products/236040550/005.jpg"
+    ],
+    "tri_score": 96,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
+  },
+  {
+    "id": "236038753",
+    "name": "Afrique du Sud 2026 Third",
+    "source_title": "2026 FIFA World Cup South Africa third Fan version",
+    "sport": "Football",
+    "cat": "Nations",
+    "product_type": "Maillot",
+    "team": "Afrique du Sud",
+    "league": "",
+    "season": "2026",
+    "kit": "Third",
+    "version": "Fan",
+    "price": 35,
+    "image": "/products/236038753/cover_auto.jpg",
+    "images": [
+      "/products/236038753/cover_auto.jpg",
+      "/products/236038753/004.jpg",
+      "/products/236038753/005.jpg"
     ],
     "tri_score": 96,
     "tri_confidence": "haute",
@@ -12446,19 +12697,11 @@
     "images": [
       "/products/235030842/cover_auto.jpg",
       "/products/235030842/004.jpg",
-      "/products/235030842/005.jpg",
-      "/products/229928005/cover_auto.jpg",
-      "/products/229928005/004.jpg",
-      "/products/229928005/005.jpg"
+      "/products/235030842/005.jpg"
     ],
     "tri_score": 96,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "235030842",
-      "229928005"
-    ]
+    "main_source_name": "004.jpg"
   },
   {
     "id": "235030837",
@@ -12802,19 +13045,11 @@
       "/products/233462481/002.jpg",
       "/products/233462481/003.jpg",
       "/products/233462481/004.jpg",
-      "/products/233462481/005.jpg",
-      "/products/232646511/cover_auto.jpg",
-      "/products/232646511/004.jpg",
-      "/products/232646511/005.jpg"
+      "/products/233462481/005.jpg"
     ],
     "tri_score": 96,
     "tri_confidence": "haute",
-    "main_source_name": "001.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "233462481",
-      "232646511"
-    ]
+    "main_source_name": "001.jpg"
   },
   {
     "id": "233462468",
@@ -13004,6 +13239,29 @@
     "main_source_name": "004.jpg"
   },
   {
+    "id": "233462249",
+    "name": "Pays-Bas 2026 Domicile Short",
+    "source_title": "2026 FIFA World Cup Netherlands home shorts",
+    "sport": "Football",
+    "cat": "Shorts",
+    "product_type": "Shorts",
+    "team": "Pays-Bas",
+    "league": "",
+    "season": "2026",
+    "kit": "Domicile",
+    "version": "Short",
+    "price": 20,
+    "image": "/products/233462249/cover_auto.jpg",
+    "images": [
+      "/products/233462249/cover_auto.jpg",
+      "/products/233462249/004.jpg",
+      "/products/233462249/005.jpg"
+    ],
+    "tri_score": 96,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
+  },
+  {
     "id": "233461903",
     "name": "Croatie 2026 Domicile",
     "source_title": "2026 FIFA World Cup Croatia home Fan version",
@@ -13043,23 +13301,11 @@
     "images": [
       "/products/233461899/cover_auto.jpg",
       "/products/233461899/004.jpg",
-      "/products/233461899/005.jpg",
-      "/products/232646375/cover_auto.jpg",
-      "/products/232646375/004.jpg",
-      "/products/232646375/005.jpg",
-      "/products/229130190/cover_auto.jpg",
-      "/products/229130190/004.jpg",
-      "/products/229130190/005.jpg"
+      "/products/233461899/005.jpg"
     ],
     "tri_score": 93,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpg",
-    "merged_duplicate_count": 3,
-    "merged_duplicate_ids": [
-      "233461899",
-      "232646375",
-      "229130190"
-    ]
+    "main_source_name": "004.jpg"
   },
   {
     "id": "233461875",
@@ -13223,6 +13469,52 @@
     "main_source_name": "004.jpg"
   },
   {
+    "id": "233461378",
+    "name": "Brésil 2026",
+    "source_title": "2026 FIFA World Cup Brazil Appearance outfit",
+    "sport": "Football",
+    "cat": "Nations",
+    "product_type": "Maillot",
+    "team": "Brésil",
+    "league": "",
+    "season": "2026",
+    "kit": "",
+    "version": "Fan",
+    "price": 35,
+    "image": "/products/233461378/cover_auto.jpg",
+    "images": [
+      "/products/233461378/cover_auto.jpg",
+      "/products/233461378/004.jpg",
+      "/products/233461378/005.jpg"
+    ],
+    "tri_score": 93,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
+  },
+  {
+    "id": "233461369",
+    "name": "Angleterre 2026",
+    "source_title": "2026 FIFA World Cup England Appearance outfit",
+    "sport": "Football",
+    "cat": "Nations",
+    "product_type": "Maillot",
+    "team": "Angleterre",
+    "league": "",
+    "season": "2026",
+    "kit": "",
+    "version": "Fan",
+    "price": 35,
+    "image": "/products/233461369/cover_auto.jpg",
+    "images": [
+      "/products/233461369/cover_auto.jpg",
+      "/products/233461369/004.jpg",
+      "/products/233461369/005.jpg"
+    ],
+    "tri_score": 93,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
+  },
+  {
     "id": "233461342",
     "name": "Mexique 2026 Extérieur",
     "source_title": "2026 FIFA World Cup Mexico away Long sleeve Fan version",
@@ -13355,6 +13647,29 @@
       "/products/232646518/cover_auto.jpg",
       "/products/232646518/004.jpg",
       "/products/232646518/005.jpg"
+    ],
+    "tri_score": 96,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
+  },
+  {
+    "id": "232646511",
+    "name": "Angleterre 2026 Gardien Enfant",
+    "source_title": "2026 FIFA World Cup England goalkeeper Kids kit",
+    "sport": "Football",
+    "cat": "Enfant",
+    "product_type": "Enfant",
+    "team": "Angleterre",
+    "league": "",
+    "season": "2026",
+    "kit": "Gardien",
+    "version": "Enfant",
+    "price": 30,
+    "image": "/products/232646511/cover_auto.jpg",
+    "images": [
+      "/products/232646511/cover_auto.jpg",
+      "/products/232646511/004.jpg",
+      "/products/232646511/005.jpg"
     ],
     "tri_score": 96,
     "tri_confidence": "haute",
@@ -13729,6 +14044,29 @@
     "main_source_name": "004.jpg"
   },
   {
+    "id": "232646375",
+    "name": "Angleterre 2026",
+    "source_title": "2026 FIFA World Cup England Concept version Fan version",
+    "sport": "Football",
+    "cat": "Nations",
+    "product_type": "Maillot",
+    "team": "Angleterre",
+    "league": "",
+    "season": "2026",
+    "kit": "",
+    "version": "Fan",
+    "price": 35,
+    "image": "/products/232646375/cover_auto.jpg",
+    "images": [
+      "/products/232646375/cover_auto.jpg",
+      "/products/232646375/004.jpg",
+      "/products/232646375/005.jpg"
+    ],
+    "tri_score": 93,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
+  },
+  {
     "id": "232646372",
     "name": "Norvège 2026 Extérieur",
     "source_title": "2026 FIFA World Cup Norway away Fan version",
@@ -13955,22 +14293,11 @@
     "images": [
       "/products/231185519/cover_auto.jpg",
       "/products/231185519/004.jpg",
-      "/products/231185519/005.jpg",
-      "/products/229927991/cover_auto.jpg",
-      "/products/229927991/001.jpg",
-      "/products/229927991/002.jpg",
-      "/products/229927991/003.jpg",
-      "/products/229927991/004.jpg",
-      "/products/229927991/005.jpg"
+      "/products/231185519/005.jpg"
     ],
     "tri_score": 96,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "231185519",
-      "229927991"
-    ]
+    "main_source_name": "004.jpg"
   },
   {
     "id": "231185496",
@@ -14202,22 +14529,11 @@
     "images": [
       "/products/231185188/cover_auto.jpg",
       "/products/231185188/004.jpg",
-      "/products/231185188/005.jpg",
-      "/products/229928292/cover_auto.jpg",
-      "/products/229928292/001.jpg",
-      "/products/229928292/002.jpg",
-      "/products/229928292/003.jpg",
-      "/products/229928292/004.jpg",
-      "/products/229928292/005.jpg"
+      "/products/231185188/005.jpg"
     ],
     "tri_score": 96,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "231185188",
-      "229928292"
-    ]
+    "main_source_name": "004.jpg"
   },
   {
     "id": "231185174",
@@ -14285,19 +14601,11 @@
     "images": [
       "/products/231185113/cover_auto.jpg",
       "/products/231185113/004.jpg",
-      "/products/231185113/005.jpg",
-      "/products/231018561/cover_auto.jpg",
-      "/products/231018561/004.jpg",
-      "/products/231018561/005.jpg"
+      "/products/231185113/005.jpg"
     ],
     "tri_score": 96,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "231185113",
-      "231018561"
-    ]
+    "main_source_name": "004.jpg"
   },
   {
     "id": "231185074",
@@ -14316,19 +14624,34 @@
     "images": [
       "/products/231185074/cover_auto.jpg",
       "/products/231185074/004.jpg",
-      "/products/231185074/005.jpg",
+      "/products/231185074/005.jpg"
+    ],
+    "tri_score": 93,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
+  },
+  {
+    "id": "231185063",
+    "name": "Benfica 2026/27",
+    "source_title": "2627 season S.L. Benfica Concept version Fan version",
+    "sport": "Football",
+    "cat": "Clubs",
+    "product_type": "Maillot",
+    "team": "Benfica",
+    "league": "Primeira Liga",
+    "season": "2026/27",
+    "kit": "",
+    "version": "Fan",
+    "price": 35,
+    "image": "/products/231185063/cover_auto.jpg",
+    "images": [
       "/products/231185063/cover_auto.jpg",
       "/products/231185063/004.jpg",
       "/products/231185063/005.jpg"
     ],
     "tri_score": 93,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "231185074",
-      "231185063"
-    ]
+    "main_source_name": "004.jpg"
   },
   {
     "id": "231185053",
@@ -14509,6 +14832,29 @@
       "/products/231018563/cover_auto.jpg",
       "/products/231018563/004.jpg",
       "/products/231018563/005.jpg"
+    ],
+    "tri_score": 96,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
+  },
+  {
+    "id": "231018561",
+    "name": "Canada 2026 Domicile",
+    "source_title": "2026 FIFA World Cup Canada home Fan version",
+    "sport": "Football",
+    "cat": "Nations",
+    "product_type": "Maillot",
+    "team": "Canada",
+    "league": "",
+    "season": "2026",
+    "kit": "Domicile",
+    "version": "Fan",
+    "price": 35,
+    "image": "/products/231018561/cover_auto.jpg",
+    "images": [
+      "/products/231018561/cover_auto.jpg",
+      "/products/231018561/004.jpg",
+      "/products/231018561/005.jpg"
     ],
     "tri_score": 96,
     "tri_confidence": "haute",
@@ -14738,19 +15084,11 @@
     "images": [
       "/products/231018259/cover_auto.jpg",
       "/products/231018259/004.jpg",
-      "/products/231018259/005.jpg",
-      "/products/229927970/cover_auto.jpg",
-      "/products/229927970/004.jpg",
-      "/products/229927970/005.jpg"
+      "/products/231018259/005.jpg"
     ],
     "tri_score": 93,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "231018259",
-      "229927970"
-    ]
+    "main_source_name": "004.jpg"
   },
   {
     "id": "231018250",
@@ -15048,19 +15386,11 @@
     "images": [
       "/products/231018087/cover_auto.jpg",
       "/products/231018087/004.jpg",
-      "/products/231018087/005.jpg",
-      "/products/229927901/cover_auto.jpg",
-      "/products/229927901/004.jpg",
-      "/products/229927901/005.jpg"
+      "/products/231018087/005.jpg"
     ],
     "tri_score": 93,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "231018087",
-      "229927901"
-    ]
+    "main_source_name": "004.jpg"
   },
   {
     "id": "231018071",
@@ -15328,6 +15658,29 @@
     "main_source_name": "004.jpg"
   },
   {
+    "id": "229928511",
+    "name": "Paris Saint-Germain 2025/26 Enfant",
+    "source_title": "2526 season Paris Saint-Germain F.C. sixth Kids kit",
+    "sport": "Football",
+    "cat": "Enfant",
+    "product_type": "Enfant",
+    "team": "Paris Saint-Germain",
+    "league": "Ligue 1",
+    "season": "2025/26",
+    "kit": "",
+    "version": "Enfant",
+    "price": 30,
+    "image": "/products/229928511/cover_auto.jpg",
+    "images": [
+      "/products/229928511/cover_auto.jpg",
+      "/products/229928511/004.jpg",
+      "/products/229928511/005.jpg"
+    ],
+    "tri_score": 93,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
+  },
+  {
     "id": "229928495",
     "name": "Los Angeles 2026/27 Domicile Enfant",
     "source_title": "2627 season Los Angeles Football Club home Kids kit",
@@ -15505,19 +15858,11 @@
     "images": [
       "/products/229928350/cover_auto.jpg",
       "/products/229928350/004.jpg",
-      "/products/229928350/005.jpg",
-      "/products/229927896/cover_auto.jpg",
-      "/products/229927896/004.jpg",
-      "/products/229927896/005.jpg"
+      "/products/229928350/005.jpg"
     ],
     "tri_score": 93,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "229928350",
-      "229927896"
-    ]
+    "main_source_name": "004.jpg"
   },
   {
     "id": "229928343",
@@ -15641,6 +15986,32 @@
     "main_source_name": "004.jpg"
   },
   {
+    "id": "229928292",
+    "name": "États-Unis 2026 Domicile Player",
+    "source_title": "2026 FIFA World Cup USA home Player version",
+    "sport": "Football",
+    "cat": "Nations",
+    "product_type": "Maillot",
+    "team": "États-Unis",
+    "league": "",
+    "season": "2026",
+    "kit": "Domicile",
+    "version": "Player",
+    "price": 45,
+    "image": "/products/229928292/cover_auto.jpg",
+    "images": [
+      "/products/229928292/cover_auto.jpg",
+      "/products/229928292/001.jpg",
+      "/products/229928292/002.jpg",
+      "/products/229928292/003.jpg",
+      "/products/229928292/004.jpg",
+      "/products/229928292/005.jpg"
+    ],
+    "tri_score": 96,
+    "tri_confidence": "haute",
+    "main_source_name": "001.jpg"
+  },
+  {
     "id": "229928286",
     "name": "Jamaïque 2026 Domicile Player",
     "source_title": "2026 Jamaica home Player version",
@@ -15759,6 +16130,29 @@
     "main_source_name": "004.jpg"
   },
   {
+    "id": "229928250",
+    "name": "Brésil 2026",
+    "source_title": "2026 FIFA World Cup Brazil Concept version Fan version",
+    "sport": "Football",
+    "cat": "Nations",
+    "product_type": "Maillot",
+    "team": "Brésil",
+    "league": "",
+    "season": "2026",
+    "kit": "",
+    "version": "Fan",
+    "price": 35,
+    "image": "/products/229928250/cover_auto.jpg",
+    "images": [
+      "/products/229928250/cover_auto.jpg",
+      "/products/229928250/004.jpg",
+      "/products/229928250/005.jpg"
+    ],
+    "tri_score": 93,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
+  },
+  {
     "id": "229928243",
     "name": "États-Unis 2026 Extérieur",
     "source_title": "2026 FIFA World Cup USA away Fan version",
@@ -15801,19 +16195,34 @@
     "images": [
       "/products/229928231/cover_auto.jpg",
       "/products/229928231/004.jpg",
-      "/products/229928231/005.jpg",
+      "/products/229928231/005.jpg"
+    ],
+    "tri_score": 93,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
+  },
+  {
+    "id": "229928187",
+    "name": "Irlande 2026",
+    "source_title": "2026 FIFA World Cup Ireland Concept version Fan version",
+    "sport": "Football",
+    "cat": "Nations",
+    "product_type": "Maillot",
+    "team": "Irlande",
+    "league": "",
+    "season": "2026",
+    "kit": "",
+    "version": "Fan",
+    "price": 35,
+    "image": "/products/229928187/cover_auto.jpg",
+    "images": [
       "/products/229928187/cover_auto.jpg",
       "/products/229928187/004.jpg",
       "/products/229928187/005.jpg"
     ],
     "tri_score": 93,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "229928231",
-      "229928187"
-    ]
+    "main_source_name": "004.jpg"
   },
   {
     "id": "229928180",
@@ -15907,22 +16316,11 @@
       "/products/229928116/002.jpg",
       "/products/229928116/003.jpg",
       "/products/229928116/004.jpg",
-      "/products/229928116/005.jpg",
-      "/products/227844287/cover_auto.jpg",
-      "/products/227844287/001.jpg",
-      "/products/227844287/002.jpg",
-      "/products/227844287/003.jpg",
-      "/products/227844287/004.jpg",
-      "/products/227844287/005.jpg"
+      "/products/229928116/005.jpg"
     ],
     "tri_score": 96,
     "tri_confidence": "haute",
-    "main_source_name": "001.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "229928116",
-      "227844287"
-    ]
+    "main_source_name": "001.jpg"
   },
   {
     "id": "229928103",
@@ -16095,6 +16493,29 @@
     "main_source_name": "004.jpg"
   },
   {
+    "id": "229928005",
+    "name": "Autriche 2026 Extérieur",
+    "source_title": "2026 FIFA World Cup Austria away Fan version",
+    "sport": "Football",
+    "cat": "Nations",
+    "product_type": "Maillot",
+    "team": "Autriche",
+    "league": "",
+    "season": "2026",
+    "kit": "Extérieur",
+    "version": "Fan",
+    "price": 35,
+    "image": "/products/229928005/cover_auto.jpg",
+    "images": [
+      "/products/229928005/cover_auto.jpg",
+      "/products/229928005/004.jpg",
+      "/products/229928005/005.jpg"
+    ],
+    "tri_score": 96,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
+  },
+  {
     "id": "229928003",
     "name": "Norvège 2026 Domicile",
     "source_title": "2026 FIFA World Cup Norway home Fan version",
@@ -16139,6 +16560,32 @@
     "tri_score": 96,
     "tri_confidence": "haute",
     "main_source_name": "004.jpg"
+  },
+  {
+    "id": "229927991",
+    "name": "États-Unis 2026 Domicile",
+    "source_title": "2026 FIFA World Cup USA home Fan version",
+    "sport": "Football",
+    "cat": "Nations",
+    "product_type": "Maillot",
+    "team": "États-Unis",
+    "league": "",
+    "season": "2026",
+    "kit": "Domicile",
+    "version": "Fan",
+    "price": 35,
+    "image": "/products/229927991/cover_auto.jpg",
+    "images": [
+      "/products/229927991/cover_auto.jpg",
+      "/products/229927991/001.jpg",
+      "/products/229927991/002.jpg",
+      "/products/229927991/003.jpg",
+      "/products/229927991/004.jpg",
+      "/products/229927991/005.jpg"
+    ],
+    "tri_score": 96,
+    "tri_confidence": "haute",
+    "main_source_name": "001.jpg"
   },
   {
     "id": "229927990",
@@ -16206,6 +16653,29 @@
       "/products/229927978/005.jpg"
     ],
     "tri_score": 96,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
+  },
+  {
+    "id": "229927970",
+    "name": "Paris Saint-Germain 2025/26 Player",
+    "source_title": "2526 season Paris Saint-Germain F.C. sixth Player version",
+    "sport": "Football",
+    "cat": "Clubs",
+    "product_type": "Maillot",
+    "team": "Paris Saint-Germain",
+    "league": "Ligue 1",
+    "season": "2025/26",
+    "kit": "",
+    "version": "Player",
+    "price": 45,
+    "image": "/products/229927970/cover_auto.jpg",
+    "images": [
+      "/products/229927970/cover_auto.jpg",
+      "/products/229927970/004.jpg",
+      "/products/229927970/005.jpg"
+    ],
+    "tri_score": 93,
     "tri_confidence": "haute",
     "main_source_name": "004.jpg"
   },
@@ -16298,6 +16768,52 @@
       "/products/229927911/005.jpg"
     ],
     "tri_score": 88,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
+  },
+  {
+    "id": "229927901",
+    "name": "Borussia Dortmund 2026/27",
+    "source_title": "2627 season Borussia Dortmund Concept version Fan version",
+    "sport": "Football",
+    "cat": "Clubs",
+    "product_type": "Maillot",
+    "team": "Borussia Dortmund",
+    "league": "Bundesliga",
+    "season": "2026/27",
+    "kit": "",
+    "version": "Fan",
+    "price": 35,
+    "image": "/products/229927901/cover_auto.jpg",
+    "images": [
+      "/products/229927901/cover_auto.jpg",
+      "/products/229927901/004.jpg",
+      "/products/229927901/005.jpg"
+    ],
+    "tri_score": 93,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
+  },
+  {
+    "id": "229927896",
+    "name": "Liverpool 1995 Rétro",
+    "source_title": "1995 season Liverpool F.C. Concept version Fan version",
+    "sport": "Football",
+    "cat": "Rétro",
+    "product_type": "Rétro",
+    "team": "Liverpool",
+    "league": "Premier League",
+    "season": "1995",
+    "kit": "",
+    "version": "Rétro",
+    "price": 50,
+    "image": "/products/229927896/cover_auto.jpg",
+    "images": [
+      "/products/229927896/cover_auto.jpg",
+      "/products/229927896/004.jpg",
+      "/products/229927896/005.jpg"
+    ],
+    "tri_score": 93,
     "tri_confidence": "haute",
     "main_source_name": "004.jpg"
   },
@@ -16604,6 +17120,29 @@
     "main_source_name": "004.jpg"
   },
   {
+    "id": "229130190",
+    "name": "Angleterre 2026",
+    "source_title": "2026 FIFA World Cup England Concept version Fan version",
+    "sport": "Football",
+    "cat": "Nations",
+    "product_type": "Maillot",
+    "team": "Angleterre",
+    "league": "",
+    "season": "2026",
+    "kit": "",
+    "version": "Fan",
+    "price": 35,
+    "image": "/products/229130190/cover_auto.jpg",
+    "images": [
+      "/products/229130190/cover_auto.jpg",
+      "/products/229130190/004.jpg",
+      "/products/229130190/005.jpg"
+    ],
+    "tri_score": 93,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
+  },
+  {
     "id": "229130187",
     "name": "France",
     "source_title": "France 120th anniversary Fan version",
@@ -16712,19 +17251,11 @@
     "images": [
       "/products/229130154/cover_auto.jpg",
       "/products/229130154/004.jpg",
-      "/products/229130154/005.jpg",
-      "/products/229130053/cover_auto.jpg",
-      "/products/229130053/004.jpg",
-      "/products/229130053/005.jpg"
+      "/products/229130154/005.jpg"
     ],
     "tri_score": 93,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "229130154",
-      "229130053"
-    ]
+    "main_source_name": "004.jpg"
   },
   {
     "id": "229130137",
@@ -16819,6 +17350,29 @@
     "main_source_name": "004.jpg"
   },
   {
+    "id": "229130084",
+    "name": "Paris Saint-Germain 2025/26",
+    "source_title": "2526 season Paris Saint-Germain F.C. sixth Fan version",
+    "sport": "Football",
+    "cat": "Clubs",
+    "product_type": "Maillot",
+    "team": "Paris Saint-Germain",
+    "league": "Ligue 1",
+    "season": "2025/26",
+    "kit": "",
+    "version": "Fan",
+    "price": 35,
+    "image": "/products/229130084/cover_auto.jpg",
+    "images": [
+      "/products/229130084/cover_auto.jpg",
+      "/products/229130084/004.jpg",
+      "/products/229130084/005.jpg"
+    ],
+    "tri_score": 93,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
+  },
+  {
     "id": "229130062",
     "name": "Boca Juniors 2026/27 Fourth",
     "source_title": "2627 season Boca Juniors fourth Fan version",
@@ -16838,6 +17392,29 @@
       "/products/229130062/005.jpg"
     ],
     "tri_score": 96,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
+  },
+  {
+    "id": "229130053",
+    "name": "Galatasaray S.K. 2026/27",
+    "source_title": "2627 season Galatasaray S.K. Concept version Fan version",
+    "sport": "Football",
+    "cat": "Clubs",
+    "product_type": "Maillot",
+    "team": "Galatasaray S.K.",
+    "league": "",
+    "season": "2026/27",
+    "kit": "",
+    "version": "Fan",
+    "price": 35,
+    "image": "/products/229130053/cover_auto.jpg",
+    "images": [
+      "/products/229130053/cover_auto.jpg",
+      "/products/229130053/004.jpg",
+      "/products/229130053/005.jpg"
+    ],
+    "tri_score": 93,
     "tri_confidence": "haute",
     "main_source_name": "004.jpg"
   },
@@ -17356,19 +17933,11 @@
     "images": [
       "/products/227844560/cover_auto.jpg",
       "/products/227844560/004.jpg",
-      "/products/227844560/005.jpg",
-      "/products/224260313/cover_auto.jpg",
-      "/products/224260313/004.jpg",
-      "/products/224260313/005.jpg"
+      "/products/227844560/005.jpg"
     ],
     "tri_score": 93,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "227844560",
-      "224260313"
-    ]
+    "main_source_name": "004.jpg"
   },
   {
     "id": "227844556",
@@ -17489,6 +18058,29 @@
     "main_source_name": "004.jpg"
   },
   {
+    "id": "227844488",
+    "name": "Club América 2026/27 Domicile",
+    "source_title": "2627 season Club América home Fan version",
+    "sport": "Football",
+    "cat": "Clubs",
+    "product_type": "Maillot",
+    "team": "Club América",
+    "league": "",
+    "season": "2026/27",
+    "kit": "Domicile",
+    "version": "Fan",
+    "price": 35,
+    "image": "/products/227844488/cover_auto.jpg",
+    "images": [
+      "/products/227844488/cover_auto.jpg",
+      "/products/227844488/004.jpg",
+      "/products/227844488/005.jpg"
+    ],
+    "tri_score": 96,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
+  },
+  {
     "id": "227844481",
     "name": "Sociedade Esportiva Palmeiras 2026/27 Extérieur",
     "source_title": "2627 season Sociedade Esportiva Palmeiras away Fan version",
@@ -17505,19 +18097,11 @@
     "images": [
       "/products/227844481/cover_auto.jpg",
       "/products/227844481/004.jpg",
-      "/products/227844481/005.jpg",
-      "/products/224260366/cover_auto.jpg",
-      "/products/224260366/004.jpg",
-      "/products/224260366/005.jpg"
+      "/products/227844481/005.jpg"
     ],
     "tri_score": 96,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "227844481",
-      "224260366"
-    ]
+    "main_source_name": "004.jpg"
   },
   {
     "id": "227844469",
@@ -17536,19 +18120,11 @@
     "images": [
       "/products/227844469/cover_auto.jpg",
       "/products/227844469/004.jpg",
-      "/products/227844469/005.jpg",
-      "/products/224260241/cover_auto.jpg",
-      "/products/224260241/004.jpg",
-      "/products/224260241/005.jpg"
+      "/products/227844469/005.jpg"
     ],
     "tri_score": 96,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "227844469",
-      "224260241"
-    ]
+    "main_source_name": "004.jpg"
   },
   {
     "id": "227844463",
@@ -17642,6 +18218,29 @@
       "/products/227844397/005.jpg"
     ],
     "tri_score": 96,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
+  },
+  {
+    "id": "227844393",
+    "name": "Real Betis 2026/27",
+    "source_title": "2627 season Real Betis Balompié Concept version Fan version",
+    "sport": "Football",
+    "cat": "Clubs",
+    "product_type": "Maillot",
+    "team": "Real Betis",
+    "league": "La Liga",
+    "season": "2026/27",
+    "kit": "",
+    "version": "Fan",
+    "price": 35,
+    "image": "/products/227844393/cover_auto.jpg",
+    "images": [
+      "/products/227844393/cover_auto.jpg",
+      "/products/227844393/004.jpg",
+      "/products/227844393/005.jpg"
+    ],
+    "tri_score": 93,
     "tri_confidence": "haute",
     "main_source_name": "004.jpg"
   },
@@ -17944,6 +18543,32 @@
     "tri_score": 96,
     "tri_confidence": "haute",
     "main_source_name": "004.jpg"
+  },
+  {
+    "id": "227844287",
+    "name": "Argentine 2026 Extérieur",
+    "source_title": "2026 FIFA World Cup Argentina Away Fan version",
+    "sport": "Football",
+    "cat": "Nations",
+    "product_type": "Maillot",
+    "team": "Argentine",
+    "league": "",
+    "season": "2026",
+    "kit": "Extérieur",
+    "version": "Fan",
+    "price": 35,
+    "image": "/products/227844287/cover_auto.jpg",
+    "images": [
+      "/products/227844287/cover_auto.jpg",
+      "/products/227844287/001.jpg",
+      "/products/227844287/002.jpg",
+      "/products/227844287/003.jpg",
+      "/products/227844287/004.jpg",
+      "/products/227844287/005.jpg"
+    ],
+    "tri_score": 96,
+    "tri_confidence": "haute",
+    "main_source_name": "001.jpg"
   },
   {
     "id": "227844285",
@@ -18329,6 +18954,29 @@
     "main_source_name": "004.jpg"
   },
   {
+    "id": "224260366",
+    "name": "Sociedade Esportiva Palmeiras 2026/27 Extérieur",
+    "source_title": "2627 season Sociedade Esportiva Palmeiras away Fan version",
+    "sport": "Football",
+    "cat": "Clubs",
+    "product_type": "Maillot",
+    "team": "Sociedade Esportiva Palmeiras",
+    "league": "",
+    "season": "2026/27",
+    "kit": "Extérieur",
+    "version": "Fan",
+    "price": 35,
+    "image": "/products/224260366/cover_auto.jpg",
+    "images": [
+      "/products/224260366/cover_auto.jpg",
+      "/products/224260366/004.jpg",
+      "/products/224260366/005.jpg"
+    ],
+    "tri_score": 96,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
+  },
+  {
     "id": "224260355",
     "name": "Jamaïque 2026 Domicile",
     "source_title": "2026 Jamaica home Fan version",
@@ -18348,6 +18996,29 @@
       "/products/224260355/005.jpg"
     ],
     "tri_score": 96,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
+  },
+  {
+    "id": "224260313",
+    "name": "Portugal 2026",
+    "source_title": "2026 FIFA World Cup Portugal Concept version Fan version",
+    "sport": "Football",
+    "cat": "Nations",
+    "product_type": "Maillot",
+    "team": "Portugal",
+    "league": "",
+    "season": "2026",
+    "kit": "",
+    "version": "Fan",
+    "price": 35,
+    "image": "/products/224260313/cover_auto.jpg",
+    "images": [
+      "/products/224260313/cover_auto.jpg",
+      "/products/224260313/004.jpg",
+      "/products/224260313/005.jpg"
+    ],
+    "tri_score": 93,
     "tri_confidence": "haute",
     "main_source_name": "004.jpg"
   },
@@ -18417,6 +19088,29 @@
       "/products/224260249/005.jpg"
     ],
     "tri_score": 93,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
+  },
+  {
+    "id": "224260241",
+    "name": "Sociedade Esportiva Palmeiras 2026/27 Domicile",
+    "source_title": "2627 season Sociedade Esportiva Palmeiras home Fan version",
+    "sport": "Football",
+    "cat": "Clubs",
+    "product_type": "Maillot",
+    "team": "Sociedade Esportiva Palmeiras",
+    "league": "",
+    "season": "2026/27",
+    "kit": "Domicile",
+    "version": "Fan",
+    "price": 35,
+    "image": "/products/224260241/cover_auto.jpg",
+    "images": [
+      "/products/224260241/cover_auto.jpg",
+      "/products/224260241/004.jpg",
+      "/products/224260241/005.jpg"
+    ],
+    "tri_score": 96,
     "tri_confidence": "haute",
     "main_source_name": "004.jpg"
   },
@@ -18759,19 +19453,34 @@
     "images": [
       "/products/224260122/cover_auto.jpg",
       "/products/224260122/004.jpg",
-      "/products/224260122/005.jpg",
+      "/products/224260122/005.jpg"
+    ],
+    "tri_score": 93,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
+  },
+  {
+    "id": "224260120",
+    "name": "A.C. Milan Sweatshirt 2025/26",
+    "source_title": "2526 season A.C. Milan Sweatshirt long sleeve",
+    "sport": "Football",
+    "cat": "Clubs",
+    "product_type": "Maillot",
+    "team": "A.C. Milan Sweatshirt",
+    "league": "",
+    "season": "2025/26",
+    "kit": "",
+    "version": "Fan",
+    "price": 35,
+    "image": "/products/224260120/cover_auto.jpg",
+    "images": [
       "/products/224260120/cover_auto.jpg",
       "/products/224260120/004.jpg",
       "/products/224260120/005.jpg"
     ],
     "tri_score": 93,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "224260122",
-      "224260120"
-    ]
+    "main_source_name": "004.jpg"
   },
   {
     "id": "224260114",
@@ -18813,19 +19522,11 @@
     "images": [
       "/products/224260110/cover_auto.jpg",
       "/products/224260110/004.jpg",
-      "/products/224260110/005.jpg",
-      "/products/224260095/cover_auto.jpg",
-      "/products/224260095/004.jpg",
-      "/products/224260095/005.jpg"
+      "/products/224260110/005.jpg"
     ],
     "tri_score": 93,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "224260110",
-      "224260095"
-    ]
+    "main_source_name": "004.jpg"
   },
   {
     "id": "224260103",
@@ -18845,6 +19546,29 @@
       "/products/224260103/cover_auto.jpg",
       "/products/224260103/004.jpg",
       "/products/224260103/005.jpg"
+    ],
+    "tri_score": 93,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
+  },
+  {
+    "id": "224260095",
+    "name": "FC Barcelona 2025/26",
+    "source_title": "2526 season FC Barcelona Barça Sweatshirt long sleeve",
+    "sport": "Football",
+    "cat": "Clubs",
+    "product_type": "Maillot",
+    "team": "FC Barcelona",
+    "league": "La Liga",
+    "season": "2025/26",
+    "kit": "",
+    "version": "Fan",
+    "price": 35,
+    "image": "/products/224260095/cover_auto.jpg",
+    "images": [
+      "/products/224260095/cover_auto.jpg",
+      "/products/224260095/004.jpg",
+      "/products/224260095/005.jpg"
     ],
     "tri_score": 93,
     "tri_confidence": "haute",
@@ -19241,19 +19965,34 @@
     "images": [
       "/products/222924034/cover_auto.jpg",
       "/products/222924034/004.jpg",
-      "/products/222924034/005.jpg",
+      "/products/222924034/005.jpg"
+    ],
+    "tri_score": 93,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
+  },
+  {
+    "id": "222924006",
+    "name": "Real Madrid 2025/26 Enfant",
+    "source_title": "2526 season Real Madrid CF Marvel White Concept Kids kit",
+    "sport": "Football",
+    "cat": "Enfant",
+    "product_type": "Enfant",
+    "team": "Real Madrid",
+    "league": "La Liga",
+    "season": "2025/26",
+    "kit": "",
+    "version": "Enfant",
+    "price": 30,
+    "image": "/products/222924006/cover_auto.jpg",
+    "images": [
       "/products/222924006/cover_auto.jpg",
       "/products/222924006/004.jpg",
       "/products/222924006/005.jpg"
     ],
     "tri_score": 93,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "222924034",
-      "222924006"
-    ]
+    "main_source_name": "004.jpg"
   },
   {
     "id": "222923995",
@@ -19411,6 +20150,29 @@
       "/products/222923960/cover_auto.jpg",
       "/products/222923960/004.jpg",
       "/products/222923960/005.jpg"
+    ],
+    "tri_score": 96,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
+  },
+  {
+    "id": "222923941",
+    "name": "Mexique 2026 Gardien",
+    "source_title": "2026 FIFA World Cup Mexico goalkeeper Fan version",
+    "sport": "Football",
+    "cat": "Nations",
+    "product_type": "Maillot",
+    "team": "Mexique",
+    "league": "",
+    "season": "2026",
+    "kit": "Gardien",
+    "version": "Fan",
+    "price": 35,
+    "image": "/products/222923941/cover_auto.jpg",
+    "images": [
+      "/products/222923941/cover_auto.jpg",
+      "/products/222923941/004.jpg",
+      "/products/222923941/005.jpg"
     ],
     "tri_score": 96,
     "tri_confidence": "haute",
@@ -20080,19 +20842,11 @@
     "images": [
       "/products/221483801/cover_auto.jpg",
       "/products/221483801/004.jpg",
-      "/products/221483801/005.jpg",
-      "/products/217601526/cover_auto.jpg",
-      "/products/217601526/004.jpg",
-      "/products/217601526/005.jpg"
+      "/products/221483801/005.jpg"
     ],
     "tri_score": 96,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "221483801",
-      "217601526"
-    ]
+    "main_source_name": "004.jpg"
   },
   {
     "id": "221483800",
@@ -21037,22 +21791,11 @@
     "images": [
       "/products/220066022/cover_auto.jpg",
       "/products/220066022/004.jpg",
-      "/products/220066022/005.jpg",
-      "/products/216428911/cover_auto.jpg",
-      "/products/216428911/001.jpg",
-      "/products/216428911/002.jpg",
-      "/products/216428911/003.jpg",
-      "/products/216428911/004.jpg",
-      "/products/216428911/005.jpg"
+      "/products/220066022/005.jpg"
     ],
     "tri_score": 96,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "220066022",
-      "216428911"
-    ]
+    "main_source_name": "004.jpg"
   },
   {
     "id": "220066019",
@@ -21457,19 +22200,11 @@
     "images": [
       "/products/220065893/cover_auto.jpg",
       "/products/220065893/004.jpg",
-      "/products/220065893/005.jpg",
-      "/products/219350872/cover_auto.jpg",
-      "/products/219350872/004.jpg",
-      "/products/219350872/005.jpg"
+      "/products/220065893/005.jpg"
     ],
     "tri_score": 96,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "220065893",
-      "219350872"
-    ]
+    "main_source_name": "004.jpg"
   },
   {
     "id": "219350900",
@@ -21567,6 +22302,29 @@
     "main_source_name": "004.jpg"
   },
   {
+    "id": "219350872",
+    "name": "Portugal 2026 Domicile Short",
+    "source_title": "2026 FIFA World Cup Portugal home shorts",
+    "sport": "Football",
+    "cat": "Shorts",
+    "product_type": "Shorts",
+    "team": "Portugal",
+    "league": "",
+    "season": "2026",
+    "kit": "Domicile",
+    "version": "Short",
+    "price": 20,
+    "image": "/products/219350872/cover_auto.jpg",
+    "images": [
+      "/products/219350872/cover_auto.jpg",
+      "/products/219350872/004.jpg",
+      "/products/219350872/005.jpg"
+    ],
+    "tri_score": 96,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
+  },
+  {
     "id": "219350868",
     "name": "Argentine 2026 Domicile Short",
     "source_title": "2026 FIFA World Cup Argentina home shorts",
@@ -21583,19 +22341,11 @@
     "images": [
       "/products/219350868/cover_auto.jpg",
       "/products/219350868/004.jpg",
-      "/products/219350868/005.jpg",
-      "/products/218359966/cover_auto.jpg",
-      "/products/218359966/004.jpg",
-      "/products/218359966/005.jpg"
+      "/products/219350868/005.jpg"
     ],
     "tri_score": 96,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "219350868",
-      "218359966"
-    ]
+    "main_source_name": "004.jpg"
   },
   {
     "id": "219350862",
@@ -21712,19 +22462,11 @@
     "images": [
       "/products/219350792/cover_auto.jpg",
       "/products/219350792/004.jpg",
-      "/products/219350792/005.jpg",
-      "/products/219350734/cover_auto.jpg",
-      "/products/219350734/004.jpg",
-      "/products/219350734/005.jpg"
+      "/products/219350792/005.jpg"
     ],
     "tri_score": 93,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "219350792",
-      "219350734"
-    ]
+    "main_source_name": "004.jpg"
   },
   {
     "id": "219350789",
@@ -21743,19 +22485,34 @@
     "images": [
       "/products/219350789/cover_auto.jpg",
       "/products/219350789/004.jpg",
-      "/products/219350789/005.jpg",
+      "/products/219350789/005.jpg"
+    ],
+    "tri_score": 93,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
+  },
+  {
+    "id": "219350786",
+    "name": "Argentine 2026",
+    "source_title": "2026 FIFA World Cup Argentina training suit Fan version",
+    "sport": "Football",
+    "cat": "Nations",
+    "product_type": "Maillot",
+    "team": "Argentine",
+    "league": "",
+    "season": "2026",
+    "kit": "",
+    "version": "Fan",
+    "price": 35,
+    "image": "/products/219350786/cover_auto.jpg",
+    "images": [
       "/products/219350786/cover_auto.jpg",
       "/products/219350786/004.jpg",
       "/products/219350786/005.jpg"
     ],
     "tri_score": 93,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "219350789",
-      "219350786"
-    ]
+    "main_source_name": "004.jpg"
   },
   {
     "id": "219350780",
@@ -21895,19 +22652,11 @@
     "images": [
       "/products/219350741/cover_auto.jpg",
       "/products/219350741/004.jpg",
-      "/products/219350741/005.jpg",
-      "/products/217601599/cover_auto.jpg",
-      "/products/217601599/004.jpg",
-      "/products/217601599/005.jpg"
+      "/products/219350741/005.jpg"
     ],
     "tri_score": 96,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "219350741",
-      "217601599"
-    ]
+    "main_source_name": "004.jpg"
   },
   {
     "id": "219350738",
@@ -21929,6 +22678,29 @@
       "/products/219350738/005.jpg"
     ],
     "tri_score": 96,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
+  },
+  {
+    "id": "219350734",
+    "name": "Italie 2026",
+    "source_title": "2026 season Italy training suit Fan version",
+    "sport": "Football",
+    "cat": "Nations",
+    "product_type": "Maillot",
+    "team": "Italie",
+    "league": "",
+    "season": "2026",
+    "kit": "",
+    "version": "Fan",
+    "price": 35,
+    "image": "/products/219350734/cover_auto.jpg",
+    "images": [
+      "/products/219350734/cover_auto.jpg",
+      "/products/219350734/004.jpg",
+      "/products/219350734/005.jpg"
+    ],
+    "tri_score": 93,
     "tri_confidence": "haute",
     "main_source_name": "004.jpg"
   },
@@ -22721,6 +23493,29 @@
     "main_source_name": "004.jpg"
   },
   {
+    "id": "218359966",
+    "name": "Argentine 2026 Domicile Short",
+    "source_title": "2026 FIFA World Cup Argentina home shorts",
+    "sport": "Football",
+    "cat": "Shorts",
+    "product_type": "Shorts",
+    "team": "Argentine",
+    "league": "",
+    "season": "2026",
+    "kit": "Domicile",
+    "version": "Short",
+    "price": 20,
+    "image": "/products/218359966/cover_auto.jpg",
+    "images": [
+      "/products/218359966/cover_auto.jpg",
+      "/products/218359966/004.jpg",
+      "/products/218359966/005.jpg"
+    ],
+    "tri_score": 96,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
+  },
+  {
     "id": "217601802",
     "name": "Belgique 2026 Domicile Enfant",
     "source_title": "2026 FIFA World Cup Belgium home Kids kit",
@@ -23003,6 +23798,29 @@
     "main_source_name": "004.jpg"
   },
   {
+    "id": "217601599",
+    "name": "Suisse 2026 Domicile",
+    "source_title": "2026 FIFA World Cup Switzerland home Fan version",
+    "sport": "Football",
+    "cat": "Nations",
+    "product_type": "Maillot",
+    "team": "Suisse",
+    "league": "",
+    "season": "2026",
+    "kit": "Domicile",
+    "version": "Fan",
+    "price": 35,
+    "image": "/products/217601599/cover_auto.jpg",
+    "images": [
+      "/products/217601599/cover_auto.jpg",
+      "/products/217601599/004.jpg",
+      "/products/217601599/005.jpg"
+    ],
+    "tri_score": 96,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
+  },
+  {
     "id": "217601593",
     "name": "Manchester United 2025/26",
     "source_title": "2526 season Manchester United F.C. Concept version Fan version",
@@ -23213,6 +24031,29 @@
     "main_source_name": "004.jpg"
   },
   {
+    "id": "217601526",
+    "name": "Allemagne 2026 Domicile Short",
+    "source_title": "2026 FIFA World Cup Germany home shorts",
+    "sport": "Football",
+    "cat": "Shorts",
+    "product_type": "Shorts",
+    "team": "Allemagne",
+    "league": "",
+    "season": "2026",
+    "kit": "Domicile",
+    "version": "Short",
+    "price": 20,
+    "image": "/products/217601526/cover_auto.jpg",
+    "images": [
+      "/products/217601526/cover_auto.jpg",
+      "/products/217601526/004.jpg",
+      "/products/217601526/005.jpg"
+    ],
+    "tri_score": 96,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
+  },
+  {
     "id": "217601522",
     "name": "Manchester City 2025/26 Fourth Short",
     "source_title": "2526 season Manchester City F.C. fourth shorts",
@@ -23252,19 +24093,34 @@
     "images": [
       "/products/217601517/cover_auto.jpg",
       "/products/217601517/004.jpg",
-      "/products/217601517/005.jpg",
+      "/products/217601517/005.jpg"
+    ],
+    "tri_score": 93,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
+  },
+  {
+    "id": "217601433",
+    "name": "Napoli 2025/26 Short",
+    "source_title": "2526 season S.S.C. Napoli Halloween shorts",
+    "sport": "Football",
+    "cat": "Shorts",
+    "product_type": "Shorts",
+    "team": "Napoli",
+    "league": "Serie A",
+    "season": "2025/26",
+    "kit": "",
+    "version": "Short",
+    "price": 20,
+    "image": "/products/217601433/cover_auto.jpg",
+    "images": [
       "/products/217601433/cover_auto.jpg",
       "/products/217601433/004.jpg",
       "/products/217601433/005.jpg"
     ],
     "tri_score": 93,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "217601517",
-      "217601433"
-    ]
+    "main_source_name": "004.jpg"
   },
   {
     "id": "217449499",
@@ -23283,19 +24139,34 @@
     "images": [
       "/products/217449499/cover_auto.jpg",
       "/products/217449499/004.jpg",
-      "/products/217449499/005.jpg",
+      "/products/217449499/005.jpg"
+    ],
+    "tri_score": 93,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
+  },
+  {
+    "id": "217449496",
+    "name": "Portugal 2025",
+    "source_title": "2025 Portugal Tribute to Eusebio Special Edition Fan version",
+    "sport": "Football",
+    "cat": "Nations",
+    "product_type": "Maillot",
+    "team": "Portugal",
+    "league": "",
+    "season": "2025",
+    "kit": "",
+    "version": "Fan",
+    "price": 35,
+    "image": "/products/217449496/cover_auto.jpg",
+    "images": [
       "/products/217449496/cover_auto.jpg",
       "/products/217449496/004.jpg",
       "/products/217449496/005.jpg"
     ],
     "tri_score": 93,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "217449499",
-      "217449496"
-    ]
+    "main_source_name": "004.jpg"
   },
   {
     "id": "217449491",
@@ -23337,19 +24208,11 @@
     "images": [
       "/products/217334549/cover_auto.jpg",
       "/products/217334549/004.jpg",
-      "/products/217334549/005.jpg",
-      "/products/216431574/cover_auto.jpg",
-      "/products/216431574/004.jpg",
-      "/products/216431574/005.jpg"
+      "/products/217334549/005.jpg"
     ],
     "tri_score": 96,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "217334549",
-      "216431574"
-    ]
+    "main_source_name": "004.jpg"
   },
   {
     "id": "217334489",
@@ -23465,6 +24328,29 @@
       "/products/217334050/cover_auto.jpg",
       "/products/217334050/004.jpg",
       "/products/217334050/005.jpg"
+    ],
+    "tri_score": 96,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
+  },
+  {
+    "id": "216431574",
+    "name": "Italie 2026 Domicile Enfant",
+    "source_title": "2026 season Italy home Kids kit",
+    "sport": "Football",
+    "cat": "Enfant",
+    "product_type": "Enfant",
+    "team": "Italie",
+    "league": "",
+    "season": "2026",
+    "kit": "Domicile",
+    "version": "Enfant",
+    "price": 30,
+    "image": "/products/216431574/cover_auto.jpg",
+    "images": [
+      "/products/216431574/cover_auto.jpg",
+      "/products/216431574/004.jpg",
+      "/products/216431574/005.jpg"
     ],
     "tri_score": 96,
     "tri_confidence": "haute",
@@ -23849,6 +24735,32 @@
     "tri_score": 96,
     "tri_confidence": "haute",
     "main_source_name": "004.jpg"
+  },
+  {
+    "id": "216428911",
+    "name": "Mexique 2026 Extérieur Player",
+    "source_title": "2026 FIFA World Cup Mexico away Player version",
+    "sport": "Football",
+    "cat": "Nations",
+    "product_type": "Maillot",
+    "team": "Mexique",
+    "league": "",
+    "season": "2026",
+    "kit": "Extérieur",
+    "version": "Player",
+    "price": 45,
+    "image": "/products/216428911/cover_auto.jpg",
+    "images": [
+      "/products/216428911/cover_auto.jpg",
+      "/products/216428911/001.jpg",
+      "/products/216428911/002.jpg",
+      "/products/216428911/003.jpg",
+      "/products/216428911/004.jpg",
+      "/products/216428911/005.jpg"
+    ],
+    "tri_score": 96,
+    "tri_confidence": "haute",
+    "main_source_name": "001.jpg"
   },
   {
     "id": "216428733",
@@ -24415,19 +25327,11 @@
     "images": [
       "/products/216307937/cover_auto.jpg",
       "/products/216307937/004.jpg",
-      "/products/216307937/005.jpg",
-      "/products/216307878/cover_auto.jpg",
-      "/products/216307878/004.jpg",
-      "/products/216307878/005.jpg"
+      "/products/216307937/005.jpg"
     ],
     "tri_score": 93,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "216307937",
-      "216307878"
-    ]
+    "main_source_name": "004.jpg"
   },
   {
     "id": "216307933",
@@ -24598,6 +25502,29 @@
     "tri_score": 93,
     "tri_confidence": "haute",
     "main_source_name": "001.jpg"
+  },
+  {
+    "id": "216307878",
+    "name": "Napoli 2025/26 Player",
+    "source_title": "2526 season S.S.C. Napoli Halloween Concept version Player version",
+    "sport": "Football",
+    "cat": "Clubs",
+    "product_type": "Maillot",
+    "team": "Napoli",
+    "league": "Serie A",
+    "season": "2025/26",
+    "kit": "",
+    "version": "Player",
+    "price": 45,
+    "image": "/products/216307878/cover_auto.jpg",
+    "images": [
+      "/products/216307878/cover_auto.jpg",
+      "/products/216307878/004.jpg",
+      "/products/216307878/005.jpg"
+    ],
+    "tri_score": 93,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpg"
   },
   {
     "id": "216307869",
@@ -24882,7 +25809,27 @@
       "/products/215393426/cover_auto.jpeg",
       "/products/215393426/001.jpeg",
       "/products/215393426/002.jpeg",
-      "/products/215393426/003.jpeg",
+      "/products/215393426/003.jpeg"
+    ],
+    "tri_score": 93,
+    "tri_confidence": "haute",
+    "main_source_name": "001.jpeg"
+  },
+  {
+    "id": "215566332",
+    "name": "Napoli 2025/26",
+    "source_title": "2526 season S.S.C. Napoli Halloween Concept version Fan version",
+    "sport": "Football",
+    "cat": "Clubs",
+    "product_type": "Maillot",
+    "team": "Napoli",
+    "league": "Serie A",
+    "season": "2025/26",
+    "kit": "",
+    "version": "Fan",
+    "price": 35,
+    "image": "/products/215566332/cover_auto.jpg",
+    "images": [
       "/products/215566332/cover_auto.jpg",
       "/products/215566332/001.jpg",
       "/products/215566332/002.jpg",
@@ -24892,12 +25839,7 @@
     ],
     "tri_score": 93,
     "tri_confidence": "haute",
-    "main_source_name": "001.jpeg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "215393426",
-      "215566332"
-    ]
+    "main_source_name": "001.jpg"
   },
   {
     "id": "215393849",
@@ -26253,22 +27195,11 @@
     "images": [
       "/products/213352173/cover_auto.jpg",
       "/products/213352173/004.jpg",
-      "/products/213352173/005.jpg",
-      "/products/213351725/cover_auto.jpg",
-      "/products/213351725/001.jpg",
-      "/products/213351725/002.jpg",
-      "/products/213351725/003.jpg",
-      "/products/213351725/004.jpg",
-      "/products/213351725/005.jpg"
+      "/products/213352173/005.jpg"
     ],
     "tri_score": 93,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "213352173",
-      "213351725"
-    ]
+    "main_source_name": "004.jpg"
   },
   {
     "id": "213352171",
@@ -26545,6 +27476,32 @@
     "tri_score": 96,
     "tri_confidence": "haute",
     "main_source_name": "004.jpg"
+  },
+  {
+    "id": "213351725",
+    "name": "Ape Head Joint Edition 2025/26",
+    "source_title": "2526 season Ape Head Joint Edition Fan version",
+    "sport": "Football",
+    "cat": "Clubs",
+    "product_type": "Maillot",
+    "team": "Ape Head Joint Edition",
+    "league": "",
+    "season": "2025/26",
+    "kit": "",
+    "version": "Fan",
+    "price": 35,
+    "image": "/products/213351725/cover_auto.jpg",
+    "images": [
+      "/products/213351725/cover_auto.jpg",
+      "/products/213351725/001.jpg",
+      "/products/213351725/002.jpg",
+      "/products/213351725/003.jpg",
+      "/products/213351725/004.jpg",
+      "/products/213351725/005.jpg"
+    ],
+    "tri_score": 93,
+    "tri_confidence": "haute",
+    "main_source_name": "001.jpg"
   },
   {
     "id": "213351722",
@@ -27725,19 +28682,11 @@
     "images": [
       "/products/212967681/cover_auto.jpeg",
       "/products/212967681/004.jpeg",
-      "/products/212967681/005.jpeg",
-      "/products/212967560/cover_auto.jpeg",
-      "/products/212967560/004.jpeg",
-      "/products/212967560/005.jpeg"
+      "/products/212967681/005.jpeg"
     ],
     "tri_score": 93,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpeg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "212967681",
-      "212967560"
-    ]
+    "main_source_name": "004.jpeg"
   },
   {
     "id": "212967673",
@@ -27756,23 +28705,57 @@
     "images": [
       "/products/212967673/cover_auto.jpeg",
       "/products/212967673/004.jpeg",
-      "/products/212967673/005.jpeg",
+      "/products/212967673/005.jpeg"
+    ],
+    "tri_score": 93,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpeg"
+  },
+  {
+    "id": "212967668",
+    "name": "Brésil 2025/26",
+    "source_title": "2526 season Brazil Training suit hooded set",
+    "sport": "Football",
+    "cat": "Nations",
+    "product_type": "Maillot",
+    "team": "Brésil",
+    "league": "",
+    "season": "2025/26",
+    "kit": "",
+    "version": "Fan",
+    "price": 35,
+    "image": "/products/212967668/cover_auto.jpeg",
+    "images": [
       "/products/212967668/cover_auto.jpeg",
       "/products/212967668/004.jpeg",
-      "/products/212967668/005.jpeg",
+      "/products/212967668/005.jpeg"
+    ],
+    "tri_score": 93,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpeg"
+  },
+  {
+    "id": "212967664",
+    "name": "Brésil 2025/26",
+    "source_title": "2526 season Brazil Training suit hooded set",
+    "sport": "Football",
+    "cat": "Nations",
+    "product_type": "Maillot",
+    "team": "Brésil",
+    "league": "",
+    "season": "2025/26",
+    "kit": "",
+    "version": "Fan",
+    "price": 35,
+    "image": "/products/212967664/cover_auto.jpeg",
+    "images": [
       "/products/212967664/cover_auto.jpeg",
       "/products/212967664/004.jpeg",
       "/products/212967664/005.jpeg"
     ],
     "tri_score": 93,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpeg",
-    "merged_duplicate_count": 3,
-    "merged_duplicate_ids": [
-      "212967673",
-      "212967668",
-      "212967664"
-    ]
+    "main_source_name": "004.jpeg"
   },
   {
     "id": "212967653",
@@ -27814,19 +28797,11 @@
     "images": [
       "/products/212967647/cover_auto.jpeg",
       "/products/212967647/004.jpeg",
-      "/products/212967647/005.jpeg",
-      "/products/212967622/cover_auto.jpeg",
-      "/products/212967622/004.jpeg",
-      "/products/212967622/005.jpeg"
+      "/products/212967647/005.jpeg"
     ],
     "tri_score": 93,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpeg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "212967647",
-      "212967622"
-    ]
+    "main_source_name": "004.jpeg"
   },
   {
     "id": "212967644",
@@ -27845,23 +28820,57 @@
     "images": [
       "/products/212967644/cover_auto.jpeg",
       "/products/212967644/004.jpeg",
-      "/products/212967644/005.jpeg",
-      "/products/212967637/cover_auto.jpeg",
-      "/products/212967637/004.jpeg",
-      "/products/212967637/005.jpeg",
-      "/products/212967546/cover_auto.jpeg",
-      "/products/212967546/004.jpeg",
-      "/products/212967546/005.jpeg"
+      "/products/212967644/005.jpeg"
     ],
     "tri_score": 93,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpeg",
-    "merged_duplicate_count": 3,
-    "merged_duplicate_ids": [
-      "212967644",
-      "212967637",
-      "212967546"
-    ]
+    "main_source_name": "004.jpeg"
+  },
+  {
+    "id": "212967637",
+    "name": "Manchester United 2025/26",
+    "source_title": "2526 season Manchester United F.C. Training suit hooded set",
+    "sport": "Football",
+    "cat": "Clubs",
+    "product_type": "Maillot",
+    "team": "Manchester United",
+    "league": "Premier League",
+    "season": "2025/26",
+    "kit": "",
+    "version": "Fan",
+    "price": 35,
+    "image": "/products/212967637/cover_auto.jpeg",
+    "images": [
+      "/products/212967637/cover_auto.jpeg",
+      "/products/212967637/004.jpeg",
+      "/products/212967637/005.jpeg"
+    ],
+    "tri_score": 93,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpeg"
+  },
+  {
+    "id": "212967622",
+    "name": "CR Flamengo 2025/26",
+    "source_title": "2526 season CR Flamengo Training suit hooded set",
+    "sport": "Football",
+    "cat": "Clubs",
+    "product_type": "Maillot",
+    "team": "CR Flamengo",
+    "league": "",
+    "season": "2025/26",
+    "kit": "",
+    "version": "Fan",
+    "price": 35,
+    "image": "/products/212967622/cover_auto.jpeg",
+    "images": [
+      "/products/212967622/cover_auto.jpeg",
+      "/products/212967622/004.jpeg",
+      "/products/212967622/005.jpeg"
+    ],
+    "tri_score": 93,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpeg"
   },
   {
     "id": "212967610",
@@ -27880,19 +28889,34 @@
     "images": [
       "/products/212967610/cover_auto.jpeg",
       "/products/212967610/004.jpeg",
-      "/products/212967610/005.jpeg",
+      "/products/212967610/005.jpeg"
+    ],
+    "tri_score": 93,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpeg"
+  },
+  {
+    "id": "212967604",
+    "name": "Chelsea 2025/26",
+    "source_title": "2526 season Chelsea F.C. Training suit hooded set",
+    "sport": "Football",
+    "cat": "Clubs",
+    "product_type": "Maillot",
+    "team": "Chelsea",
+    "league": "Premier League",
+    "season": "2025/26",
+    "kit": "",
+    "version": "Fan",
+    "price": 35,
+    "image": "/products/212967604/cover_auto.jpeg",
+    "images": [
       "/products/212967604/cover_auto.jpeg",
       "/products/212967604/004.jpeg",
       "/products/212967604/005.jpeg"
     ],
     "tri_score": 93,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpeg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "212967610",
-      "212967604"
-    ]
+    "main_source_name": "004.jpeg"
   },
   {
     "id": "212967571",
@@ -27911,19 +28935,57 @@
     "images": [
       "/products/212967571/cover_auto.jpeg",
       "/products/212967571/004.jpeg",
-      "/products/212967571/005.jpeg",
+      "/products/212967571/005.jpeg"
+    ],
+    "tri_score": 93,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpeg"
+  },
+  {
+    "id": "212967560",
+    "name": "Club América 2025/26",
+    "source_title": "2526 season Club América Training suit hooded set",
+    "sport": "Football",
+    "cat": "Clubs",
+    "product_type": "Maillot",
+    "team": "Club América",
+    "league": "",
+    "season": "2025/26",
+    "kit": "",
+    "version": "Fan",
+    "price": 35,
+    "image": "/products/212967560/cover_auto.jpeg",
+    "images": [
+      "/products/212967560/cover_auto.jpeg",
+      "/products/212967560/004.jpeg",
+      "/products/212967560/005.jpeg"
+    ],
+    "tri_score": 93,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpeg"
+  },
+  {
+    "id": "212967554",
+    "name": "Paris Saint-Germain 2025/26",
+    "source_title": "2526 season Paris Saint-Germain F.C. Training suit hooded set",
+    "sport": "Football",
+    "cat": "Clubs",
+    "product_type": "Maillot",
+    "team": "Paris Saint-Germain",
+    "league": "Ligue 1",
+    "season": "2025/26",
+    "kit": "",
+    "version": "Fan",
+    "price": 35,
+    "image": "/products/212967554/cover_auto.jpeg",
+    "images": [
       "/products/212967554/cover_auto.jpeg",
       "/products/212967554/004.jpeg",
       "/products/212967554/005.jpeg"
     ],
     "tri_score": 93,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpeg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "212967571",
-      "212967554"
-    ]
+    "main_source_name": "004.jpeg"
   },
   {
     "id": "212967553",
@@ -27942,19 +29004,34 @@
     "images": [
       "/products/212967553/cover_auto.jpeg",
       "/products/212967553/004.jpeg",
-      "/products/212967553/005.jpeg",
-      "/products/212967530/cover_auto.jpeg",
-      "/products/212967530/004.jpeg",
-      "/products/212967530/005.jpeg"
+      "/products/212967553/005.jpeg"
     ],
     "tri_score": 93,
     "tri_confidence": "haute",
-    "main_source_name": "004.jpeg",
-    "merged_duplicate_count": 2,
-    "merged_duplicate_ids": [
-      "212967553",
-      "212967530"
-    ]
+    "main_source_name": "004.jpeg"
+  },
+  {
+    "id": "212967546",
+    "name": "Manchester United 2025/26",
+    "source_title": "2526 season Manchester United F.C. Training suit hooded set",
+    "sport": "Football",
+    "cat": "Clubs",
+    "product_type": "Maillot",
+    "team": "Manchester United",
+    "league": "Premier League",
+    "season": "2025/26",
+    "kit": "",
+    "version": "Fan",
+    "price": 35,
+    "image": "/products/212967546/cover_auto.jpeg",
+    "images": [
+      "/products/212967546/cover_auto.jpeg",
+      "/products/212967546/004.jpeg",
+      "/products/212967546/005.jpeg"
+    ],
+    "tri_score": 93,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpeg"
   },
   {
     "id": "212967540",
@@ -27997,6 +29074,29 @@
       "/products/212967536/cover_auto.jpeg",
       "/products/212967536/004.jpeg",
       "/products/212967536/005.jpeg"
+    ],
+    "tri_score": 93,
+    "tri_confidence": "haute",
+    "main_source_name": "004.jpeg"
+  },
+  {
+    "id": "212967530",
+    "name": "Real Madrid 2025/26",
+    "source_title": "2526 season Real Madrid CF Training suit hooded set",
+    "sport": "Football",
+    "cat": "Clubs",
+    "product_type": "Maillot",
+    "team": "Real Madrid",
+    "league": "La Liga",
+    "season": "2025/26",
+    "kit": "",
+    "version": "Fan",
+    "price": 35,
+    "image": "/products/212967530/cover_auto.jpeg",
+    "images": [
+      "/products/212967530/cover_auto.jpeg",
+      "/products/212967530/004.jpeg",
+      "/products/212967530/005.jpeg"
     ],
     "tri_score": 93,
     "tri_confidence": "haute",

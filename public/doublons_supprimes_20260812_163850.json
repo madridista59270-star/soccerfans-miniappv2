@@ -1,0 +1,441 @@
+{
+  "before": 1238,
+  "after": 1166,
+  "removed": 72,
+  "duplicate_groups": 67,
+  "merged_extra_photos": 249,
+  "removed_products": [
+    {
+      "id": "247187822",
+      "name": "Real Betis 2026/27 Domicile Enfant",
+      "source_title": "2627 season Real Betis Balompié home Kids kit",
+      "kept_id": "248834901"
+    },
+    {
+      "id": "246938849",
+      "name": "FC Barcelona 2026/27 Extérieur",
+      "source_title": "2627 season FC Barcelona Barça away Fan version",
+      "kept_id": "248414852"
+    },
+    {
+      "id": "247262551",
+      "name": "Espagne 2026 Third",
+      "source_title": "2026 FIFA World Cup Spain third Fan version two star",
+      "kept_id": "247262687"
+    },
+    {
+      "id": "247371583",
+      "name": "Espagne 2026",
+      "source_title": "2026 Spain Pure Cotton Champion T-Shirt",
+      "kept_id": "247371597"
+    },
+    {
+      "id": "247371573",
+      "name": "Espagne 2026",
+      "source_title": "2026 Spain Pure Cotton Champion T-Shirt",
+      "kept_id": "247371597"
+    },
+    {
+      "id": "247371560",
+      "name": "Espagne 2026",
+      "source_title": "2026 Spain Pure Cotton Champion T-Shirt",
+      "kept_id": "247371597"
+    },
+    {
+      "id": "238358010",
+      "name": "Espagne 2026 Gardien",
+      "source_title": "2026 FIFA World Cup Spain goalkeeper Fan version",
+      "kept_id": "222923944"
+    },
+    {
+      "id": "247188138",
+      "name": "A.C. Milan 2026/27 Domicile Short",
+      "source_title": "2627 season A.C. Milan home shorts",
+      "kept_id": "247188193"
+    },
+    {
+      "id": "227844393",
+      "name": "Real Betis 2026/27",
+      "source_title": "2627 season Real Betis Balompié Concept version Fan version",
+      "kept_id": "247187842"
+    },
+    {
+      "id": "239340903",
+      "name": "Rangers FC. 2026/27 Extérieur",
+      "source_title": "2627 season Rangers F.C. away Fan version",
+      "kept_id": "246937685"
+    },
+    {
+      "id": "239342320",
+      "name": "Paris Saint-Germain 2026/27 Domicile Enfant",
+      "source_title": "2627 season Paris Saint-Germain F.C. home Kids kit",
+      "kept_id": "242412717"
+    },
+    {
+      "id": "239340926",
+      "name": "Paris Saint-Germain 2026/27 Domicile Player",
+      "source_title": "2627 season Paris Saint-Germain F.C. home Player version",
+      "kept_id": "242317179"
+    },
+    {
+      "id": "233461369",
+      "name": "Angleterre 2026",
+      "source_title": "2026 FIFA World Cup England Appearance outfit",
+      "kept_id": "242314243"
+    },
+    {
+      "id": "240045089",
+      "name": "Borussia Dortmund 2026/27 Domicile Short",
+      "source_title": "2627 season Borussia Dortmund home shorts",
+      "kept_id": "242309515"
+    },
+    {
+      "id": "233461378",
+      "name": "Brésil 2026",
+      "source_title": "2026 FIFA World Cup Brazil Appearance outfit",
+      "kept_id": "240045180"
+    },
+    {
+      "id": "240045113",
+      "name": "rose 2026/27 Rétro",
+      "source_title": "2627 season rose Hip hop version retro Fan version",
+      "kept_id": "240045119"
+    },
+    {
+      "id": "239342281",
+      "name": "Manchester United 2026/27 Domicile Short",
+      "source_title": "2627 season Manchester United F.C. home shorts",
+      "kept_id": "239593803"
+    },
+    {
+      "id": "239593965",
+      "name": "Al Ittihad 2026/27",
+      "source_title": "2627 season Al-Ittihad Club Concept version Fan version",
+      "kept_id": "239593981"
+    },
+    {
+      "id": "229130084",
+      "name": "Paris Saint-Germain 2025/26",
+      "source_title": "2526 season Paris Saint-Germain F.C. sixth Fan version",
+      "kept_id": "239342215"
+    },
+    {
+      "id": "239341630",
+      "name": "Pays-Bas 2026 Gardien",
+      "source_title": "2026 FIFA World Cup Netherlands goalkeeper Fan version",
+      "kept_id": "239341635"
+    },
+    {
+      "id": "222923941",
+      "name": "Mexique 2026 Gardien",
+      "source_title": "2026 FIFA World Cup Mexico goalkeeper Fan version",
+      "kept_id": "239341135"
+    },
+    {
+      "id": "227844488",
+      "name": "Club América 2026/27 Domicile",
+      "source_title": "2627 season Club América home Fan version",
+      "kept_id": "239340983"
+    },
+    {
+      "id": "236040898",
+      "name": "Rangers FC. 2026/27 Domicile",
+      "source_title": "2627 season Rangers F.C. home Fan version",
+      "kept_id": "239340897"
+    },
+    {
+      "id": "236765079",
+      "name": "Uruguay 2026 Domicile Short",
+      "source_title": "2026 FIFA World Cup Uruguay home shorts",
+      "kept_id": "238357942"
+    },
+    {
+      "id": "233462249",
+      "name": "Pays-Bas 2026 Domicile Short",
+      "source_title": "2026 FIFA World Cup Netherlands home shorts",
+      "kept_id": "238357940"
+    },
+    {
+      "id": "229928511",
+      "name": "Paris Saint-Germain 2025/26 Enfant",
+      "source_title": "2526 season Paris Saint-Germain F.C. sixth Kids kit",
+      "kept_id": "238357922"
+    },
+    {
+      "id": "236764992",
+      "name": "Angleterre 2026",
+      "source_title": "2026 FIFA World Cup England 500 Concept version Fan version",
+      "kept_id": "236765002"
+    },
+    {
+      "id": "236321199",
+      "name": "France 2026",
+      "source_title": "2026 FIFA World Cup France Appearance outfit",
+      "kept_id": "236321201"
+    },
+    {
+      "id": "229928250",
+      "name": "Brésil 2026",
+      "source_title": "2026 FIFA World Cup Brazil Concept version Fan version",
+      "kept_id": "236044270"
+    },
+    {
+      "id": "236038753",
+      "name": "Afrique du Sud 2026 Third",
+      "source_title": "2026 FIFA World Cup South Africa third Fan version",
+      "kept_id": "236043198"
+    },
+    {
+      "id": "229928005",
+      "name": "Autriche 2026 Extérieur",
+      "source_title": "2026 FIFA World Cup Austria away Fan version",
+      "kept_id": "235030842"
+    },
+    {
+      "id": "232646511",
+      "name": "Angleterre 2026 Gardien Enfant",
+      "source_title": "2026 FIFA World Cup England goalkeeper Kids kit",
+      "kept_id": "233462481"
+    },
+    {
+      "id": "232646375",
+      "name": "Angleterre 2026",
+      "source_title": "2026 FIFA World Cup England Concept version Fan version",
+      "kept_id": "233461899"
+    },
+    {
+      "id": "229130190",
+      "name": "Angleterre 2026",
+      "source_title": "2026 FIFA World Cup England Concept version Fan version",
+      "kept_id": "233461899"
+    },
+    {
+      "id": "229927991",
+      "name": "États-Unis 2026 Domicile",
+      "source_title": "2026 FIFA World Cup USA home Fan version",
+      "kept_id": "231185519"
+    },
+    {
+      "id": "229928292",
+      "name": "États-Unis 2026 Domicile Player",
+      "source_title": "2026 FIFA World Cup USA home Player version",
+      "kept_id": "231185188"
+    },
+    {
+      "id": "231018561",
+      "name": "Canada 2026 Domicile",
+      "source_title": "2026 FIFA World Cup Canada home Fan version",
+      "kept_id": "231185113"
+    },
+    {
+      "id": "231185063",
+      "name": "Benfica 2026/27",
+      "source_title": "2627 season S.L. Benfica Concept version Fan version",
+      "kept_id": "231185074"
+    },
+    {
+      "id": "229927970",
+      "name": "Paris Saint-Germain 2025/26 Player",
+      "source_title": "2526 season Paris Saint-Germain F.C. sixth Player version",
+      "kept_id": "231018259"
+    },
+    {
+      "id": "229927901",
+      "name": "Borussia Dortmund 2026/27",
+      "source_title": "2627 season Borussia Dortmund Concept version Fan version",
+      "kept_id": "231018087"
+    },
+    {
+      "id": "229927896",
+      "name": "Liverpool 1995 Rétro",
+      "source_title": "1995 season Liverpool F.C. Concept version Fan version",
+      "kept_id": "229928350"
+    },
+    {
+      "id": "229928187",
+      "name": "Irlande 2026",
+      "source_title": "2026 FIFA World Cup Ireland Concept version Fan version",
+      "kept_id": "229928231"
+    },
+    {
+      "id": "227844287",
+      "name": "Argentine 2026 Extérieur",
+      "source_title": "2026 FIFA World Cup Argentina Away Fan version",
+      "kept_id": "229928116"
+    },
+    {
+      "id": "229130053",
+      "name": "Galatasaray S.K. 2026/27",
+      "source_title": "2627 season Galatasaray S.K. Concept version Fan version",
+      "kept_id": "229130154"
+    },
+    {
+      "id": "224260313",
+      "name": "Portugal 2026",
+      "source_title": "2026 FIFA World Cup Portugal Concept version Fan version",
+      "kept_id": "227844560"
+    },
+    {
+      "id": "224260366",
+      "name": "Sociedade Esportiva Palmeiras 2026/27 Extérieur",
+      "source_title": "2627 season Sociedade Esportiva Palmeiras away Fan version",
+      "kept_id": "227844481"
+    },
+    {
+      "id": "224260241",
+      "name": "Sociedade Esportiva Palmeiras 2026/27 Domicile",
+      "source_title": "2627 season Sociedade Esportiva Palmeiras home Fan version",
+      "kept_id": "227844469"
+    },
+    {
+      "id": "224260120",
+      "name": "A.C. Milan Sweatshirt 2025/26",
+      "source_title": "2526 season A.C. Milan Sweatshirt long sleeve",
+      "kept_id": "224260122"
+    },
+    {
+      "id": "224260095",
+      "name": "FC Barcelona 2025/26",
+      "source_title": "2526 season FC Barcelona Barça Sweatshirt long sleeve",
+      "kept_id": "224260110"
+    },
+    {
+      "id": "222924006",
+      "name": "Real Madrid 2025/26 Enfant",
+      "source_title": "2526 season Real Madrid CF Marvel White Concept Kids kit",
+      "kept_id": "222924034"
+    },
+    {
+      "id": "217601526",
+      "name": "Allemagne 2026 Domicile Short",
+      "source_title": "2026 FIFA World Cup Germany home shorts",
+      "kept_id": "221483801"
+    },
+    {
+      "id": "216428911",
+      "name": "Mexique 2026 Extérieur Player",
+      "source_title": "2026 FIFA World Cup Mexico away Player version",
+      "kept_id": "220066022"
+    },
+    {
+      "id": "219350872",
+      "name": "Portugal 2026 Domicile Short",
+      "source_title": "2026 FIFA World Cup Portugal home shorts",
+      "kept_id": "220065893"
+    },
+    {
+      "id": "218359966",
+      "name": "Argentine 2026 Domicile Short",
+      "source_title": "2026 FIFA World Cup Argentina home shorts",
+      "kept_id": "219350868"
+    },
+    {
+      "id": "219350734",
+      "name": "Italie 2026",
+      "source_title": "2026 season Italy training suit Fan version",
+      "kept_id": "219350792"
+    },
+    {
+      "id": "219350786",
+      "name": "Argentine 2026",
+      "source_title": "2026 FIFA World Cup Argentina training suit Fan version",
+      "kept_id": "219350789"
+    },
+    {
+      "id": "217601599",
+      "name": "Suisse 2026 Domicile",
+      "source_title": "2026 FIFA World Cup Switzerland home Fan version",
+      "kept_id": "219350741"
+    },
+    {
+      "id": "217601433",
+      "name": "Napoli 2025/26 Short",
+      "source_title": "2526 season S.S.C. Napoli Halloween shorts",
+      "kept_id": "217601517"
+    },
+    {
+      "id": "217449496",
+      "name": "Portugal 2025",
+      "source_title": "2025 Portugal Tribute to Eusebio Special Edition Fan version",
+      "kept_id": "217449499"
+    },
+    {
+      "id": "216431574",
+      "name": "Italie 2026 Domicile Enfant",
+      "source_title": "2026 season Italy home Kids kit",
+      "kept_id": "217334549"
+    },
+    {
+      "id": "216307878",
+      "name": "Napoli 2025/26 Player",
+      "source_title": "2526 season S.S.C. Napoli Halloween Concept version Player version",
+      "kept_id": "216307937"
+    },
+    {
+      "id": "215566332",
+      "name": "Napoli 2025/26",
+      "source_title": "2526 season S.S.C. Napoli Halloween Concept version Fan version",
+      "kept_id": "215393426"
+    },
+    {
+      "id": "213351725",
+      "name": "Ape Head Joint Edition 2025/26",
+      "source_title": "2526 season Ape Head Joint Edition Fan version",
+      "kept_id": "213352173"
+    },
+    {
+      "id": "212967560",
+      "name": "Club América 2025/26",
+      "source_title": "2526 season Club América Training suit hooded set",
+      "kept_id": "212967681"
+    },
+    {
+      "id": "212967668",
+      "name": "Brésil 2025/26",
+      "source_title": "2526 season Brazil Training suit hooded set",
+      "kept_id": "212967673"
+    },
+    {
+      "id": "212967664",
+      "name": "Brésil 2025/26",
+      "source_title": "2526 season Brazil Training suit hooded set",
+      "kept_id": "212967673"
+    },
+    {
+      "id": "212967622",
+      "name": "CR Flamengo 2025/26",
+      "source_title": "2526 season CR Flamengo Training suit hooded set",
+      "kept_id": "212967647"
+    },
+    {
+      "id": "212967637",
+      "name": "Manchester United 2025/26",
+      "source_title": "2526 season Manchester United F.C. Training suit hooded set",
+      "kept_id": "212967644"
+    },
+    {
+      "id": "212967546",
+      "name": "Manchester United 2025/26",
+      "source_title": "2526 season Manchester United F.C. Training suit hooded set",
+      "kept_id": "212967644"
+    },
+    {
+      "id": "212967604",
+      "name": "Chelsea 2025/26",
+      "source_title": "2526 season Chelsea F.C. Training suit hooded set",
+      "kept_id": "212967610"
+    },
+    {
+      "id": "212967554",
+      "name": "Paris Saint-Germain 2025/26",
+      "source_title": "2526 season Paris Saint-Germain F.C. Training suit hooded set",
+      "kept_id": "212967571"
+    },
+    {
+      "id": "212967530",
+      "name": "Real Madrid 2025/26",
+      "source_title": "2526 season Real Madrid CF Training suit hooded set",
+      "kept_id": "212967553"
+    }
+  ]
+}
